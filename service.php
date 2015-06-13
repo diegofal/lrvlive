@@ -2,8 +2,6 @@
 
 require_once('WEB-INF/includes/classes/api.php'); // including service class to work with database
 
-
-
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     die('Only POST requests are accepted');
 }

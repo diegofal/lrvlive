@@ -1,21 +1,28 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Diego
- * Date: 6/12/2015
- * Time: 11:00 PM
- */
+
 
 class Api {
     var $resellerId;
     var $resellerToken;
 
-    function Api()
+    function Api($resellerId, $resellerToken)
     {
-        $reseller_id = $_POST['ResellerId'];
-        $reseller_token = $_POST['ResellerToken'];
+        $this->resellerId= $resellerId;
+        $this->resellerToken = $resellerToken;
 
-        
+
+
+    }
+
+    function getAvailableOffers(){
+        return "available";
+    }
+
+    function getOfferAvailability(){
+        return "offer";
+    }
+
+    function makeReservation(){
 
     }
 
