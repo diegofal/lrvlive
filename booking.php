@@ -1888,10 +1888,10 @@ foreach ($tours as $index=>$tour) {
 
 	case "step1":
 
-		if (TESTING && !isset($_GET['debug']) && empty($_POST)) {
-			die("Sorry! LRV Booking is currently down for maintenance.<br/>
-				We expect to be back in a couple of minutes. Thanks for your patience.");
-		}
+//		if (TESTING && !isset($_GET['debug']) && empty($_POST)) {
+//			die("Sorry! LRV Booking is currently down for maintenance.<br/>
+//				We expect to be back in a couple of minutes. Thanks for your patience.");
+//		}
 
 		if (isset($_GET['tour_id']) && is_numeric($_GET['tour_id'])) {
 			$tour_id = $_GET['tour_id'];

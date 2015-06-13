@@ -21,4 +21,8 @@ switch ($_REQUEST['action']) {
         $oApi->getOfferAvailability();
 
         break;
+    case 'reservation':
+        $oApi->makeReservation();
+
+        break;
 }

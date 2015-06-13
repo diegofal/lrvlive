@@ -5,7 +5,10 @@
  */
 function generate_order($fields, $context = "") {		
 	global $db;
-	
+
+    echo json_encode($fields);
+    die;
+
 	if (validate_seats($fields)) {	
 
 		$result = $db->insert_field($db->order, $fields);
@@ -18,7 +21,7 @@ function generate_order($fields, $context = "") {
 		return $id;
 		
 	} else {
-		
+
 		$m = "New order generation failed - $context";
 		if (isset($fields['order_sid'])) {
 			$m .= " - Session Id: ".$fields['order_sid'];
@@ -38,7 +41,7 @@ function generate_order($fields, $context = "") {
  */
 function edit_order($fields, $fieldfilter, $fieldvalue, $context = "") {
 	global $db;
-	
+
 	if (isset($fields['order_tickets']) && isset($fields['order_quantities']) && isset($fields['order_tickets_number']))
 	{
 		if (!validate_seats($fields)) {

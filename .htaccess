@@ -18,6 +18,7 @@ RewriteRule ^\/?booking\/?(.*)\.html$ /booking/print.php?code=$1
 
 RewriteRule api/resellers/getavailableoffers service.php?action=offers
 RewriteRule api/resellers/getofferavailability service.php?action=availability
+RewriteRule api/resellers/makereservation service.php?action=reservation
 
 #RewriteRule ^(.*)$ http://162.13.140.19/$1 [R=301,L]
 
