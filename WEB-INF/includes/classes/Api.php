@@ -43,7 +43,15 @@ class Api {
     }
 
     function getAvailableOffers(){
-        return "available";
+        $query = "
+                SELECT  reseller_offer_id as id,
+                        name,
+                        price
+                FROM `".$this->db->reseller_offers."`
+                WHERE reseller_id=" . $this->resellerId;
+        $reseller_offers = $this->db->select_fields($this->db->resellers, $query,array("id", "name", "price"));
+
+        $this->buildResponse("OK", "", "offers", $reseller_offers);
     }
 
     function getOfferAvailability(){
