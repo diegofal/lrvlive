@@ -1,0 +1,12 @@
+londonribvoyages.com/www/WEB-INF/templates/cms/index/hex.txt
+<html>
+<head>
+<title>HACKED By HEXB00T3R</title>
+</head>
+<body bgcolor=black>
+<p align="center">
+<img src="http://www.atg-schwimmen.at/images/hex.jpg"></p>
+<p align="center"><font color="#999999" size="2" face="courier new">Real Terrorist Zionist israel - BOYCOTT ! Stop Supporting Baby Killers</font></p>
+<p align="center"><font color="white" size="2" face="tahoma">Turkish Hacker By HEXB00T3R - ( Informatics Mafia )</font></p>
+<p align="center"><font color="red" size="2" face="tahoma">NE MUTLU TURKUM DIYENE TIM</font></p>
+</html>

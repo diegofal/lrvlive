@@ -1,0 +1,6 @@
+[25-Jun-2011 22:03:50] PHP Parse error:  syntax error, unexpected ')' in /home/londonri/public_html/booking_test.php on line 929
+[25-Jun-2011 23:08:14] PHP Parse error:  syntax error, unexpected ')' in /home/londonri/public_html/booking_test.php on line 973
+[30-Jun-2011 02:42:39] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/londonri/public_html/booking.php on line 926
+[30-Jun-2011 02:42:42] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/londonri/public_html/booking.php on line 926
+[30-Jun-2011 02:42:43] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/londonri/public_html/booking.php on line 926
+[20-Sep-2011 21:33:25] PHP Parse error:  syntax error, unexpected '.', expecting ')' in /home/londonri/public_html/test_uploadimages.php on line 24

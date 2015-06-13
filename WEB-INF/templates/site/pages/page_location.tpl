@@ -1,0 +1,1 @@
+<div class="lr_body">{$content.page_body}</div>

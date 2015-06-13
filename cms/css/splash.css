@@ -1,0 +1,42 @@
+body {
+	background-color: #666666;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.splash-backlogin {
+	background-image: url(../images/splash/splash_boxtop.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.splash-backbox {
+	background-image: url(../images/splash/splash_boxback.gif);
+	background-repeat: repeat-y;
+	background-position: 0px 200px;
+}
+.splash-backmiddle {
+	background-image: url(../images/splash/splash_backmiddle.gif);
+}
+.splash-backleft {
+	background-image: url(../images/splash/splash_left.gif);
+	background-position: right top;
+}
+.splash-backright {
+	background-image: url(../images/splash/splash_right.gif);
+	background-position: left top;
+}
+.splash-contentpadding {
+	padding: 20px;
+}
+.splash-content {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	line-height: 18px;
+}
+.splash-cell {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	height: 22px;
+	width: 140px;
+}

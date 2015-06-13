@@ -1,0 +1,39 @@
+#Options +FollowSymlinks
+RewriteEngine On
+ 
+Redirect 302 /thamesrockets http://www.londonribvoyages.com/booking.php?tour_id=12&subpage=tour_details
+Redirect 302 /thamesrocket http://www.londonribvoyages.com/booking.php?tour_id=12&subpage=tour_details
+
+RewriteCond %{REQUEST_URI}  ^\/?vouchers\/?(.*)\.print
+RewriteRule ^\/?vouchers\/?(.*)\.print /vouchers/print.php?code=$1
+
+RewriteCond %{REQUEST_URI}  ^\/?vouchers\/?(.*)\.html$
+RewriteRule ^\/?vouchers\/?(.*)\.html$ /vouchers/html.php?code=$1
+
+RewriteCond %{REQUEST_URI}  ^\/?vouchers\/?(.*)\.pdf$
+RewriteRule ^\/?vouchers\/?(.*)\.pdf$ /vouchers/pdf.php?code=$1
+
+RewriteCond %{REQUEST_URI}  ^\/?booking\/?(.*)\.html$
+RewriteRule ^\/?booking\/?(.*)\.html$ /booking/print.php?code=$1
+
+RewriteRule api/resellers/getavailableoffers service.php?action=offers
+RewriteRule api/resellers/getofferavailability service.php?action=availability
+
+#RewriteRule ^(.*)$ http://162.13.140.19/$1 [R=301,L]
+
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName londonribvoyages.com
+AuthUserFile /home/londonri/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/londonri/public_html/_vti_pvt/service.grp

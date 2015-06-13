@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Maps JavaScript API Example</title>
+    <script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAk_PeATHc7Zk4v935p5iMORSxvEeoub5XJA_lxpHKm5twtdLGvBStwgThJBY4QlXVMscR3h_tf2KZNA"
+      type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+		var WINDOW_HTML = '<div style="width: 210px; padding-right: 10px">London Rib Voyages 39 York Rd Lambeth, Greater London SE1 7, UK</div>';		
+
+    function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        	map.addControl(new GSmallMapControl());
+			map.addControl(new GMapTypeControl());
+        map.setMapType(G_HYBRID_MAP);
+        map.setCenter(new GLatLng(51.503293230761045, -0.11954069137573242), 16);
+        
+        var marker = new GMarker(new GLatLng(51.503293230761045, -0.11954069137573242));
+				map.addOverlay(marker);
+				GEvent.addListener(marker, "click", function() {
+				marker.openInfoWindowHtml(WINDOW_HTML);
+				  });
+				marker.openInfoWindowHtml(WINDOW_HTML);		
+      }
+    }
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+    <div id="map" style="width: 500px; height: 300px"></div>
+  </body>
+</html>

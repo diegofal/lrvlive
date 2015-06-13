@@ -1,0 +1,324 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.background {
+	background-color: #ededed;
+	background-image: url(../images/backgrounds/backgr_repeat.jpg);
+	background-repeat: repeat-x;
+}
+.back-left {
+	background-image: url(../images/backgrounds/backgr_left_norepeat.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.menuLeft-backgr {
+	background-image: url(../images/utils/menu_shadow_left.jpg);
+	background-repeat: repeat-y;
+}
+.menu-backgr {
+	background-image: url(../images/utils/menu_backgr.gif);
+}
+.menu-bottom {
+	background-image: url(../images/utils/menu_bottom_corner.gif);
+	background-repeat: no-repeat;
+}
+.content-backgr {
+	background-image: url(../images/utils/content_backgr.gif);
+	background-repeat: repeat-y;
+}
+.menuRight-backgr {
+	background-image: url(../images/utils/menu_right_shadow.gif);
+	background-repeat: repeat-y;
+}
+#footer {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #838383;
+}
+#footer:link {
+	color: #fd7c00;
+	text-decoration: none;
+}
+#footer:visited {
+
+	color: #fd7c00;
+	text-decoration: none;
+}
+.content-padding {
+	padding-top: 35px;
+	padding-right: 40px;
+	padding-bottom: 35px;
+	padding-left: 40px;
+}
+.content-formatting {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	line-height: 18px;
+	color: #000000;
+}
+h1 {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+}
+.content-route-padding {
+
+	padding-top: 35px;
+	padding-right: 35px;
+	padding-bottom: 35px;
+	padding-left: 35px;
+}
+.route-table {
+	border: 1px solid #d9d5d5;
+	background-color: #fafafa;
+	padding: 5px;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	margin: 2px;
+}
+#route {
+	font-family: Tahoma, Arial, Helvetica;
+	color: #F78200;
+	text-decoration: none;
+}
+#route:link {
+	font-family: Tahoma, Arial, Helvetica;
+	color: #F78200;
+	text-decoration: none;
+}
+.route-table-open {
+	border: 1px solid #d9d5d5;
+	background-color: #FFFFFF;
+	padding: 10px 5px;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	margin: 2px;
+	background-image: url(../images/backgrounds/bg-route-content-opn.gif);
+	background-repeat: repeat-x;
+}
+.route-table-header {
+
+	border: 1px none #d9d5d5;
+	padding: 6px;
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	margin: 2px;
+}
+
+.style1 {color: #333333}
+.style2 {color: #666666}
+.style3 {font-size: 12px;font-weight: bold;}
+.style4 {color: #3B465A;font-weight: bold;}
+
+.booking-stepsback {
+	background-image: url(../images/utils/line_grey.gif);
+	background-repeat: repeat-x;
+	background-position: left center;
+}
+.booking-chselback {
+	background-image: url(../images/booking/backgr-charterselect.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border: 1px solid #fab466;
+	padding: 5px;
+}
+.booking-tableheader1 {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 6px 5px;
+	background-image: url(../images/booking/backgr-header1.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #3B465A;
+}
+.booking-tablecont1 {
+
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	padding: 4px 5px 3px;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #333333;
+}
+.booking-tableoutln1 {
+	border: 1px solid #7eaada;
+}
+
+.booking-cell {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color: #000000;
+	height: 18px;
+}
+
+.booking-cell107 {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color: #000000;
+	height: 18px;
+	width: 107px;
+}
+.booking-totalst1bg {
+
+	background-image: url(../images/booking/backgr-totalst1.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border: 1px solid #7EAADA;
+	padding: 6px 6px 5px;
+}
+.booking-ddwn-length {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	color: #000000;
+	height: 18px;
+	width: 150px;
+}
+.booking-calendarhead {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666666;
+	background-color: #FFFFFF;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border: 1px solid #CCCCCC;
+	background-image: url(../images/booking/backgr-calendarHeader.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.booking-tableheader2 {
+
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	padding: 6px 5px;
+	background-image: url(../images/booking/backgr-header1.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+.calendarAv {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #dae4fe;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid #CCCCCC;
+	background-image: url(../images/booking/backgr-cellAv.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	cursor:hand;
+}
+#calendar:link {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #003399;
+	text-decoration: none;
+}
+#calendar:visited {
+
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #003399;
+	text-decoration: none;
+}
+.calendarNone {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.calendarNa {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #e0e0e0;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid #CCCCCC;
+	background-image: url(../images/booking/backgr-cellNA.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	color: #666666;
+}
+.calendarSold {
+
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #e0e0e0;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid #CCCCCC;
+	background-image: url(../images/booking/backgr-cellFull.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	color: #996600;
+}
+.calendarSelected {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #F78200;	
+	color:#FFFFFF;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid #F78200;
+	background-repeat: repeat-x;
+	background-position: top;
+	color: #FFFFFF;
+}
+.booknow {
+	font-weight: bold;
+	color: #5872A5;
+}
+.booknow:link {
+	font-weight: bold;
+	color: #4D6491;
+}
+.booknow:hover {
+	font-weight: bold;
+	color: #4D6491;
+	text-decoration: none;
+}
+.booking-st3-review {
+	background-repeat: repeat-x;
+	background-position: left top;
+	border: 1px solid #fab466;
+	padding: 5px;
+	background-color: #fef2e5;
+	background-image: url(../images/booking/backgr-reviewst3.gif);
+}
+.booking-tablecontSelected {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	padding: 4px 5px 3px;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #FFFFFF;
+	background-color: #F78200;
+}
+.booking-totalst2 {
+	background-image: url(../images/booking/backgr-totalst1.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	padding: 6px 6px 5px;
+}
+.booking-tablecont2 {
+	font-family: Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	padding: 4px 5px 6px;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #333333;
+	line-height: 16px;
+}
