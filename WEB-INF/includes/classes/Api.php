@@ -184,6 +184,56 @@ class Api {
         echo json_encode(array("Status"=>"OK", "Desc" => "", "BookingId" => $bookingId, "TotalPrice" => $orderTotal));
     }
 
+    function confirmBooking(){
+        global $db;
+
+        // check check booking id set
+        if (!isset($_POST['BookingId'])){
+            $this->buildResponse("ERROR", "Invalid booking id.", "empty", null);
+            die;
+        }
+
+        $bookingId = $_POST["BookingId"];
+
+        // check offer exists in DB
+        $bookingQuery = "
+            SELECT order_id
+            FROM " . $db->order . "
+            WHERE order_id = " . $bookingId."
+        ";
+        $order = $db->select_field($db->order, "order_id", "", $bookingQuery);
+
+        if (empty($order)){
+            $this->buildResponse("ERROR", "Order does not exist.", "empty", null);
+            die;
+        }
+
+        //----------------------------------------- //
+        //----  Start Confirm Booking          ---- //
+        //----------------------------------------- //
+
+        $firstName = $_POST["FirstName"];
+        $lastName = $_POST["LastName"];
+        $phone = $_POST["Phone"];
+        $email = $_POST["Email"];
+        $specialNotes = $_POST["SpecialNotes"];
+
+        $confirmBookingFields = array(  "order_first_name" => $firstName,
+                                        "order_last_name" => $lastName,
+                                        "order_phone" => $phone,
+                                        "order_email" => $email,
+                                        "order_note_crew" => $specialNotes); // confirm where to put this information
+
+
+        edit_order($confirmBookingFields, null, null, "api booking");
+
+        echo json_encode(array("Status"=>"OK", "Desc" => ""));
+        //----------------------------------------- //
+        //----  End Confirm Booking            ---- //
+        //----------------------------------------- //
+
+    }
+
     function checkOfferParameter(){
         global $db;
 

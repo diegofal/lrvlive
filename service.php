@@ -25,4 +25,8 @@ switch ($_REQUEST['action']) {
         $oApi->makeReservation();
 
         break;
+    case 'confirmation':
+        $oApi->confirmBooking();
+
+        break;
 }
