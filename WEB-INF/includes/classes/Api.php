@@ -163,6 +163,8 @@ class Api {
             $orderTotal += floatval($ticketInfo['ticket_price']);
         }
 
+        $orderTotal += PRICE_FEE;
+
         $reservationFields = array( "order_tickets" => $orderTickets,
                                     "order_quantities" => $orderQuantities,
                                     "order_tickets_number" => $orderTicketsNumber,
@@ -177,11 +179,9 @@ class Api {
         //----  end prepare fields for reservation ---- //
         //--------------------------------------------- //
 
-        $result = generate_order($reservationFields, "api booking");
+        $bookingId = generate_order($reservationFields, "api booking");
 
-        echo $result;
-        die;
-
+        echo json_encode(array("Status"=>"OK", "Desc" => "", "BookingId" => $bookingId, "TotalPrice" => $orderTotal));
     }
 
     function checkOfferParameter(){

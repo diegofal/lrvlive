@@ -115,6 +115,9 @@ $menu_cms_pages  = array("about_us"=>"About Us",
 						 	"links"=>"Links"
                         );
 
+
+define ("PRICE_FEE", 3.95);
+
 // nr de afisari pe pag :
 define("PER_PAGE",25);
 
