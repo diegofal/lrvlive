@@ -18,13 +18,22 @@ class Api {
         $this->db = new DB_config;
         $this->db->connect();
 
-
         $query = "SELECT reseller_id FROM `".$this->db->resellers."` WHERE reseller_id=" . $resellerId;
         $reseller_ids = $this->db->select_field($this->db->resellers, "reseller_id", "", $query);
 
         if (empty($reseller_ids)){
-            die("empty");
+            return $this->buildResponse("ERROR", "Reseller not found", "empty", null);
+            die;
         }
+
+        $query = "SELECT reseller_id FROM `".$this->db->resellers."` WHERE reseller_id=" . $resellerId;
+        $reseller_token = $this->db->select_field($this->db->resellers, "reseller_id", "", $query);
+
+        if (empty($reseller_ids)){
+            return $this->buildResponse("ERROR", "Reseller not found", "empty", null);
+        }
+
+
 
     }
 
@@ -40,8 +49,8 @@ class Api {
 
     }
 
-    function buildResponse($status, $desc, $data){
-        return json_response($data);
+    function buildResponse($status, $desc, $dataName, $data){
+        return json_response(array("Status"=>$status, "Desc" => $desc, $dataName=>$data));
     }
 
 }
