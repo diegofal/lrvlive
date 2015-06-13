@@ -3,20 +3,25 @@
 require_once "WEB-INF/includes/classes/class.x3.database.php";
 require_once "WEB-INF/includes/config.php";
 require_once "WEB-INF/includes/functions/functions_utils.php";
+require_once "WEB-INF/includes/functions/functions_order.php";
+
+$db = new DB_config;
+$db->connect();
 
 class Api {
     var $resellerId;
     var $resellerToken;
 
-    var $db;
 
     function Api($resellerId, $resellerToken)
     {
+        global $db;
+
         $this->resellerId= $resellerId;
         $this->resellerToken = $resellerToken;
 
-        $this->db = new DB_config;
-        $this->db->connect();
+        $db = new DB_config;
+        $db->connect();
 
 
         // do security checks
@@ -27,8 +32,8 @@ class Api {
         }
 
         // check reseller id
-        $query = "SELECT reseller_id FROM `".$this->db->resellers."` WHERE reseller_id=" . $resellerId;
-        $reseller = $this->db->select_field($this->db->resellers, "reseller_id", "", $query);
+        $query = "SELECT reseller_id FROM `".$db->resellers."` WHERE reseller_id=" . $resellerId;
+        $reseller = $db->select_field($db->resellers, "reseller_id", "", $query);
 
         if (empty($reseller)){
             $this->buildResponse("ERROR", "Reseller not found", "empty", null);
@@ -36,8 +41,8 @@ class Api {
         }
 
         // check token
-        $query = "SELECT reseller_token FROM `".$this->db->resellers."` WHERE reseller_id=" . $resellerId . " AND reseller_token ='" . $resellerToken . "'";
-        $reseller = $this->db->select_field($this->db->resellers, "reseller_token", "", $query);
+        $query = "SELECT reseller_token FROM `".$db->resellers."` WHERE reseller_id=" . $resellerId . " AND reseller_token ='" . $resellerToken . "'";
+        $reseller = $db->select_field($db->resellers, "reseller_token", "", $query);
 
         if (empty($reseller)){
              $this->buildResponse("ERROR", "Reseller token not found", "empty", null);
@@ -48,18 +53,22 @@ class Api {
     }
 
     function getAvailableOffers(){
+        global $db;
+
         $resellerOffersQuery = "
                 SELECT  reseller_offer_id as id,
                         name,
                         price
-                FROM `".$this->db->reseller_offers."`
+                FROM `".$db->reseller_offers."`
                 WHERE reseller_id=" . $this->resellerId;
-        $reseller_offers = $this->db->select_fields($this->db->resellers, $resellerOffersQuery,array("id", "name", "price"));
+        $reseller_offers = $db->select_fields($db->resellers, $resellerOffersQuery,array("id", "name", "price"));
 
         $this->buildResponse("OK", "", "offers", $reseller_offers);
     }
 
     function getOfferAvailability(){
+
+        global $db;
 
         // check offer is set
         $offerId = $this->checkOfferParameter();
@@ -77,11 +86,11 @@ class Api {
         // grab tour id from first associated ticket in offer
         $tourQuery = "
             SELECT DISTINCT ticket_tour_id as tour_id
-            FROM " . $this->db->reseller_offer_tickets . " rot
-            INNER JOIN ". $this->db->ticket ." t on t.ticket_id = rot.ticket_id
+            FROM " . $db->reseller_offer_tickets . " rot
+            INNER JOIN ". $db->ticket ." t on t.ticket_id = rot.ticket_id
             WHERE reseller_offer_id = " . $offerId ."
         ";
-        $tourId = $this->db->select_field($this->db->reseller_offer_tickets, "tour_id", "", $tourQuery)[0];
+        $tourId = $db->select_field($db->reseller_offer_tickets, "tour_id", "", $tourQuery)[0];
 
         // get departures for tour and date
         $departuresQuery = "
@@ -96,12 +105,14 @@ class Api {
 			AND departure_date = '". $date ."'
 			ORDER BY departure_date, departure_time";
 
-        $departures = $this->db->select_fields($this->db->departure, $departuresQuery,array("id", "date", "time"));
+        $departures = $db->select_fields($db->departure, $departuresQuery,array("id", "date", "time"));
 
         $this->buildResponse("OK", "", "departures", $departures);
     }
 
     function makeReservation(){
+        global $db;
+
         // check offer is set
         $offerId = $this->checkOfferParameter();
 
@@ -113,29 +124,69 @@ class Api {
 
         $departureId = $_POST['DepartureId'];
 
+        //----------------------------------------- //
         //----  prepare fields for reservation ---- //
+        //----------------------------------------- //
+
+        // get departure date
+        $departureDateQuery =  "
+                SELECT departure_date
+                FROM " . $db->departure. "
+                WHERE departure_id = " . $departureId . "
+        ";
+        $departureDate = $db->select_field($db->departure, "departure_date", "", $departureDateQuery)[0];
+
 
         // get offer tickets information
 
         $ticketsInfoQuery ="
                 SELECT rot.ticket_id, quantity , ticket_seats, ticket_price
-                FROM " . $this->db->reseller_offer_tickets. " rot
-                INNER JOIN ". $this->db->ticket . " t on t.ticket_id = rot.ticket_id
-                WHERE reseller_offer_id = 1
+                FROM " . $db->reseller_offer_tickets. " rot
+                INNER JOIN ". $db->ticket . " t on t.ticket_id = rot.ticket_id
+                WHERE reseller_offer_id = " . $offerId . "
         ";
 
-        $ticketsInfo = $this->db->select_fields($this->db->reseller_offer_tickets, $ticketsInfoQuery,array("ticket_id", "quantity", "ticket_seats", "ticket_price"));
+        $ticketsInfo = $db->select_fields($db->reseller_offer_tickets, $ticketsInfoQuery,array("ticket_id", "quantity", "ticket_seats", "ticket_price"));
 
-        echo json_encode($ticketsInfo);
+        $orderTickets = "";
+        $orderQuantities = "";
+        $orderTicketsNumber = 0;
+        $orderTotal = 0.0;
+        $orderTime = date("Hm");
+        $orderMethod = "protx";
+
+
+        foreach ($ticketsInfo as $ticketInfo){
+            $orderTickets = strlen($orderTickets)>0 ? $orderTickets . "|".$ticketInfo['ticket_id'] : $ticketInfo['ticket_id'];
+            $orderQuantities = strlen($orderQuantities)>0 ? $orderQuantities . "|".$ticketInfo['quantity'] : $ticketInfo['quantity'];
+            $orderTicketsNumber += intval($ticketInfo['quantity']) * intval($ticketInfo['ticket_seats']);
+            $orderTotal += floatval($ticketInfo['ticket_price']);
+        }
+
+        $reservationFields = array( "order_tickets" => $orderTickets,
+                                    "order_quantities" => $orderQuantities,
+                                    "order_tickets_number" => $orderTicketsNumber,
+                                    "order_total" => $orderTotal,
+                                    "order_time" => $orderTime,
+                                    "order_departure_id" => $departureId,
+                                    "order_method" => $orderMethod,
+                                    "order_date" => $departureDate,
+                                    "order_sid" => "");
+
+        //--------------------------------------------- //
+        //----  end prepare fields for reservation ---- //
+        //--------------------------------------------- //
+
+        $result = generate_order($reservationFields, "api booking");
+
+        echo $result;
         die;
-
-
-        //---- end prepare fields for reservation ---- //
-
 
     }
 
     function checkOfferParameter(){
+        global $db;
+
         // check reseller offer id set
         if (!isset($_POST['OfferId'])){
             $this->buildResponse("ERROR", "Invalid offer id.", "empty", null);
@@ -147,10 +198,10 @@ class Api {
         // check offer exists in DB
         $offerQuery = "
             SELECT reseller_offer_id
-            FROM " . $this->db->reseller_offers . "
+            FROM " . $db->reseller_offers . "
             WHERE reseller_offer_id = " . $offerId ."
         ";
-        $offer = $this->db->select_field($this->db->reseller_offer, "offer_id", "", $offerQuery);
+        $offer = $db->select_field($db->reseller_offers, "reseller_offer_id", "", $offerQuery);
 
         if (empty($offer)){
             $this->buildResponse("ERROR", "Offer does not exist.", "empty", null);

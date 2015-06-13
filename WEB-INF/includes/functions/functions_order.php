@@ -6,8 +6,6 @@
 function generate_order($fields, $context = "") {		
 	global $db;
 
-    echo json_encode($fields);
-    die;
 
 	if (validate_seats($fields)) {	
 
