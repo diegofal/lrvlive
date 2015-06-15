@@ -17,6 +17,8 @@ class Api {
     {
         global $db;
 
+
+
         $this->resellerId= $resellerId;
         $this->resellerToken = $resellerToken;
 
@@ -63,7 +65,7 @@ class Api {
                 WHERE reseller_id=" . $this->resellerId;
         $reseller_offers = $db->select_fields($db->resellers, $resellerOffersQuery,array("id", "name", "price"));
 
-        $this->buildResponse("OK", "", "offers", $reseller_offers);
+        return $this->buildResponse("OK", "", "offers", $reseller_offers);
     }
 
     function getOfferAvailability(){
@@ -81,6 +83,7 @@ class Api {
 
 
         $date = $_POST["Date"];
+
 
 
         // grab tour id from first associated ticket in offer
@@ -107,7 +110,7 @@ class Api {
 
         $departures = $db->select_fields($db->departure, $departuresQuery,array("id", "date", "time"));
 
-        $this->buildResponse("OK", "", "departures", $departures);
+        return $this->buildResponse("OK", "", "departures", $departures);
     }
 
     function makeReservation(){
@@ -181,7 +184,7 @@ class Api {
 
         $bookingId = generate_order($reservationFields, "api booking");
 
-        echo json_encode(array("Status"=>"OK", "Desc" => "", "BookingId" => $bookingId, "TotalPrice" => $orderTotal));
+        return json_encode(array("Status"=>"OK", "Desc" => "", "BookingId" => $bookingId, "TotalPrice" => $orderTotal));
     }
 
     function confirmBooking(){
@@ -225,9 +228,9 @@ class Api {
                                         "order_note_crew" => $specialNotes); // confirm where to put this information
 
 
-        edit_order($confirmBookingFields, null, null, "api booking");
+        edit_order($confirmBookingFields, "order_id", $bookingId, "api booking");
 
-        echo json_encode(array("Status"=>"OK", "Desc" => ""));
+        return json_encode(array("Status"=>"OK", "Desc" => ""));
         //----------------------------------------- //
         //----  End Confirm Booking            ---- //
         //----------------------------------------- //
@@ -262,7 +265,7 @@ class Api {
     }
 
     function buildResponse($status, $desc, $dataName, $data){
-        echo json_encode(array("Status"=>$status, "Desc" => $desc, $dataName=>$data));
+        return json_encode(array("Status"=>$status, "Desc" => $desc, $dataName=>$data));
     }
 
 }

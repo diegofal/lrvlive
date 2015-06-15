@@ -1,6 +1,6 @@
 <?php
 //error_reporting(E_ALL ^ E_NOTICE);
-//error_reporting(0);
+error_reporting(0);
 // connecting class :
 /*
 	var $mysql_host		= "localhost";
@@ -17,7 +17,7 @@ define("TESTING",true);
 class DB_config extends x3_database {
 	var $mysql_host		= "127.0.0.1";
 	var $mysql_username	= "root"; //lrv-live
-	var $mysql_password	= "capn1984"; //mP9KXcTr9MYsxH8G
+	var $mysql_password	= ""; //mP9KXcTr9MYsxH8G
 	var $mysql_database	= "lrvlive"; //lrv-live
 
     //GENII

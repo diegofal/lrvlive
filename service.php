@@ -14,19 +14,20 @@ $oApi = new Api($resellerId,$token);
 // process actions
 switch ($_REQUEST['action']) {
     case 'offers':
-        $oApi->getAvailableOffers();
-
+        $offers = $oApi->getAvailableOffers();
+        echo $offers;
         break;
     case 'availability':
-        $oApi->getOfferAvailability();
-
+        $offerAvailability = $oApi->getOfferAvailability();
+        echo $offerAvailability;
         break;
     case 'reservation':
-        $oApi->makeReservation();
+        $reservation = $oApi->makeReservation();
+        echo $reservation;
 
         break;
     case 'confirmation':
-        $oApi->confirmBooking();
-
+        $confirmBooking = $oApi->confirmBooking();
+        echo $confirmBooking;
         break;
 }
