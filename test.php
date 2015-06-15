@@ -143,9 +143,9 @@ Token:
                     $(response.offers).each(function(){
                         var tr = "<tr><td>" +this.id+" </td><td>" + this.name + "</td><td>" + this.price +"</td><td><a href='#' onclick='javascript:getOfferAvailability(" + this.id +")'>Availability</a></td></tr>"
                         $("#offers").find("tbody").append(tr);
-                    })
+                    });
                 }else{
-                    alert("Request Error");
+                    alert("Request Error: " + response.Desc);
                 }
                 $("#offers").show();
             },
@@ -177,7 +177,7 @@ Token:
                         $("#departures").find("tbody").append(tr);
                     })
                 }else{
-                    alert("Request Error");
+                    alert("Request Error: " + response.Desc);
                 }
                 $("#departures").show();
             },
@@ -208,7 +208,7 @@ Token:
                     $("#reservation").find("tbody").append(tr);
                     $("#bookingData").show();
                 }else{
-                    alert("Request Error");
+                    alert("Request Error: " + response.Desc);
                 }
                 $("#reservation").show();
             },
@@ -241,7 +241,7 @@ Token:
                     $("#bookingData").hide();
                     $("#bookingData input").val('');
                 }else{
-                    alert("Request Error");
+                    alert("Request Error: " + response.Desc);
                 }
             },
             error: function(){

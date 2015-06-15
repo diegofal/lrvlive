@@ -29,7 +29,7 @@ class Api {
         // do security checks
 
         if (!is_numeric($resellerId)){
-            $this->buildResponse("ERROR", "Invalid reseller id.", "empty", null);
+            echo $this->buildResponse("ERROR", "Invalid reseller id.", "empty", null);
             die;
         }
 
@@ -38,7 +38,7 @@ class Api {
         $reseller = $db->select_field($db->resellers, "reseller_id", "", $query);
 
         if (empty($reseller)){
-            $this->buildResponse("ERROR", "Reseller not found", "empty", null);
+            echo $this->buildResponse("ERROR", "Reseller not found", "empty", null);
             die;
         }
 
@@ -47,7 +47,7 @@ class Api {
         $reseller = $db->select_field($db->resellers, "reseller_token", "", $query);
 
         if (empty($reseller)){
-             $this->buildResponse("ERROR", "Reseller token not found", "empty", null);
+             echo $this->buildResponse("ERROR", "Reseller token not found", "empty", null);
              die;
         }
 
