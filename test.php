@@ -49,6 +49,12 @@ Token:
 
 <br/>
 <br/>
+
+<div id="offerAvailability" class="section" style="display:none">
+    Offer Date [YYYY-mm-dd]:
+    <input id="offerDate" type="text"/>
+    <br/>
+</div>
 <div id="bookingData" class="section" style="display:none">
     First Name:
     <input id="firstName" type="text"/>
@@ -137,17 +143,25 @@ Token:
             data: parameters,
             success: function(response){
                 response = JSON.parse(response);
+                $("#offers").find("tbody").empty();
                 if (response.Status=="OK"){
-                    $("#offers").find("tbody").empty();
+
 
                     $(response.offers).each(function(){
                         var tr = "<tr><td>" +this.id+" </td><td>" + this.name + "</td><td>" + this.price +"</td><td><a href='#' onclick='javascript:getOfferAvailability(" + this.id +")'>Availability</a></td></tr>"
                         $("#offers").find("tbody").append(tr);
                     });
+                    $("#offers").show();
+                    $("#offerAvailability").show();
                 }else{
                     alert("Request Error: " + response.Desc);
                 }
-                $("#offers").show();
+
+
+//                var tomorrow = new Date();
+//              //  tomorrow.setDate(tomorrow.getDate() + 1);
+//                $("#offerDate").val(tomorrow.getFullYear()+"-"+tomorrow.getMonth()+"-"+tomorrow.getDay());
+
             },
             error: function(){
                 alert("error");
@@ -160,26 +174,34 @@ Token:
         var parameters = getParameters();
 
         parameters.OfferId = offerId;
-        parameters.Date = '2015-06-16';
+        parameters.Date = $("#offerDate").val();
 
-        $("#offers").hide();
+
         $.ajax({
             type: "POST",
             url: "api/resellers/getofferavailability",
             data: parameters,
             success: function(response){
                 response = JSON.parse(response);
-                if (response.Status=="OK"){
+                if (response.Status=="OK" && response.departures.length>0){
                     $("#departures").find("tbody").empty();
+
+                    $("[class='section']").hide();
 
                     $(response.departures).each(function(){
                         var tr = "<tr><td>" +this.id+" </td><td>" + this.date + "</td><td>" + this.time +"</td><td><a href='#' onclick='javascript:makeReservation(" + offerId + "," + this.id +")'>Make Reservation</a></td></tr>"
                         $("#departures").find("tbody").append(tr);
                     })
+                    $("#departures").show();
                 }else{
-                    alert("Request Error: " + response.Desc);
+
+                    if (response.departures.length==0){
+                        alert("No departures for date set");
+                    }else{
+                        alert("Request Error: " + response.Desc);
+                    }
                 }
-                $("#departures").show();
+
             },
             error: function(){
                 alert("error");
@@ -194,7 +216,6 @@ Token:
         parameters.OfferId = offerId;
         parameters.DepartureId = departureId;
 
-        $("#departures").hide();
         $.ajax({
             type: "POST",
             url: "api/resellers/makereservation",
@@ -210,6 +231,7 @@ Token:
                 }else{
                     alert("Request Error: " + response.Desc);
                 }
+                $("#departures").hide();
                 $("#reservation").show();
             },
             error: function(){
@@ -229,7 +251,7 @@ Token:
         parameters.Email= $("#email").val();
         parameters.SpecialNotes = $("#specialNotes").val();
 
-        $("#reservation").hide();
+
         $.ajax({
             type: "POST",
             url: "api/resellers/confirmbooking",
@@ -237,6 +259,7 @@ Token:
             success: function(response){
                 response = JSON.parse(response);
                 if (response.Status=="OK"){
+                    $("#reservation").hide();
                     $("#confirmation").show();
                     $("#bookingData").hide();
                     $("#bookingData input").val('');
