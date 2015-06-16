@@ -1,45 +1,5 @@
 <script src="WEB-INF/includes/js/jquery-1.7.2.min.js"></script>
 
-<?php
-
-require_once('WEB-INF/includes/classes/api.php'); // including service class to work with database
-
-
-if (isset($_POST["Token"]) && isset($_POST["ResellerID"])){
-    $token = $_POST["Token"];
-    $resellerId = $_POST["ResellerID"];
-
-    $oApi = new Api($resellerId,$token);
-
-    $requestResult = null;
-
-// process actions
-    switch ($_REQUEST['action']) {
-        case 'offers':
-            $requestResult = $oApi->getAvailableOffers();
-
-            break;
-        case 'availability':
-            $requestResult =  $oApi->getOfferAvailability();
-
-            break;
-        case 'reservation':
-            $requestResult = $oApi->makeReservation();
-
-            break;
-        case 'confirmation':
-            $requestResult = $oApi->confirmBooking();
-
-            break;
-    }
-    echo json_encode($requestResult);
-
-}
-
-
-
-
-?>
 
 ResellerID:
 <input id="resellerId" type="text"/>
@@ -126,6 +86,15 @@ Token:
     Your booking has been confirmed!
 </div>
 
+<br/>
+<br/>
+
+<hr>
+<h4> JSON Response </h4>
+<div id="jsonResponse">
+
+</div>
+
 <script type="text/javascript">
     $(document).ready(function(){
         $("#getOffers").click(getOffers);
@@ -143,6 +112,8 @@ Token:
             data: parameters,
             success: function(response){
                 response = JSON.parse(response);
+
+                $("#jsonResponse").empty().append(JSON.stringify(response));
                 $("#offers").find("tbody").empty();
                 if (response.Status=="OK"){
 
@@ -183,6 +154,8 @@ Token:
             data: parameters,
             success: function(response){
                 response = JSON.parse(response);
+                $("#jsonResponse").empty().append(JSON.stringify(response));
+
                 if (response.Status=="OK" && response.departures.length>0){
                     $("#departures").find("tbody").empty();
 
@@ -222,6 +195,7 @@ Token:
             data: parameters,
             success: function(response){
                 response = JSON.parse(response);
+                $("#jsonResponse").empty().append(JSON.stringify(response));
                 if (response.Status=="OK"){
                     $("#reservation").find("tbody").empty();
 
