@@ -1887,7 +1887,6 @@ foreach ($tours as $index=>$tour) {
 **/
 
 	case "step1":
-
 //		if (TESTING && !isset($_GET['debug']) && empty($_POST)) {
 //			die("Sorry! LRV Booking is currently down for maintenance.<br/>
 //				We expect to be back in a couple of minutes. Thanks for your patience.");
@@ -1917,11 +1916,11 @@ foreach ($tours as $index=>$tour) {
 		}
 
 		if (!empty($_POST)){
-			
+
 			// Deleted by Carlos
 			/*Adding booking fee for regular orders */
 			//$order_total = 3.95; 
-			
+
 			if(!empty($_POST['charter']) && ($_POST['charter']=='yes')){			
 				/*
 				Charter
@@ -1943,6 +1942,7 @@ foreach ($tours as $index=>$tour) {
 				NOT Charter
 				*/
 
+
 				$order_total = $_POST['total'];
 
 				foreach($_POST['quantity'] as $key => $value){
@@ -1957,7 +1957,6 @@ foreach ($tours as $index=>$tour) {
 					$_tour_id = $tour_id;
 
 				}
-	
 				
 				//extract tickets seats
 				$query = "SELECT * FROM $db->ticket

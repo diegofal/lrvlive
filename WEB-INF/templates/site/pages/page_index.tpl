@@ -1,109 +1,258 @@
-<div class="imagerow_body">
-	<div class="corner-it-home">
-		<div class="imagerow_image_1" onclick="window.location.href='booking.php?tour_id={$tours[$content.page_link1].tour_id}&amp;subpage=tour_details'" style="cursor:pointer;">
-			<div class="imagerow_image_one1"><img src="img/tours/thumb/{$tours[$content.page_link1].tour_home_image}"  alt="{$_tours[$content.page_link1].title_home_page}" title="{$tours[$content.page_link1].title_home_page}" /></div>
-			<div class="imagerow_image_one_text">{$tours[$content.page_link1].tour_special_text_home}</div>
-		</div>
-	 </div>
-	 
-	 <!-- Captain Kidds -->
-	<div class="corner-it-home">	 
-    <div class="imagerow_image_2" onclick="window.location.href='booking.php?tour_id={$tours[$content.page_link2].tour_id}&amp;subpage=tour_details'" style="cursor:pointer;">
-        <div class="imagerow_image_two1"><img src="img/tours/thumb/{$tours[$content.page_link2].tour_home_image}" height="120" width="180" alt="{$tours[$content.page_link2].title_home_page}" title="{$tours[$content.page_link2].title_home_page}" /></div>
-		<div class="imagerow_image_one_text">{$tours[$content.page_link2].tour_special_text_home}</div>
-	</div>
-	</div>	
+<section id="homepage">
+    <div class="video-container">
+        <canvas width="960" height="220"></canvas>
+        <video poster="content/img/poster.jpg" width="960" height="220" id="intro-video" loop >
+            <!--  <source src="content/video/video.mp4" type="video/mp4" />
+             <source src="content/video/video.webm" type="video/webm"/> -->
+        </video>
+    </div>
+    <div class="home-content">
+        <div class="subheading">
+            <img src='content/img/home/fastest2.png' alt="Start living the fastest, funniest and craziest trip ever. Select your trip"/>
+            <!-- <h2>Select your trip</h2>
+            <p>Start living the fastest, funniest and craziest trip ever</p> -->
+        </div>
+        <section id="trips">
+            <div id="slides">
+                <ul class="slides-container">
+                    <li>
+
+                        <div class="wrapper container">
+
+                            <div class="trip">
+                                <div>
+                                    <img src="content/img/thumb-ultimatelondon.jpg" class="preserve"/>
+                                    <div class="info">
+                                        <span>The London Eye → Canary Wharf → The London Eye </span>
+                                        <h3>The Ultimate London Adventure</h3>
+                                        <p>This is the one that started it all! <br>Our ‘Ultimate London Adventure’ is a jam-packed, fun-filled adrenaline-fuelled 50 minutes.</p>
+                                        <div class="facts">
+                                            <p>
+                                                <strong>50’</strong><br>
+                                                min. ride
+                                            </p>
+                                            <p>
+                                                <strong>22</strong><br>
+                                                sitepoints
+                                            </p>
+                                            <p>
+                                                <strong>35</strong><br>
+                                                mph<br>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn btn-main doble">
+                                        <a href="detail-ultimatelondon.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end trip item -->
+
+                            <div class="trip">
+                                <div>
+                                    <img src="content/img/thumb-thamesbarrier.jpg" class="preserve" />
+                                    <div class="info">
+                                        <span>The London Eye → Thames Barrier → The London Eye</span>
+                                        <h3>Thames Barrier Explorers Voyage</h3>
+                                        <p>Your journey will take in every major sight the Thames has to offer from the power of Parliament to the might of the Thames Barrier and back.</p>
+                                        <div class="facts">
+                                            <p>
+                                                <strong>80’</strong><br>
+                                                min. ride
+                                            </p>
+                                            <p>
+                                                <strong>28</strong><br>
+                                                sitepoints
+                                            </p>
+                                            <p>
+                                                <strong>35</strong><br>
+                                                mph<br>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn btn-main doble">
+                                        <a href="detail-thamesbarrierexplorersvoyage.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end trip item -->
 
 
-	
-	<div class="corner-it-home"> 
-	<div class="imagerow_image_3" onclick="window.location.href='booking.php?tour_id={$tours[$content.page_link3].tour_id}&amp;subpage=tour_details'" style="cursor:pointer;">
-        <div class="imagerow_image_two1_3" style="border:0px #FFFFFF solid;"><img src="img/tours/thumb/{$tours[$content.page_link3].tour_home_image}" alt="{$tours[$content.page_link3].title_home_page}" title="{$tours[$content.page_link3].title_home_page}"/></div>
-		<div class="imagerow_image_one_text">{$tours[$content.page_link3].tour_special_text_home}</div>
-	</div>
- 	</div>
+                            <div class="trip">
+                                <div>
+                                    <img src="content/img/thumb-breakbarrier.jpg" class="preserve" />
+                                    <div class="info">
+                                        <span>TSt Katharine’s Pier  → Thames Barrier  → St Katharine’s Pier</span>
+                                        <h3>Break The Barrier (Speed only)</h3>
+                                        <p> It’s Fast, Furious and a World First. Thames Rockets is a new thrilling, high-speed boat ride blasting off this summer in the Capital.</p>
+                                        <div class="facts">
+                                            <p>
+                                                <strong>40’</strong><br>
+                                                min. ride
+                                            </p>
+                                            <p>
+                                                <strong>8</strong><br>
+                                                sitepoints
+                                            </p>
+                                            <p>
+                                                <strong>35</strong><br>
+                                                mph<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btn btn-main doble">
+                                        <a href="detail-breakthebarrier.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                                    </div>
+                                </div>
+                            </div>
 
-	 <!-- Sunset Speed-boating -->	
-	<div class="corner-it-home">	 
-    <div class="imagerow_image_2" onclick="window.location.href='booking.php?tour_id=26&amp;subpage=tour_details'" style="cursor:pointer;">
-        <div class="imagerow_image_two1"><img src="img/tours/thumb/26_tour_home_image_1422914807.png" height="120" width="180" alt="Spring has Sprung" title="Spring has Sprung" /></div>
-		<div class="imagerow_image_one_text">Spring has Sprung</div>
-	</div>
-	</div>	
-	
-	<!--div class="corner-it-home"> 
-	<div class="imagerow_image_4" onclick="window.location.href='booking.php?tour_id=20&amp;subpage=tour_details'" style="cursor:pointer;">
-        <div class="imagerow_image_two1_4"><img src="img/tours/thumb/20_tour_home_image_1396568482.png" alt="" title=""/></div>
-		<div class="imagerow_image_one_text">London Edge Sky Ride Experience</div>
-	</div>
-	</div-->
-	
-	<div class="corner-it-home">	
-	<div class="imagerow_image_5" onclick="window.location.href='booking.php?tour_id=12&amp;subpage=tour_details'" style="cursor:pointer;">
-        <div class="imagerow_image_two1_3" style="border:0px #FFFFFF solid;">
-        <img src="img/tours/thumb/break-barrier-home.png" alt="Break The Barrier" border="0" width="180" height="120" /></div>
-        <div class="imagerow_image_one_text">Break The Barrier (Speed Only)</div>
-	</div> 
- 	</div>
-	
-</div>      
-
-		<div class="sailling_body clearfix">
-			<div class="sailling_first_body_nd1">
-				<div class="home-text">{$content.page_body}</div>
-				<div class="speech-bubble"></div>
-			</div>
-		<div class="sailling_second_body_nd1">
+                            <!-- trip -->
 
 
-	<div class="slideshow">
-		<img src="images/slide1.png" width="403" height="264" />
-		<img src="images/slide2.png" width="403" height="264" />
-		<img src="images/slide3.png" width="403" height="264" />
-		<img src="images/slide4.png" width="403" height="264" />
-		<img src="images/slide5.png" width="403" height="264" />
-	</div>
-	
-	<!--iframe src="http://visualise.s3.amazonaws.com/london-rib-voyages-2014/index.html" width="382" height="312" frameborder="0" style="border:2px solid #D72012;margin-left:14px;"></iframe-->
 
-			<!--script type="text/javascript">header()</script-->
-		</div>
-		 </div>
-		 
-	<div class="corporate_mainbody">
+                        </div>
+                    </li>
 
-		<div class="corner-it-home">
-		<div class="corporate_image2">
-			<div class="corporate_image_one"><a href="stag_and_hen.php" title="Stag and Hen Party Celebrations"><img src="images/stag-hen-home-button.png" alt="Stag and Hen Party Celebrations" border="0" width="180" height="120" /></a></div>
-			<div class="corporate_image_text"><a href="stag_and_hen.php" class="corporatetext_r" title="Stag and Hen Party Celebrations">Stag and Hen Party Celebrations</a></div>
-		</div>
-		</div>
 
-		<div class="corner-it-home">		
-		<div class="corporate_image1">
-			<div class="corporate_image_one"><a href="corporate_groups.php" title="Corporate Entertaining"><img src="images/corporate-button-home.png" alt="Corporate Entertaining" border="0" width="180" height="120" /></a></div>
-			<div class="corporate_image_text"><a href="corporate_groups.php" class="corporatetext_r" title="Fastest Corporate Speedboat Experiences">Fastest Corporate Speedboat Experiences</a></div>
-		</div>
-		</div>
-		
-		<div class="corner-it-home">		
-		<div class="corporate_image2">
-			<div class="corporate_image_one"><a href="filming.php" title="Filming"><img src="images/filming-home-button.png" alt="Filming" border="0" width="180" height="120" /></a></div>
-			<div class="corporate_image_text"><a href="filming.php" class="corporatetext_r" title="Filming">Filming on the River Thames</a></div>
-		</div>        
- 		</div>
-		
-		<div class="corner-it-home"> 
-		<div class="corporate_image2">
-			<div class="corporate_image_one"><a href="booking.php?package_id=5&subpage=package_details" title="Blog"><img src="images/pirates-button-home.png" alt="Blog" border="0" width="180" height="120" /></a></div>
-			<div class="corporate_image_text"><a href="booking.php?package_id=5&subpage=package_details" class="corporatetext_r" title="Pirates Of The Thames">Pirates Of The Thames</a></div>
-		</div>
-		</div>
-		
-		<div class="corner-it-home">		
-		<div class="corporate_image2">
-			<div class="corporate_image_one"><a href="about_us.php" title="About Us"><img src="images/about-1.png" alt="About Us" border="0" width="180" height="120" title="About Us" /></a></div>
-			<div class="corporate_image_text"><a href="about_us.php" class="corporatetext_r" title="Filming on the River Thames">About Us</a></div>
-		</div>
-		</div>
-	</div>	
+                    <li>
+
+                        <div class="wrapper container">
+                            <div class="trip">
+                                <div>
+                                    <img src="content/img/thumb-captainkidd.jpg" class="preserve" />
+                                    <div class="info">
+                                        <span>The London Eye → Canary Wharf → The London Eye</span>
+                                        <h3>Captain Kidd's Canary Wharf</h3>
+                                        <p>Specially designed for families<br> You can still expect all the thrills and spills that have become the trademark our experience!</p>
+                                        <div class="facts">
+                                            <p>
+                                                <strong>50’</strong><br>
+                                                min. ride
+                                            </p>
+                                            <p>
+                                                <strong>22</strong><br>
+                                                sitepoints
+                                            </p>
+                                            <p>
+                                                <strong>35</strong><br>
+                                                mph<br>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn btn-main doble">
+                                        <a href="detail-captainkiddcanarywharf.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- trip -->
+
+                            <div class="trip">
+                                <div>
+                                    <img src="content/img/thumb-spring.jpg" class="preserve" />
+                                    <div class="info">
+                                        <span>The London Eye → Canary Wharf</span>
+                                        <h3>Spring<br>has Sprung</h3>
+                                        <p> For us that only means one thing. Sunshine, spring chickens, and the start of another Super Speedy Summer!<br><br></p>
+                                        <div class="facts">
+                                            <p>
+                                                <strong>50</strong><br>
+                                                min. ride
+                                            </p>
+                                            <p>
+                                                <strong>22</strong><br>
+                                                sitepoints
+                                            </p>
+                                            <p>
+                                                <strong>35</strong><br>
+                                                mph<br>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn btn-main doble">
+                                        <a href="detail-springsprung.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+                <nav class="slides-navigation">
+                    <a href="#" class="next">Next</a>
+                    <a href="#" class="prev">Previous</a>
+                </nav>
+            </div>
+        </section>
+
+        <div id="badges" class="wrapper">
+            <div>
+                <a href="http://www.timeout.com/london/attractions/london-rib-voyages" target="_blank" class="attraction-timeout"><img src="content/img/attraction-timeout.png" /></a>
+            </div>
+            <div class="tripadvisor-live">
+                <div id="TA_cdsscrollingravewide200" class="TA_cdsscrollingravewide">
+                    <ul id="Dv0kGIekXQ" class="TA_links EORM8lCP8">
+                        <li id="n85GZ8Z88" class="IZ6Ow03mXi">
+                            <a target="_blank" href="http://www.tripadvisor.co.uk/"><img src="http://e2.tacdn.com/img2/t4b/Stacked_TA_logo.png" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <script src="http://www.jscache.com/wejs?wtype=cdsscrollingravewide&amp;uniq=200&amp;locationId=1526046&amp;lang=en_UK&amp;border=false&amp;display_version=2"></script>
+            </div>
+            <div>
+                <a href="http://www.tripadvisor.com/Attraction_Review-g186338-d1526046-Reviews-London_Rib_Voyages-London_England.html" target="_blank" class="attraction-trip"><img src="content/img/attraction-trip.png" /></a>
+            </div>
+            <img class="view-review" src="content/img/home/view-reviews.png" alt="view reviews" />
+        </div>
+    </div>
+
+</section>
+
+{literal}
+    <script>
+        $(function() {
+            $('#slides').superslides({
+                hashchange: true,
+                inherit_height_from: '#trips',
+            });
+        });
+    </script>
+    <script>
+        function addSourceToVideo(element, src, type) {
+            var source = document.createElement('source');
+            source.src = src;
+            source.type = type;
+            element.appendChild(source);
+        }
+
+        var video;
+        var index = 0;
+        $(document).ready(function(){
+            video = document.getElementsByTagName('video')[0];
+            addSourceToVideo( video, "content/video/video.ogv", "video/ogv");
+            addSourceToVideo( video, "content/video/video.mp4", "video/mp4");
+            video.addEventListener("progress", progressHandler,false);
+            bindKeys();
+            // if set, overrides <video width>
+            videoWidth: win.width;
+            // if set, overrides <video height>
+            videoHeight: win.height;
+        });
+
+        progressHandler = function(e) {
+            if( video.duration ) {
+                var percent = (video.buffered.end(0)/video.duration) * 100;
+                console.log( percent );
+                if( percent >= 40 ) {
+                    video.play();
+                }
+            }
+        }
+    </script>
+{/literal}

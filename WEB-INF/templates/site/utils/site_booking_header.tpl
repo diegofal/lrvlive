@@ -2,7 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>{if $content.page_title != ""} {$content.page_title} {else} London RIB Voyages{/if}</title>
+
+    <!-- New booking design -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet/less" type="text/css" href="css/main.less" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="js/vendor/less.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- End New booking design -->
+
+    <title>{if $content.page_title != ""} {$content.page_title} {else} London RIB Voyages{/if}</title>
 {$MycontentpageMeta}
 {if $subpage == '_tour_details'}
 {$tour.page_meta}
@@ -17,27 +29,27 @@
  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAk_PeATHc7Zk4v935p5iMORQyasHvbimZ52QT_h2fTtA71RTODRQ4xDTS8sZxMt0yUhjUPYWjkGCeew" type="text/javascript"></script>
 <script type="text/javascript">
     //<![CDATA[
-		var WINDOW_HTML = '<div style="width: 210px; padding-right: 10px">London Rib Voyages 39 York Rd Lambeth, Greater London SE1 7, UK</div>';		
+		var WINDOW_HTML = '<div style="width: 210px; padding-right: 10px">London Rib Voyages 39 York Rd Lambeth, Greater London SE1 7, UK</div>';
 
     function load() {
       if (GBrowserIsCompatible()) {
         var map = new GMap2(document.getElementById("mapsearch"));
-        	map.addControl(new GSmallMapControl());
+            	map.addControl(new GSmallMapControl());
 			map.addControl(new GMapTypeControl());
         map.setMapType(G_HYBRID_MAP);
         map.setCenter(new GLatLng(51.503293230761045, -0.11954069137573242), 16);
-        
+
         var marker = new GMarker(new GLatLng(51.503293230761045, -0.11954069137573242));
 				map.addOverlay(marker);
 				GEvent.addListener(marker, "click", function() {
 				marker.openInfoWindowHtml(WINDOW_HTML);
 				  });
-				//marker.openInfoWindowHtml(WINDOW_HTML);		
+				//marker.openInfoWindowHtml(WINDOW_HTML);
       }
     }
     //]]>
     </script>
-{/literal} 
+{/literal}
 {/if}
 {literal}
 <script type="text/javascript" src="WEB-INF/includes/js/main.js"></script>
@@ -78,7 +90,7 @@
             itemId = itemId.substring(4,itemId.length-2);
 
             parentE = document.getElementById('pd'+itemId);
-			
+
             //parentE = item.parentNode.parentNode;
 
             closeButton = document.createElement('a');
@@ -97,7 +109,7 @@
 			itemName = document.getElementById("pn"+itemId);
             //itemText = parentE.lastChild;
 			itemText   = document.getElementById("Text"+itemId)
-			
+
 			//alert(itemText);
 			//return false;
 
@@ -113,7 +125,7 @@
             {/literal}
             nTd2.innerHTML = '<img src="http://{$smarty.server.SERVER_NAME}/img/route/'+itemId+'.jpg" width="119" height="138" alt="'+itemName.innerHTML+'" title="'+itemName.innerHTML+'" />';
             {literal}
-			
+
             nTr.appendChild(nTd1);
             nTr.appendChild(nTd2);
 
@@ -127,7 +139,7 @@
 
             dettop = document.createElement('div');
             dettop.setAttribute('class','dettop');
-			
+
 
             if (document.getElementById) { // DOM3 = IE5, NS6
                 element = document.getElementById('anchor');
@@ -246,7 +258,7 @@
         <script language="javascript" src="WEB-INF/includes/js/step3.js" type="text/javascript"></script>
 {/if}
 {if $subpage=="_step4"}
-		<script language="javascript" src="WEB-INF/includes/js/validation.js" type="text/javascript"></script>  
+		<script language="javascript" src="WEB-INF/includes/js/validation.js" type="text/javascript"></script>
         <script language="javascript" src="WEB-INF/includes/js/step4.js" type="text/javascript"></script>
 	{literal}
     <script language="javascript" type="text/javascript">
@@ -259,10 +271,10 @@
     }
     -->
     </script>
-    {/literal}  
+    {/literal}
 {/if}
 {if $subpage=="_step5"}
-        <script language="javascript" src="WEB-INF/includes/js/validation.js" type="text/javascript"></script>  
+        <script language="javascript" src="WEB-INF/includes/js/validation.js" type="text/javascript"></script>
         <script language="javascript" src="WEB-INF/includes/js/step5.js" type="text/javascript"></script>
     {literal}
     <script language="javascript" type="text/javascript">
@@ -275,14 +287,14 @@
     }
     -->
     </script>
-    {/literal}  
+    {/literal}
 {/if}
 {if $subpage=="_step6"}
     <script language="javascript" src="WEB-INF/includes/js/step6.js" type="text/javascript"></script>
 {/if}
 {if $subpage=="_step8"}
 	<!-- STEP 8 - Google Analytics -->
-	{if $results.status=="OK"}{literal}		 
+	{if $results.status=="OK"}{literal}
 		<script language="javascript" type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-23852518-1']);
@@ -295,7 +307,7 @@
 			'{$ga_trans.shipping}',              // shipping
 			'{$ga_trans.city}',       // city
 			'{$ga_trans.state}',     // state or province
-			'{$ga_trans.country}'             // country{literal}			 
+			'{$ga_trans.country}'             // country{literal}
 		  ]);
 
 		   // add item might be called for every item in the shopping cart
@@ -311,7 +323,7 @@
 				"{$ticket.unit_price}",          // unit price - required
 				"{$ticket.quantity}"               // quantity - required
 			  ]);
-		  {/foreach}{literal}		   
+		  {/foreach}{literal}
 		  _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
 
 		  (function() {
@@ -324,7 +336,7 @@
 	{/if}
 {/if}
 {if $subpage=="_voucher_step1"}
-        <script language="javascript" src="WEB-INF/includes/js/validation.js" type="text/javascript"></script>  
+        <script language="javascript" src="WEB-INF/includes/js/validation.js" type="text/javascript"></script>
         <script language="javascript" src="WEB-INF/includes/js/voucher_step1.js" type="text/javascript"></script>
     {literal}
     <script language="javascript" type="text/javascript">
@@ -343,7 +355,7 @@
     }
     -->
     </script>
-    {/literal}  
+    {/literal}
 {/if}
 {if $subpage=="_voucher_step2"}
         <script language="javascript" src="WEB-INF/includes/js/voucher_step2.js" type="text/javascript"></script>
@@ -353,7 +365,7 @@
     <script language="javascript" src="WEB-INF/includes/js/exp_col.js" type="text/javascript"></script>
 {/if}
 
-	
+
 </head>
 {strip}
 <body {if $subpage=="_step4" || $subpage=="_voucher_step1"}onload="init_address();"{elseif  $page=="location"}onload="load();"{/if}>
@@ -361,7 +373,7 @@
 
 
 <!-- Digital Savannah Facebook re-messaging tags -->
-{literal} 
+{literal}
     <div id="ttdUniversalPixelTag4a9161caa8c54b588047dde860cf3d9f" style="display:none">
         <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
         <script type="text/javascript">
@@ -373,15 +385,27 @@
             })(this);
         </script>
     </div>
-	{/literal} 
+	{/literal}
 <!-- Digital Savannah Facebook re-messaging tags -->
 
 
-<div class="main_body">
-	<div class="wrap_about_body">
-									<div class="secondmain_about_main_body">
-									<div class="secondmain_about_body float_left">
-										<div class="lap_2"></div>
-										<div>
-										<div class="secondmain_wrap">
-											
+<!-- New booking design -->
+{*<div class="main_body">*}
+	{*<div class="wrap_about_body">*}
+									{*<div class="secondmain_about_main_body">*}
+									{*<div class="secondmain_about_body float_left">*}
+										{*<div class="lap_2"></div>*}
+										{*<div>*}
+										{*<div class="secondmain_wrap">*}
+
+
+<section id="buy">
+    <div class="breadcrum-step">
+        <a href="#" class="selected">1. Trip type and seats</a>
+        <a href="#">2. Date and time</a>
+        <a href="#">3. Personal info</a>
+        <a href="#">4. Confirmation</a>
+    </div>
+
+
+<!-- End new booking design -->

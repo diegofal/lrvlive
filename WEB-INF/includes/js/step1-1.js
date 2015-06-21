@@ -41,38 +41,7 @@ function isnumeric(text, text_alert) {
 	return valid;
 }
 
-function calculate_total(){
-	var total = 0;
 
-	for (i = 0; i < document.step1.elements.length; i++) {
-		if(document.step1.elements[i].name != "charter" && document.step1.elements[i].type=="checkbox" && document.step1.elements[i].checked==true){		
-			document.step1.elements[i-2].value= "1";
-		} 
-		if(document.step1.elements[i].name != "charter" && document.step1.elements[i].type=="checkbox" && document.step1.elements[i].checked==false){		
-			document.step1.elements[i-2].value= "0";
-		}
-	}
-
-
-	for (i = 0; i < document.step1.elements.length; i++) {
-		if(document.step1.elements[i].name == "quantity[]" && document.step1.elements[i].value) 
-			if(isnumeric(document.step1.elements[i].value, "An error has occured! This field only supports numeric characters.")){
-				//alert(document.step1.elements[i].value);
-				total += parseInt(document.step1.elements[i].value)*parseFloat(document.step1.elements[i+1].value);
-			} else {
-				document.step1.elements[i].value = "";
-			}		
-		//alert(total);
-	}
-	// Added by Carlos
-	if (total != 0){
-		total += parseFloat(document.step1.elements["price_fee"].value);
-	}
-	//document.step1.total.value = Currency(total);
-	document.getElementById("total_val").value = total;
-	document.getElementById("tot_price").innerHTML = Currency(total);
-
-}
 
 function set_fields(status, price){
 	for (i = 0; i < document.step1.elements.length; i++) {

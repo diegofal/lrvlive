@@ -16,10 +16,15 @@ RewriteRule ^\/?vouchers\/?(.*)\.pdf$ /vouchers/pdf.php?code=$1
 RewriteCond %{REQUEST_URI}  ^\/?booking\/?(.*)\.html$
 RewriteRule ^\/?booking\/?(.*)\.html$ /booking/print.php?code=$1
 
+#### Resellers API ####
 RewriteRule api/resellers/getavailableoffers service.php?action=offers
 RewriteRule api/resellers/getofferavailability service.php?action=availability
 RewriteRule api/resellers/makereservation service.php?action=reservation
 RewriteRule api/resellers/confirmbooking service.php?action=confirmation
+
+#### Bookings API ####
+RewriteRule api/bookings/gettourtickets bookingController.php?action=tourTickets [QSA]
+
 
 #RewriteRule ^(.*)$ http://162.13.140.19/$1 [R=301,L]
 
