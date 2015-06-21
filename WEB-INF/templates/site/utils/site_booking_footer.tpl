@@ -144,9 +144,12 @@
 
 
         for (i = 0; i < document.step1.elements.length; i++) {
+            var ticketPrice = $(document.step1.elements[i]).parent().find("[ticketPrice]").val();
+
             if(document.step1.elements[i].name == "quantity[]" && document.step1.elements[i].value)
                 if(isnumeric(document.step1.elements[i].value, "An error has occured! This field only supports numeric characters.")){
                     //alert(document.step1.elements[i].value);
+
                     total += parseInt(document.step1.elements[i].value)*parseFloat(document.step1.elements[i+1].value);
                 } else {
                     document.step1.elements[i].value = "";

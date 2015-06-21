@@ -21,8 +21,8 @@
 
         {section name=i loop=$tickets}
         <div>
-            <input name="ticket[]" type="hidden" value="{$tickets[i].ticket_id}" />
-            <input name="price[]" type="hidden" value="{$tickets[i].ticket_price}" />
+            <input name="ticket[]" ticketId type="hidden" value="{$tickets[i].ticket_id}" />
+            <input name="price[]" ticketPrice type="hidden" value="{$tickets[i].ticket_price}" />
 
             <label for="ticket_type_{$tickets[i].ticket_id}">{$tickets[i].ticket_type}:</label>
             <select id="ticket_type_{$tickets[i].ticket_id}" name="quantity[]" onchange="calculate_total()" class="cs-select ticket cs-skin-elastic">

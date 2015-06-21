@@ -1,4 +1,4 @@
-    <?
+<?
 // if($_SERVER['REMOTE_ADDR'] == '37.157.49.220') { echo 'OK'; exit; }
 
 // includere smarty :
@@ -46,6 +46,6 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
-$smarty->assign("page","crew");
+$smarty->assign("page","captainkiddcanarywharf");
 $smarty->display('site_pages.tpl');
 ?>
