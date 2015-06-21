@@ -1,0 +1,130 @@
+
+Tue, 12 Aug 2014 08:51:51 +0200
+Some emails fail.
+The following 1 email feedback have failed.
+
+-----------------------
+Id: 
+Recipient email: fcisco@gmail.com
+Error message: Failed to connect to localhost:25 [SMTP: Failed to connect socket: No connection could be made because the target machine actively refused it.
+ (code: -1, response: )]
+-----------------------
+
+
+Tue, 12 Aug 2014 08:58:21 +0200
+Some emails fail.
+The following 1 email feedback have failed.
+
+-----------------------
+Id: 
+Recipient email: fcisco@gmail.com
+Error message: Failed to connect to localhost:25 [SMTP: Failed to connect socket: No connection could be made because the target machine actively refused it.
+ (code: -1, response: )]
+-----------------------
+
+
+Tue, 12 Aug 2014 09:02:17 +0200
+Some emails fail.
+The following 1 email feedback have failed.
+
+-----------------------
+Id: 3
+Recipient email: fcisco@gmail.com
+Error message: 
+-----------------------
+
+
+Tue, 12 Aug 2014 09:12:49 +0200
+Some emails fail.
+The following 10 email feedback have failed.
+
+-----------------------
+Id: 4
+Recipient email: kevinrcullen@gmail.com
+Error message: 
+-----------------------
+Id: 5
+Recipient email: leannessimpson@hotmail.co.uk
+Error message: 
+-----------------------
+Id: 6
+Recipient email: muslem26@icloud.com
+Error message: 
+-----------------------
+Id: 7
+Recipient email: jackreeve@aol.com
+Error message: 
+-----------------------
+Id: 8
+Recipient email: andrew.crofts@outlook.com
+Error message: 
+-----------------------
+Id: 9
+Recipient email: sahin.yonten@gmail.com
+Error message: 
+-----------------------
+Id: 10
+Recipient email: matt.noble@devonshires.co.uk
+Error message: 
+-----------------------
+Id: 11
+Recipient email: KPerugini@live.com
+Error message: 
+-----------------------
+Id: 12
+Recipient email: jodie.cameron@myport.ac.uk
+Error message: 
+-----------------------
+Id: 13
+Recipient email: lauriedubel3@gmail.com
+Error message: 
+-----------------------
+
+
+Tue, 12 Aug 2014 09:16:13 +0200
+Some emails fail.
+The following 10 email feedback have failed.
+
+-----------------------
+Id: 14
+Recipient email: wclark7.306@lgflmail.org
+Error message: Failed to connect to localhost:25 [SMTP: Failed to connect socket: No connection could be made because the target machine actively refused it.
+ (code: -1, response: )]
+-----------------------
+Id: 15
+Recipient email: paul.morton@btinternet.com
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 16
+Recipient email: dpeake6@gmail.com
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 17
+Recipient email: miguel@desousapires.co.uk
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 18
+Recipient email: michaelbrauers@ozonline.de
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 19
+Recipient email: lisamariecross@hotmail.co.uk
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 20
+Recipient email: emmaward1994@yahoo.co.uk
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 21
+Recipient email: sean@headshotsuk.co.uk
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 22
+Recipient email: jmc1982uk@yahoo.co.uk
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+Id: 23
+Recipient email: loveridgesamantha@gmail.com
+Error message: Failed to set sender: @localhost [SMTP: Failed to write to socket: not connected (code: -1, response: )]
+-----------------------
+

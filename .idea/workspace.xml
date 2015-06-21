@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6ecd2ed-dd55-4447-9608-e29d658eeaa7" name="Default" comment="Api - confirmBooking">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/TOWERBRIDGE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/amy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/amy_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/attraction-timeout.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/attraction-trip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/bbc-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/bg-attraction.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/bg-captainkid.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/bg-home.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/bg-map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/safety/bg-safety.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/bg-safety.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/bigben.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/billingsgate.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/social/blog-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/book-now-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/book-now.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/buy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/canary.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/card-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/card.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/cleopatra.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/services/corporate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/breakthebarrier/cover-breakthebarrier.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/captainkidd/cover-captainkidd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/springsprung/cover-springsprung.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/thamesbarrier/cover-thamesbarrier.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/ultimatelondon/cover-ultimatelondon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/crew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/cutty.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dearjoe_6_trial-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dearjoe_6_trial-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dearjoe_6_trial-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dearjoe_6_trial-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/dropdown-arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/evening.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/evening.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/exposure.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/express.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/express.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/social/facebook-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/fast-stripes-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/fast-stripes-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/fastest.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/fastest2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/services/filming.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/fionabruce.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/gherkin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/gla.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/golden.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/green-univ.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/green-village.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/guardian.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/guardian.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/header-why-us.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/hms-belfast.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/hms.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/breakthebarrier/img-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/captainkidd/img-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/springsprung/img-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/thamesbarrier/img-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/ultimatelondon/img-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/img-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/breakthebarrier/img-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/captainkidd/img-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/springsprung/img-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/thamesbarrier/img-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/ultimatelondon/img-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/img-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/breakthebarrier/img-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/captainkidd/img-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/springsprung/img-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/thamesbarrier/img-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/ultimatelondon/img-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/img-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/itv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/safety/jackets-rib.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/knidle.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/londonbridge.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/londoneye.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/long-stripes.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/m16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/mail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/map-home.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/mark1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/mark2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/mark3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/mike.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/mike_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/milleniumbridge.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/detail/ultimatelondon/mobile-cover-ultimatelondon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/monument.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/o2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/oxo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/parliament.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/services/party.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/points.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/poster.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/poster.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/quote.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/quote2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/safety.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/scofield.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/select-trip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/selected-red.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/selected-red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/selected-white.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/selected-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/services.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/services/services2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/shakespeare.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/sliderarrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/somerset.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/splash-2-left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/splash-left-big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/splash-left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/splash-right-big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/img/splash-right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/stacey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/stacey_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/steve.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/steve_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/stpauls.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/sundaytimes.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/tareview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/tate.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/thames.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/theshard.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/theview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/theview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/thumb-breakbarrier.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/thumb-captainkidd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/thumb-spring.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/thumb-thamesbarrier.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/thumb-ultimatelondon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/timeout.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/timeout.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/brand/times.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/times.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/tom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/crew/tom_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/toweroflondon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/social/trip-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/social/twitter-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/why-us/us.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/video/video.mp4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/video/video.ogv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/video/video.webm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/home/view-reviews.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/map/wappingpolice.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/img/social/youtube-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/booking.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookingController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookingModal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/includes/classes/bookingapi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/classie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/common.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crew.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dearjoe_6_trial-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/faq-jquery.mobile.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/faq-main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/faq.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/grid.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/jquery-1.11.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/jquery.animate-enhanced.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/jquery.datetimepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/jquery.easing.1.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/jquery.superslides.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/less.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/main.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/maplace-0.1.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/mediaqueries.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/modal.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/modalEffects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/modernizr-2.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking-modal.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1_bak.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step2_bak.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_crew.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_index_bak.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_map.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_services.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_why-us.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/plugins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/print.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/reset.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/select.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/plugins/selectFx.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_footer.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/site_footer_bak.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_header_bak.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/timepicker.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/type.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/utilities.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/why-us.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/booking.php" afterPath="$PROJECT_DIR$/booking.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step2.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step2.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_index.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_safety.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_safety.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/safety.php" afterPath="$PROJECT_DIR$/safety.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_header.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/pages/site_footer.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/pages/site_footer.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_footer.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_footer.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_header.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/templates/site/site_pages.tpl" afterPath="$PROJECT_DIR$/WEB-INF/templates/site/site_pages.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/includes/js/step1-1.js" afterPath="$PROJECT_DIR$/WEB-INF/includes/js/step1-1.js" />
+    </list>
+    <ignored path="lrvlive.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="lrvlive" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="booking.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/booking.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-39.0" vertical-offset="32272" max-vertical-offset="35598">
+              <caret line="1958" column="17" selection-start-line="1958" selection-start-column="17" selection-end-line="1958" selection-end-column="17" />
+              <folding>
+                <marker date="1434896976502" expanded="true" signature="3072:3209" placeholder="SELECT count..." />
+                <marker date="1434896976502" expanded="true" signature="5370:5439" placeholder="SELECT vouch..." />
+                <marker date="1434896976502" expanded="true" signature="5607:5685" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="5793:5861" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="8853:8922" placeholder="SELECT vouch..." />
+                <marker date="1434896976502" expanded="true" signature="9090:9168" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="9276:9344" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="11366:11435" placeholder="SELECT vouch..." />
+                <marker date="1434896976502" expanded="true" signature="11566:11644" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="11752:11820" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="12287:12426" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="15471:15623" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="15943:16095" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="16926:16995" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="17136:17214" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="17793:17887" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="18187:18283" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="18395:18464" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="18763:18822" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="19063:19188" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="19305:19430" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="21237:21306" placeholder="SELECT packa..." />
+                <marker date="1434896976502" expanded="true" signature="21471:21539" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="21776:21845" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="23634:23703" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="23994:24120" placeholder="SELECT ticke..." />
+                <marker date="1434896976502" expanded="true" signature="24345:24466" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="24711:24799" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="28213:28282" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="28511:28637" placeholder="SELECT ticke..." />
+                <marker date="1434896976502" expanded="true" signature="28874:28995" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="29256:29334" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="31832:31892" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="32039:32108" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="32238:32351" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="32462:32538" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="32846:32971" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="33088:33213" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="37005:37230" placeholder="SELECT t.tou..tours..." />
+                <marker date="1434896976502" expanded="true" signature="43995:44055" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="44171:44240" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="44336:44395" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="47934:47994" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="48110:48179" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="48275:48334" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="49805:50087" placeholder="SELECT depar..." />
+                <marker date="1434896976502" expanded="true" signature="50345:50439" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="52714:52774" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="52918:52987" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="53083:53142" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="54724:54784" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="54904:54973" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="55075:55151" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="55263:55322" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="56833:57115" placeholder="SELECT depar..." />
+                <marker date="1434896976502" expanded="true" signature="57380:57474" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="59858:59918" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="60034:60103" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="60199:60258" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="62552:62820" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="63651:63994" placeholder="SELECT depar..." />
+                <marker date="1434896976502" expanded="true" signature="64306:64393" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="65352:65762" placeholder="SELECT depar..." />
+                <marker date="1434896976502" expanded="true" signature="66041:66133" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="67866:67926" placeholder="SELECT tour_..." />
+                <marker date="1434896976502" expanded="true" signature="68042:68111" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="68207:68266" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="69671:69784" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="72338:72464" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="72764:72890" placeholder="SELECT * FRO..." />
+                <marker date="1434896976502" expanded="true" signature="73201:73258" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_booking_step1.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="306" max-vertical-offset="2057">
+              <caret line="27" column="132" selection-start-line="27" selection-start-column="132" selection-end-line="27" selection-end-column="132" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="step1-1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/includes/js/step1-1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1581">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selectFx.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/selectFx.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="5627">
+              <caret line="58" column="50" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="50" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_booking_step1_bak.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1_bak.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.3076925" vertical-offset="1485" max-vertical-offset="2278">
+              <caret line="97" column="107" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site_header.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_header.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.5" vertical-offset="892" max-vertical-offset="1326">
+              <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site_booking_footer.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_footer.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16790123" vertical-offset="0" max-vertical-offset="2992">
+              <caret line="4" column="85" selection-start-line="4" selection-start-column="85" selection-end-line="4" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site_footer.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_footer.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.230769" vertical-offset="2063" max-vertical-offset="3621">
+              <caret line="137" column="33" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modalEffects.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/modalEffects.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="1190">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site_booking_header.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_header.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.3076925" vertical-offset="1655" max-vertical-offset="7072">
+              <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
+              <folding>
+                <marker date="1434846490957" expanded="true" signature="1558:1591" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WEB-INF/includes/functions/functions_order.php" />
+        <option value="$PROJECT_DIR$/service.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/includes/classes/Api.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_individuals_couples_friends.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_index_bak.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/site_footer.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_index.tpl" />
+        <option value="$PROJECT_DIR$/why-us.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_why-us.tpl" />
+        <option value="$PROJECT_DIR$/crew.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_crew.tpl" />
+        <option value="$PROJECT_DIR$/services.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_services.tpl" />
+        <option value="$PROJECT_DIR$/map.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_map.tpl" />
+        <option value="$PROJECT_DIR$/safety.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_safety.tpl" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/bookingController.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/includes/classes/class.x3.database.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/includes/config.php" />
+        <option value="$PROJECT_DIR$/js/booking.js" />
+        <option value="$PROJECT_DIR$/WEB-INF/includes/classes/bookingapi.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking-modal.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step2.tpl" />
+        <option value="$PROJECT_DIR$/bookingModal.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/site_pages.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_header.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_footer.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_header.tpl" />
+        <option value="$PROJECT_DIR$/js/plugins/modalEffects.js" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1_bak.tpl" />
+        <option value="$PROJECT_DIR$/booking.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/includes/js/step1-1.js" />
+        <option value="$PROJECT_DIR$/js/plugins/selectFx.js" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1.tpl" />
+        <option value="$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_footer.tpl" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="67" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="786" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lrvlive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../redesign" />
+    <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="site_page&#9;FILE&#9;file://C:/xampp/htdocs/lrvlive/WEB-INF/templates/site/site_pages.tpl&#10;footer&#9;FILE&#9;file://C:/xampp/htdocs/lrvlive/WEB-INF/templates/site/utils/site_footer.tpl" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\lrvlive\WEB-INF\templates\site\utils" />
+      <recent name="C:\xampp\htdocs\lrvlive\WEB-INF\templates\site\pages" />
+      <recent name="C:\xampp\htdocs\lrvlive" />
+      <recent name="C:\xampp\htdocs\lrvlive\WEB-INF\includes\classes" />
+      <recent name="C:\xampp\htdocs\lrvlive\js" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.Unnamed">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/../../php/php.exe">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.Unnamed" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6ecd2ed-dd55-4447-9608-e29d658eeaa7" name="Default" comment="" />
+      <created>1434160196200</created>
+      <option name="number" value="Default" />
+      <updated>1434160196200</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Api methods definition">
+      <created>1434190656910</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1434190656910</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Api methods definition">
+      <created>1434192604624</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1434192604624</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Api metodos iniciales funcionando">
+      <created>1434192885662</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1434192885662</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Api and DB backup&#10;">
+      <created>1434194032809</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1434194032809</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Api security checks">
+      <created>1434194867561</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1434194867561</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Api - getAvailableOffers">
+      <created>1434196775300</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1434196775300</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Api - getOffersAvailability">
+      <created>1434198662943</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1434198662943</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Api - partial make reservation">
+      <created>1434202243594</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1434202243594</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Api - makeReservation">
+      <created>1434204487634</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1434204487634</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Api - makeReservation - included price fee">
+      <created>1434206241599</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1434206241599</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Api - confirmBooking">
+      <created>1434207942606</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1434207942606</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="20" width="1400" height="786" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25997046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24638729" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Api methods definition" />
+    <MESSAGE value="Api metodos iniciales funcionando" />
+    <MESSAGE value="Api and DB backup&#10;" />
+    <MESSAGE value="Api security checks" />
+    <MESSAGE value="Api - getAvailableOffers" />
+    <MESSAGE value="Api - getOffersAvailability" />
+    <MESSAGE value="Api - partial make reservation" />
+    <MESSAGE value="Api - makeReservation" />
+    <MESSAGE value="Api - makeReservation - included price fee" />
+    <MESSAGE value="Api - confirmBooking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api - confirmBooking" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/plugins/classie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_individuals_couples_friends.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3297414" vertical-offset="0" max-vertical-offset="464">
+          <caret line="9" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_header_bak.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49002218" vertical-offset="102" max-vertical-offset="2193">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/site_footer_bak.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6407982" vertical-offset="255" max-vertical-offset="748">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/site_header_details.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45232815" vertical-offset="0" max-vertical-offset="8534">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/jquery-1.11.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10691824" vertical-offset="0" max-vertical-offset="477">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/site_header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.846153" vertical-offset="45" max-vertical-offset="2635">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsletter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in_the_news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="490">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.153846" vertical-offset="518" max-vertical-offset="969">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/site_footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="748">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_footer_detail.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="867">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_why-us.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.423077" vertical-offset="1929" max-vertical-offset="2380">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crew.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.461538" vertical-offset="518" max-vertical-offset="969">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_crew.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5" vertical-offset="4020" max-vertical-offset="5542">
+          <caret line="251" column="22" selection-start-line="251" selection-start-column="22" selection-end-line="251" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.461538" vertical-offset="518" max-vertical-offset="969">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_services.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.923077" vertical-offset="637" max-vertical-offset="1309">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.461538" vertical-offset="518" max-vertical-offset="969">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_map.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-382.5" vertical-offset="0" max-vertical-offset="10064">
+          <caret line="585" column="13" selection-start-line="585" selection-start-column="13" selection-end-line="585" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safety.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="510" max-vertical-offset="969">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_safety.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-39.576923" vertical-offset="1334" max-vertical-offset="2482">
+          <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_index_bak.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1938">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="473">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="153" max-vertical-offset="646">
+          <caret line="17" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-74.23077" vertical-offset="2320" max-vertical-offset="4488">
+          <caret line="250" column="13" selection-start-line="250" selection-start-column="13" selection-end-line="250" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="884">
+          <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="357">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cms/edit_ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="5304" max-vertical-offset="6987">
+          <caret line="321" column="50" selection-start-line="321" selection-start-column="50" selection-end-line="321" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cms/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8461537" vertical-offset="9" max-vertical-offset="697">
+          <caret line="11" column="93" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/includes/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="6834">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/includes/classes/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="1173" max-vertical-offset="4692">
+          <caret line="78" column="25" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/includes/classes/class.x3.database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3076923" vertical-offset="6068" max-vertical-offset="18377">
+          <caret line="362" column="9" selection-start-line="362" selection-start-column="9" selection-end-line="362" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/includes/classes/bookingapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8076925" vertical-offset="240" max-vertical-offset="850">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/booking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/why-us.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="969">
+          <caret line="44" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.423077" vertical-offset="978" max-vertical-offset="4471">
+          <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking-modal.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="3570">
+          <caret line="6" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="204" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step2.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="663">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step2_bak.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2244">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookingModal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3782" max-vertical-offset="4216">
+          <caret line="242" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/site_pages.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="51" max-vertical-offset="493">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3076925" vertical-offset="1655" max-vertical-offset="7072">
+          <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
+          <folding>
+            <marker date="1434846490957" expanded="true" signature="1558:1591" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.230769" vertical-offset="2063" max-vertical-offset="3621">
+          <caret line="137" column="33" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5" vertical-offset="892" max-vertical-offset="1326">
+          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/modalEffects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="1190">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-39.0" vertical-offset="32272" max-vertical-offset="35598">
+          <caret line="1958" column="17" selection-start-line="1958" selection-start-column="17" selection-end-line="1958" selection-end-column="17" />
+          <folding>
+            <marker date="1434896976502" expanded="true" signature="3072:3209" placeholder="SELECT count..." />
+            <marker date="1434896976502" expanded="true" signature="5370:5439" placeholder="SELECT vouch..." />
+            <marker date="1434896976502" expanded="true" signature="5607:5685" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="5793:5861" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="8853:8922" placeholder="SELECT vouch..." />
+            <marker date="1434896976502" expanded="true" signature="9090:9168" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="9276:9344" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="11366:11435" placeholder="SELECT vouch..." />
+            <marker date="1434896976502" expanded="true" signature="11566:11644" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="11752:11820" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="12287:12426" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="15471:15623" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="15943:16095" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="16926:16995" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="17136:17214" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="17793:17887" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="18187:18283" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="18395:18464" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="18763:18822" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="19063:19188" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="19305:19430" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="21237:21306" placeholder="SELECT packa..." />
+            <marker date="1434896976502" expanded="true" signature="21471:21539" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="21776:21845" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="23634:23703" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="23994:24120" placeholder="SELECT ticke..." />
+            <marker date="1434896976502" expanded="true" signature="24345:24466" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="24711:24799" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="28213:28282" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="28511:28637" placeholder="SELECT ticke..." />
+            <marker date="1434896976502" expanded="true" signature="28874:28995" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="29256:29334" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="31832:31892" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="32039:32108" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="32238:32351" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="32462:32538" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="32846:32971" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="33088:33213" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="37005:37230" placeholder="SELECT t.tou..tours..." />
+            <marker date="1434896976502" expanded="true" signature="43995:44055" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="44171:44240" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="44336:44395" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="47934:47994" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="48110:48179" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="48275:48334" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="49805:50087" placeholder="SELECT depar..." />
+            <marker date="1434896976502" expanded="true" signature="50345:50439" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="52714:52774" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="52918:52987" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="53083:53142" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="54724:54784" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="54904:54973" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="55075:55151" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="55263:55322" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="56833:57115" placeholder="SELECT depar..." />
+            <marker date="1434896976502" expanded="true" signature="57380:57474" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="59858:59918" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="60034:60103" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="60199:60258" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="62552:62820" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="63651:63994" placeholder="SELECT depar..." />
+            <marker date="1434896976502" expanded="true" signature="64306:64393" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="65352:65762" placeholder="SELECT depar..." />
+            <marker date="1434896976502" expanded="true" signature="66041:66133" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="67866:67926" placeholder="SELECT tour_..." />
+            <marker date="1434896976502" expanded="true" signature="68042:68111" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="68207:68266" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="69671:69784" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="72338:72464" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="72764:72890" placeholder="SELECT * FRO..." />
+            <marker date="1434896976502" expanded="true" signature="73201:73258" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/includes/js/step1-1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1581">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/selectFx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="5627">
+          <caret line="58" column="50" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="50" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="306" max-vertical-offset="2057">
+          <caret line="27" column="132" selection-start-line="27" selection-start-column="132" selection-end-line="27" selection-end-column="132" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/pages/page_booking_step1_bak.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3076925" vertical-offset="1485" max-vertical-offset="2278">
+          <caret line="97" column="107" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/templates/site/utils/site_booking_footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16790123" vertical-offset="0" max-vertical-offset="2992">
+          <caret line="4" column="85" selection-start-line="4" selection-start-column="85" selection-end-line="4" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
