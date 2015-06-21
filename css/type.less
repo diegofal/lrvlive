@@ -1,0 +1,91 @@
+
+@font-face {
+    font-family: 'dearjoe';
+    src: url('../fonts/dearjoe_6_trial-webfont.eot');
+    src: url('../fonts/dearjoe_6_trial-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dearjoe_6_trial-webfont.woff2') format('woff2'),
+         url('../fonts/dearjoe_6_trial-webfont.woff') format('woff'),
+         url('../fonts/dearjoe_6_trial-webfont.ttf') format('truetype'),
+         url('../fonts/dearjoe_6_trial-webfont.svg#dearjoe_6_trialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html,
+body{
+	font-family: 'Roboto', sans-serif;
+	color:@black;
+}
+p{
+	color:@darkgrey;
+	line-height: 1.3em;
+}
+a{
+	color:@brand-primary-1;
+	text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 700;
+	color:@brand-primary-1;
+	line-height: 1.3em;
+}
+h1{ font-size: 2em;}
+
+h2{ font-size: 1.7em;}
+
+h3{ font-size: 1.4em;font-weight: 900;}
+
+h4{ font-size: 1.1em;}
+
+h5{ font-size: 1em;margin-bottom: 1em;}
+
+h6{ font-size: 0.8em;}
+
+ul{
+	margin-bottom: 2em;
+	li{
+		margin-bottom: 0.75em;
+	}
+}
+strong{
+	font-weight: 700;
+}
+
+blockquote{
+	font-weight: 500;
+	margin-bottom:2em;
+  	font-size: 0.8em;
+    width: 100%;
+    p{
+    	padding:15px;
+        position: relative;
+        background: @lightgrey;
+        color:@brand-secondary-2;
+  		font-size: 1.4em;
+  		font-style: italic;
+
+	    &::before{    	
+	    	content:'.';
+	    	width: 3px;
+		    top: 0;
+		    left: 0;
+		    position: absolute;
+	    	height: 100%;
+	    	.gradient;
+	    }
+    }
+	img{
+	  height: 40px;
+	  background: white;
+	  padding:7px 0 0 0;
+	  margin: 0 0 0 0;
+	  border-top: 3px solid darken(@lightgrey,10%);
+	}
+}
+        
+        
+    
+        
+p.lead{
+	font-size: 1.4em;
+}
