@@ -66,7 +66,7 @@ if(!empty($departures))
 		{
 			if($sum == 0 && $total_passenger > 0)
 			{
-				$returnString.='<div class="time_1">'.date("H:i",strtotime($departures[$Dindex]['departure_time'])).'&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="but_radio" onclick="javascript:select_departure(\''.$departures[$Dindex]['departure_id'].'\',\''.$order['order_total'].'\')" /></div>';
+				$returnStering.='<div class="time_1">'.date("H:i",strtotime($departures[$Dindex]['departure_time'])).'&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="but_radio" onclick="javascript:select_departure(\''.$departures[$Dindex]['departure_id'].'\',\''.$order['order_total'].'\')" /></div>';
 			}
 		}
 		else
