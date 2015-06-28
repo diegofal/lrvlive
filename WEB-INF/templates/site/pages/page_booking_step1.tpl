@@ -2,115 +2,78 @@
 <div class="step step-1">
     <header>
         <span>Step 1</span>
-        <h3>Choose your trip type and seats</h3>
-        <p>On the final step you will see a full payment detail before the confirmation.</p>
+        <h3>Boat Trip: {$tour.tour_name}</h3>
+        <p>Please select the number of adults and children joining you for your experience below.</p>
     </header>
     <div class="buy-content">
+        <div id="mainbooking">
+            <div>
+                <h5>Ticket type</h5>
+                <ol>
+                    {section name=i loop=$tickets}
+                    <li>{$tickets[i].ticket_type}:</li>
+                    {/section}
 
-        <div>
-            <label for="trip">Trip:</label>
-            <select id="trip" name="trip" class="cs-select cs-skin-elastic">
-                <option value="" disabled>Select your trip </option>
-                <option value="9" {if $tour_id==9} selected{/if}>The Ultimate London Adventure</option>
-                <option value="1" {if $tour_id==1} selected{/if}>Captain Kidd's Canary Wharf</option>
-                <option value="4" {if $tour_id==4} selected{/if}>Thames Barrier Explorers Voyage</option>
-                <option value="12" {if $tour_id==12} selected{/if}>Break The Barrier (Speed only)</option>
-                <option value="-1">Spring has Sprung</option>
-            </select>
+                </ol>
+            </div>
+            <div>
+                <h5>Quantity</h5>
+                {section name=i loop=$tickets}
+                    <input type="hidden" name="ticket[]" value="{$tickets[i].ticket_id}" />
+                    <input type="hidden" name="price[]" value="{$tickets[i].ticket_price}" />
+                    <div>
+                        <label for="select_{$tickets[i].ticket_id}"></label>
+                        <select id="select_{$tickets[i].ticket_id}" ticketPrice="{$tickets[i].ticket_price}" name="quantity[]" class="ticket cs-select cs-skin-elastic">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                {/section}
+
+
+
+
+            </div>
+            <div>
+                <h5>Price</h5>
+                <ol>
+                    {section name=i loop=$tickets}
+                        <li>£{$tickets[i].ticket_price}</li>
+                    {/section}
+                </ol>
+            </div>
+
+            <small>BOOKING FEE: £3.95</small>
+        </div>
+        <div id="thecharter">
+            <div>
+                <h5>Charters</h5>
+                <label for="charter"></label>
+                <p>Book the whole boat for a private and exclusive experience for up to twelve passengers.</p>
+            </div>
+            <div class="chartercheckbox"><input type="checkbox" id="charter" onclick="is_charter('{$tour.tour_charter_price}');"/>${$tour.tour_charter_price} (12 seats)</div>
         </div>
 
-        {section name=i loop=$tickets}
-        <div>
-            <input name="ticket[]" ticketId type="hidden" value="{$tickets[i].ticket_id}" />
-            <input name="price[]" ticketPrice type="hidden" value="{$tickets[i].ticket_price}" />
-
-            <label for="ticket_type_{$tickets[i].ticket_id}">{$tickets[i].ticket_type}:</label>
-            <select id="ticket_type_{$tickets[i].ticket_id}" name="quantity[]" onchange="calculate_total()" class="cs-select ticket cs-skin-elastic">
-                <option value="0" disabled selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-        </div>
-        {/section}
-        {*<div>*}
-            {*<label for="adult">Adult:</label>*}
-            {*<select id="adult" name="adult" class="cs-select cs-skin-elastic">*}
-                {*<option value="0" disabled selected>0</option>*}
-                {*<option value="1">1</option>*}
-                {*<option value="2">2</option>*}
-                {*<option value="3">3</option>*}
-                {*<option value="4">4</option>*}
-                {*<option value="5">5</option>*}
-                {*<option value="6">6</option>*}
-                {*<option value="7">7</option>*}
-                {*<option value="8">8</option>*}
-                {*<option value="9">9</option>*}
-                {*<option value="10">10</option>*}
-            {*</select>*}
-        {*</div>*}
-        {*<div>*}
-            {*<label for="child">Child (10 - 14):</label>*}
-            {*<select id="child" name="child" class="cs-select cs-skin-elastic">*}
-                {*<option value="0" disabled selected>0</option>*}
-                {*<option value="1">1</option>*}
-                {*<option value="2">2</option>*}
-                {*<option value="3">3</option>*}
-                {*<option value="4">4</option>*}
-                {*<option value="5">5</option>*}
-                {*<option value="6">6</option>*}
-                {*<option value="7">7</option>*}
-                {*<option value="8">8</option>*}
-                {*<option value="9">9</option>*}
-                {*<option value="10">10</option>*}
-            {*</select>*}
-        {*</div>*}
-        {*<div>*}
-            {*<label for="couple">Couple:</label>*}
-            {*<select id="couple" name="couple" class="cs-select cs-skin-elastic">*}
-                {*<option value="0" disabled selected>0</option>*}
-                {*<option value="1">1</option>*}
-                {*<option value="2">2</option>*}
-                {*<option value="3">3</option>*}
-                {*<option value="4">4</option>*}
-                {*<option value="5">5</option>*}
-                {*<option value="6">6</option>*}
-                {*<option value="7">7</option>*}
-                {*<option value="8">8</option>*}
-                {*<option value="9">9</option>*}
-                {*<option value="10">10</option>*}
-            {*</select>*}
-        {*</div>*}
-        {*<div>*}
-            {*<label for="family">Family (2 + 2):</label>*}
-            {*<select id="family" name="family" class="cs-select cs-skin-elastic">*}
-                {*<option value="0" disabled selected>0</option>*}
-                {*<option value="1">1</option>*}
-                {*<option value="2">2</option>*}
-                {*<option value="3">3</option>*}
-                {*<option value="4">4</option>*}
-                {*<option value="5">5</option>*}
-                {*<option value="6">6</option>*}
-                {*<option value="7">7</option>*}
-                {*<option value="8">8</option>*}
-                {*<option value="9">9</option>*}
-                {*<option value="10">10</option>*}
-            {*</select>*}
-        {*</div>*}
-
-        <div>
-            <label for="charter">Charter ?</label>
-            <input type="checkbox" name="charter" id="charter"/>
-        </div>
     </div>
 
-
 </div>
-</form>
+
+    {*{literal}*}
+        {*<script type="text/javascript">*}
+            {*$(document).ready(function()*}
+            {*{*}
+                {*$("#charter").click(function(){*}
+                    {*calculate_total();*}
+                {*})*}
+            {*})*}
+        {*</script>*}
+    {*{/literal}*}

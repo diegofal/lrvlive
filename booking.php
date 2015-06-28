@@ -2071,6 +2071,7 @@ foreach ($tours as $index=>$tour) {
 		$smarty->assign("special_tickets",$special_tickets);
 		$smarty->assign("no_tickets",@count($tickets));
 		$smarty->assign("subpage","_step1");
+        $smarty->assign("price_fee", PRICE_FEE);
 
 		
 		// asignare variabile smarty si generare fisier smarty :
