@@ -1,0 +1,51 @@
+
+
+
+        <!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+	<style>
+	  #container {
+    	position: relative;
+  }
+  
+  video, canvas {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid red;
+  }
+  video {
+    height: 100%;
+    position: absolute;
+  }
+  body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+	</style>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<div id="container">
+	  <canvas width="960" height="220"></canvas>
+	  <video poster="content/img/poster.jpg" width="960" height="220" id="intro-video" loop controls >
+        <source src="content/video/video.mp4" type="video/mp4" />
+          <source src="content/video/video.webm" type="video/webm"/>
+        </video>
+    </div>
+</body>
+</html>

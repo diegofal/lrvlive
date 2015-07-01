@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: 'dearjoe';
+    src: url('../fonts/dearjoe_6_trial-webfont.eot');
+    src: url('../fonts/dearjoe_6_trial-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dearjoe_6_trial-webfont.woff2') format('woff2'),
+         url('../fonts/dearjoe_6_trial-webfont.woff') format('woff'),
+         url('../fonts/dearjoe_6_trial-webfont.ttf') format('truetype'),
+         url('../fonts/dearjoe_6_trial-webfont.svg#dearjoe_6_trialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html,
+body{
+	font-family: 'Roboto', sans-serif;
+	color:@black;
+}
+p{
+	color:@darkgrey;
+	line-height: 1.3em;
+}
+a{
+	color:@brand-primary-1;
+	text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 700;
+	color:@brand-primary-1;
+	line-height: 1.3em;
+}
+h1{ font-size: 2em;}
+
+h2{ font-size: 1.7em;}
+
+h3{ font-size: 1.4em;font-weight: 900;}
+
+h4{ font-size: 1.1em;}
+
+h5{ font-size: 1em;margin-bottom: 0.4em;}
+
+h6{ font-size: 0.8em;}
+
+ul{
+	margin-bottom: 2em;
+	li{
+		margin-bottom: 0.75em;
+	}
+}
+strong{
+			font-weight: 700;
+		}
+blockquote{
+	font-weight: 300;
+	color:@brand-secondary-1;
+	font-size: 1.1em;
+	width: 100%;
+  	margin-bottom: 1em;
+	p{
+	  background: #F5F5F5;
+	  padding: 15px;
+	  position: relative;
+	  border-radius: 2px;
+	}
+	p:before {
+	  content: "";
+	  background: transparent;
+	  position: absolute;
+	  bottom: -20px;
+	  width: 0;
+	  height: 0;
+	  border-style: solid;
+	  border-width: 20px 20px 0 0;
+	  border-color: #F5F5F5 transparent transparent;
+	}
+	img{
+		margin: 12px 0 0 25px;
+  		width: 60px;
+	}
+	h6{
+		color:@brand-secondary-1;
+		font-size: 0.7em;
+		margin-top: 0.5em;
+		padding-top: 0.5em;
+		border-top: 1px solid fade(@darkgrey,30%);
+		img{
+			max-width: 80px; 
+		}
+	}
+}
+
+p.lead{
+	font-size: 1.4em;
+}
