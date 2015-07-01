@@ -10,14 +10,13 @@ $db->connect();
 
 class Api {
     var $resellerId;
+    var $resellerName;
     var $resellerToken;
 
 
     function Api($resellerId, $resellerToken)
     {
         global $db;
-
-
 
         $this->resellerId= $resellerId;
         $this->resellerToken = $resellerToken;
@@ -33,14 +32,17 @@ class Api {
             die;
         }
 
+
         // check reseller id
-        $query = "SELECT reseller_id FROM `".$db->resellers."` WHERE reseller_id=" . $resellerId;
-        $reseller = $db->select_field($db->resellers, "reseller_id", "", $query);
+        $query = "SELECT reseller_id, reseller_name FROM `".$db->resellers."` WHERE reseller_id=" . $resellerId;
+        $reseller = $db->select_fields($db->resellers, $query,array("reseller_id", "reseller_name"));
 
         if (empty($reseller)){
             echo $this->buildResponse("ERROR", "Reseller not found", "empty", null);
             die;
         }
+
+        $this->resellerName = $reseller[0]['reseller_name'];
 
         // check token
         $query = "SELECT reseller_token FROM `".$db->resellers."` WHERE reseller_id=" . $resellerId . " AND reseller_token ='" . $resellerToken . "'";
@@ -81,36 +83,49 @@ class Api {
             die;
         }
 
-
         $date = $_POST["Date"];
 
-
-
         // grab tour id from first associated ticket in offer
-        $tourQuery = "
-            SELECT DISTINCT ticket_tour_id as tour_id
-            FROM " . $db->reseller_offer_tickets . " rot
-            INNER JOIN ". $db->ticket ." t on t.ticket_id = rot.ticket_id
-            WHERE reseller_offer_id = " . $offerId ."
-        ";
-        $tourId = $db->select_field($db->reseller_offer_tickets, "tour_id", "", $tourQuery)[0];
+        $tourId = $this->getOfferTourId($offerId);
 
-        // get departures for tour and date
-        $departuresQuery = "
-			SELECT departure_id as id, departure_date as date, departure_time as time
-			FROM
-				departure
-			    INNER JOIN
-				boat ON departure.departure_boat_id = boat.boat_id
-			WHERE boat_del = 0
-			AND departure_boat_id = boat_id
-			AND departure_tour_id = ".$tourId."
-			AND departure_date = '". $date ."'
-			ORDER BY departure_date, departure_time";
+        // grab the total of seats used by the offer
+        $orderTicketsNumber = $this->getSeatCountFromOffer($offerId);
 
-        $departures = $db->select_fields($db->departure, $departuresQuery,array("id", "date", "time"));
+        // get all departures for selected tour and date
+        $departures = $this->getDeparturesForTourAndDate($tourId, $date);
 
-        return $this->buildResponse("OK", "", "departures", $departures);
+
+        // start processing response
+        $response = [];
+
+        foreach($departures as $departure){
+            $orderQuery = "SELECT * FROM $db->order
+		    WHERE order_departure_id = '". $departure['id'] ."'";
+
+            $fields = array("order_tickets", "order_tickets_number");
+            $orders = $db->select_fields($db->order, $orderQuery, $fields);
+            $sum = 0;
+
+            $total_passenger = $departure['boat_passengers'];
+
+            foreach($orders as $orderData)
+            {
+                //charter
+                if (($orderData['order_tickets']==0) && ($orderData['order_tickets_number']==1)) {
+                    $sum += $departure['boat_passengers'];
+                } else {
+                    //normal
+                    $sum +=  $orderData['order_tickets_number'];
+                }
+            }
+
+            if($departure['boat_passengers'] - $sum >= $orderTicketsNumber && $total_passenger > 0)
+            {
+                $response[] = $departure;
+            }
+        }
+
+        return $this->buildResponse("OK", "", "departures", $response);
     }
 
     function makeReservation(){
@@ -155,8 +170,7 @@ class Api {
         $orderQuantities = "";
         $orderTicketsNumber = 0;
         $orderTotal = 0.0;
-        $orderTime = date("Hm");
-        $orderMethod = "protx";
+        $orderMethod = "voucher";
 
 
         foreach ($ticketsInfo as $ticketInfo){
@@ -172,11 +186,14 @@ class Api {
                                     "order_quantities" => $orderQuantities,
                                     "order_tickets_number" => $orderTicketsNumber,
                                     "order_total" => $orderTotal,
-                                    "order_time" => $orderTime,
                                     "order_departure_id" => $departureId,
                                     "order_method" => $orderMethod,
                                     "order_date" => $departureDate,
-                                    "order_sid" => "");
+                                    "order_sid" => "",
+                                    "order_unique_code" => md5(uniqid(rand(), true)),
+                                    "order_time" =>  time()+600,
+                                    "order_reseller_id" => $this->resellerId,
+                                    "order_reseller_name" => $this->resellerName);
 
         //--------------------------------------------- //
         //----  end prepare fields for reservation ---- //
@@ -225,8 +242,8 @@ class Api {
                                         "order_last_name" => $lastName,
                                         "order_phone" => $phone,
                                         "order_email" => $email,
-                                        "order_note_crew" => $specialNotes); // confirm where to put this information
-
+                                        "order_note_crew" => $specialNotes,
+                                        "order_payd" => 1); // confirm where to put this information
 
         edit_order($confirmBookingFields, "order_id", $bookingId, "api booking");
 
@@ -264,7 +281,66 @@ class Api {
         return $offerId;
     }
 
-    function buildResponse($status, $desc, $dataName, $data){
+
+    private function getSeatCountFromOffer($offerId){
+        global $db;
+
+        // get offer tickets information
+
+        $ticketsInfoQuery ="
+                SELECT rot.ticket_id, quantity , ticket_seats, ticket_price
+                FROM " . $db->reseller_offer_tickets. " rot
+                INNER JOIN ". $db->ticket . " t on t.ticket_id = rot.ticket_id
+                WHERE reseller_offer_id = " . $offerId . "
+        ";
+
+        $ticketsInfo = $db->select_fields($db->reseller_offer_tickets, $ticketsInfoQuery,array("ticket_id", "quantity", "ticket_seats", "ticket_price"));
+
+
+        // define how much tickets will the offer require in the boat
+        $orderTicketsNumber = 0;
+
+        foreach ($ticketsInfo as $ticketInfo){
+            $orderTicketsNumber += intval($ticketInfo['quantity']) * intval($ticketInfo['ticket_seats']);
+        }
+
+        return $orderTicketsNumber;
+    }
+
+    private function getOfferTourId($offerId){
+        global $db;
+
+        $tourQuery = "
+            SELECT DISTINCT ticket_tour_id as tour_id
+            FROM " . $db->reseller_offer_tickets . " rot
+            INNER JOIN ". $db->ticket ." t on t.ticket_id = rot.ticket_id
+            WHERE reseller_offer_id = " . $offerId ."
+        ";
+        $tourId = $db->select_field($db->reseller_offer_tickets, "tour_id", "", $tourQuery)[0];
+
+        return $tourId;
+    }
+
+    private function getDeparturesForTourAndDate($tourId, $date){
+        global $db;
+
+        $departuresQuery = "
+			SELECT departure_id as id, departure_date as date, departure_time as time, boat_passengers
+			FROM
+				departure
+			    INNER JOIN
+				boat ON departure.departure_boat_id = boat.boat_id
+			WHERE boat_del = 0
+			AND departure_boat_id = boat_id
+			AND departure_tour_id = ".$tourId."
+			AND departure_date = '". $date ."'
+			ORDER BY departure_date, departure_time";
+
+        $departures = $db->select_fields($db->departure, $departuresQuery,array("id", "date", "time", "boat_passengers"));
+        return $departures;
+    }
+
+    private function buildResponse($status, $desc, $dataName, $data){
         return json_encode(array("Status"=>$status, "Desc" => $desc, $dataName=>$data));
     }
 

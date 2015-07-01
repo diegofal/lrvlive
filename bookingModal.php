@@ -20,7 +20,7 @@
 <body>
 <section id="buy">
     <div class="breadcrum-step">
-        <a href="#" class="selected">1. Trip type and seats</a>
+        <a href="#" class="selected">1. Trip type abc and seats</a>
         <a href="#">2. Date and time</a>
         <a href="#">3. Personal info</a>
         <a href="#">4. Confirmation</a>

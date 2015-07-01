@@ -9,7 +9,7 @@
 
 <input type="hidden" name="price_fee" value="{$price_fee}" id="price_fee" />
 <input type="hidden" name="total" value="" id="total_val" />
-
+</form>
 </section>
 </body>
 
@@ -133,33 +133,20 @@
     function calculate_total(){
         var total = 0;
 
-        for (i = 0; i < document.step1.elements.length; i++) {
-            if(document.step1.elements[i].name != "charter" && document.step1.elements[i].type=="checkbox" && document.step1.elements[i].checked==true){
-                document.step1.elements[i-2].value= "1";
-            }
-            if(document.step1.elements[i].name != "charter" && document.step1.elements[i].type=="checkbox" && document.step1.elements[i].checked==false){
-                document.step1.elements[i-2].value= "0";
-            }
-        }
+        var ticketSelects = $("select[class*='ticket']");
+        ticketSelects.each(function(){
+            var select = $(this);
+            var ticketPrice = select.attr('ticketPrice');
+            var ticketCount = select.val();
 
+            total += parseInt(ticketCount)*parseFloat(ticketPrice);
+        })
 
-        for (i = 0; i < document.step1.elements.length; i++) {
-            var ticketPrice = $(document.step1.elements[i]).parent().find("[ticketPrice]").val();
-
-            if(document.step1.elements[i].name == "quantity[]" && document.step1.elements[i].value)
-                if(isnumeric(document.step1.elements[i].value, "An error has occured! This field only supports numeric characters.")){
-                    //alert(document.step1.elements[i].value);
-
-                    total += parseInt(document.step1.elements[i].value)*parseFloat(document.step1.elements[i+1].value);
-                } else {
-                    document.step1.elements[i].value = "";
-                }
-            //alert(total);
-        }
         // Added by Carlos
         if (total != 0){
             total += parseFloat($("#price_fee").val());
         }
+
         //document.step1.total.value = Currency(total);
         document.getElementById("total_val").value = total;
         document.getElementById("tot_price").innerHTML = Currency(total);
