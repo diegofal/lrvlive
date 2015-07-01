@@ -11,8 +11,6 @@ $baseUrl = "http://134.213.145.120/lrvlive/";
 
 // End config
 
-
-
 // PHP function to make a Request without externals libraries
 
     function curl($url, $fields = array()){
