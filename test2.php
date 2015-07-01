@@ -1,12 +1,12 @@
 <?php
 
 // Config parameters
-
+error_reporting(0);
 $reselerID = "112";
 $token = "abc";
 
 $scritpUrl = "test2.php"; // if you change the script name.
-$baseUrl = "http://live.lrv.web/";
+$baseUrl = "http://localhost/lrvlive/";
 
 // End config
 
@@ -334,6 +334,12 @@ if ($_POST[step] == 2){
     break; // End Step 4
 
 } // End case
+
+    if (isset($json)){
+        echo "<br><br><pre>";
+        var_dump( json_encode($json));
+        echo "</pre>";
+    }
 ?>
 
 
