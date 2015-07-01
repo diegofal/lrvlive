@@ -6,7 +6,7 @@ $reselerID = "112";
 $token = "abc";
 
 $scritpUrl = "test2.php"; // if you change the script name.
-$baseUrl = "http://localhost/lrvlive/";
+$baseUrl = "http://134.213.145.120/lrvlive/";
 
 // End config
 
