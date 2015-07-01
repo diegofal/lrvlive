@@ -1498,7 +1498,6 @@ body {
       padding-bottom: 2em;
     }
     select{
-      display: none;
     }
     input{
       border: 0;
@@ -1612,19 +1611,21 @@ body {
 .step-1{
   display: block;
   .buy-content div:first-child .cs-select{
-    width: 230px;
+
   }
   #mainbooking {
-    width: 66%;
+    width: 56%;
+    border-right: 2px solid grey;
+    margin-bottom: 1em;
     h5 {
       font-size: 0.8em;
       margin-bottom: 1em;
       color: rgb(171, 171, 171);
     }
     div {
-      width: 33%;
+
       float: left;
-      padding: 0 10px 0 0;
+      padding: 0 40px 0 0;
       &:first-child ol li, &:last-child ol li {
         font-weight: 700;
       }
@@ -1642,12 +1643,15 @@ body {
         width: 100%;
         margin: 0 0 8px 0;
         padding: 0;
+        height: 35px;
+        margin: 18px 0 19px;
+        border-top: 1px solid #ededed;
+        border-bottom: 1px solid #ededed;
       }
     }
   }
   #thecharter {
-    width: 33%;
-    border-left: 2px solid grey;
+    width: 43%;
     padding: 0 0 0 30px;
     height: 100%;
     h5 { margin-bottom: .3em; }
@@ -1689,6 +1693,8 @@ body {
   }
   small{
     font-size: .8em;
+    display: block;
+    clear: both;
   }
 }
 .step-2{
