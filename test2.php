@@ -1,12 +1,13 @@
 <?php
-
-// Config parameters
 error_reporting(0);
+// Config parameters
+
 $reselerID = "112";
 $token = "abc";
 
 $scritpUrl = "test2.php"; // if you change the script name.
 $baseUrl = "http://134.213.145.120/lrvlive/";
+//$baseUrl = "http://live.lrv.web/";
 
 // End config
 
@@ -244,7 +245,7 @@ if ($_POST[step] == 2){
     <input type="hidden" name="OfferName" value="<?=$_POST['offerName'] ?>">
     <input type="hidden" name="offerDate" value="<?=$_POST['offerDate'] ?>">
 
-    <p><b>Trips for OfferName for date</b></p>
+    <p><b>Trips for <?=  $_POST['offerName'] ?> for <?= $_POST['offerDate'] ?></b></p>
 
     <p>Please select the departure and click in ther button below</p>
 
@@ -335,11 +336,12 @@ if ($_POST[step] == 2){
 
 } // End case
 
-    if (isset($json)){
-        echo "<br><br><pre>";
-        var_dump( json_encode($json));
-        echo "</pre>";
-    }
+if (isset($json)){
+    echo "<br><br><pre>";
+    echo( json_encode($json));
+    echo "</pre>";
+}
+
 ?>
 
 
