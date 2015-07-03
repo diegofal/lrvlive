@@ -1,9 +1,9 @@
 <section id="buy">
     <div class="breadcrum-step">
         <a href="#" class="selected">1. Trip type and seats</a>
-        <a href="#">2. Date and time</a>
-        <a href="#">3. Personal info</a>
-        <a href="#">4. Confirmation</a>
+        <a href="#" style="cursor:pointer">2. Date and time</a>
+        <a href="#" style="cursor:pointer">3. Personal info</a>
+        <a href="#" style="cursor:pointer">4. Confirmation</a>
     </div>
     <div class="step step-1">
         <header>

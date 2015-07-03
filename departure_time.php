@@ -8,9 +8,16 @@ include "WEB-INF/includes/smarty/smarty_site.php";
 $db = new DB_config;
 $db->connect();
 
-$tour_id 	= trim($_POST['tour_id']);
-$selectDate = trim($_POST['selectDate']);
-$order_id   = trim($_POST['sid']); //Changed to use Order Id
+$tour_id 	= trim($_GET['tour_id']);
+
+$selectDate = trim($_GET['selectDate']);
+
+
+$date = new DateTime($selectDate);
+$selectDate = $date->format('Y-m-d');
+
+
+$order_id   = trim($_GET['sid']); //Changed to use Order Id
 
 $order = $db->select_fields($db->order, "", "", 'order_id', $order_id, "", "", "", 1);
 if ($order['order_tour_shared_id'] !=0) {
@@ -31,9 +38,17 @@ ORDER BY departure_time ASC";
 
 $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
 $departures = $db->select_fields($db->departure, $query, $fields);
+
+echo json_encode($departures);
+die();
+
+
 if(!empty($departures))
 {
-	$returnString ='<div class="departure_top_1"></div>
+
+    return (json_encode($departures));
+    die();
+    $returnString ='<div class="departure_top_1"></div>
 	<div class="departure_center_1">
 	<div class="departure_time_1">Departure Time</div>';
 	//$total_passenger = 0;

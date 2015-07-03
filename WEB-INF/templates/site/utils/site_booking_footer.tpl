@@ -1,9 +1,10 @@
 <footer>
     <p class="msj error"><span class="icon">Aca va un mensaje de error de algo mal seleccionado</p>
     <div class="grid">
-        <div class="col-1-3"><a href="#" id="prev" class="btn md-close btn-secondary"> cancel </a></div>
-        <div class="col-1-3"><p class="price-total"><span>$</span><span id="tot_price" class="number">0.00</span></p></div>
-        <div class="col-1-3"><a href="#" id="next" class="btn btn-main"> siguiente </a></div>
+        <div class="col-1-3"><a href="#" id="prev" class="btn md-close btn-secondary"> Cancel </a></div>
+        <div class="col-1-3"><p class="price-total"><span>$</span><span id="tot_price" class="number">{$order.order_total}</span></p></div>
+        <div class="col-1-3"><a href="#" id="next" class="btn btn-main"> Next </a></div>
+        <!--<input type="submit" class="btn btn-main" value="Next">-->
     </div>
 </footer>
 
@@ -13,6 +14,77 @@
 </section>
 </body>
 
+
+{if $subpage=="_step2"}
+    <script>
+        var times = [];
+        var departures = [];
+        departures = {$departures};
+    </script>
+    <script src="js/plugins/jquery.datetimepicker.js"></script>
+
+{literal}
+        <script>
+        $.each( departures, function( key, val ) {
+
+        times.push(val.departure_time.substr(0,5));
+
+        } );
+
+
+            var selectedTime = function (currentTime){
+                givenTime = new Date(currentTime);
+
+                hourSelected = givenTime.getHours() + ':' + givenTime.getMinutes() + ':00';
+
+                result = $.grep(departures, function(e) { return e.departure_time == hourSelected; } );
+
+                $('#selected_departure').val(result[0].departure_id)
+
+            }
+
+            var logic = function( currentDateTime ){
+                var picker = this;
+                sid = $('#order_id').val();
+                tour_id = $('#tour_id').val();
+
+                var data = {
+                    'selectDate' : currentDateTime,
+                    'sid': sid,
+                    'tour_id': tour_id
+                };
+
+                $.getJSON( "departure_time.php", data, function( response ) {
+                    departures = response;
+                    times = [];
+                    $.each( response, function( key, val ) {
+
+                        times.push(val.departure_time.substr(0,5));
+
+                    } );
+                    console.log(times);
+
+                    picker.setOptions({
+                        allowTimes: times
+                    } );
+                } );
+
+
+            };
+        </script>
+
+        <script type="text/javascript">
+            $('#datetimepicker3').datetimepicker( {
+                inline:true,
+                format: "Y/m/d H:i",
+                onSelectDate:logic,
+                allowTimes: times,
+                onSelectTime: selectedTime
+            } );
+        </script>
+
+    {/literal}
+{/if}
 {literal}
 
     <script src="js/plugins.js"></script>
@@ -20,14 +92,13 @@
     <script src="js/plugins/jquery.easing.1.3.js"></script>
     <script src="js/plugins/jquery.animate-enhanced.min.js"></script>
     <script src="js/plugins/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7"></script>
-    <script src="js/plugins/maplace-0.1.3.js"></script>
     <script src="js/plugins/modalEffects.js"></script>
     <script src="js/plugins/classie.js"></script>
-    <script src="js/plugins/jquery.datetimepicker.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+        <!--<script type="text/javascript" src="slick/slick.min.js"></script>-->
 
     <script>
+
+
         $(function() {
             var header = $(".clearHeader");
             $(window).scroll(function() {
@@ -62,36 +133,21 @@
         ga('create','UA-XXXXX-X','auto');ga('send','pageview');
     </script>
 
-    <script type="text/javascript">
-        $('#datetimepicker3').datetimepicker({
-            inline:true
-        });
-    </script>
 
-    <script>
-        var currentIndex = 0,
-                items = $('.step'),
-                itemAmt = items.length;
-
-        function cycleItems() {
-            var item = $('.step').eq(currentIndex);
-            items.hide();
-            item.css('display','block');
-            // $('#buy').addClass('step-' + currentIndex);
-
-        }
 
 
 
+    <script>
         $('#next').click(function() {
-            currentIndex += 1;
+            $('#bookingForm').submit();
+            /*currentIndex += 1;
             if (currentIndex > itemAmt - 1) {
                 currentIndex = 0;
                 window.location.href = "http://www.sagepay.co.uk/";
             }
             else{
             }
-            cycleItems();
+            cycleItems();*/
         });
 
         // $('#prev').click(function() {
@@ -104,14 +160,10 @@
     </script>
 
 
-
-
-
-
-
-
 <script type="text/javascript">
     $(document).ready(function() {
+
+        //logic(Date.now().getDate)
         var s = $(".facts-container");
         var pos = s.position();
         $(window).scroll(function() {
@@ -144,6 +196,7 @@
 
         //document.step1.total.value = Currency(total);
         document.getElementById("total_val").value = total;
+        document.getElementById("bottomTotal").value = total;
         document.getElementById("tot_price").innerHTML = Currency(total);
 
     }

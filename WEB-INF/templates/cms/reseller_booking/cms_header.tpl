@@ -3,7 +3,7 @@
 <head>
 	{config_load file="config.conf" section="General"}
 	<title>{#COMPANY_NAME#}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="inc/main.css">
 	
 </head>

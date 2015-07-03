@@ -13,6 +13,8 @@ $smarty->assign("os",browser_detection( 'os' ));
 
 $smarty->assign("MycontentpageMeta",'');
 
+$smarty->assign('order_id',$_SESSION['order_id']);
+
 if( isset($_GET['tour_id']) && trim($_GET['tour_id'])!="" )
 {
 	if( trim($_GET['tour_id'])=="9" )
@@ -1441,13 +1443,61 @@ foreach ($tours as $index=>$tour) {
 		if(!empty($_POST)){
 			$fields = $_POST;
 			$fields["order_time"] = time();
+
+            //extract tickets
+            $all_tickets = $db->select_fields($db->ticket, "", "", "ticket_del", "0");
+
+            $selected_tickets = explode("|",$order["order_tickets"]);
+            $selected_quantities = explode("|",$order["order_quantities"]);
+
+            $tickets = array();
+
+            //only selected tickets
+            foreach($all_tickets as $ticket){
+                $k = array_search($ticket['ticket_id'],$selected_tickets);
+                if ($k!==false) {
+                    $tmp = array();
+                    $tmp['type'] = $ticket['ticket_type'];
+                    $tmp['price'] = $ticket['ticket_price'];
+                    $tmp['quantity'] = $selected_quantities[$k];
+                    $tmp['total'] = sprintf("%0.2f", $tmp['quantity'] * $tmp['price']);
+                    $tickets[] = $tmp;
+                }
+            }
+            var_dump($tickets); die();
+            $smarty->assign("tickets",$tickets);
+
 			if( $db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
 				edit_order($fields, 'order_id', $_SESSION['order_id'], 'frontend booking step4');
 				header("Location: booking.php?tour_id=".$tour_id."&subpage=step5");
 				exit();
 			}
-		}	
-		
+		}
+        $fields = $_POST;
+        $fields["order_time"] = time();
+
+        //extract tickets
+        $all_tickets = $db->select_fields($db->ticket, "", "", "ticket_del", "0");
+
+        $selected_tickets = explode("|",$order["order_tickets"]);
+        $selected_quantities = explode("|",$order["order_quantities"]);
+
+        $tickets = array();
+
+        //only selected tickets
+        foreach($all_tickets as $ticket){
+            $k = array_search($ticket['ticket_id'],$selected_tickets);
+            if ($k!==false) {
+                $tmp = array();
+                $tmp['type'] = $ticket['ticket_type'];
+                $tmp['price'] = $ticket['ticket_price'];
+                $tmp['quantity'] = $selected_quantities[$k];
+                $tmp['total'] = sprintf("%0.2f", $tmp['quantity'] * $tmp['price']);
+                $tickets[] = $tmp;
+            }
+        }
+        var_dump($tickets); die();
+        $smarty->assign("tickets",$tickets);
 
 		//extract current session
 		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
@@ -1468,7 +1518,7 @@ foreach ($tours as $index=>$tour) {
 		// asignare variabile smarty si generare fisier smarty :
 		$smarty->assign("pages_dir","pages");
 		$smarty->assign("page","booking");
-		$smarty->display('site_pages.tpl');
+        $smarty->display('site_pages.tpl');
 		break;		
 /**
 	STEP 3
@@ -1512,16 +1562,22 @@ foreach ($tours as $index=>$tour) {
 
 		//add to database
 		if(!empty($_POST['order_find'])){
-			
-			$fields = array("order_find"=>$_POST['order_find'], "order_time"=>time(), "order_total" => $order["order_total"] - $_POST['facebook_discount'], "order_facebook_discount" => $_POST['facebook_discount']);				
-			
+            $fields = $_POST;
+            $fields["order_time"] = time();
+            if($db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
+                edit_order($fields, 'order_id', $_SESSION['order_id'],'frontend booking step5');
+            }
+
+			//$fields = array("order_find"=>$_POST['order_find'], "order_time"=>time(), "order_total" => $order["order_total"] - $_POST['facebook_discount'], "order_facebook_discount" => $_POST['facebook_discount']);
+			$fields = array("order_find"=>$_POST['order_find'], "order_time"=>time(), "order_total" => $order["order_total"]);
+
 			if( $db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
 				edit_order($fields, 'order_id', $_SESSION['order_id'], 'frontend booking step3');
 				header("Location: booking.php?tour_id=".$tour_id."&subpage=step4");
 				exit();
 			}
 		}	
-	
+
 		$departure  = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
 
 		if(empty($departure['departure_id'])){
@@ -1575,7 +1631,7 @@ foreach ($tours as $index=>$tour) {
 		$smarty->assign("hear_about_us",$hear_about);
 		$smarty->assign("order",$order);
 		$smarty->assign("departure",$departure);
-		
+        $smarty->assign("bottomTotal", $_POST['bottomTotal']);
 
 		//extract tickets 
 		$all_tickets = $db->select_fields($db->ticket, "", "", "ticket_del", "0");
@@ -1608,11 +1664,11 @@ foreach ($tours as $index=>$tour) {
 		$style_array = array("style_div_detail1","style_div_detail2");
 		$smarty->assign("divStyles",$style_array);
 		$smarty->assign("tickets",$tickets);
-		
+        $smarty->assign("bottomTotal", $_POST['bottomTotal']);
 		//Deprecated (not used)
 		$wipe=base64_encode($order['order_id']);
 		$smarty->assign("wipe",$wipe);
-		
+        $smarty->assign("bottomTotal", $_POST['bottomTotal']);
 		$smarty->assign("tour",$tour_details);
 		$smarty->assign("tour_id",$tour_id);
 		$smarty->assign("tours",$tours);
@@ -1652,7 +1708,7 @@ foreach ($tours as $index=>$tour) {
 			header("Location: booking.php?subpage=tours"); 
 			exit();
 		}
-
+    /*
 		if (!isset($_SESSION['order_id'])){
 
 			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
@@ -1660,7 +1716,7 @@ foreach ($tours as $index=>$tour) {
 
 		}
 
-
+*/
 		// Save values
 		if (!empty($_POST['selected_departure'])) {
 
@@ -1867,12 +1923,42 @@ foreach ($tours as $index=>$tour) {
 			$days[] = $tmp;
 		}
 		//exit();
-		$sessionId = array($_SESSION['order_id']);
+
+        $order = $db->select_fields($db->order, "", "", 'order_id', $order_id, "", "", "", 1);
+        if ($order['order_tour_shared_id'] !=0) {
+            $_tour_id = $order['order_tour_shared_id'];
+        } else {
+            $_tour_id = $tour_id;
+        }
+
+
+        $today = new DateTime();
+
+        $selectDate = $today->format('Y-m-d');
+
+        $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+            FROM $db->departure,  $db->boat
+            WHERE departure_date = '".$selectDate."'
+            ".(($selectDate == date("Y-m-d"))?" AND departure_time > CURTIME()":"")."
+            AND departure_boat_id = boat_id
+            AND departure_tour_id = ".$tour_id."
+            AND boat_del = 0
+            ORDER BY departure_time ASC";
+            //echo $query; exit();
+
+        $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
+        $departures = $db->select_fields($db->departure, $query, $fields);
+
+
+        $Initdepartures =  json_encode($departures);
+
+
 		$smarty->assign("sessionId",$sessionId);
 		$smarty->assign("days",$days);
 		$smarty->assign("tour",$tour_details);
 		$smarty->assign("tour_id",$tour_id);
 		$smarty->assign("tours",$tours);
+		$smarty->assign("departures",$Initdepartures);
 
 		$smarty->assign("contor", array(0,1,2,3,4,5,6));
 		$smarty->assign("subpage","_step2");
@@ -1916,6 +2002,8 @@ foreach ($tours as $index=>$tour) {
 		}
 
 		if (!empty($_POST)){
+
+            $smarty->assign('bottomTotal',$_POST['bottomTotal']);
 
 			// Deleted by Carlos
 			/*Adding booking fee for regular orders */
@@ -2010,8 +2098,10 @@ foreach ($tours as $index=>$tour) {
 			} else {
 				$fields['order_sid'] = session_id();			
 				$_SESSION['order_id'] = generate_order($fields, "frontend booking");
+
+
 			}
-			
+            $smarty->assign("bottomTotal", $_POST['bottomTotal']);
 			header("Location: booking.php?tour_id=".$tour_id."&subpage=step2");
 			exit();
 		}
@@ -2072,7 +2162,6 @@ foreach ($tours as $index=>$tour) {
 		$smarty->assign("no_tickets",@count($tickets));
 		$smarty->assign("subpage","_step1");
         $smarty->assign("price_fee", PRICE_FEE);
-
 		
 		// asignare variabile smarty si generare fisier smarty :
 		$smarty->assign("pages_dir","pages");

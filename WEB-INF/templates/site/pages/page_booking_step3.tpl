@@ -1,192 +1,80 @@
-<div id="fb-root"></div>
-<script type="text/javascript">
-var lblOrderTotal = {$order.order_total};
-</script>
-{literal}
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<script>
+<form name="step3" id="bookingForm" method="post" action="booking.php?tour_id={$tour_id}&subpage=step3">
+    <div class="breadcrum-step">
+        <a href="#" >1. Trip type and seats</a>
+        <a href="#" >2. Date and time</a>
+        <a href="#" class="selected">3. Personal info</a>
+        <a href="#">4. Confirmation</a>
+    </div>
 
+<div class="step step-3" style="display: block;">
+    <header>
+        <span>Step 3</span>
+        <h3>Complete your personal information</h3>
+        <p>And save one pound in just in one click!</p>
+    </header>
+    <div class="buy-content">
+        <form id="personal-info">
+            <div>
+                <label for="name">First name</label>
+                <input name="order_first_name" id="name" type="text" value="{$order.order_first_name}"/>
+            </div>
+            <div>
+                <label for="lastname">Surname / Last name</label>
+                <input name="order_last_name" id="lastname" type="text" value="{$order.order_last_name}"/>
+            </div>
+            <div>
+                <label for="phone">Phone</label>
+                <input name="order_phone" id="phone" type="number" value="{$order.order_phone}"/>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input name="order_email" id="email" type="email"  value="{$order.order_email}/>
+            </div>
+            <div>
+                <label for="country">Country</label>
+                <input name="order_country" id="country" type="text" value="{$order.order_country}/>
+            </div>
+            <div>
+                <label for="city">City</label>
+                <input name="order_city" id="city" type="text" value="{$order.order_city}/>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input name="order_street_address1" id="address" type="text" value="{$order.order_street_address1}/>
+            </div>
+            <div>
+                <label for="address2">Aditional address</label>
+                <input name="order_street_address2" id="address2" type="text" value="{$order.order_street_address2}/>
+            </div>
+            <div>
+                <label for="postcode">Post code</label>
+                <input name="order_zip" id="postcode" type="text" value="{$order.order_zip}/>
+            </div>
 
-window.onload = function () { 
-	
-	FB.Event.subscribe('edge.create', page_like_callback);
-	FB.Event.subscribe('edge.remove', page_unlike_callback);
-	document.getElementById('lblOrderTotal').innerHTML = lblOrderTotal;
-
-	if (getCookie("likeFacebookCookie"))
-		page_like_callback();
-	else
-		page_unlike_callback();
-	
-};
-
-var page_like_callback = function(url, html_element) {
-	setCookie("likeFacebookCookie", "true", 1000);
-
-	document.getElementById('lblOrderTotal').innerHTML = lblOrderTotal - 1;
-	document.getElementById('fbLikeDiscount').style.display = 'block' ;
-	document.getElementById('facebook_discount').value = 1;
-}
-var page_unlike_callback = function(url, html_element) {
-	  setCookie("likeFacebookCookie", "true", -1);
-	  document.getElementById('lblOrderTotal').innerHTML = lblOrderTotal;
-	  document.getElementById('fbLikeDiscount').style.display = 'none';
-	  document.getElementById('facebook_discount').value = 0;
-}
-
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
-    }
-    return "";
-}
-
-function checkCookie(cookieName) {
-    var cookieName=getCookie(cookieName);
-    if (cookieName!="") {
-        return true;
-    }else{
-        return false;
-    }
-}
-</script>
-{/literal}
-
-<div class="booking-form">
-	<!--Form start -->
-	<form name="step3" method="post" action="booking.php?tour_id={$tour_id}&subpage=step3">
-		<input type="hidden" id="facebook_discount" name="facebook_discount" value="0" />
-		<div class="booking-nav">
-			<ul>
-				<li><a href="booking.php?tour_id={$smarty.get.tour_id}&amp;subpage=step1" class="how_many_1" title="How Many?">How Many</a></li>
-				<li><a href="booking.php?tour_id={$smarty.get.tour_id}&amp;subpage=step2" class="date_1" title="Date &amp; Time">Time</a></li>
-				<li><a href="booking.php?tour_id={$smarty.get.tour_id}&amp;subpage=step3" class="yourdetail_1 active" title="Your Details">Your Details</a></li>
-				<li><a href="booking.php?tour_id={$smarty.get.tour_id}&amp;subpage=step6" class="payment_1" title="Payment">Payment</a></li>
-			</ul>
-		</div>
-		
-		<div class="booking-form-main">
-		
-			<h3>Shopping Cart</h3>
-		
-			<div class="bookingtext_1_new1">Please verify the booking information you have selected. If you need to make any changes, please use the Back button below. </div>
-		   
-			<div class="booking_form_row booking_terms">
-				<input type="checkbox" class="checkbox" name="confirm" value="checkbox" {if !empty($order.order_find)} checked="checked"{/if}>&nbsp;Please confirm that you have read our <a href="javascript:openwind('terms.php', 700, 500, 'yes')">Terms & Conditions</a>.
-			</div>
-			
-			<!--Second Div Starts-->
-			<div class="booking_form_row cart_summary clearfix">
-					<div class="style_step3_7">Item :</div>
-					<div class="style_step3_10">{$tour.tour_name}</div>
-			</div>
-			<div class="booking_form_row cart_summary clearfix">
-					<div class="style_step3_7">Date of Voyage :</div>
-					<div class="style_step3_10">{$departure.departure_date|date_format:"%d %b %Y"}</div>
-			</div>
-			<div class="booking_form_row cart_summary clearfix">
-					<div class="style_step3_7">Departure Time :</div>
-					<div class="style_step3_10">{$departure.departure_time|truncate:5:""}</div>
-			</div>
-		
-	 <!--END-->
-		 <div class="style_tour_details17">
-		 	<div class="style_step3_3">
-				<div class="style_step3_12">
-					<div class="style_step3_7">
-						<div class="style_step3_13"></div>
-						<div class="style_step3_14" style="text-align:center"><strong>Quantity</strong></div>
-						<div class="style_step3_15" style="text-align:center"><strong>Total</strong></div>
-					</div>
-				</div>
-				<!--Second Div Starts Here-->
-				{section name=i loop=$tickets}
-				<div class="style_div_detail1">
-					<div class="style_step3_7">
-						<div class="style_step3_16">{$tickets[i].type}</div>
-						<div class="style_step3_17" style="text-align:center">{$tickets[i].quantity} @ &pound;{$tickets[i].price}</div>
-						<div class="style_step3_15" style="text-align:center">&pound;{$tickets[i].total}</div>
-					</div>
-				</div>
-				{sectionelse}
-				<div class="style_div_detail1">
-					<div class="style_step3_7">
-						<div class="style_step3_16" style="text-align:center"><strong>Charter</strong></div>
-						<div class="style_step3_17" style="text-align:center">1 @ &pound;{$order.order_total}</div>
-						<div class="style_step3_15" style="text-align:center">&pound;{$order.order_total}</div>
-					</div>
-				</div>
-				{/section}
-				<!--Start Total-->
-
-				<div class="booking_form_row" style="height:80px;padding-top: 30px;">
-					<div style="float:left;float:left;margin-top: 17px;">Come join us on Facebook and<br />save &pound;1 on your booking</div>
-					<div style="float:right;">
-						<div class="fb-like-box" data-href="https://www.facebook.com/londonribvoyages" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
-					</div>
-				</div>
-
-				<div class="style_step3_18"></div>
-				<div class="style_step3_19">
-					<div class="style_step3_20">
-						<div class="style_step3_13"></div>
-						<div class="style_step3_14"></div>
-						<div class="style_step3_15 booking_totals booking_fee">BOOKING FEE: &nbsp;&pound;3.95</div>
-					</div>					
-					<div class="style_step3_20" id="fbLikeDiscount" style="display:none;">
-						<div class="style_step3_13"></div>
-						<div class="style_step3_14"></div>
-						<div class="style_step3_15 booking_totals">DISCOUNT: &nbsp;-&pound;1</div>
-					</div>
-					<div class="style_step3_20">
-						<div class="style_step3_13"></div>
-						<div class="style_step3_14"></div>
-						<div class="style_step3_15 booking_totals">TOTAL COST: &nbsp;&pound;<span id="lblOrderTotal"></span></div>
-					</div>
-				</div>
-			<!--ENDS TOTAL-->
-		</div>
-		
-	<div class="style_step3_21 booking_form_row">
-		<div class="style_step3_22">How did you find us?</div>
-			<div class="style_step3_23">
-				<select name="order_find" class="booking-ddwn-length">
-					<option value="0">Please select</option>
-					{section name=b loop=$hear_about_us}
-					<option value="{$hear_about_us[b].Title}" {if $order.order_find == $hear_about_us[b].Title} selected="selected"{/if}>{$hear_about_us[b].Title}</option>
-					{/section}
-				</select>
-			</div>
-		 </div>
-	</div>		 
-		<!--END-->
-		<div class="booking_form_row booking_buttons clearfix">
-			<div class="booking-button back-button"><a href="booking.php?tour_id={$tour_id}&amp;subpage=step1">Back</a></div>
-			<div class="booking-button booking-submit"><a href="javascript:check_form();">Proceed</a></div>
-		</div>
-
-	</form>
+            <div>
+                <label for="how">How did you find us ?</label>
+                <select name="order_find" id="how" class="cs-select cs-skin-elastic">
+                    <option value="0"  disabled selected>Please select</option>
+                    <option value="Friend referral, word of mouth">Friend referral, word of mouth</option>
+                    <option value="Editorial, press release">Editorial, press release</option>
+                    <option value="Walk by, seen boats on the river">Walk by, seen boats on the river</option>
+                    <option value="Website link">Website link</option>
+                    <option value="Leaflet or postcard">Leaflet or postcard</option>
+                    <option value="Website, search engine">Website, search engine</option>
+                    <option value="Returning London RIB Voyager">Returning London RIB Voyager</option>
+                    <option value="Visit London">Visit London</option>
+                    <option value="Great Date Guide">Great Date Guide</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div>
+                <div class="fb-like" data-href="https://www.facebook.com/londonribvoyages" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+            <div>
+                <input id="terms" type="checkbox" />
+                <label for="terms">Please confirm that you have read our <a href="#">Terms & Conditions.</a></label>
+            </div>
+        </form>
+    </div>
 </div>
-</div>
-	
-	<!--Include Right Menu-->
-		{include file="utils/site_right_menu_booking_sub.tpl" }
-	<!--END-->
-</div>	

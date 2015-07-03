@@ -24,7 +24,7 @@
 																
 																<div class="b_ul_pic_main_r">
 																	
-																	  <div class="b_ut_txt1">Adult (usually &pound;42.00):</div>
+																	  <div class="b_ut_txt1">Adult (usually £42.00):</div>
 																	  <div class="b_ut_txt2">&pound;36.50</div>
 																	  <div class="b_ut_txt1">Children <span class="smaller">(14 years &amp; under)</span>:</div>
 																	  <div class="b_ut_txt2">&pound;21.50</div>

@@ -1,4 +1,11 @@
-<form name="step1" method="post" action="booking.php?tour_id={$tour_id}&subpage=step1">
+<div class="breadcrum-step">
+    <a href="#" class="selected">1. Trip type and seats</a>
+    <a href="#">2. Date and time</a>
+    <a href="#">3. Personal info</a>
+    <a href="#">4. Confirmation</a>
+</div>
+<form name="step1" id="bookingForm" method="post" action="booking.php?tour_id={$tour_id}&subpage=step1">
+    <input name="bottomTotal" id="bottomTotal" type="hidden" value="0.00">
 <div class="step step-1">
     <header>
         <span>Step 1</span>
@@ -23,7 +30,7 @@
                     <input type="hidden" name="price[]" value="{$tickets[i].ticket_price}" />
                     <div>
                         <label for="select_{$tickets[i].ticket_id}"></label>
-                        <select id="select_{$tickets[i].ticket_id}" ticketPrice="{$tickets[i].ticket_price}" name="quantity[]" class="ticket cs-select cs-skin-elastic">
+                        <select id="select_{$tickets[i].ticket_id}" ticketPrice="{$tickets[i].ticket_price}" onchange="calculate_total()" name="quantity[]" class="ticket cs-select cs-skin-elastic">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>

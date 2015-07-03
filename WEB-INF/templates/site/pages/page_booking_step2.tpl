@@ -1,33 +1,24 @@
-<section id="buy">
+<form name="step2" id="bookingForm" method="post" action="booking.php?tour_id={$tour_id}&subpage=step2">
+    <input name="bottomTotal" id="bottomTotal" type="hidden" value="{$bottomTotal}">
+    <input name="selected_departure" id="selected_departure" type="hidden" value="" />
+    <input name="tour_id" id="tour_id" type="hidden" value="{$tour_id}" />
+    <input name="order_id" id="order_id" type="hidden" value="{$sessionId[0]}" />
+    <input name="number_of_people" type="hidden" value="{$order.order_tickets_number}" />
     <div class="breadcrum-step">
-        <a href="#" class="selected">1. Trip type and seats</a>
-        <a href="#">2. Date and time</a>
+        <a href="#" >1. Trip type and seats</a>
+        <a href="#" class="selected">2. Date and time</a>
         <a href="#">3. Personal info</a>
         <a href="#">4. Confirmation</a>
     </div>
 
-    <div class="step step-2">
+    <div class="step step-2" style="display: block;">
         <header>
             <span>Step 2</span>
             <h3>Choose your date and time of departure</h3>
             <p>If you are a party of over 8 and require a departure time that is not listed please call 020 7928 8933.</p>
         </header>
         <div class="buy-content">
-            <input type="text" id="datetimepicker3"/><br><br>
+            <input name="selectedDate" type="text" id="datetimepicker3"/><br><br>
         </div>
     </div>
-
-
-
-    <footer>
-        <p class="msj error"><span class="icon">Aca va un mensaje de error de algo mal seleccionado</p>
-        <div class="grid">
-            <div class="col-1-3"><a href="#" id="prev" class="btn md-close btn-secondary"> cancel </a></div>
-            <div class="col-1-3"><p class="price-total"><span>$</span><span class="number">0.00</span></p></div>
-            <div class="col-1-3"><a href="#" id="next" class="btn btn-main"> siguiente </a></div>
-        </div>
-    </footer>
-
-
-
-</section>
+</form>
