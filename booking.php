@@ -1464,7 +1464,7 @@ foreach ($tours as $index=>$tour) {
                     $tickets[] = $tmp;
                 }
             }
-            var_dump($tickets); die();
+            //var_dump($tickets); die();
             $smarty->assign("tickets",$tickets);
 
 			if( $db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
@@ -1473,6 +1473,7 @@ foreach ($tours as $index=>$tour) {
 				exit();
 			}
 		}
+        $order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
         $fields = $_POST;
         $fields["order_time"] = time();
 
@@ -1496,22 +1497,26 @@ foreach ($tours as $index=>$tour) {
                 $tickets[] = $tmp;
             }
         }
-        var_dump($tickets); die();
+        //var_dump($selected_tickets); die();
         $smarty->assign("tickets",$tickets);
-
+        $tour_details = $db->select_fields ($db->tour, $query);
+    $tour_name = $tour_details[0]['tour_name'];
+    //var_dump($tour_details[0]['tour_name']); die();
 		//extract current session
 		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
 		if(empty($order['order_find'])){
 			header("Location: booking.php?subpage=step1&expired=true");
 			exit();			
-		}	
-
+		}
+        $departure = $db->select_fields($db->departure, $query, $fields, "", "", "", "", "", 1);
+    //var_dump($departure); die();
 		if(empty($order['order_country'])) $order['order_country'] = "GB";
 		$smarty->assign("order",$order);
-		
+        $smarty->assign("departure",$departure);
+        $smarty->assign("tour",$tour_name);
 		$wipe=base64_encode($order['order_id']);
 		$smarty->assign("wipe",$wipe);
-		
+
 		$smarty->assign("tour_id",$tour_id);
 		$smarty->assign("COUNTRIES",$COUNTRIES);
 		$smarty->assign("subpage","_step4");

@@ -23,33 +23,19 @@
             <ul class="trip col-1-3">
                 <li>Trip</li>
                 <li>Trip</li>
-                <li><span>Trip</span>The Ultimate London Adventure</li>
-                <li><span>Date</span>16 april 2015</li>
-                <li><span>Time</span>13:00 hs</li>
-                <li><span>Adults</span>£75.90 (2)</li>
-                <li><span>Childrens</span>£75.90 (2)</li>
+                <li><span>Trip</span>{$tour}</li>
+                <li><span>Date</span>{$departure.departure_date|date_format:"%d %b %Y"}</li>
+                <li><span>Time</span>{$departure.departure_time|truncate:5:""}</li>
                 {section name=i loop=$tickets}
-                <div class="style_div_detail1">
-                    <div class="style_step3_7">
-                        <div class="style_step3_16">{$tickets[i].type}</div>
-                        <div class="style_step3_17" style="text-align:center">{$tickets[i].quantity} @ &pound;{$tickets[i].price}</div>
-                        <div class="style_step3_15" style="text-align:center">&pound;{$tickets[i].total}</div>
-                    </div>
-                </div>
+                    <li><span>{$tickets[i].type}</span>&pound;{$tickets[i].price} ({$tickets[i].quantity})</li>
                 {sectionelse}
-                    <div class="style_div_detail1">
-                        <div class="style_step3_7">
-                            <div class="style_step3_16" style="text-align:center"><strong>Charter</strong></div>
-                            <div class="style_step3_17" style="text-align:center">1 @ &pound;{math equation="x - y" x=$order.order_total y=$price_fee format="%.2f"}</div>
-                            <div class="style_step3_15" style="text-align:center">&pound;{math equation="x - y " x=$order.order_total y=$price_fee format="%.2f"}</div>
-                        </div>
-                    </div>
+                    <li><span>Charter</span>&pound;{math equation="x - y " x=$order.order_total y=$price_fee format="%.2f"} (1})</li>
                 {/section}
             </ul>
 
             <ul class="extras col-1-3">
                 <li>Extras</li>
-                <li><span>Extras</span>£3.95</li>
+                <li><span>Extras</span>£{$price_fee}</li>
                 <li><span>Discount</span>£0.00</li>
             </ul>
         </div>
