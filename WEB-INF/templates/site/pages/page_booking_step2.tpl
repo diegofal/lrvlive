@@ -1,9 +1,9 @@
 <form name="step2" id="bookingForm" method="post" action="booking.php?tour_id={$tour_id}&subpage=step2">
-    <input name="bottomTotal" id="bottomTotal" type="hidden" value="{$bottomTotal}">
     <input name="selected_departure" id="selected_departure" type="hidden" value="" />
     <input name="tour_id" id="tour_id" type="hidden" value="{$tour_id}" />
     <input name="order_id" id="order_id" type="hidden" value="{$sessionId[0]}" />
     <input name="number_of_people" type="hidden" value="{$order.order_tickets_number}" />
+    <input type="hidden" name="selected_date" id="selected_date" value="" />
     <div class="breadcrum-step">
         <a href="#" >1. Trip type and seats</a>
         <a href="#" class="selected">2. Date and time</a>

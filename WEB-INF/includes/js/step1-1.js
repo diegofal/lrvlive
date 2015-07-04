@@ -80,7 +80,7 @@ function check_form(){
 	    if ( document.getElementById('order_reseller_id') && '0' ==  document.getElementById('order_reseller_id').value) {
 	       alert('Please specify type of booking.');
 	    } else {
-	   	   document.step1.submit();	
+	   	   document.step1.submit();
 	    }
 	} else {
 		alert("Please specify the number of people for your voyage, as well as the ticket types you would like to purchase. If you would like to book a charter, please select this option below");

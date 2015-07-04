@@ -1490,7 +1490,7 @@ foreach ($tours as $index=>$tour) {
             $k = array_search($ticket['ticket_id'],$selected_tickets);
             if ($k!==false) {
                 $tmp = array();
-                $tmp['type'] = $ticket['ticket_type'];
+                $tmp['type'] = utf8_encode($ticket['ticket_type']);
                 $tmp['price'] = $ticket['ticket_price'];
                 $tmp['quantity'] = $selected_quantities[$k];
                 $tmp['total'] = sprintf("%0.2f", $tmp['quantity'] * $tmp['price']);
@@ -1500,16 +1500,17 @@ foreach ($tours as $index=>$tour) {
         //var_dump($selected_tickets); die();
         $smarty->assign("tickets",$tickets);
         $tour_details = $db->select_fields ($db->tour, $query);
-    $tour_name = $tour_details[0]['tour_name'];
-    //var_dump($tour_details[0]['tour_name']); die();
+        $tour_name = $tour_details[0]['tour_name'];
+        //var_dump($tour_details[0]['tour_name']); die();
 		//extract current session
 		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
 		if(empty($order['order_find'])){
 			header("Location: booking.php?subpage=step1&expired=true");
 			exit();			
 		}
-        $departure = $db->select_fields($db->departure, $query, $fields, "", "", "", "", "", 1);
-    //var_dump($departure); die();
+        //$departure = $db->select_fields($db->departure, $query, $fields, "", "", "", "", "", 1);
+        $departure  = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
+        //var_dump($departure); die();
 		if(empty($order['order_country'])) $order['order_country'] = "GB";
 		$smarty->assign("order",$order);
         $smarty->assign("departure",$departure);
@@ -2156,8 +2157,8 @@ foreach ($tours as $index=>$tour) {
 /*		echo "<pre>";
 		print_r($tickets);
 		exit();
-*/		
-		
+*/
+
 		$smarty->assign("resellers",$resellers);
 		$smarty->assign("tour",$tour_details);
 		$smarty->assign("tour_id",$tour_id);

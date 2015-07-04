@@ -28,51 +28,45 @@
             </div>
             <div>
                 <label for="email">Email</label>
-                <input name="order_email" id="email" type="email"  value="{$order.order_email}/>
+                <input name="order_email" id="email" type="email"  value="{$order.order_email}"/>
             </div>
             <div>
                 <label for="country">Country</label>
-                <input name="order_country" id="country" type="text" value="{$order.order_country}/>
+                <input name="order_country" id="country" type="text" value="{$order.order_country}"/>
             </div>
             <div>
                 <label for="city">City</label>
-                <input name="order_city" id="city" type="text" value="{$order.order_city}/>
+                <input name="order_city" id="city" type="text" value="{$order.order_city}"/>
             </div>
             <div>
                 <label for="address">Address</label>
-                <input name="order_street_address1" id="address" type="text" value="{$order.order_street_address1}/>
+                <input name="order_street_address1" id="address" type="text" value="{$order.order_street_address1}"/>
             </div>
             <div>
                 <label for="address2">Aditional address</label>
-                <input name="order_street_address2" id="address2" type="text" value="{$order.order_street_address2}/>
+                <input name="order_street_address2" id="address2" type="text" value="{$order.order_street_address2}"/>
             </div>
             <div>
                 <label for="postcode">Post code</label>
-                <input name="order_zip" id="postcode" type="text" value="{$order.order_zip}/>
+                <input name="order_zip" id="postcode" type="text" value="{$order.order_zip}"/>
             </div>
 
             <div>
                 <label for="how">How did you find us ?</label>
-                <select name="order_find" id="how" class="cs-select cs-skin-elastic">
-                    <option value="0"  disabled selected>Please select</option>
-                    <option value="Friend referral, word of mouth">Friend referral, word of mouth</option>
-                    <option value="Editorial, press release">Editorial, press release</option>
-                    <option value="Walk by, seen boats on the river">Walk by, seen boats on the river</option>
-                    <option value="Website link">Website link</option>
-                    <option value="Leaflet or postcard">Leaflet or postcard</option>
-                    <option value="Website, search engine">Website, search engine</option>
-                    <option value="Returning London RIB Voyager">Returning London RIB Voyager</option>
-                    <option value="Visit London">Visit London</option>
-                    <option value="Great Date Guide">Great Date Guide</option>
-                    <option value="Social Media">Social Media</option>
-                    <option value="Other">Other</option>
+
+                <select name="order_find" id="how" class="booking-ddwn-length">
+                    <option value="0">Please select</option>
+                    {section name=b loop=$hear_about_us}
+                        <option value="{$hear_about_us[b].Title}" {if $order.order_find == $hear_about_us[b].Title} selected="selected"{/if}>{$hear_about_us[b].Title}</option>
+                    {/section}
                 </select>
+
             </div>
             <div>
                 <div class="fb-like" data-href="https://www.facebook.com/londonribvoyages" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
             </div>
             <div>
-                <input id="terms" type="checkbox" />
+                <input id="terms" type="checkbox" {if !empty($order.order_find)} checked="checked"{/if}/>
                 <label for="terms">Please confirm that you have read our <a href="#">Terms & Conditions.</a></label>
             </div>
         </form>

@@ -10,7 +10,7 @@ function openwind(file_link, width, height, scrollbar) {
 }
 
 function check_form(){
-	if(document.step3.confirm.checked==false){
+	if(document.step3.terms.checked==false){
 		alert("Please confirm that you have read our Terms & Conditions.");
 	} else if(document.step3.order_find.value=='0') {
 		alert("Please select a suitable option from the dropdown!");

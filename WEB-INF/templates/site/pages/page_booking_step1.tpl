@@ -5,7 +5,7 @@
     <a href="#">4. Confirmation</a>
 </div>
 <form name="step1" id="bookingForm" method="post" action="booking.php?tour_id={$tour_id}&subpage=step1">
-    <input name="bottomTotal" id="bottomTotal" type="hidden" value="0.00">
+    <input type="hidden" name="total" value="" id="total" />
 <div class="step step-1">
     <header>
         <span>Step 1</span>
@@ -31,17 +31,17 @@
                     <div>
                         <label for="select_{$tickets[i].ticket_id}"></label>
                         <select id="select_{$tickets[i].ticket_id}" ticketPrice="{$tickets[i].ticket_price}" onchange="calculate_total()" name="quantity[]" class="ticket cs-select cs-skin-elastic">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
+                            <option value="0" {if $tickets[i].quantity == 0}selected{/if}>0</option>
+                            <option value="1" {if $tickets[i].quantity == 1}selected{/if}>1</option>
+                            <option value="2" {if $tickets[i].quantity == 2}selected{/if}>2</option>
+                            <option value="3" {if $tickets[i].quantity == 3}selected{/if}>3</option>
+                            <option value="4" {if $tickets[i].quantity == 4}selected{/if}>4</option>
+                            <option value="5" {if $tickets[i].quantity == 5}selected{/if}>5</option>
+                            <option value="6" {if $tickets[i].quantity == 6}selected{/if}>6</option>
+                            <option value="7" {if $tickets[i].quantity == 7}selected{/if}>7</option>
+                            <option value="8" {if $tickets[i].quantity == 8}selected{/if}>8</option>
+                            <option value="9" {if $tickets[i].quantity == 9}selected{/if}>9</option>
+                            <option value="10" {if $tickets[i].quantity == 10}selected{/if}>10</option>
                         </select>
                     </div>
                 {/section}
@@ -67,7 +67,7 @@
                 <label for="charter"></label>
                 <p>Book the whole boat for a private and exclusive experience for up to twelve passengers.</p>
             </div>
-            <div class="chartercheckbox"><input type="checkbox" id="charter" onclick="is_charter('{$tour.tour_charter_price}');"/>${$tour.tour_charter_price} (12 seats)</div>
+            <div class="chartercheckbox"><input type="checkbox" id="charter" {if ($order.order_tickets_number == 1) && ($order.order_tickets == 0)} checked="checked"{/if} onclick="is_charter('{$tour.tour_charter_price}');"/>${$tour.tour_charter_price} (12 seats)</div>
         </div>
 
     </div>
