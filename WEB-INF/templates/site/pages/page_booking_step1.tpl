@@ -67,7 +67,7 @@
                 <label for="charter"></label>
                 <p>Book the whole boat for a private and exclusive experience for up to twelve passengers.</p>
             </div>
-            <div class="chartercheckbox"><input type="checkbox" id="charter" {if ($order.order_tickets_number == 1) && ($order.order_tickets == 0)} checked="checked"{/if} onclick="is_charter('{$tour.tour_charter_price}');"/>${$tour.tour_charter_price} (12 seats)</div>
+            <div class="chartercheckbox"><input type="checkbox" name="charter" id="charter" {if ($order.order_tickets_number == 1) && ($order.order_tickets == 0)} checked="checked"{/if} onclick="is_charter('{$tour.tour_charter_price}');"/>${$tour.tour_charter_price} (12 seats)</div>
         </div>
 
     </div>

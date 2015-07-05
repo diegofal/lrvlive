@@ -2003,7 +2003,7 @@ foreach ($tours as $index=>$tour) {
 			$tour_details = $tour_details[0];
 		}
 		else {
-			header("Location: booking.php?subpage=tours"); 
+			header("Location: booking.php?subpage=tours");
 			exit();
 		}
 
@@ -2015,11 +2015,11 @@ foreach ($tours as $index=>$tour) {
 			/*Adding booking fee for regular orders */
 			//$order_total = 3.95; 
 
-			if(!empty($_POST['charter']) && ($_POST['charter']=='yes')){			
+			if(!empty($_POST['charter']) && ($_POST['charter']=='on')){
 				/*
 				Charter
 				*/
-
+                //var_dump($_POST['charter']); die();
 				$order_total = $tour_details['tour_charter_price'] + (float)$price_fee;
 				
 				$fields = array("order_tickets"=>"0","order_quantities"=>"1", "order_tickets_number"=>1, "order_total"=>$order_total, "order_time"=>time(), "order_method"=>"protx");

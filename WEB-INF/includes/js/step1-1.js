@@ -44,20 +44,20 @@ function isnumeric(text, text_alert) {
 
 
 function set_fields(status, price){
-	//for (i = 0; i < document.step1.elements.length; i++) {
-	//	if(document.step1.elements[i].name != "charter" && (document.step1.elements[i].type=="text" || document.step1.elements[i].type=="checkbox")){
-	//		if (document.step1.elements[i].name != "total")
-	//		{
-	//			document.step1.elements[i].value="";
-	//			document.step1.elements[i].disabled=status;
-	//		}
-	//	}
-	//}
+	for (i = 0; i < document.step1.elements.length; i++) {
+		if(document.step1.elements[i].name != "charter" && (document.step1.elements[i].type=="select-one" || document.step1.elements[i].type=="checkbox") || document.step1.elements[i].type=="text"){
+			if (document.step1.elements[i].name != "total")
+			{
+				document.step1.elements[i].value="0";
+				document.step1.elements[i].disabled=status;
+			}
+		}
+	}
 	if (status==true) 
 	{
 		var price_fee = parseFloat($("#price_fee").val());
 	
-		document.getElementById("total_val").value = parseFloat(price) + price_fee;
+		document.getElementById("total").value = parseFloat(price) + price_fee;
 		document.getElementById("tot_price").innerHTML = Currency( parseFloat(price) + price_fee);
 	}
 	else 
@@ -67,7 +67,7 @@ function set_fields(status, price){
 }
 
 function is_charter(price){
-	if(document.step1.charter.checked==true){		
+	if(document.step1.charter.checked==true){
 		set_fields(true, price);
 	} else {
 		set_fields(false, price);

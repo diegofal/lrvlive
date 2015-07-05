@@ -29,7 +29,7 @@
                 {section name=i loop=$tickets}
                     <li><span>{$tickets[i].type}</span>&pound;{$tickets[i].price} ({$tickets[i].quantity})</li>
                 {sectionelse}
-                    <li><span>Charter</span>&pound;{math equation="x - y " x=$order.order_total y=$price_fee format="%.2f"} (1})</li>
+                    <li><span>Charter</span>&pound;{math equation="x - y" x=$order.order_total y=$price_fee format="%.2f"} (1)</li>
                 {/section}
             </ul>
 
