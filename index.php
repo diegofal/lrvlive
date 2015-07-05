@@ -2,6 +2,7 @@
 // if($_SERVER['REMOTE_ADDR'] == '37.157.49.220') { echo 'OK'; exit; }
 
 // includere smarty :
+
 include "check_session.php";
 
 $id_page = 1;
@@ -48,4 +49,5 @@ $smarty->assign("content",$content);
 $smarty->assign("pages_dir","pages");
 $smarty->assign("page","index");
 $smarty->display('site_pages.tpl');
+
 ?>

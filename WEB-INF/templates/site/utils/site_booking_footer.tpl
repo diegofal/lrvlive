@@ -18,6 +18,7 @@
     <script>
         var times = [];
         var departures = [];
+        var visible = true;
         departures = {$departures};
     </script>
     <script src="js/plugins/jquery.datetimepicker.js"></script>
@@ -25,11 +26,11 @@
 {literal}
         <script>
         $.each( departures, function( key, val ) {
-
-        times.push(val.departure_time.substr(0,5));
-
+            times.push(val.departure_time.substr(0,5));
         } );
-
+        if (times.length == 0){
+            visible = false;
+        }
         function addZero(i) {
             if (i < 10) {
                 i = "0" + i;
@@ -40,21 +41,15 @@
                 givenTime = new Date(currentTime);
                 date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth()) + '-' + addZero(givenTime.getDate());
                 hourSelected = addZero(givenTime.getHours()) + ':' + addZero(givenTime.getMinutes()) + ':00';
-                console.log(departures);
-                console.log(hourSelected);
                 result = $.grep(departures, function(e) { return e.departure_time == hourSelected; } );
-                console.log(result);
                 $('#selected_departure').val(result[0].departure_id);
                 $('#selected_date').val(date);
-                console.log(result[0].departure_date);
-
             }
 
             var logic = function( currentDateTime ){
                 var picker = this;
                 sid = $('#order_id').val();
                 tour_id = $('#tour_id').val();
-
                 var data = {
                     'selectDate' : currentDateTime,
                     'sid': sid,
@@ -65,17 +60,20 @@
                     departures = response;
                     times = [];
                     $.each( response, function( key, val ) {
-
                         times.push(val.departure_time.substr(0,5));
-
                     } );
-                    console.log(times);
-
-                    picker.setOptions({
-                        allowTimes: times
-                    } );
+                     if (times.length == 0){
+                         picker.setOptions({
+                             timepicker: false
+                         });
+                    } else {
+                         picker.setOptions({
+                             allowTimes: times,
+                             timepicker: true
+                         });
+                     }
+                    console.log(times)
                 } );
-
 
             };
         </script>
@@ -87,8 +85,10 @@
                 onSelectDate:logic,
                 allowTimes: times,
                 minDate: 0,
-                onSelectTime: selectedTime
+                onSelectTime: selectedTime,
+                timepicker: visible
             } );
+
         </script>
 
     {/literal}
