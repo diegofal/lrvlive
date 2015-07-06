@@ -39,7 +39,7 @@
         }
             var selectedTime = function (currentTime) {
                 givenTime = new Date(currentTime);
-                //date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth()) + '-' + addZero(givenTime.getDate());
+                date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth()+1) + '-' + addZero(givenTime.getDate());
                 hourSelected = addZero(givenTime.getHours()) + ':' + addZero(givenTime.getMinutes()) + ':00';
                 console.log(hourSelected);
                 result = $.grep(departures, function(e) { return e.departure_time == hourSelected; } );
