@@ -39,19 +39,23 @@
         }
             var selectedTime = function (currentTime) {
                 givenTime = new Date(currentTime);
-                date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth()) + '-' + addZero(givenTime.getDate());
+                //date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth()) + '-' + addZero(givenTime.getDate());
                 hourSelected = addZero(givenTime.getHours()) + ':' + addZero(givenTime.getMinutes()) + ':00';
+                console.log(hourSelected);
                 result = $.grep(departures, function(e) { return e.departure_time == hourSelected; } );
                 $('#selected_departure').val(result[0].departure_id);
                 $('#selected_date').val(date);
             }
 
-            var logic = function( currentDateTime ){
+            var logic = function( givenTime ){
+                console.log(givenTime);
+                console.log(givenTime.getMonth());
+                date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth() + 1) + '-' + addZero(givenTime.getDate());
                 var picker = this;
                 sid = $('#order_id').val();
                 tour_id = $('#tour_id').val();
                 var data = {
-                    'selectDate' : currentDateTime,
+                    'selectDate' : date,
                     'sid': sid,
                     'tour_id': tour_id
                 };
@@ -81,7 +85,7 @@
         <script type="text/javascript">
             $('#datetimepicker3').datetimepicker( {
                 inline:true,
-                format: "Y/m/d H:i",
+                //format: "Y/m/d H:i",
                 onSelectDate:logic,
                 allowTimes: times,
                 minDate: 0,

@@ -13,8 +13,8 @@ $tour_id 	= trim($_GET['tour_id']);
 $selectDate = trim($_GET['selectDate']);
 
 
-$date = new DateTime($selectDate);
-$selectDate = $date->format('Y-m-d');
+//$date = new DateTime($selectDate);
+//$selectDate = $date->format('Y-m-d');
 
 
 $order_id   = trim($_GET['sid']); //Changed to use Order Id
