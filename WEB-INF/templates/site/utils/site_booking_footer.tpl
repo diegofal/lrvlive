@@ -185,16 +185,6 @@
     }
 
 </script>
-
-
-    <script>
-        // Clicking button/checkbox Hack
-        $( ".chartercheckbox" ).click(function() {
-            $( ".chartercheckbox input" ).click(),
-                    $(".chartercheckbox").addClass("checked");
-        });
-    </script>
-
 {/literal}
 </html>
 

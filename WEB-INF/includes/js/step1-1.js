@@ -67,11 +67,15 @@ function set_fields(status, price){
 }
 
 function is_charter(price){
-	if(document.step1.charter.checked==true){
-		set_fields(true, price);
-	} else {
-		set_fields(false, price);
-	}
+    if(document.step1.charter.checked==false){
+        document.step1.charter.checked=true;
+        set_fields(true, price);
+    } else {
+        document.step1.charter.checked=false;
+        set_fields(false, price);
+
+    }
+
 }
 
 function check_form(){
