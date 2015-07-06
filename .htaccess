@@ -41,6 +41,4 @@ allow from all
 order deny,allow
 deny from all
 </Limit>
-AuthName londonribvoyages.com
-AuthUserFile /home/londonri/public_html/_vti_pvt/service.pwd
-AuthGroupFile /home/londonri/public_html/_vti_pvt/service.grp
+
