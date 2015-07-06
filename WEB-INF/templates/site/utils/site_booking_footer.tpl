@@ -90,7 +90,9 @@
                 allowTimes: times,
                 minDate: 0,
                 onSelectTime: selectedTime,
-                timepicker: visible
+                timepicker: visible,
+                roundTime: 'floor',
+                step: 1
             } );
 
         </script>
