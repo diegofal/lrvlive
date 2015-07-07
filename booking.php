@@ -1953,7 +1953,9 @@ foreach ($tours as $index=>$tour) {
 //            AND boat_del = 0
 //            ORDER BY departure_time ASC";
             //echo $query; exit();
+        $qty = $order["order_tickets_number"];
 
+        //var_dump($qty); die();
         $departuresQuery = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '".$selectDate."'
@@ -1961,6 +1963,7 @@ foreach ($tours as $index=>$tour) {
 					  AND departure_tour_id = ".$_tour_id."
 					  AND boat_del = 0
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
+					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  ORDER BY departure_time ASC";
 
         $availableDepartureDaysQuery = "SELECT DISTINCT departure_date
@@ -1970,8 +1973,9 @@ foreach ($tours as $index=>$tour) {
 					  AND boat_del = 0
 					  AND departure_date >= curdate()
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
+					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  ORDER BY departure_date ASC";
-        echo $availableDepartureDaysQuery;
+        //echo $departuresQuery;
        $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
         $departures = $db->select_fields($db->departure, $departuresQuery, $fields);
 
@@ -1988,6 +1992,7 @@ foreach ($tours as $index=>$tour) {
 
 		$smarty->assign("sessionId",$sessionId);
 		$smarty->assign("days",$days);
+        $smarty->assign("qty",$qty);
 		$smarty->assign("tour",$tour_details);
 		$smarty->assign("tour_id",$tour_id);
 		$smarty->assign("tours",$tours);
