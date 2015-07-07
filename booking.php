@@ -1832,7 +1832,7 @@ foreach ($tours as $index=>$tour) {
 					  ORDER BY departure_time ASC";
 
 				$fields 	= array("departure_id","boat_passengers"); 
-				$departures = $db->select_fields($db->departure, $query, $fields); 
+				$departures = $db->select_fields($db->departure, $query, $fields);
 
 					
 				if(!empty($departures))
@@ -1887,7 +1887,8 @@ foreach ($tours as $index=>$tour) {
 						  AND boat_del = 0
 						  AND boat_passengers != '0'
 						  GROUP BY departure_id";
-					  
+
+
 				$fields = array("departure_id","boat_passengers", "tickets_no");
 				$departures = $db->select_fields($db->departure, $query, $fields);
 				
@@ -1940,17 +1941,26 @@ foreach ($tours as $index=>$tour) {
 
         $today = new DateTime();
 
+
         $selectDate = $today->format('Y-m-d');
 
-        $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
-            FROM $db->departure,  $db->boat
-            WHERE departure_date = '".$selectDate."'
-            ".(($selectDate == date("Y-m-d"))?" AND departure_time > CURTIME()":"")."
-            AND departure_boat_id = boat_id
-            AND departure_tour_id = ".$tour_id."
-            AND boat_del = 0
-            ORDER BY departure_time ASC";
+//        $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+//            FROM $db->departure,  $db->boat
+//            WHERE departure_date = '".$selectDate."'
+//            ".(($selectDate == date("Y-m-d"))?" AND departure_time > CURTIME()":"")."
+//            AND departure_boat_id = boat_id
+//            AND departure_tour_id = ".$tour_id."
+//            AND boat_del = 0
+//            ORDER BY departure_time ASC";
             //echo $query; exit();
+
+        $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+					  FROM $db->departure,  $db->boat
+					  WHERE departure_date = '".$selectDate."'
+					  AND departure_boat_id = boat_id
+					  AND departure_tour_id = ".$_tour_id."
+					  AND boat_del = 0
+					  ORDER BY departure_time ASC";
 
         $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
         $departures = $db->select_fields($db->departure, $query, $fields);
@@ -1966,7 +1976,7 @@ foreach ($tours as $index=>$tour) {
 		$smarty->assign("tours",$tours);
 		$smarty->assign("departures",$Initdepartures);
 
-		$smarty->assign("contor", array(0,1,2,3,4,5,6));
+        $smarty->assign("contor", array(0,1,2,3,4,5,6));
 		$smarty->assign("subpage","_step2");
 		// asignare variabile smarty si generare fisier smarty :
 		$smarty->assign("pages_dir","pages");

@@ -74,13 +74,16 @@
 
 </div>
 
-    {*{literal}*}
-        {*<script type="text/javascript">*}
-            {*$(document).ready(function()*}
-            {*{*}
-                {*$("#charter").click(function(){*}
-                    {*calculate_total();*}
-                {*})*}
-            {*})*}
-        {*</script>*}
-    {*{/literal}*}
+    {literal}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                calculate_total();
+            });
+
+//            {
+//                $("#charter").click(function(){
+//                    calculate_total();
+//                })
+//            })
+        </script>
+    {/literal}

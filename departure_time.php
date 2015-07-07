@@ -12,7 +12,6 @@ $tour_id 	= trim($_GET['tour_id']);
 
 $selectDate = trim($_GET['selectDate']);
 
-
 //$date = new DateTime($selectDate);
 //$selectDate = $date->format('Y-m-d');
 
@@ -26,14 +25,25 @@ if ($order['order_tour_shared_id'] !=0) {
 	$_tour_id = $tour_id;
 }
 
+//$query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+//FROM $db->departure,  $db->boat
+//WHERE departure_date = '".$selectDate."'
+//".(($selectDate == date("Y-m-d"))?" AND departure_time > CURTIME()":"")."
+//AND departure_boat_id = boat_id
+//AND departure_tour_id = ".$_tour_id."
+//AND boat_del = 0
+//ORDER BY departure_time ASC";
+
 $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
-FROM $db->departure,  $db->boat
-WHERE departure_date = '".$selectDate."'
-".(($selectDate == date("Y-m-d"))?" AND departure_time > CURTIME()":"")."
-AND departure_boat_id = boat_id
-AND departure_tour_id = ".$_tour_id."
-AND boat_del = 0
-ORDER BY departure_time ASC";
+					  FROM $db->departure,  $db->boat
+					  WHERE departure_date = '".$selectDate."'
+
+					  AND departure_boat_id = boat_id
+					  AND departure_tour_id = ".$_tour_id."
+					  AND boat_del = 0
+					  ORDER BY departure_time ASC";
+
+
 //echo $query; exit();
 
 $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");

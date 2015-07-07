@@ -83,12 +83,16 @@
         </script>
 
         <script type="text/javascript">
+            var tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+
             $('#datetimepicker3').datetimepicker( {
                 inline:true,
                 //format: "Y/m/d H:i",
                 onSelectDate:logic,
                 allowTimes: times,
-                minDate: 0,
+                format : 'd.m.Y',
+                startDate: tomorrow,
+                minDate : '-1969/12/31',
                 onSelectTime: selectedTime,
                 timepicker: visible,
                 roundTime: 'floor',
@@ -181,6 +185,8 @@
         }
 
         //document.step1.total.value = Currency(total);
+
+
         document.getElementById("total").value = total;
         document.getElementById("tot_price").innerHTML = Currency(total);
 
