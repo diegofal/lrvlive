@@ -40,11 +40,12 @@ $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_pri
 
 					  AND departure_boat_id = boat_id
 					  AND departure_tour_id = ".$_tour_id."
+					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
 					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
 
 
-//echo $query; exit();
+//echo $query; //exit();
 
 $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
 $departures = $db->select_fields($db->departure, $query, $fields);
