@@ -1954,7 +1954,7 @@ foreach ($tours as $index=>$tour) {
 //            ORDER BY departure_time ASC";
             //echo $query; exit();
 
-        $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+        $departuresQuery = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '".$selectDate."'
 					  AND departure_boat_id = boat_id
@@ -1962,9 +1962,23 @@ foreach ($tours as $index=>$tour) {
 					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
 
-        $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
-        $departures = $db->select_fields($db->departure, $query, $fields);
+        $availableDepartureDaysQuery = "SELECT DISTINCT departure_date
+					  FROM $db->departure,  $db->boat
+					  WHERE departure_boat_id = boat_id
+					  AND departure_tour_id = ".$_tour_id."
+					  AND boat_del = 0
+					  ORDER BY departure_date ASC";
 
+        $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
+        $departures = $db->select_fields($db->departure, $departuresQuery, $fields);
+
+
+        $availableDatesResults = $db->select_fields($db->departure, $availableDepartureDaysQuery, array("departure_date"));
+        $availableDates = [];
+
+        foreach($availableDatesResults as $availableDateResult){
+            $availableDates[] = $availableDateResult['departure_date'];
+        }
 
         $Initdepartures =  json_encode($departures);
 
@@ -1974,7 +1988,8 @@ foreach ($tours as $index=>$tour) {
 		$smarty->assign("tour",$tour_details);
 		$smarty->assign("tour_id",$tour_id);
 		$smarty->assign("tours",$tours);
-		$smarty->assign("departures",$Initdepartures);
+        $smarty->assign("availableDates",json_encode($availableDates));
+        $smarty->assign("departures",$Initdepartures);
 
         $smarty->assign("contor", array(0,1,2,3,4,5,6));
 		$smarty->assign("subpage","_step2");

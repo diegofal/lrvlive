@@ -20,6 +20,8 @@
         var departures = [];
         var visible = true;
         departures = {$departures};
+
+        var availableDates = {$availableDates};
     </script>
     <script src="js/plugins/jquery.datetimepicker.js"></script>
 
@@ -86,17 +88,33 @@
             var tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 
             $('#datetimepicker3').datetimepicker( {
+                onGenerate:function( ct ){
+//                    var dates = jQuery(this).find('.xdsoft_date');
+//                    dates.addClass('xdsoft_disabled');
+//
+//                    $(dates).each(function(){
+//                        var date =  $(this).attr('data-year') + "-" +
+//                                    ($(this).attr('data-month')<10? '0'+$(this).attr('data-month'):''+$(this).attr('data-month'))  + "-" +
+//                                    ($(this).attr('data-date')<10? '0'+$(this).attr('data-date'):''+$(this).attr('data-date'));
+//
+//                        if ($.inArray(date, availableDates)!= -1){
+//                            $(this).toggleClass('xdsoft_disabled');
+//                        }
+//                    })
+
+                    jQuery(this).find('.xdsoft_date')
+                            .toggleClass('xdsoft_disabled');
+                },
                 inline:true,
                 //format: "Y/m/d H:i",
                 onSelectDate:logic,
                 allowTimes: times,
-                format : 'd.m.Y',
-                startDate: tomorrow,
-                minDate : '-1969/12/31',
                 onSelectTime: selectedTime,
                 timepicker: visible,
                 roundTime: 'floor',
-                step: 1
+                step: 1,
+                disabledDates: availableDates,
+                formatDate : 'Y-m-d'
             } );
 
         </script>
