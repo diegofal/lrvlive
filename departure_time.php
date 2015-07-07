@@ -21,10 +21,13 @@ $order_id   = trim($_GET['sid']); //Changed to use Order Id
 $order = $db->select_fields($db->order, "", "", 'order_id', $order_id, "", "", "", 1);
 if ($order['order_tour_shared_id'] !=0) {
 	$_tour_id = $order['order_tour_shared_id'];
+    $qty = 12;
 } else {
 	$_tour_id = $tour_id;
+    $qty = $order["order_tickets_number"];
 }
 
+//var_dump($qty); die();
 //$query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
 //FROM $db->departure,  $db->boat
 //WHERE departure_date = '".$selectDate."'
@@ -41,11 +44,12 @@ $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_pri
 					  AND departure_boat_id = boat_id
 					  AND departure_tour_id = ".$_tour_id."
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
+					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
 
 
-//echo $query; //exit();
+//echo $query; exit();
 
 $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
 $departures = $db->select_fields($db->departure, $query, $fields);

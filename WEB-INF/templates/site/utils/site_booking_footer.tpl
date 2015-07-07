@@ -19,6 +19,7 @@
         var times = [];
         var departures = [];
         var visible = true;
+        var sid = {$sessionId[0]};
         departures = {$departures};
 
         var availableDates = {$availableDates};

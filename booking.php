@@ -1934,8 +1934,10 @@ foreach ($tours as $index=>$tour) {
         $order = $db->select_fields($db->order, "", "", 'order_id', $order_id, "", "", "", 1);
         if ($order['order_tour_shared_id'] !=0) {
             $_tour_id = $order['order_tour_shared_id'];
+            $qty = 12;
         } else {
             $_tour_id = $tour_id;
+            $qty = $order["order_tickets_number"];
         }
 
 
@@ -1989,7 +1991,7 @@ foreach ($tours as $index=>$tour) {
 
         $Initdepartures =  json_encode($departures);
 
-
+        $sessionId = array($_SESSION['order_id']);
 		$smarty->assign("sessionId",$sessionId);
 		$smarty->assign("days",$days);
         $smarty->assign("qty",$qty);
