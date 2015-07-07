@@ -1931,14 +1931,6 @@ foreach ($tours as $index=>$tour) {
 		}
 		//exit();
 */
-        $order = $db->select_fields($db->order, "", "", 'order_id', $order_id, "", "", "", 1);
-        if ($order['order_tour_shared_id'] !=0) {
-            $_tour_id = $order['order_tour_shared_id'];
-            $qty = 12;
-        } else {
-            $_tour_id = $tour_id;
-            $qty = $order["order_tickets_number"];
-        }
 
 
         $today = new DateTime();
@@ -1955,8 +1947,11 @@ foreach ($tours as $index=>$tour) {
 //            AND boat_del = 0
 //            ORDER BY departure_time ASC";
             //echo $query; exit();
-        $qty = $order["order_tickets_number"];
-
+        if ($order['orders_tickets'] != 0){
+            $qty = $order["order_tickets_number"];
+        } else {
+            $qty = "boat_passengers";
+        }
         //var_dump($qty); die();
         $departuresQuery = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
@@ -1967,7 +1962,7 @@ foreach ($tours as $index=>$tour) {
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  ORDER BY departure_time ASC";
-
+//echo $departuresQuery;
         $availableDepartureDaysQuery = "SELECT DISTINCT departure_date
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_boat_id = boat_id

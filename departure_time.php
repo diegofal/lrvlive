@@ -37,6 +37,12 @@ if ($order['order_tour_shared_id'] !=0) {
 //AND boat_del = 0
 //ORDER BY departure_time ASC";
 
+if ($order['orders_tickets'] != 0){
+    $qty = $order["order_tickets_number"];
+} else {
+    $qty = "boat_passengers";
+}
+
 $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '".$selectDate."'
