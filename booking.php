@@ -1174,14 +1174,251 @@ foreach ($tours as $index=>$tour) {
 	STEP 6
 */
 	case "step6":
-		
-		if (isset($_GET['tour_id']) && is_numeric($_GET['tour_id'])) {
-			$tour_id = $_GET['tour_id'];
-		} else {	
-			$query = "SELECT tour_id FROM `".$db->tour."` WHERE 1 AND tour_del = 0";
-			$tour_ids = $db->select_field($db->tour, "tour_id", "", $query);
-			$tour_id = $tour_ids[0];
-		}
+
+//		/*if (isset($_GET['tour_id']) && is_numeric($_GET['tour_id'])) {
+//			$tour_id = $_GET['tour_id'];
+//		} else {
+//			$query = "SELECT tour_id FROM `".$db->tour."` WHERE 1 AND tour_del = 0";
+//			$tour_ids = $db->select_field($db->tour, "tour_id", "", $query);
+//			$tour_id = $tour_ids[0];
+//		}
+//
+//		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
+//		$tours = $db->select_fields ($db->tour,$query, array("tour_id","tour_name"));
+//
+//		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_id = ".$tour_id."";
+//		$tour_details = $db->select_fields ($db->tour, $query);
+//		if (sizeof($tour_details)>0) {
+//			$tour_details = $tour_details[0];
+//		}
+//		else {
+//			write_error_log("Step6: no tour_details.\nIP:".$_SERVER['REMOTE_ADDR']."\nGET: ".implode_array($_GET)."\nPOST: ".implode_array($_POST));
+//			header("Location: booking.php?subpage=tours");
+//			exit();
+//		}
+//
+//		if(!isset($_SESSION['order_id'])) {
+//			write_error_log("Step6: no session.\nIP:".$_SERVER['REMOTE_ADDR']."\nGET: ".implode_array($_GET)."\nPOST: ".implode_array($_POST));
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			exit();
+//		}
+//
+//		//extract current session
+//		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
+//		$departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
+//		if(empty($departure['departure_id']) || empty($order['order_first_name']) || empty($order['order_tickets_number'])){
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			exit();
+//		}
+//
+//		if (empty($order["order_unique_code"])) {
+//
+//			//Ask if its set to avoid replacement.
+//			$fields = array();
+//			$order["order_unique_code"] = $fields['order_unique_code'] = md5(uniqid(rand(), true));
+//			$order["order_time"] = $fields["order_time"] = time()+600;
+//
+//			if( $db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
+//				edit_order($fields, 'order_id', $_SESSION['order_id'], 'frontend booking step6');
+//			}
+//		}
+//
+//
+//		write_log("Time: ".$order['order_time'].", Order ID: ".$order['order_id'].", Direction: TO PROTX, Order Code: ".$order['order_unique_code'].", Total: ".$order['order_total'].
+//		 	", Email: ".$order['order_email'].", Name: ".$order['order_title']." ".$order['order_first_name']." ".$order['order_last_name'].", Address: ".
+//			$order['order_street_address1']." ".$order['order_street_address2'].", City: ".$order['order_city'].", Country: ".$order['order_country'].
+//			", Zip:".$order['order_zip'].", Session ID: ".session_id().", IP: ".$_SERVER['REMOTE_ADDR'].", order = ".serialize($order));
+//
+//		if (TESTING) {
+//			/*
+//			 * using functions from "functions_payment.php"
+//			 * We send what Step8 is expecting as a 'success' payment
+//			 */
+//			$crypt = base64Encode(SimpleXor("VendorTxCode=".$order['order_unique_code']."&Status=OK",$EncryptionPassword));
+//			header("Location: booking.php?subpage=step8&crypt=".$crypt);
+//			exit();
+//		}
+//
+//		$crypt = generate_crypt($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
+//			$order['order_title']." ". $order['order_first_name']." ". $order['order_last_name'], COMPANY_EMAIL,
+//			$order['order_street_address1'].", ".$order['order_street_address2'].", ".$order['order_city'].", ".$order['order_country'], $order['order_zip']);
+//
+//		/*
+//		 * ONLY FOR TESTING (look config.php)
+//		 */
+//
+//		$smarty->assign("vspsite",$vspsite);
+//		$smarty->assign("crypt",$crypt);
+//
+//		$wipe=base64_encode($order['order_id']);
+//		$smarty->assign("wipe",$wipe);
+//
+//
+//		$smarty->assign("COUNTRIES",$COUNTRIES);
+//		$smarty->assign("subpage","_step6");
+//
+//		$smarty->assign("tour_id",$tour_id);
+//		// asignare variabile smarty si generare fisier smarty :
+//		$smarty->assign("pages_dir","pages");
+//		$smarty->assign("page","booking");
+//		$smarty->display('site_pages.tpl');		*/
+		break;	
+/**
+	STEP 5
+*/
+	case "step5":
+//		if (isset($_GET['tour_id']) && is_numeric($_GET['tour_id'])) {
+//			$tour_id = $_GET['tour_id'];
+//		}
+//		else {
+//			$query = "SELECT tour_id FROM `".$db->tour."` WHERE 1 AND tour_del = 0";
+//			$tour_ids = $db->select_field($db->tour, "tour_id", "", $query);
+//			$tour_id = $tour_ids[0];
+//		}
+//
+//		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
+//		$tours = $db->select_fields ($db->tour,$query, array("tour_id","tour_name"));
+//
+//		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_id = ".$tour_id."";
+//		$tour_details = $db->select_fields ($db->tour, $query);
+//
+//		if (sizeof($tour_details)>0) {
+//			$tour_details = $tour_details[0];
+//		}
+//		else {
+//			header("Location: booking.php?subpage=tours");
+//			exit();
+//		}
+//
+//		if(!isset($_SESSION['order_id'])){
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			exit();
+//		}
+//		//extract current session
+//		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
+//		$departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
+//		if(empty($departure['departure_id']) || empty($order['order_first_name']) || empty($order['order_tickets_number'])){
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			exit();
+//		}
+//
+//		if(!empty($_POST)){
+//
+//			$fields = array();
+//			$fields["order_time"] = time();
+//
+//			if($db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
+//				edit_order($fields, 'order_id', $_SESSION['order_id'],'frontend booking step5');
+//			}
+//
+//			if(!$db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
+//
+//				header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//				exit();
+//
+//			}
+//
+//
+//			//check if there is tickets Available or Sold Out
+//
+//			if ($order['order_tour_shared_id'] !=0) {
+//				$_tour_id = $order['order_tour_shared_id'];
+//			} else {
+//				$_tour_id = $tour_id;
+//			}
+//
+//
+//			$query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+//					  FROM $db->departure,  $db->boat
+//					  WHERE departure_id = '".$order['order_departure_id']."'
+//					  AND departure_boat_id = boat_id
+//					  AND departure_tour_id = ".$_tour_id."
+//					  AND boat_del = 0";
+//
+//			$fields = array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
+//
+//			$departure = $db->select_fields($db->departure, $query, $fields, "", "", "", "", "", 1);
+//
+//			if (!empty($departure['departure_id'])) {
+//				$query2 = "SELECT * FROM $db->order
+//						  WHERE order_departure_id = '".$order['order_departure_id']."'";
+//				$fields = array("order_tickets", "order_tickets_number");
+//				$orders = $db->select_fields($db->order, $query2, $fields);
+//				$sum = 0;
+//				foreach($orders as $order)
+//				{
+//					//charter
+//					if (($order['order_tickets']==0) && ($order['order_tickets_number']==1)) {
+//						$sum += $departure['boat_passengers'];
+//					} else {
+//					//normal
+//						$sum +=  $order['order_tickets_number'];
+//					}
+//				}
+//				if ($sum > $departure['boat_passengers']) {
+//					header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&busy=true");
+//					exit();
+//				} else {
+//					header("Location: booking.php?tour_id=".$tour_id."&subpage=step6");
+//					exit();
+//				}
+//			} else {
+//				header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&busy=true");
+//				exit();
+//			}
+//		}
+//		$style_array = array("style_div_detail1","style_div_detail2");
+//		$smarty->assign("divStyles",$style_array);
+//		$smarty->assign("order",$order);
+//		$smarty->assign("departure",$departure);
+//
+//		//extract tickets
+//		$all_tickets = $db->select_fields($db->ticket, "", "", "ticket_del", "0");
+//
+//		$selected_tickets = explode("|",$order["order_tickets"]);
+//		$selected_quantities = explode("|",$order["order_quantities"]);
+//
+//		$tickets = array();
+//
+//		//only selected tickets
+//		foreach($all_tickets as $ticket){
+//			$k = array_search($ticket['ticket_id'],$selected_tickets);
+//			if ($k!==false) {
+//				$tmp = array();
+//				$tmp['type'] = $ticket['ticket_type'];
+//				$tmp['price'] = $ticket['ticket_price'];
+//				$tmp['quantity'] = $selected_quantities[$k];
+//				$tmp['total'] = sprintf("%0.2f", $tmp['quantity'] * $tmp['price']);
+//				$tickets[] = $tmp;
+//			}
+//		}
+//
+//		$smarty->assign("tickets",$tickets);
+//		$wipe=base64_encode($order['order_id']);
+//		$smarty->assign("wipe",$wipe);
+//
+//		$smarty->assign("tour",$tour_details);
+//		$smarty->assign("tour_id",$tour_id);
+//		$smarty->assign("tours",$tours);
+//
+//		$smarty->assign("COUNTRIES",$COUNTRIES);
+//		$smarty->assign("subpage","_step5");
+//		// asignare variabile smarty si generare fisier smarty :
+//		$smarty->assign("pages_dir","pages");
+//		$smarty->assign("page","booking");
+//		$smarty->display('site_pages.tpl');
+		break;
+/**
+	STEP 4
+*/
+	case "step4":
+	if (isset($_GET['tour_id']) && is_numeric($_GET['tour_id'])) {
+		$tour_id = $_GET['tour_id'];
+	} else {
+		$query = "SELECT tour_id FROM `".$db->tour."` WHERE 1 AND tour_del = 0";
+		$tour_ids = $db->select_field($db->tour, "tour_id", "", $query);
+		$tour_id = $tour_ids[0];
+	}
 
 		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
 		$tours = $db->select_fields ($db->tour,$query, array("tour_id","tour_name"));
@@ -1192,7 +1429,6 @@ foreach ($tours as $index=>$tour) {
 			$tour_details = $tour_details[0];
 		}
 		else {
-			write_error_log("Step6: no tour_details.\nIP:".$_SERVER['REMOTE_ADDR']."\nGET: ".implode_array($_GET)."\nPOST: ".implode_array($_POST));
 			header("Location: booking.php?subpage=tours"); 
 			exit();
 		}
@@ -1201,8 +1437,8 @@ foreach ($tours as $index=>$tour) {
 			write_error_log("Step6: no session.\nIP:".$_SERVER['REMOTE_ADDR']."\nGET: ".implode_array($_GET)."\nPOST: ".implode_array($_POST));
 			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
 			exit();
-		}	
-			
+		}
+
 		//extract current session
 		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
 		$departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
@@ -1210,237 +1446,62 @@ foreach ($tours as $index=>$tour) {
 			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
 			exit();
 		}
-		
+
 		if (empty($order["order_unique_code"])) {
-			
+
 			//Ask if its set to avoid replacement.
 			$fields = array();
 			$order["order_unique_code"] = $fields['order_unique_code'] = md5(uniqid(rand(), true));
 			$order["order_time"] = $fields["order_time"] = time()+600;
 
 			if( $db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
-				edit_order($fields, 'order_id', $_SESSION['order_id'], 'frontend booking step6');			
-			} 
-		}
-		
-
-		write_log("Time: ".$order['order_time'].", Order ID: ".$order['order_id'].", Direction: TO PROTX, Order Code: ".$order['order_unique_code'].", Total: ".$order['order_total'].
-		 	", Email: ".$order['order_email'].", Name: ".$order['order_title']." ".$order['order_first_name']." ".$order['order_last_name'].", Address: ".
-			$order['order_street_address1']." ".$order['order_street_address2'].", City: ".$order['order_city'].", Country: ".$order['order_country'].
-			", Zip:".$order['order_zip'].", Session ID: ".session_id().", IP: ".$_SERVER['REMOTE_ADDR'].", order = ".serialize($order));
-
-		if (TESTING) {
-			/*
-			 * using functions from "functions_payment.php"
-			 * We send what Step8 is expecting as a 'success' payment
-			 */
-			$crypt = base64Encode(SimpleXor("VendorTxCode=".$order['order_unique_code']."&Status=OK",$EncryptionPassword));
-			header("Location: booking.php?subpage=step8&crypt=".$crypt);
-			exit();
-		}
-
-		$crypt = generate_crypt($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'], 
-			$order['order_title']." ". $order['order_first_name']." ". $order['order_last_name'], COMPANY_EMAIL, 
-			$order['order_street_address1'].", ".$order['order_street_address2'].", ".$order['order_city'].", ".$order['order_country'], $order['order_zip']);
-			
-		/*
-		 * ONLY FOR TESTING (look config.php)
-		 */ 	
-					
-		$smarty->assign("vspsite",$vspsite);
-		$smarty->assign("crypt",$crypt);
-		
-		$wipe=base64_encode($order['order_id']);
-		$smarty->assign("wipe",$wipe);
-		
-
-		$smarty->assign("COUNTRIES",$COUNTRIES);
-		$smarty->assign("subpage","_step6");
-		
-		$smarty->assign("tour_id",$tour_id);
-		// asignare variabile smarty si generare fisier smarty :
-		$smarty->assign("pages_dir","pages");
-		$smarty->assign("page","booking");
-		$smarty->display('site_pages.tpl');		
-		break;	
-/**
-	STEP 5
-*/
-	case "step5":
-		if (isset($_GET['tour_id']) && is_numeric($_GET['tour_id'])) {
-			$tour_id = $_GET['tour_id'];
-		}
-		else {
-			$query = "SELECT tour_id FROM `".$db->tour."` WHERE 1 AND tour_del = 0";
-			$tour_ids = $db->select_field($db->tour, "tour_id", "", $query);
-			$tour_id = $tour_ids[0];
-		}
-
-		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
-		$tours = $db->select_fields ($db->tour,$query, array("tour_id","tour_name"));
-
-		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_id = ".$tour_id."";
-		$tour_details = $db->select_fields ($db->tour, $query);
-
-		if (sizeof($tour_details)>0) {
-			$tour_details = $tour_details[0];
-		}
-		else {
-			header("Location: booking.php?subpage=tours"); 
-			exit();
-		}
-
-		if(!isset($_SESSION['order_id'])){
-			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
-			exit();			
-		}		
-		//extract current session
-		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
-		$departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
-		if(empty($departure['departure_id']) || empty($order['order_first_name']) || empty($order['order_tickets_number'])){
-			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
-			exit();			
-		}	
-		
-		if(!empty($_POST)){
-		
-			$fields = array();
-			$fields["order_time"] = time();
-
-			if($db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
-				edit_order($fields, 'order_id', $_SESSION['order_id'],'frontend booking step5');
-			}
-					
-			if(!$db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
-
-				header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
-				exit();			
-
-			}
-		
-			
-			//check if there is tickets Available or Sold Out
-			
-			if ($order['order_tour_shared_id'] !=0) {
-				$_tour_id = $order['order_tour_shared_id'];
-			} else {
-				$_tour_id = $tour_id;
-			}
-
-
-			$query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
-					  FROM $db->departure,  $db->boat
-					  WHERE departure_id = '".$order['order_departure_id']."'
-					  AND departure_boat_id = boat_id
-					  AND departure_tour_id = ".$_tour_id."
-					  AND boat_del = 0";
-	
-			$fields = array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
-	
-			$departure = $db->select_fields($db->departure, $query, $fields, "", "", "", "", "", 1);
-			
-			if (!empty($departure['departure_id'])) {
-				$query2 = "SELECT * FROM $db->order
-						  WHERE order_departure_id = '".$order['order_departure_id']."'";
-				$fields = array("order_tickets", "order_tickets_number");
-				$orders = $db->select_fields($db->order, $query2, $fields);
-				$sum = 0;
-				foreach($orders as $order)
-				{
-					//charter
-					if (($order['order_tickets']==0) && ($order['order_tickets_number']==1)) {
-						$sum += $departure['boat_passengers'];
-					} else {
-					//normal
-						$sum +=  $order['order_tickets_number'];
-					}
-				}
-				if ($sum > $departure['boat_passengers']) {
-					header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&busy=true");
-					exit();				
-				} else {
-					header("Location: booking.php?tour_id=".$tour_id."&subpage=step6");
-					exit();
-				}
-			} else {
-				header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&busy=true");
-				exit();				
-			}
-		}
-		$style_array = array("style_div_detail1","style_div_detail2");
-		$smarty->assign("divStyles",$style_array);
-		$smarty->assign("order",$order);
-		$smarty->assign("departure",$departure);
-
-		//extract tickets 
-		$all_tickets = $db->select_fields($db->ticket, "", "", "ticket_del", "0");
-		
-		$selected_tickets = explode("|",$order["order_tickets"]);
-		$selected_quantities = explode("|",$order["order_quantities"]);
-
-		$tickets = array();
-		
-		//only selected tickets
-		foreach($all_tickets as $ticket){
-			$k = array_search($ticket['ticket_id'],$selected_tickets);
-			if ($k!==false) {
-				$tmp = array();
-				$tmp['type'] = $ticket['ticket_type'];
-				$tmp['price'] = $ticket['ticket_price'];
-				$tmp['quantity'] = $selected_quantities[$k];
-				$tmp['total'] = sprintf("%0.2f", $tmp['quantity'] * $tmp['price']);
-				$tickets[] = $tmp;
+				edit_order($fields, 'order_id', $_SESSION['order_id'], 'frontend booking step6');
 			}
 		}
 
-		$smarty->assign("tickets",$tickets);
-		$wipe=base64_encode($order['order_id']);
-		$smarty->assign("wipe",$wipe);
 
-		$smarty->assign("tour",$tour_details);
-		$smarty->assign("tour_id",$tour_id);
-		$smarty->assign("tours",$tours);
 
-		$smarty->assign("COUNTRIES",$COUNTRIES);
-		$smarty->assign("subpage","_step5");
-		// asignare variabile smarty si generare fisier smarty :
-		$smarty->assign("pages_dir","pages");
-		$smarty->assign("page","booking");
-		$smarty->display('site_pages.tpl');
-		break;
-/**
-	STEP 4
-*/
-	case "step4":
-	if (isset($_GET['tour_id']) && is_numeric($_GET['tour_id'])) {
-		$tour_id = $_GET['tour_id'];
-		}
-	else {
-		$query = "SELECT tour_id FROM `".$db->tour."` WHERE 1 AND tour_del = 0";
-		$tour_ids = $db->select_field($db->tour, "tour_id", "", $query);
-	//	$tour_id  = $tour_ids[0];
-		$tour_id = $tour_ids[0];
-		}
-
-		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
-		$tours = $db->select_fields ($db->tour,$query, array("tour_id","tour_name"));
-
-		$query = "SELECT * FROM $db->tour WHERE 1 AND tour_id = ".$tour_id."";
-		$tour_details = $db->select_fields ($db->tour, $query);
-		if (sizeof($tour_details)>0) {
-			$tour_details = $tour_details[0];
-		}
-		else {
-			header("Location: booking.php?subpage=tours"); 
-			exit();
-		}
-
-		if(!isset($_SESSION['order_id'])){
-			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
-			exit();			
-		}		
 
 		if(!empty($_POST)){
+            write_log("Time: ".$order['order_time'].", Order ID: ".$order['order_id'].", Direction: TO PROTX, Order Code: ".$order['order_unique_code'].", Total: ".$order['order_total'].
+                ", Email: ".$order['order_email'].", Name: ".$order['order_title']." ".$order['order_first_name']." ".$order['order_last_name'].", Address: ".
+                $order['order_street_address1']." ".$order['order_street_address2'].", City: ".$order['order_city'].", Country: ".$order['order_country'].
+                ", Zip:".$order['order_zip'].", Session ID: ".session_id().", IP: ".$_SERVER['REMOTE_ADDR'].", order = ".serialize($order));
+
+
+            if (TESTING) {
+                /*
+                 * using functions from "functions_payment.php"
+                 * We send what Step8 is expecting as a 'success' payment
+                 */
+                $crypt = base64Encode(SimpleXor("VendorTxCode=".$order['order_unique_code']."&Status=OK",$EncryptionPassword));
+                header("Location: booking.php?subpage=step8&crypt=".$crypt);
+                exit();
+            }
+
+            /*$crypt = generate_crypt($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
+                $order['order_title']." ". $order['order_first_name']." ". $order['order_last_name'], COMPANY_EMAIL,
+                $order['order_street_address1'].", ".$order['order_street_address2'].", ".$order['order_city'].", ".$order['order_country'], $order['order_zip']);*/
+
+            $crypt = generate_crypt3($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
+                $order['order_title']." ". $order['order_first_name']." ". $order['order_last_name'], COMPANY_EMAIL,
+                $order['order_street_address1'].", " .$order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country'],
+                $order['order_street_address1'].", " .$order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country']);
+
+            /*
+             * ONLY FOR TESTING (look config.php)
+             */
+
+            $smarty->assign("vspsite",$vspsite);
+            $smarty->assign("crypt",$crypt);
+
+            $wipe=base64_encode($order['order_id']);
+            $smarty->assign("wipe",$wipe);
+
+
+            $smarty->assign("COUNTRIES",$COUNTRIES);
+
+
 			$fields = $_POST;
 			$fields["order_time"] = time();
 
@@ -1627,6 +1688,10 @@ foreach ($tours as $index=>$tour) {
 						$sum +=  $ordern['order_tickets_number'];
 					}
 				}
+                //echo $sum;
+                //echo " -  " . $departures['boat_passengers'];
+                //echo " -  " . $departures['departure_id'];
+                //die();
 				if ($sum > $departures['boat_passengers']) {
 					header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&busy=true");
 					exit();

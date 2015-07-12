@@ -1,3 +1,8 @@
+<form name="step4" id="bookingForm" method="post" action="{$vspsite}">
+<input type="hidden" name="VPSProtocol" value="3.0">
+<input type="hidden" name="TxType" value="PAYMENT">
+<input type="hidden" name="Vendor" value="londonribvoyage">
+<input type="hidden" name="Crypt" value="{$crypt}">
 <div class="breadcrum-step">
     <a href="#" >1. Trip type and seats</a>
     <a href="#" >2. Date and time</a>
@@ -24,7 +29,7 @@
                 <li>Trip</li>
                 <li>Trip</li>
                 <li><span>Trip</span>{$tour}</li>
-                <li><span>Date</span>{$departure.departure_date|date_format:"%d %b %Y"}</li>
+                <li><span>Date</span>{$departure.departure_dateHide time selector when empty departures|date_format:"%d %b %Y"}</li>
                 <li><span>Time</span>{$departure.departure_time|truncate:5:""}</li>
                 {section name=i loop=$tickets}
                     <li><span>{$tickets[i].type}</span>&pound;{$tickets[i].price} ({$tickets[i].quantity})</li>
@@ -41,3 +46,4 @@
         </div>
     </div>
 </div>
+    </form>
