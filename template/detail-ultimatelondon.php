@@ -2,13 +2,6 @@
 <?php include 'head.php';?>
 
 <?php include 'menu.php';?> 
-<div class="md-modal md-effect-11" id="modal-1">
-    <div class="md-content">
-            <button class="md-close" style="background:transparent;border:0;">
-                <img style="width:100%;" src="content/img/buy.jpg" />
-            </button>
-    </div>
-</div>
 
 
 <section id="detail" class="ultimatelondon"> 
@@ -42,7 +35,7 @@
 
                 <div class="booknow"></div>
                 <button class="btn btn-main md-trigger" data-modal="modal-1"> book this trip  </button>
-                <button class="btn btn-secondary md-trigger" data-modal="modal-1"> buy gift voucher  </button>
+                <button class="btn btn-secondary md-trigger" data-modal="modal-2"> buy gift voucher  </button>
             </div>
         </div>
     </div>

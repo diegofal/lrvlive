@@ -9,7 +9,6 @@
         <script src="js/plugins/maplace-0.1.3.js"></script>
         <script src="js/plugins/modalEffects.js"></script>
         <script src="js/plugins/classie.js"></script>
-        <script src="js/plugins/selectFx.js"></script>
         <script src="js/plugins/jquery.datetimepicker.js"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
         <script>
@@ -30,7 +29,7 @@
                   e.preventDefault();
                 });
                 // Si clickear cualquier item del menu, oculpa el menu
-                $('.md-trigger').on('click', function(e) {
+                $('.select-trip-items .md-trigger').on('click', function(e) {
                   $('.select-trip-items').toggleClass("pressed");
                   $('.dropdown-btn').toggleClass("pressed");
                   e.preventDefault();
@@ -55,27 +54,28 @@
 
 <script>
   var currentIndex = 0,
-  items = $('.step'),
+  items = $('.md-modal .step'),
   itemAmt = items.length;
 
-function cycleItems() {
-  var item = $('.step').eq(currentIndex);
+function cycleItems(padre) {
+  var item = $(padre).find(".step").eq(currentIndex);
+  console.log(item);
   items.hide();
   item.css('display','block');
   // $('#buy').addClass('step-' + currentIndex);
-
 }
 
-
-$('#next').click(function() {
+$('.btn-next').click(function() {
   currentIndex += 1;
+  var padre = $(this).closest('section');
+  console.log(padre);
   if (currentIndex > itemAmt - 1) {
     currentIndex = 0;
     window.location.href = "http://www.sagepay.co.uk/";
   }
   else{
+    cycleItems(padre);
   }
-  cycleItems();
 });
 
 // $('#prev').click(function() {
@@ -86,13 +86,6 @@ $('#next').click(function() {
 //   cycleItems();
 // });
 </script>
-<script>
-      (function() {
-        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
-          new SelectFx(el);
-        } );
-      })();
-    </script>
 
 <script type="text/javascript">
   $(document).ready(function() {
@@ -109,6 +102,7 @@ $('#next').click(function() {
       });
   });
 </script>
+
 <script>
     // Clicking button/checkbox Hack
     $( ".chartercheckbox" ).click(function() {
