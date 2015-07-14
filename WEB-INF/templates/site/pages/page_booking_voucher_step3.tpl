@@ -1,42 +1,36 @@
-<div class="booking-form vouchers_form">
-		<!--Form start -->
-		<form name="step6" method="post" action="{$vspsite}">
-			<INPUT TYPE="hidden" NAME="VPSProtocol" VALUE="2.22">
-			<INPUT TYPE="hidden" NAME="TxType" VALUE="PAYMENT">
-			<INPUT TYPE="hidden" NAME="Vendor" VALUE="londonribvoyage">
-			<INPUT TYPE="hidden" NAME="Crypt" VALUE="{$crypt}">
-			
-			<div class="booking-nav voucher-nav">
-					<ul>
-						<li><a href="booking.php?voucher_id={$smarty.get.voucher_id}&subpage=voucher_step1" class="how_many_1" title="How Many?">How Many</a></li>
-						<li><a href="booking.php?voucher_id={$smarty.get.voucher_id}&subpage=voucher_step2" class="yourdetail_1" title="Your Details">Your Details</a></li>
-						<li><a href="booking.php?voucher_id={$smarty.get.voucher_id}&subpage=voucher_step3" class="payment_1 active" title="Payment">Payment</a></li>
-					</ul>
-			</div>
-			
-			<div class="booking-form-main">
-				
-				<h1>Vouchers</h1>
-		
-				<div class="bookingtext_1_new">Please click on the "proceed" button below in order to pay for your ticket(s). The payment operation will be performed through <a href="http://www.protx.com/" target="_blank">www.protx.com</a>, a provider of secure online credit card and debit card payment solutions for thousands of online and mail order businesses across the UK.
-				<p><img src="WEB-INF/assets/images/utils/acceptedcards.gif" width="296" height="25" /></p>
-				</div>
+<div class="step step-3">
+	<header>
+		<span>Step 3</span>
+		<h3>Re-check  your information and proceed to payment</h3>
+		<p>You will be redirected to Protx.com, a provider of secure online credit card and debit card payment solutions for thousands of online and mail order businesses across the UK.</p>
+	</header>
+	<div class="buy-content">
+		<div id="resume" class="grid">
+			<ul class="personal col-1-3">
+				<li>Sender</li>
+				<li><span>Name</span>Mark Jacob</li>
+				<li><span>Phone</span>011 - 15 - 5315 - 9223</li>
+				<li><span>E-Mail</span>markjacob@gmail.com</li>
+				<li><span>Message</span>Querido Juancito Snow, te envio este voucher para que navegues las aguas del rio Thamesis a toda velocidad. Saludos, tu amigo Mark.</li>
+			</ul>
 
-				<div class="booking_form_row booking_buttons clearfix">
-					<div class="booking-button back-button"><a href="booking.php?voucher_id={$voucher_id}&subpage=voucher_step2">Back</a></div>
-					<div class="booking-button booking-submit"><a href="javascript:document.step6.submit();">Continue</a></div>
-				</div>	
-				
-			
-			
-		</form>
-		
+			<ul class="trip col-1-3">
+				<li>Receiver</li>
+
+				<li><span>Name</span>Jhon Snow</li>
+				<li><span>Phone</span>011 - 15 - 3415 - 4423</li>
+				<li><span>Address</span>youknownothing@gmail.com</li>
+				<li><span>Person of who it is to be posted</span>Jhon</li>
+
+			</ul>
+
+			<ul class="extras col-1-3">
+				<li>Trip</li>
+				<li><span>Trip</span>The Ultimate London Adventure</li>
+				<li><span>Adults</span>£75.90 (2)</li>
+				<li><span>Childrens</span>£75.90 (2)</li>
+				<li><span>Extras</span>£3.95</li>
+			</ul>
 		</div>
-<!--Form end -->
-	
-	
 	</div>
-											
-	{include file="utils/site_right_menu_booking_sub.tpl" }
-</div>
 </div>
