@@ -1,4 +1,11 @@
-<div class="step step-3">
+<form name="step6" method="post" action="{$vspsite}">
+<div class="breadcrum-step">
+	<a href="#">1. Voucher details</a>
+	<a href="#">2. Ticket type</a>
+	<a href="#" class="selected">3. Resume and payment</a>
+</div>
+
+<div class="step step-3" style="display: block;">
 	<header>
 		<span>Step 3</span>
 		<h3>Re-check  your information and proceed to payment</h3>
@@ -8,29 +15,31 @@
 		<div id="resume" class="grid">
 			<ul class="personal col-1-3">
 				<li>Sender</li>
-				<li><span>Name</span>Mark Jacob</li>
-				<li><span>Phone</span>011 - 15 - 5315 - 9223</li>
-				<li><span>E-Mail</span>markjacob@gmail.com</li>
-				<li><span>Message</span>Querido Juancito Snow, te envio este voucher para que navegues las aguas del rio Thamesis a toda velocidad. Saludos, tu amigo Mark.</li>
+				<li><span>Name</span>{$voucher_order.voucher_order_name}</li>
+				<li><span>Phone</span>{$voucher_order.voucher_order_phone}</li>
+				<li><span>E-Mail</span>{$voucher_order.voucher_order_email}</li>
+				<li><span>Message</span>{$voucher_order.voucher_order_message}</li>
 			</ul>
 
 			<ul class="trip col-1-3">
 				<li>Receiver</li>
 
-				<li><span>Name</span>Jhon Snow</li>
-				<li><span>Phone</span>011 - 15 - 3415 - 4423</li>
-				<li><span>Address</span>youknownothing@gmail.com</li>
-				<li><span>Person of who it is to be posted</span>Jhon</li>
+				<li><span>Name</span>{$voucher_order.voucher_order_to}</li>
+				<li><span>Phone</span>{$voucher_order.voucher_order_phone_to}</li>
+				<li><span>Address</span>{$voucher_order.voucher_order_address1_to}</li>
+				<li><span>Person of who it is to be posted</span>{$voucher_order.voucher_order_name_to}</li>
 
 			</ul>
 
 			<ul class="extras col-1-3">
-				<li>Trip</li>
-				<li><span>Trip</span>The Ultimate London Adventure</li>
-				<li><span>Adults</span>£75.90 (2)</li>
-				<li><span>Childrens</span>£75.90 (2)</li>
+                <li>Trip</li>
+				<li><span>Trip</span>XXXXXXXXX</li>
+                {section name=i loop=$tickets}
+                    <li><span>{$tickets[i].type}</span>£ {$tickets[i].price} ({$tickets[i].quantity})</li>
+                {/section}
 				<li><span>Extras</span>£3.95</li>
 			</ul>
 		</div>
 	</div>
 </div>
+    </form>

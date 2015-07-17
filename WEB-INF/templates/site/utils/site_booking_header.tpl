@@ -399,7 +399,11 @@
 										{*<div class="secondmain_wrap">*}
 
 
+{if $subpage == _voucher_step1 or $subpage == _voucher_step2 or $subpage == _voucher_step3 or $subpage == _voucher_step4 }
+<section id="voucher">
+    {else}
 <section id="buy">
+    {/if}
 
 
 

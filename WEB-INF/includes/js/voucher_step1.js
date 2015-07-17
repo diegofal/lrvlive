@@ -31,14 +31,14 @@ function check_input(){
 			}			
 		}
 	}
-	
+
 }
 
 function check_form(){
 	validate();
-	
+	/*
 	if (returnVal) {
-		/* Check Quantity at least 1 */
+		//Check Quantity at least 1
 		var total_quantity = 0;
 		for (i = 0; i < document.voucher_step1.elements.length; i++) {
 			if(document.voucher_step1.elements[i].name == "quantity[]" 
@@ -56,7 +56,7 @@ function check_form(){
 			returnVal = false;
 		}
 	}
-
+*/
 	if(returnVal) document.voucher_step1.submit();	
 	//return returnVal;
 }
