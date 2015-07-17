@@ -24,7 +24,7 @@
             </div>
             <div>
                 <label for="phone">Phone</label>
-                <input name="order_phone" id="phone" type="number" value="{$order.order_phone}"/>
+                <input name="order_phone" id="phone" type="number" maxlength="20" value="{$order.order_phone}"/>
             </div>
             <div>
                 <label for="email">Email</label>
@@ -32,19 +32,23 @@
             </div>
             <div>
                 <label for="country">Country</label>
-                <input name="order_country" id="country" type="text" value="{$order.order_country}"/>
+                <select name="order_country" id="country" class="booking-ddwn-length">
+                {foreach key=key from=$COUNTRIES item=country}
+                    <option value="{$key}" {if $order.order_country == $key} selected="selected"{/if}>{$country}</option>
+                {/foreach}
+                </select>
             </div>
             <div>
                 <label for="city">City</label>
-                <input name="order_city" id="city" type="text" value="{$order.order_city}"/>
+                <input name="order_city" id="city" type="text" maxlength="40" value="{$order.order_city}"/>
             </div>
             <div>
                 <label for="address">Address</label>
-                <input name="order_street_address1" id="address" type="text" value="{$order.order_street_address1}"/>
+                <input name="order_street_address1" id="address" type="text" maxlength="100" value="{$order.order_street_address1}"/>
             </div>
             <div>
                 <label for="address2">Aditional address</label>
-                <input name="order_street_address2" id="address2" type="text" value="{$order.order_street_address2}"/>
+                <input name="order_street_address2" id="address2" type="text" maxlength="100" value="{$order.order_street_address2}"/>
             </div>
             <div>
                 <label for="postcode">Post code</label>

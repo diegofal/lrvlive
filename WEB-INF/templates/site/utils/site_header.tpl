@@ -10,10 +10,13 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet/less" type="text/css" href="css/main.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/main.less" />
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/vendor/less.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
 
 </head>
 <body>
@@ -39,6 +42,14 @@
 <div class="md-modal md-effect-11" id="modal-1">
     <div class="md-content">
         <iframe id="bookingFrame" src="booking.php?tour_id=9&subpage=step1" width="100%" height="500px"></iframe>
+    </div>
+    <div id="buyhelp">
+        <div>
+            <span>Need help with your booking?</span> Call us on: 0207 928 8933
+        </div>
+        <div>
+            <span>*</span>Child Tickets:  14 years & under
+        </div>
     </div>
 </div>
 

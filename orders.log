@@ -266,3 +266,147 @@ Array
     [order_date] => NULL
 )
 
+
+Fri, 17 Jul 2015 14:47:14 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 0
+    [order_quantities] => 1
+    [order_tickets_number] => 1
+    [order_total] => 408.95
+    [order_time] => 1437155234
+    [order_method] => protx
+    [order_tour_shared_id] => 1
+    [order_tour_prefix] => 5
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+
+
+Fri, 17 Jul 2015 14:57:54 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 32|33
+    [order_quantities] => 1|1
+    [order_tickets_number] => 2
+    [order_total] => 61.95
+    [order_time] => 1437155874
+    [order_method] => protx
+    [order_tour_shared_id] => 1
+    [order_tour_prefix] => 5
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+
+
+Fri, 17 Jul 2015 14:58:03 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 32|33
+    [order_quantities] => 1|1
+    [order_tickets_number] => 2
+    [order_total] => 61.95
+    [order_time] => 1437155883
+    [order_method] => protx
+    [order_tour_shared_id] => 1
+    [order_tour_prefix] => 5
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+
+
+Fri, 17 Jul 2015 14:58:20 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 32|33
+    [order_quantities] => 1|1
+    [order_tickets_number] => 2
+    [order_total] => 61.95
+    [order_time] => 1437155900
+    [order_method] => protx
+    [order_tour_shared_id] => 1
+    [order_tour_prefix] => 5
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+
+
+Fri, 17 Jul 2015 14:58:36 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 32|33
+    [order_quantities] => 1|1
+    [order_tickets_number] => 2
+    [order_total] => 61.95
+    [order_time] => 1437155916
+    [order_method] => protx
+    [order_tour_shared_id] => 1
+    [order_tour_prefix] => 5
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+
+
+Fri, 17 Jul 2015 17:15:53 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 32|33
+    [order_quantities] => 1|1
+    [order_tickets_number] => 2
+    [order_total] => 61.95
+    [order_time] => 1437164153
+    [order_method] => protx
+    [order_tour_shared_id] => 0
+    [order_tour_prefix] => 
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+
+
+Fri, 17 Jul 2015 17:20:18 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 32|33
+    [order_quantities] => 1|1
+    [order_tickets_number] => 2
+    [order_total] => 61.95
+    [order_time] => 1437164418
+    [order_method] => protx
+    [order_tour_shared_id] => 0
+    [order_tour_prefix] => 
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+
+
+Fri, 17 Jul 2015 17:25:09 -0300
+Try to edit order with departure = 0 - frontend booking step1 - order_id = 1
+Array
+(
+    [order_tickets] => 32|33
+    [order_quantities] => 1|1
+    [order_tickets_number] => 2
+    [order_total] => 61.95
+    [order_time] => 1437164709
+    [order_method] => protx
+    [order_tour_shared_id] => 0
+    [order_tour_prefix] => 
+    [order_reseller_id] => -1
+    [order_departure_id] => NULL
+    [order_date] => NULL
+)
+

@@ -180,6 +180,48 @@ function randomise()
     return (float)$sec + ((float)$usec * 100000);
 }
 
+function addPKCS5Padding($input)
+{
+    $blockSize = 16;
+    $padd = "";
+
+    // Pad input to an even block size boundary.
+    $length = $blockSize - (strlen($input) % $blockSize);
+    for ($i = 1; $i <= $length; $i++)
+    {
+        $padd .= chr($length);
+    }
+
+    return $input . $padd;
+}
+
+function removePKCS5Padding($input)
+{
+    $blockSize = 16;
+    $padChar = ord($input[strlen($input) - 1]);
+
+    /* Check for PadChar is less then Block size */
+    if ($padChar > $blockSize)
+    {
+        die('Invalid encryption string');
+    }
+    /* Check by padding by character mask */
+    if (strspn($input, chr($padChar), strlen($input) - $padChar) != $padChar)
+    {
+        die('Invalid encryption string');
+    }
+
+    $unpadded = substr($input, 0, (-1) * $padChar);
+    /* Chech result for printable characters */
+    if (preg_match('/[[:^print:]]/', $unpadded))
+    {
+        die('Invalid encryption string');
+    }
+    return $unpadded;
+}
+
+
+
 function generate_crypt($ThisVendorTxCode, $ThisAmount, $ThisDescription, $ThisCustomerEmail, $ThisCustomerName, $ThisVendorEmail,
                         $ThisDeliveryAddress, $ThisDeliveryPostCode, $MyURL = "")
 {
@@ -285,17 +327,37 @@ function generate_crypt3($ThisVendorTxCode, $ThisAmount, $ThisDescription, $This
 
     // ** Encrypt the plaintext string for inclusion in the hidden field **
     //$crypt = base64Encode(SimpleXor($stuff,$EncryptionPassword));
-    return base64Encode(SimpleXor($stuff, $EncryptionPassword));
+    //return base64Encode(SimpleXor($stuff, $EncryptionPassword));
+    $stuff = addPKCS5Padding($stuff);
+
+    $crypt = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $EncryptionPassword, $stuff, MCRYPT_MODE_CBC, $EncryptionPassword);
+
+    // Perform hex encoding and return.
+    return "@" . strtoupper(bin2hex($crypt));
+    //return ($stuff);
 }
 
 function decode_crypt($crypt)
 {
     global $EncryptionPassword;
-    $Decoded = SimpleXor(base64Decode($crypt), $EncryptionPassword);
+    $hex = substr($crypt, 1);
+    if (!preg_match('/^[0-9a-fA-F]+$/', $hex))
+    {
+        die('Invalid encryption string');
+    }
+    $crypt = pack('H*', $hex);
 
-    $values = getToken($Decoded);
+    $string = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $EncryptionPassword, $crypt, MCRYPT_MODE_CBC, $EncryptionPassword);
+
+    return removePKCS5Padding($string);
+
+
+    // Old version 2 decryption
+    //$Decoded = SimpleXor(base64Decode($crypt), $EncryptionPassword);
+
+    //$values = getToken($Decoded);
     //print_r($values);
-    return array("code" => $values['VendorTxCode'], "status" => $values['Status']);
+    //return array("code" => $values['VendorTxCode'], "status" => $values['Status']);
 }
 
 ?>

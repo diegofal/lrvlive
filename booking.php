@@ -471,6 +471,7 @@ switch (@$_GET['subpage']) {
         $smarty->assign("voucher", $voucher_details);
         $smarty->assign("voucher_id", $voucher_id);
         $smarty->assign("vouchers", $vouchers);
+        $smarty->assign("COUNTRIES", $COUNTRIES);
 
 
         $smarty->assign("subpage", "_voucher_step1");
@@ -1500,43 +1501,7 @@ switch (@$_GET['subpage']) {
 
 
         if (!empty($_POST)) {
-            write_log("Time: " . $order['order_time'] . ", Order ID: " . $order['order_id'] . ", Direction: TO PROTX, Order Code: " . $order['order_unique_code'] . ", Total: " . $order['order_total'] .
-                ", Email: " . $order['order_email'] . ", Name: " . $order['order_title'] . " " . $order['order_first_name'] . " " . $order['order_last_name'] . ", Address: " .
-                $order['order_street_address1'] . " " . $order['order_street_address2'] . ", City: " . $order['order_city'] . ", Country: " . $order['order_country'] .
-                ", Zip:" . $order['order_zip'] . ", Session ID: " . session_id() . ", IP: " . $_SERVER['REMOTE_ADDR'] . ", order = " . serialize($order));
-
-
-            if (TESTING) {
-                /*
-                 * using functions from "functions_payment.php"
-                 * We send what Step8 is expecting as a 'success' payment
-                 */
-                $crypt = base64Encode(SimpleXor("VendorTxCode=" . $order['order_unique_code'] . "&Status=OK", $EncryptionPassword));
-                header("Location: booking.php?subpage=step8&crypt=" . $crypt);
-                exit();
-            }
-
-            /*$crypt = generate_crypt($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
-                $order['order_title']." ". $order['order_first_name']." ". $order['order_last_name'], COMPANY_EMAIL,
-                $order['order_street_address1'].", ".$order['order_street_address2'].", ".$order['order_city'].", ".$order['order_country'], $order['order_zip']);*/
-
-            $crypt = generate_crypt3($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
-                $order['order_title'] . " " . $order['order_first_name'] . " " . $order['order_last_name'], COMPANY_EMAIL,
-                $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country'],
-                $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country']);
-
-            /*
-             * ONLY FOR TESTING (look config.php)
-             */
-
-            $smarty->assign("vspsite", $vspsite);
-            $smarty->assign("crypt", $crypt);
-
-            $wipe = base64_encode($order['order_id']);
-            $smarty->assign("wipe", $wipe);
-
-
-            $smarty->assign("COUNTRIES", $COUNTRIES);
+            //$smarty->assign("COUNTRIES", $COUNTRIES);
 
 
             $fields = $_POST;
@@ -1571,6 +1536,42 @@ switch (@$_GET['subpage']) {
                 exit();
             }
         }
+
+        write_log("Time: " . $order['order_time'] . ", Order ID: " . $order['order_id'] . ", Direction: TO PROTX, Order Code: " . $order['order_unique_code'] . ", Total: " . $order['order_total'] .
+            ", Email: " . $order['order_email'] . ", Name: " . $order['order_title'] . " " . $order['order_first_name'] . " " . $order['order_last_name'] . ", Address: " .
+            $order['order_street_address1'] . " " . $order['order_street_address2'] . ", City: " . $order['order_city'] . ", Country: " . $order['order_country'] .
+            ", Zip:" . $order['order_zip'] . ", Session ID: " . session_id() . ", IP: " . $_SERVER['REMOTE_ADDR'] . ", order = " . serialize($order));
+
+
+        if (TESTING) {
+            /*
+             * using functions from "functions_payment.php"
+             * We send what Step8 is expecting as a 'success' payment
+             */
+            //$crypt = base64Encode(SimpleXor("VendorTxCode=" . $order['order_unique_code'] . "&Status=OK", $EncryptionPassword));
+            //header("Location: booking.php?subpage=step8&crypt=" . $crypt);
+            //exit();
+        }
+
+        /*$crypt = generate_crypt($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
+            $order['order_title']." ". $order['order_first_name']." ". $order['order_last_name'], COMPANY_EMAIL,
+            $order['order_street_address1'].", ".$order['order_street_address2'].", ".$order['order_city'].", ".$order['order_country'], $order['order_zip']);*/
+
+        $crypt = generate_crypt3($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
+            $order['order_title'] . " " . $order['order_first_name'] . " " . $order['order_last_name'], COMPANY_EMAIL,
+            $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country'],
+            $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country']);
+
+        /*
+         * ONLY FOR TESTING (look config.php)
+         */
+
+        $smarty->assign("vspsite", $vspsite);
+        $smarty->assign("crypt", $crypt);
+
+        $wipe = base64_encode($order['order_id']);
+        $smarty->assign("wipe", $wipe);
+
         $order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
         $fields = $_POST;
         $fields["order_time"] = time();
@@ -1776,7 +1777,7 @@ switch (@$_GET['subpage']) {
         $smarty->assign("tour", $tour_details);
         $smarty->assign("tour_id", $tour_id);
         $smarty->assign("tours", $tours);
-
+        $smarty->assign("COUNTRIES", $COUNTRIES);
         $smarty->assign("subpage", "_step3");
         // asignare variabile smarty si generare fisier smarty :
         $smarty->assign("pages_dir", "pages");

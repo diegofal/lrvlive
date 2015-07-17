@@ -45,6 +45,8 @@
     <script src="js/plugins/selectFx.js"></script>
     <script src="js/plugins/jquery.datetimepicker.js"></script>
     <script src="js/booking.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+
     <script>
         $(function() {
             var header = $(".clearHeader");
@@ -75,12 +77,15 @@
     </script>
 
     <script type="text/javascript">
+        /*
         $('#datetimepicker3').datetimepicker({
             inline:true
         });
+        */
     </script>
 
     <script>
+        /*
         var currentIndex = 0,
                 items = $('.step'),
                 itemAmt = items.length;
@@ -104,7 +109,7 @@
             }
             cycleItems();
         });
-
+*/
         // $('#prev').click(function() {
         //   currentIndex -= 1;
         //   if (currentIndex < 0) {
