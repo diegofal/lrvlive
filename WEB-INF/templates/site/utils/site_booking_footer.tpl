@@ -7,7 +7,8 @@
     {/if}
     <div class="grid">
         {if $subpage==_step1}
-        <div class="col-1-3"><a href="javascript:$('#modal-1').modal('hide')" id="prev" class="btn md-close btn-secondary"> Close </a></div>
+        <div class="col-1-3">
+            <a href="#" id="prev" class="btn md-close btn-secondary"> Close </a></div>
         {else}
             <div class="col-1-3"><a href="javascript:history.back()" id="prev" class="btn md-close btn-secondary"> Back </a></div>
         {/if}

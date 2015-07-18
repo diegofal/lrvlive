@@ -1,4 +1,8 @@
-<form name="step6" method="post" action="{$vspsite}">
+<form name="step3" method="post" action="{$vspsite}">
+	<input type="hidden" name="VPSProtocol" value="3.0">
+	<input type="hidden" name="TxType" value="PAYMENT">
+	<input type="hidden" name="Vendor" value="londonribvoyage">
+	<input type="hidden" name="Crypt" value="{$crypt}">
 <div class="breadcrum-step">
 	<a href="#">1. Voucher details</a>
 	<a href="#">2. Ticket type</a>
@@ -33,7 +37,7 @@
 
 			<ul class="extras col-1-3">
                 <li>Trip</li>
-				<li><span>Trip</span>XXXXXXXXX</li>
+				<li><span>Trip</span>{$tourName}</li>
                 {section name=i loop=$tickets}
                     <li><span>{$tickets[i].type}</span>£ {$tickets[i].price} ({$tickets[i].quantity})</li>
                 {/section}
@@ -43,3 +47,9 @@
 	</div>
 </div>
     </form>
+
+{literal}
+	<script>function check_form(){
+			document.step3.submit();
+		}</script>
+	{/literal}

@@ -143,6 +143,16 @@ switch (@$_GET['subpage']) {
             exit();
         }
 
+
+        $query = "SELECT tour_id FROM `" . $db->tour . "` WHERE tour_id=" . $voucher_details[voucher_tour_id] . " AND tour_del = 0";
+        $tour_ids = $db->select_field($db->tour, "tour_id", "", $query);
+        $tour_id = $tour_ids[0];
+
+
+
+        $query = "SELECT * FROM $db->tour WHERE 1 AND tour_id = " . $tour_id . "";
+        $tour_details = $db->select_fields($db->tour, $query);
+
         //extract current session
         $voucher_order = $db->select_fields($db->voucher_order, "", "", 'voucher_order_id', $_SESSION['voucher_order_id'], "", "", "", 1);
 
@@ -171,9 +181,16 @@ switch (@$_GET['subpage']) {
               exit();
           }*/
 
-        $crypt = generate_crypt($voucher_order['voucher_order_unique_code'], $voucher_order['voucher_order_discounted_total'], $voucher_details['voucher_name'], $voucher_order['voucher_order_email'],
+
+        $crypt = generate_crypt3($voucher_order['voucher_order_unique_code'], $voucher_order['voucher_order_total'], $tour_details[0]['tour_name'], $voucher_order['voucher_order_email'],
+            $voucher_order['voucher_order__name'] . " " . $voucher_order['voucher_order_lastname'], COMPANY_EMAIL,
+            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country'],
+            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country']);
+
+
+        /*$crypt = generate_crypt($voucher_order['voucher_order_unique_code'], $voucher_order['voucher_order_discounted_total'], $voucher_details['voucher_name'], $voucher_order['voucher_order_email'],
             $voucher_order['voucher_order_to'], COMPANY_EMAIL,
-            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'] . ", " . $voucher_order['voucher_order_city'] . ", " . $voucher_order['voucher_order_country'], $voucher_order['voucher_order_postcode'], $URL);
+            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'] . ", " . $voucher_order['voucher_order_city'] . ", " . $voucher_order['voucher_order_country'], $voucher_order['voucher_order_postcode'], $URL);*/
 
 
         //		//extract tickets
@@ -212,6 +229,8 @@ switch (@$_GET['subpage']) {
         $smarty->assign("voucher_order", $voucher_order);
         $smarty->assign("vspsite", $vspsite);
         $smarty->assign("crypt", $crypt);
+        $smarty->assign("tourName", $tour_details[0]['tour_name']);
+
 
 
         $smarty->assign("COUNTRIES", $COUNTRIES);
@@ -946,7 +965,7 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            die('Sorry! Trip not found');
+            echo('Sorry! Trip not found');
             //header("Location: booking.php?subpage=tours");
             exit();
         }
@@ -1469,7 +1488,7 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            die('Sorry! Trip not found');
+            echo('Sorry! Trip not found');
             //header("Location: booking.php?subpage=tours");
             exit();
         }
@@ -1652,9 +1671,9 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            die('Sorry! Trip not found');
+            echo('Sorry! Trip not found');
             //header("Location: booking.php?subpage=tours");
-            //exit();
+            exit();
         }
 
         if (!isset($_SESSION['order_id'])) {
@@ -2130,7 +2149,7 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            die('Sorry! Trip not found');
+            echo('Sorry! Trip not found');
             //header("Location: booking.php?subpage=tours");
             exit();
         }
