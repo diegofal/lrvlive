@@ -64,7 +64,7 @@
 				<label for="terms"></label>
 				<p>Please confirm that you have read <a href="javascript:openwind('terms.php', 700, 500, 'yes')">TERMS & CONDITIONS.</a></p>
 			</div>
-			<div class="chartercheckbox"><input type="checkbox" name="confirm" value="checkbox" {if !empty($order.order_find)} checked="checked"{/if} id="terms"/>Accept</div>
+			<div onclick="selectCheck()" class="chartercheckbox"><input  onclick="selectCheck()" id="checkTerms" type="checkbox" name="confirm" value="checkbox" {if !empty($order.order_find)} checked="checked"{/if} id="terms"/>Accept</div>
 		</div>
 	</div>
 
@@ -76,5 +76,13 @@
         $(document).ready(function(){
             calculate_total();
         });
+
+        function selectCheck() {
+            if (document.getElementById('checkTerms').checked) {
+                $('#checkTerms').prop("checked", false);
+            } else {
+                $('#checkTerms').prop("checked", true);
+            }
+        }
     </script>
 {/literal}
