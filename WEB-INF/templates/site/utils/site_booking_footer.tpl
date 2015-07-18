@@ -1,7 +1,17 @@
 <footer>
-    <!--<p class="msj error"><span class="icon">Aca va un mensaje de error de algo mal seleccionado</p>-->
+    {if $error == 'expired' }
+        <p class="msj error" style="display: block"><span class="icon">Session expired</p>
+    {/if}
+    {if $error == 'nodata' }
+        <p class="msj error" style="display: block"><span class="icon">No data received</p>
+    {/if}
     <div class="grid">
-        <div class="col-1-3"><a href="#" id="prev" class="btn md-close btn-secondary"> Cancel </a></div>
+        {if $subpage==_step1}
+        <div class="col-1-3"><a href="javascript:$('#modal-1').modal('hide')" id="prev" class="btn md-close btn-secondary"> Close </a></div>
+        {else}
+            <div class="col-1-3"><a href="javascript:history.back()" id="prev" class="btn md-close btn-secondary"> Back </a></div>
+        {/if}
+
         <div class="col-1-3"><p class="price-total"><span>$</span><span id="tot_price" class="number">{$order.order_total}</span></p></div>
         <div class="col-1-3"><a href="javascript:check_form();" id="next" class="btn btn-main" > Next </a></div>
         <!--<input type="submit" class="btn btn-main" value="Next">-->
