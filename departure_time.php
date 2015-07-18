@@ -37,9 +37,11 @@ if ($order['order_tour_shared_id'] !=0) {
 //AND boat_del = 0
 //ORDER BY departure_time ASC";
 
-if ($order['orders_tickets'] != 0){
+//echo json_encode($order['orders_tickets'] . " - " .  $order["order_tickets_number"]);
+
+if ($order['order_tickets'] != 0){ // not a charter
     $qty = $order["order_tickets_number"];
-} else {
+} else { // charter
     $qty = "boat_passengers";
 }
 
@@ -54,7 +56,9 @@ $query = "SELECT departure_id, departure_time, boat_passengers, boat_charter_pri
 					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
 
-
+//
+//echo $query;
+//die;
 //echo $query; exit();
 
 $fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");

@@ -5,7 +5,7 @@
 {$content.page_meta}
 {literal}
 <link href="WEB-INF/assets/css/slider.css?v=2" rel="stylesheet" type="text/css" />
-<link href="WEB-INF/assets/css/style.css?v=2" rel="stylesheet" type="text/css" />
+
 <!--script type="text/javascript" src="WEB-INF/includes/js/main.js?v=2"></script-->
 <script type="text/javascript" src="WEB-INF/includes/js/pngfix.js?v=2"></script>
 

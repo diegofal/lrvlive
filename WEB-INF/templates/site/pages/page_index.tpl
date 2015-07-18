@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="btn btn-main doble">
-                            <a href="detail-ultimatelondon.php"> view detail </a><span>or</span><a class="md-trigger" tourid="9" data-modal="modal-1"> book now </a>
+                            <a href="detail-ultimatelondon.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="btn btn-main doble">
-                            <a href="detail-thamesbarrierexplorersvoyage.php"> view detail </a><span>or</span><a class="md-trigger" tourid="4" data-modal="modal-1"> book now </a>
+                            <a href="detail-thamesbarrierexplorersvoyage.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="btn btn-main doble">
-                            <a href="detail-breakthebarrier.php"> view detail </a><span>or</span><a class="md-trigger" tourid="12" data-modal="modal-1"> book now </a>
+                            <a href="detail-breakthebarrier.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                         </div>
 
                         <div class="btn btn-main doble">
-                            <a href="detail-captainkiddcanarywharf.php"> view detail </a><span>or</span><a class="md-trigger" tourid="1" data-modal="modal-1"> book now </a>
+                            <a href="detail-captainkiddcanarywharf.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
@@ -190,7 +190,32 @@
 
 {literal}
     <script>
-        $(function() {
+        var video;
+        var index = 0;
+
+        function addSourceToVideo(element, src, type) {
+            var source = document.createElement('source');
+            source.src = src;
+            source.type = type;
+            element.appendChild(source);
+        }
+
+        progressHandler = function(e) {
+            if( video.duration ) {
+                var percent = (video.buffered.end(0)/video.duration) * 100;
+                console.log( percent );
+                if( percent >= 40 ) {
+                    video.play();
+                }
+            }
+        }
+
+        $(document).ready(function(){
+            video = document.getElementsByTagName('video')[0];
+            addSourceToVideo( video, "content/video/video.ogv", "video/ogv");
+            addSourceToVideo( video, "content/video/video.mp4", "video/mp4");
+            video.addEventListener("progress", progressHandler,false);
+
             $('#slides').superslides({
                 hashchange: true,
                 inherit_height_from: '#trips',
@@ -223,38 +248,12 @@
                 ]
 
             });
-        });
-    </script>
-    <script>
-        function addSourceToVideo(element, src, type) {
-            var source = document.createElement('source');
-            source.src = src;
-            source.type = type;
-            element.appendChild(source);
-        }
 
-        var video;
-        var index = 0;
-        $(document).ready(function(){
-            video = document.getElementsByTagName('video')[0];
-            addSourceToVideo( video, "content/video/video.ogv", "video/ogv");
-            addSourceToVideo( video, "content/video/video.mp4", "video/mp4");
-            video.addEventListener("progress", progressHandler,false);
-            //bindKeys();
-            // if set, overrides <video width>
-//            videoWidth: win.width;
-//            // if set, overrides <video height>
-//            videoHeight: win.height;
+            $(document).find("body").show();
+
         });
 
-        progressHandler = function(e) {
-            if( video.duration ) {
-                var percent = (video.buffered.end(0)/video.duration) * 100;
-                console.log( percent );
-                if( percent >= 40 ) {
-                    video.play();
-                }
-            }
-        }
+
+
     </script>
 {/literal}

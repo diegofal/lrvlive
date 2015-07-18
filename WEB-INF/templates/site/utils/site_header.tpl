@@ -19,7 +19,7 @@
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
 
 </head>
-<body>
+<body style="display:none">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -39,9 +39,9 @@
 
 {/literal}
 
-<div class="md-modal md-effect-11" id="modal-1">
+<div class="md-modal md-effect-11" style="display:none" id="modal-1">
     <div class="md-content">
-        <iframe id="bookingFrame" src="booking.php?tour_id=9&subpage=step1" width="100%" height="500px"></iframe>
+        <iframe id="bookingFrame" src="" width="100%" height="500px" ></iframe>
 
         <div id="buyhelp">
             <div>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>London RIB Voyages</title>
 {literal}
-<link href="WEB-INF/assets/css/style.css" rel="stylesheet" type="text/css" />
+
 <script type="text/javascript" src="WEB-INF/includes/js/main.js"></script>
 <script type="text/javascript" src="WEB-INF/includes/js/pngfix.js"></script>
 <script type="text/javascript" src="WEB-INF/includes/js/flash.js"></script>

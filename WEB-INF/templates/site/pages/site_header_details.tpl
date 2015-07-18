@@ -11,7 +11,7 @@
 {else}
 {$content.page_meta}
 {/if}
-<link href="WEB-INF/assets/css/style.css?v=20130709" rel="stylesheet" type="text/css" />
+
 {if $page == "location"}
 {literal}
  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAk_PeATHc7Zk4v935p5iMORQyasHvbimZ52QT_h2fTtA71RTODRQ4xDTS8sZxMt0yUhjUPYWjkGCeew" type="text/javascript"></script>
