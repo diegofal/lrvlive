@@ -409,8 +409,9 @@
     {literal}
     <script type="text/javascript">
         $(document).ready(function(){
-            $(window.parent.document).find("#modal-1").height($(document).height());
-            $(window.parent.document).find("#bookingFrame").height($(document).height())
+//            debugger;
+            $(window.parent.document).find("#modal-1").height($(document).find("html").height());
+            $(window.parent.document).find("#bookingFrame").height($(document).find("html").height())
         })
     </script>
     {/literal}
