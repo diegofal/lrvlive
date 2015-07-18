@@ -406,5 +406,13 @@
     {/if}
 
 
+    {literal}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window.parent.document).find("#modal-1").height($(document).height());
+            $(window.parent.document).find("#bookingFrame").height($(document).height())
+        })
+    </script>
+    {/literal}
 
 <!-- End new booking design -->

@@ -35,8 +35,16 @@ var ModalEffects = (function() {
             // Create Modal
 			el.addEventListener( 'click', function( ev ) {
                 var tourid = $(this).attr('tourid');
+                var voucherid = $(this).attr('voucherid');
 
-                $("#bookingFrame").attr('src', 'booking.php?tour_id=' + tourid + '&subpage=step1')
+                if (tourid != undefined){
+                    $("#bookingFrame").attr('src', 'booking.php?tour_id=' + tourid + '&subpage=step1')
+                }
+
+                if (voucherid != undefined){
+                    $("#bookingFrame").attr('src', 'booking.php?voucher_id=' + voucherid+ '&subpage=voucher_step1')
+                }
+
 
 				classie.add( modal, 'md-show' );
 				overlay.removeEventListener( 'click', removeModalHandler );
