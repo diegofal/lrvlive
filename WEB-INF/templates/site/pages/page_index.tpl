@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="btn btn-main doble">
-                            <a href="detail-ultimatelondon.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                            <a href="detail-ultimatelondon.php"> view detail </a><span>or</span><a class="md-trigger" tourid="9" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="btn btn-main doble">
-                            <a href="detail-thamesbarrierexplorersvoyage.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                            <a href="detail-thamesbarrierexplorersvoyage.php"> view detail </a><span>or</span><a class="md-trigger" tourid="4" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="btn btn-main doble">
-                            <a href="detail-breakthebarrier.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                            <a href="detail-breakthebarrier.php"> view detail </a><span>or</span><a class="md-trigger" tourid="12" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                         </div>
 
                         <div class="btn btn-main doble">
-                            <a href="detail-captainkiddcanarywharf.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                            <a href="detail-captainkiddcanarywharf.php"> view detail </a><span>or</span><a class="md-trigger" tourid="1" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>
