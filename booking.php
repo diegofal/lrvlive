@@ -5,7 +5,7 @@ include "WEB-INF/includes/functions/functions_payment.php";
 include "WEB-INF/includes/functions/functions_log.php";
 include "WEB-INF/includes/functions/functions_order.php";
 
-$price_fee = 3.95;
+$price_fee = PRICE_FEE;
 // Added by Carlos
 $smarty->assign("price_fee", $price_fee);
 
@@ -204,7 +204,7 @@ switch (@$_GET['subpage']) {
         $_ticket = $db->select_field_keyval($db->ticket, $query, "ticket_id", "ticket_seats");
 
         $smarty->assign("tickets", $tickets);
-        $query = "SELECT * FROM $db->voucher WHERE 1 AND voucher_id = " . $voucher_id . "";
+        $query = "SELECT * FROM $db->voucher WHERE 1 AND voucher_id = " . $voucher_id;
         $voucher_details = $db->select_fields($db->voucher, $query);
         $voucher_order = $db->select_fields($db->voucher_order, "", "", 'voucher_order_id', $_SESSION['voucher_order_id'], "", "", "", 1);
         $smarty->assign("voucher", $voucher_details);
@@ -946,8 +946,8 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            // TODO
-            header("Location: booking.php?subpage=tours");
+            die('Sorry! Trip not found');
+            //header("Location: booking.php?subpage=tours");
             exit();
         }
 
@@ -1028,7 +1028,7 @@ switch (@$_GET['subpage']) {
 
         if (empty($_GET['crypt'])) {
             write_error_log("Access to step 8 without crypt variable.\nIP:" . $_SERVER['REMOTE_ADDR'] . "\nGET: " . implode_array($_GET) . "\nPOST: " . implode_array($_POST));
-            header("Location: booking.php?subpage=step1&expired=true");
+            header("Location: booking.php?subpage=step1&error=expired");
             exit();
         }
 
@@ -1161,7 +1161,7 @@ switch (@$_GET['subpage']) {
             }
 
             if(empty($my_session)){
-                header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+                header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
                 exit();
             }
 
@@ -1178,7 +1178,7 @@ switch (@$_GET['subpage']) {
             $order = $db->select_fields($db->order, "", "", 'order_sid', session_id(), "", "", "", 1);
             $departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
             if(empty($departure['departure_id']) || empty($order['order_first_name']) || empty($order['order_tickets_number'])){
-                header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+                header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
                 exit();
             }
 
@@ -1240,7 +1240,7 @@ switch (@$_GET['subpage']) {
 //
 //		if(!isset($_SESSION['order_id'])) {
 //			write_error_log("Step6: no session.\nIP:".$_SERVER['REMOTE_ADDR']."\nGET: ".implode_array($_GET)."\nPOST: ".implode_array($_POST));
-//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
 //			exit();
 //		}
 //
@@ -1248,7 +1248,7 @@ switch (@$_GET['subpage']) {
 //		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
 //		$departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
 //		if(empty($departure['departure_id']) || empty($order['order_first_name']) || empty($order['order_tickets_number'])){
-//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
 //			exit();
 //		}
 //
@@ -1332,14 +1332,14 @@ switch (@$_GET['subpage']) {
 //		}
 //
 //		if(!isset($_SESSION['order_id'])){
-//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
 //			exit();
 //		}
 //		//extract current session
 //		$order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
 //		$departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
 //		if(empty($departure['departure_id']) || empty($order['order_first_name']) || empty($order['order_tickets_number'])){
-//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//			header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
 //			exit();
 //		}
 //
@@ -1354,7 +1354,7 @@ switch (@$_GET['subpage']) {
 //
 //			if(!$db->exist_value($db->order,'order_id', $_SESSION['order_id'])){
 //
-//				header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+//				header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
 //				exit();
 //
 //			}
@@ -1469,13 +1469,14 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            header("Location: booking.php?subpage=tours");
+            die('Sorry! Trip not found');
+            //header("Location: booking.php?subpage=tours");
             exit();
         }
 
         if (!isset($_SESSION['order_id'])) {
             write_error_log("Step6: no session.\nIP:" . $_SERVER['REMOTE_ADDR'] . "\nGET: " . implode_array($_GET) . "\nPOST: " . implode_array($_POST));
-            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&expired=true");
+            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=expired");
             exit();
         }
 
@@ -1483,7 +1484,7 @@ switch (@$_GET['subpage']) {
         $order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
         $departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
         if (empty($departure['departure_id']) || empty($order['order_first_name']) || empty($order['order_tickets_number'])) {
-            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&expired=true");
+            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=expired");
             exit();
         }
 
@@ -1604,7 +1605,7 @@ switch (@$_GET['subpage']) {
         //extract current session
         $order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
         if (empty($order['order_find'])) {
-            header("Location: booking.php?subpage=step1&expired=true");
+            header("Location: booking.php?subpage=step1&error=expired");
             exit();
         }
         //$departure = $db->select_fields($db->departure, $query, $fields, "", "", "", "", "", 1);
@@ -1651,12 +1652,13 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            header("Location: booking.php?subpage=tours");
-            exit();
+            die('Sorry! Trip not found');
+            //header("Location: booking.php?subpage=tours");
+            //exit();
         }
 
         if (!isset($_SESSION['order_id'])) {
-            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&expired=true");
+            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=expired");
             exit();
         }
         //extract current session
@@ -1683,7 +1685,7 @@ switch (@$_GET['subpage']) {
         $departure = $db->select_fields($db->departure, "", "", 'departure_id', @$order['order_departure_id'], "", "", "", 1);
 
         if (empty($departure['departure_id'])) {
-            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&expired=true");
+            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=expired");
             exit();
         }
 
@@ -1727,7 +1729,7 @@ switch (@$_GET['subpage']) {
             //echo " -  " . $departures['departure_id'];
             //die();
             if ($sum > $departures['boat_passengers']) {
-                header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&busy=true");
+                header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=busy");
                 exit();
             }
         }
@@ -1808,13 +1810,14 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            header("Location: booking.php?subpage=tours");
+            die('Sorry, trip not found');
+            //header("Location: booking.php?subpage=tours");
             exit();
         }
         /*
             if (!isset($_SESSION['order_id'])){
 
-                header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&expired=true");
+                header("Location: booking.php?tour_id=".$tour_id."&subpage=step1&error=expired");
                 exit();
 
             }
@@ -1850,7 +1853,7 @@ switch (@$_GET['subpage']) {
         $order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
 
         if (empty($order['order_quantities'])) {
-            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&expired=true");
+            header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=expired");
             exit();
         }
 
@@ -2127,7 +2130,8 @@ switch (@$_GET['subpage']) {
         if (sizeof($tour_details) > 0) {
             $tour_details = $tour_details[0];
         } else {
-            header("Location: booking.php?subpage=tours");
+            die('Sorry! Trip not found');
+            //header("Location: booking.php?subpage=tours");
             exit();
         }
 
