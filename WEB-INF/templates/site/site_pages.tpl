@@ -13,7 +13,7 @@
 
 	{* FOOTER *}
 	{if $page == index}
-	{include file="utils/site_footer.tpl"}
+	    {include file="utils/site_footer.tpl"}
 	{elseif $subpage == _step1 or $subpage == _step2 or $subpage == _step3 or $subpage == _step4 or $subpage == _step5 or $subpage == _step6 or $subpage == _step8}
         {include file="utils/site_booking_footer.tpl"}
 	{elseif $subpage == _voucher_step1 or $subpage == _voucher_step2 or $subpage == _voucher_step3 or $subpage == _voucher_step4 }
