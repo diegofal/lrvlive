@@ -12,181 +12,156 @@
             <img alt="select yours" src="content/img/home/fastest-arrows.png">
         </div>
         <section id="trips">
-            <div id="slides">
-                <ul class="slides-container">
-                    <li>
-
-                        <div class="wrapper container">
-
-                            <div class="trip">
-                                <div>
-                                    <img src="content/img/thumb-ultimatelondon.jpg" class="preserve"/>
-                                    <div class="info">
-                                        <span>The London Eye → Canary Wharf → The London Eye </span>
-                                        <h3>The Ultimate London Adventure</h3>
-                                        <p>This is the one that started it all! <br>Our ‘Ultimate London Adventure’ is a jam-packed, fun-filled adrenaline-fuelled 50 minutes.</p>
-                                        <div class="facts">
-                                            <p>
-                                                <strong>50’</strong><br>
-                                                min. ride
-                                            </p>
-                                            <p>
-                                                <strong>22</strong><br>
-                                                sitepoints
-                                            </p>
-                                            <p>
-                                                <strong>35</strong><br>
-                                                mph<br>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn btn-main doble">
-                                        <a href="detail-ultimatelondon.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
-                                    </div>
-                                </div>
+            <div class="slider-homepage slider center">
+                <div class="trip">
+                    <div>
+                        <img src="content/img/thumb-ultimatelondon.jpg" class="preserve"/>
+                        <div class="info">
+                            <span>The London Eye <img src="content/img/arrow-mini.png"/> Canary Wharf <img src="content/img/arrow-mini.png"/> The London Eye </span>
+                            <h3>The Ultimate London Adventure</h3>
+                            <p>This is the one that started it all! <br>Our ‘Ultimate London Adventure’ is a jam-packed, fun-filled adrenaline-fuelled 50 minutes.</p>
+                            <div class="facts">
+                                <p>
+                                    <strong>50’</strong><br>
+                                    min. ride
+                                </p>
+                                <p>
+                                    <strong>22</strong><br>
+                                    sitepoints
+                                </p>
+                                <p>
+                                    <strong>35</strong><br>
+                                    mph<br>
+                                </p>
                             </div>
-                            <!-- end trip item -->
-
-                            <div class="trip">
-                                <div>
-                                    <img src="content/img/thumb-thamesbarrier.jpg" class="preserve" />
-                                    <div class="info">
-                                        <span>The London Eye → Thames Barrier → The London Eye</span>
-                                        <h3>Thames Barrier Explorers Voyage</h3>
-                                        <p>Your journey will take in every major sight the Thames has to offer from the power of Parliament to the might of the Thames Barrier and back.</p>
-                                        <div class="facts">
-                                            <p>
-                                                <strong>80’</strong><br>
-                                                min. ride
-                                            </p>
-                                            <p>
-                                                <strong>28</strong><br>
-                                                sitepoints
-                                            </p>
-                                            <p>
-                                                <strong>35</strong><br>
-                                                mph<br>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn btn-main doble">
-                                        <a href="detail-thamesbarrierexplorersvoyage.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end trip item -->
-
-
-                            <div class="trip">
-                                <div>
-                                    <img src="content/img/thumb-breakbarrier.jpg" class="preserve" />
-                                    <div class="info">
-                                        <span>TSt Katharine’s Pier  → Thames Barrier  → St Katharine’s Pier</span>
-                                        <h3>Break The Barrier (Speed only)</h3>
-                                        <p> It’s Fast, Furious and a World First. Thames Rockets is a new thrilling, high-speed boat ride blasting off this summer in the Capital.</p>
-                                        <div class="facts">
-                                            <p>
-                                                <strong>40’</strong><br>
-                                                min. ride
-                                            </p>
-                                            <p>
-                                                <strong>8</strong><br>
-                                                sitepoints
-                                            </p>
-                                            <p>
-                                                <strong>35</strong><br>
-                                                mph<br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn btn-main doble">
-                                        <a href="detail-breakthebarrier.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- trip -->
-
-
-
-                        </div>
-                    </li>
-
-
-                    <li>
-
-                        <div class="wrapper container">
-                            <div class="trip">
-                                <div>
-                                    <img src="content/img/thumb-captainkidd.jpg" class="preserve" />
-                                    <div class="info">
-                                        <span>The London Eye → Canary Wharf → The London Eye</span>
-                                        <h3>Captain Kidd's Canary Wharf</h3>
-                                        <p>Specially designed for families<br> You can still expect all the thrills and spills that have become the trademark our experience!</p>
-                                        <div class="facts">
-                                            <p>
-                                                <strong>50’</strong><br>
-                                                min. ride
-                                            </p>
-                                            <p>
-                                                <strong>22</strong><br>
-                                                sitepoints
-                                            </p>
-                                            <p>
-                                                <strong>35</strong><br>
-                                                mph<br>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn btn-main doble">
-                                        <a href="detail-captainkiddcanarywharf.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- trip -->
-
-                            <div class="trip">
-                                <div>
-                                    <img src="content/img/thumb-spring.jpg" class="preserve" />
-                                    <div class="info">
-                                        <span>The London Eye → Canary Wharf</span>
-                                        <h3>Spring<br>has Sprung</h3>
-                                        <p> For us that only means one thing. Sunshine, spring chickens, and the start of another Super Speedy Summer!<br><br></p>
-                                        <div class="facts">
-                                            <p>
-                                                <strong>50</strong><br>
-                                                min. ride
-                                            </p>
-                                            <p>
-                                                <strong>22</strong><br>
-                                                sitepoints
-                                            </p>
-                                            <p>
-                                                <strong>35</strong><br>
-                                                mph<br>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn btn-main doble">
-                                        <a href="detail-springsprung.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
-                    </li>
+                        <div class="btn btn-main doble">
+                            <a href="detail-ultimatelondon.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end trip item -->
 
-                </ul>
+                <div class="trip">
+                    <div>
+                        <img src="content/img/thumb-thamesbarrier.jpg" class="preserve" />
+                        <div class="info">
+                            <span>The London Eye <img src="content/img/arrow-mini.png"/> Thames Barrier <img src="content/img/arrow-mini.png"/> The London Eye</span>
+                            <h3>Thames Barrier Explorers Voyage</h3>
+                            <p>Your journey will take in every major sight the Thames has to offer from the power of Parliament to the might of the Thames Barrier and back.</p>
+                            <div class="facts">
+                                <p>
+                                    <strong>80’</strong><br>
+                                    min. ride
+                                </p>
+                                <p>
+                                    <strong>28</strong><br>
+                                    sitepoints
+                                </p>
+                                <p>
+                                    <strong>35</strong><br>
+                                    mph<br>
+                                </p>
+                            </div>
+                        </div>
 
-                <nav class="slides-navigation">
-                    <a href="#" class="next">Next</a>
-                    <a href="#" class="prev">Previous</a>
-                </nav>
+                        <div class="btn btn-main doble">
+                            <a href="detail-thamesbarrierexplorersvoyage.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end trip item -->
+
+
+                <div class="trip">
+                    <div>
+                        <img src="content/img/thumb-breakbarrier.jpg" class="preserve" />
+                        <div class="info">
+                            <span>St Katharine’s Pier  <img src="content/img/arrow-mini.png"/> Thames Barrier <img src="content/img/arrow-mini.png"/> St Katharine’s Pier</span>
+                            <h3>Break The Barrier (Speed only)</h3>
+                            <p> It’s Fast, Furious and a World First. Thames Rockets is a new thrilling, high-speed boat ride blasting off this summer in the Capital.</p>
+                            <div class="facts">
+                                <p>
+                                    <strong>40’</strong><br>
+                                    min. ride
+                                </p>
+                                <p>
+                                    <strong>8</strong><br>
+                                    sitepoints
+                                </p>
+                                <p>
+                                    <strong>35</strong><br>
+                                    mph<br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn btn-main doble">
+                            <a href="detail-breakthebarrier.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end trip item -->
+
+                <div class="trip">
+                    <div>
+                        <img src="content/img/thumb-captainkidd.jpg" class="preserve" />
+                        <div class="info">
+                            <span>The London Eye <img src="content/img/arrow-mini.png"/> Canary Wharf <img src="content/img/arrow-mini.png"/> The London Eye</span>
+                            <h3>Captain Kidd's Canary Wharf.</h3>
+                            <p>Specially designed for families.<br> You can still expect all the thrills and spills that have become the trademark our experience!</p>
+                            <div class="facts">
+                                <p>
+                                    <strong>50’</strong><br>
+                                    min. ride
+                                </p>
+                                <p>
+                                    <strong>22</strong><br>
+                                    sitepoints
+                                </p>
+                                <p>
+                                    <strong>35</strong><br>
+                                    mph<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-main doble">
+                            <a href="detail-captainkiddcanarywharf.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- trip -->
+
+                <div class="trip">
+                    <div>
+                        <img src="content/img/thumb-limehouse.jpg" class="preserve" />
+                        <div class="info">
+                            <span>The London Eye <img src="content/img/arrow-mini.png"/> Canary Wharf <img src="content/img/arrow-mini.png"/> Limehouse Pontoon</span>
+                            <h3>Limehouse<br>Blast</h3>
+                            <p>London RIB Voyages invite you to start your weekend in style. This is the classiest, tastiest and speediest Friday night in London!<br><br></p>
+                            <div class="facts">
+                                <p>
+                                    <strong>30</strong><br>
+                                    min. ride
+                                </p>
+                                <p>
+                                    <strong>22</strong><br>
+                                    sitepoints
+                                </p>
+                                <p>
+                                    <strong>35</strong><br>
+                                    mph<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-main doble">
+                            <a href="detail-limehouseblast.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -220,6 +195,34 @@
                 hashchange: true,
                 inherit_height_from: '#trips',
             });
+
+            $('.slider-homepage').slick({
+                centerMode: true,
+                centerPadding: '350px',
+                slidesToShow: 3,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1600,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+
+            });
         });
     </script>
     <script>
@@ -239,9 +242,9 @@
             video.addEventListener("progress", progressHandler,false);
             //bindKeys();
             // if set, overrides <video width>
-            videoWidth: win.width;
-            // if set, overrides <video height>
-            videoHeight: win.height;
+//            videoWidth: win.width;
+//            // if set, overrides <video height>
+//            videoHeight: win.height;
         });
 
         progressHandler = function(e) {
