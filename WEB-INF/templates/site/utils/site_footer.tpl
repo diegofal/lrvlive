@@ -127,23 +127,25 @@
     </script>
 
     <script type="text/javascript">
-//        $(document).ready(function() {
-//            var s = $(".facts-container");
-//            var pos = s.position();
-//            $(window).scroll(function() {
-//                var windowpos = $(window).scrollTop();
-//
-//                if (windowpos >= pos.top) {
-//                    s.addClass("stick");
-//                } else {
-//                    s.removeClass("stick");
-//                }
-//            });
-//
-//            $("[class='md-trigger']").click(function(){
-//
-//            })
-//        });
+        $(document).ready(function() {
+            var s = $(".facts-container");
+            var pos = s.position();
+
+            if (s.length>0){
+                $(window).scroll(function() {
+                    var windowpos = $(window).scrollTop();
+
+                    if (windowpos >= pos.top) {
+                        s.addClass("stick");
+                    } else {
+                        s.removeClass("stick");
+                    }
+                });
+            }
+
+
+           
+        });
     </script>
 {/literal}
 
