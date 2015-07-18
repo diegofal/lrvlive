@@ -1,4 +1,4 @@
-<form name="step4" id="bookingForm" method="post" action="{$vspsite}">
+<form name="step4" id="bookingForm" target="_parent" method="post" action="{$vspsite}">
 <input type="hidden" name="VPSProtocol" value="3.0">
 <input type="hidden" name="TxType" value="PAYMENT">
 <input type="hidden" name="Vendor" value="londonribvoyage">
