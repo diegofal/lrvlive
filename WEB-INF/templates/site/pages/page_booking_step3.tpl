@@ -16,11 +16,11 @@
         <form id="personal-info">
             <div>
                 <label for="name">First name</label>
-                <input name="order_first_name" id="name" type="text" value="{$order.order_first_name}"/>
+                <input name="order_first_name" id="name" type="text" maxlength="20" value="{$order.order_first_name}"/>
             </div>
             <div>
                 <label for="lastname">Surname / Last name</label>
-                <input name="order_last_name" id="lastname" type="text" value="{$order.order_last_name}"/>
+                <input name="order_last_name" id="lastname" type="text" maxlength="20" value="{$order.order_last_name}"/>
             </div>
             <div>
                 <label for="phone">Phone</label>
@@ -28,7 +28,7 @@
             </div>
             <div>
                 <label for="email">Email</label>
-                <input name="order_email" id="email" type="email"  value="{$order.order_email}"/>
+                <input name="order_email" id="email" type="email"  maxlength="50" value="{$order.order_email}"/>
             </div>
             <div>
                 <label for="country">Country</label>
@@ -44,15 +44,15 @@
             </div>
             <div>
                 <label for="address">Address</label>
-                <input name="order_street_address1" id="address" type="text" maxlength="100" value="{$order.order_street_address1}"/>
+                <input name="order_street_address1" id="address" type="text" maxlength="50" value="{$order.order_street_address1}"/>
             </div>
             <div>
                 <label for="address2">Aditional address</label>
-                <input name="order_street_address2" id="address2" type="text" maxlength="100" value="{$order.order_street_address2}"/>
+                <input name="order_street_address2" id="address2" type="text" maxlength="49" value="{$order.order_street_address2}"/>
             </div>
             <div>
                 <label for="postcode">Post code</label>
-                <input name="order_zip" id="postcode" type="text" value="{$order.order_zip}"/>
+                <input name="order_zip" id="postcode" type="text"  maxlength="10" value="{$order.order_zip}"/>
             </div>
 
             <div>

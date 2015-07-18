@@ -22,7 +22,7 @@
 			<li><span>Email of sender:</span><input name="voucher_order_email" value="{$voucher_order.voucher_order_email}" maxlength="100" type="text"/></li>
 
 			<li><span>Address of sender:</span><input name="voucher_order_address1" value="{$voucher_order.voucher_order_address1}" maxlength="50" type="text"/></li>
-			<li><span></span><input name="voucher_order_address2" value="{$voucher_order.voucher_order_address2}" maxlength="50" type="text"/></li>
+			<li><span></span><input name="voucher_order_address2" value="{$voucher_order.voucher_order_address2}" maxlength="49" type="text"/></li>
 
 			<li><span>City of sender:</span><input name="voucher_order_city" value="{$voucher_order.voucher_order_city}" maxlength="40" type="text"/></li>
 			<li><span>Post Code of sender:</span><input name="voucher_order_postcode" value="{$voucher_order.voucher_order_postcode}" maxlength="10" type="text"/></li>
