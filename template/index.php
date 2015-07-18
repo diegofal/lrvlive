@@ -53,7 +53,7 @@
 
                             <div class="trip">
                                 <div>
-                                    <img src="content/img/thumb-thamesbarrier.jpg" class="preserve" />
+                                <img src="content/img/thumb-thamesbarrier.jpg" class="preserve" />
                                     <div class="info">
                                         <span>The London Eye → Thames Barrier → The London Eye</span>
                                         <h3>Thames Barrier Explorers Voyage</h3>
