@@ -29,10 +29,15 @@ var ModalEffects = (function() {
 
 			function removeModalHandler() {
 				removeModal( classie.has( el, 'md-setperspective' ) );
+                $("#bookingFrame").attr('src', 'about:blank');
 			}
 
             // Create Modal
 			el.addEventListener( 'click', function( ev ) {
+                var tourid = $(this).attr('tourid');
+
+                $("#bookingFrame").attr('src', 'booking.php?tour_id=' + tourid + '&subpage=step1')
+
 				classie.add( modal, 'md-show' );
 				overlay.removeEventListener( 'click', removeModalHandler );
 				overlay.addEventListener( 'click', removeModalHandler );
@@ -43,9 +48,8 @@ var ModalEffects = (function() {
 					}, 25 );
 				}
 
-                var tourid = $(this).attr('tourid');
 
-                $("#bookingFrame").attr('src', 'booking.php?tour_id=' + tourid + '&subpage=step1')
+
 			});
 
 			//close.addEventListener( 'click', function( ev ) {

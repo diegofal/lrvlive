@@ -67,11 +67,11 @@
         </div>
     </div>
     <ul class="select-trip-items">
-        <li><button class="md-trigger" data-modal="modal-1"> The Ultimate London Adventure </button></li>
-        <li><button class="md-trigger" data-modal="modal-1"> Captain Kidd's Canary Wharf </button></li>
-        <li><button class="md-trigger" data-modal="modal-1"> Thames Barrier Explorers Voyage </button></li>
-        <li><button class="md-trigger" data-modal="modal-1"> Break The Barrier (Speed only) </button></li>
-        <li><button class="md-trigger" data-modal="modal-1"> Sunset Speed Boating </button></li>
+        <li><button class="md-trigger" tourid="9" data-modal="modal-1"> The Ultimate London Adventure </button></li>
+        <li><button class="md-trigger" tourid="1" data-modal="modal-1"> Captain Kidd's Canary Wharf </button></li>
+        <li><button class="md-trigger" tourid="4" data-modal="modal-1"> Thames Barrier Explorers Voyage </button></li>
+        <li><button class="md-trigger" tourid="12" data-modal="modal-1"> Break The Barrier (Speed only) </button></li>
+        <li><button class="md-trigger" tourid="27" data-modal="modal-1"> Sunset Speed Boating </button></li>
     </ul>
 </header>
 
