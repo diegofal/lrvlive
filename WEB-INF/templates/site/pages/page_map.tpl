@@ -710,15 +710,3 @@
 </section>
 
 
-{literal}
-    <script type="text/javascript">
-        $('.slider-map').slick({
-            dots: true,
-            infinite: false,
-            speed: 300,
-            arrows: true,
-            slidesToShow: 18,
-            slidesToScroll: 2
-        });
-    </script>
-    {/literal}

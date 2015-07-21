@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/slick/slick.min.js"></script>
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -26,7 +26,6 @@
 <!-- Add your site or application content here -->
 <div id="fb-root"></div>
 <div id="fb-root"></div>
-
 {literal}
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -38,21 +37,27 @@
 
 {/literal}
 
-<div class="md-modal md-effect-11" style="display:none" id="modal-1">
+<div class="md-modal md-effect-11" id="modal-1">
     <div class="md-content">
         <iframe id="bookingFrame" src="" width="100%" height="500px" ></iframe>
-
-        <div id="buyhelp">
-            <div>
-                <span>Need help with your booking?</span> Call us on: 0207 928 8933
-            </div>
-            <div>
-                <span>*</span>Child Tickets:  14 years & under
-            </div>
-        </div>
-
     </div>
-
+    <div id="buyhelp" style="width: 100%;
+	margin: 0px 0 0 0;
+	position: absolute;
+	overflow: hidden;
+	color: white;
+	font-size: small;
+	font-weight: bold;
+	line-height: 18px;">
+        <div style="float: left;width: 50%;">
+            <span style="color: yellow">Need help with your booking?</span> Call us on: 0207 928 8933
+        </div>
+        <div style="text-align: right;">
+            <span style="font-size: 26px;
+		margin: 2px 5px 0 -17px;
+		position: absolute;">*</span>Child Tickets:  14 years & under
+        </div>
+    </div>
 </div>
 
 

@@ -105,8 +105,9 @@
     <script src="js/plugins/classie.js"></script>
     <script src="js/plugins/selectFx.js"></script>
     <script src="js/plugins/jquery.datetimepicker.js"></script>
-    <script src="js/booking.js"></script>
     <script src="js/slick/slick.min.js"></script>
+    <script src="js/booking.js"></script>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -120,6 +121,20 @@
 
 {/literal}
 
+{if $page==map}
+    {literal}
+        <script type="text/javascript">
+            $('.slider-map').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                arrows: true,
+                slidesToShow: 18,
+                slidesToScroll: 2
+            });
+        </script>
+    {/literal}
+{/if}
 
 {literal}
     <script type="text/javascript">
