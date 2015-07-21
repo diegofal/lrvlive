@@ -9,15 +9,14 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet/less" type="text/css" href="css/main.less" />
-    <link rel="stylesheet/less" type="text/css" href="css/main.less" />
-    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <link rel="stylesheet/less" type=/"text/css" href="css/main.less" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/vendor/less.min.js"></script>
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 8]>

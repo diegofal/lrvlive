@@ -67,6 +67,17 @@
   background: -ms-linear-gradient(top, @startColor, @endColor);
   background: -o-linear-gradient(top, @startColor, @endColor);
 }
+
+.gradient-map-bg{
+  background: -moz-linear-gradient(top,  rgba(237,234,228,0) 0%, rgba(237,234,228,1) 5%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(237,234,228,0)), color-stop(5%,rgba(237,234,228,1)));
+  background: -webkit-linear-gradient(top,  rgba(237,234,228,0) 0%,rgba(237,234,228,1) 5%);
+  background: -o-linear-gradient(top,  rgba(237,234,228,0) 0%,rgba(237,234,228,1) 5%);
+  background: -ms-linear-gradient(top,  rgba(237,234,228,0) 0%,rgba(237,234,228,1) 5%);
+  background: linear-gradient(to bottom,  rgba(237,234,228,0) 0%,rgba(237,234,228,1) 5%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00edeae4', endColorstr='#edeae4',GradientType=0 );
+}
+
 .horizontal-gradient (@startColor: @brand-primary-1, @endColor: @brand-primary-2) {
   background-color: @startColor;
   background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
@@ -98,6 +109,7 @@
   background: -ms-linear-gradient(top, @startColor, @endColor);
   background: -o-linear-gradient(top, @startColor, @endColor);
 }
+
 .animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
   -webkit-animation: @name @duration @delay @ease;
   -moz-animation:    @name @duration @delay @ease;
