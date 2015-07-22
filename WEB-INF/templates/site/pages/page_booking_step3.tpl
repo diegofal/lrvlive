@@ -71,7 +71,7 @@
             </div>
             <div>
                 <input id="terms" type="checkbox" {if !empty($order.order_find)} checked="checked"{/if}/>
-                <label for="terms">Please confirm that you have read our <a href="#">Terms & Conditions.</a></label>
+                <label for="terms">Please confirm that you have read our <a href="javascript:openwind('terms.php', 700, 500, 'yes')">Terms & Conditions.</a></label>
             </div>
         </form>
     </div>

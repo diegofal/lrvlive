@@ -20,9 +20,15 @@
 			<ul class="personal col-1-3">
 				<li>Sender</li>
 				<li><span>Name</span>{$voucher_order.voucher_order_name}</li>
+				<li><span>Last Name</span>{$voucher_order.voucher_order_lastname}</li>
+				<li><span>Address</span>{$voucher_order.voucher_order_address1}</li>
+				<li><span></span>{$voucher_order.voucher_order_address2}</li>
+				<li><span>City</span>{$voucher_order.voucher_order_city}</li>
+				<li><span>Post code</span>{$voucher_order.voucher_order_postcode}</li>
+				<li><span>Country</span>{$voucher_order.voucher_order_country}</li>
 				<li><span>Phone</span>{$voucher_order.voucher_order_phone}</li>
 				<li><span>E-Mail</span>{$voucher_order.voucher_order_email}</li>
-				<li><span>Message</span>{$voucher_order.voucher_order_message}</li>
+
 			</ul>
 
 			<ul class="trip col-1-3">
@@ -32,7 +38,7 @@
 				<li><span>Phone</span>{$voucher_order.voucher_order_phone_to}</li>
 				<li><span>Address</span>{$voucher_order.voucher_order_address1_to}</li>
 				<li><span>Person of who it is to be posted</span>{$voucher_order.voucher_order_name_to}</li>
-
+				<li><span>Message</span>{$voucher_order.voucher_order_message}</li>
 			</ul>
 
 			<ul class="extras col-1-3">

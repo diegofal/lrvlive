@@ -1,5 +1,4 @@
 <section id="map">
-
     <div class="md-modal md-effect-11 modal-sitepoint" id="london-eye">
         <div class="md-content">
             <div class="sitepoint-image">
