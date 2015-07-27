@@ -1677,7 +1677,9 @@ body {
 		}
 	}
 }
-
+.schema{
+	display: none;
+}
 /*///////////////////////////////////////////////////////////////////  FOOTER LINKS //////*/
 
 #footerlinks {
@@ -2185,6 +2187,57 @@ body {
     	p{
     		font-size: 12px;
     	}
+    }
+}
+
+/*////////////////////////////////////////////// random section ///////*/
+#random-section{
+    background: url("img/bg-home.jpg")no-repeat top center;
+    background-size:cover; 
+    padding: 170px 0;
+    text-align: center;
+    &.success{
+    	h1{
+    		background: green;
+    	}
+    }
+    > div {
+    	    padding: 0 ;
+    	    overflow: hidden;
+    	    line-height: 1.2em;
+    	    width: 400px;
+    	    .border-radius;
+    	    display: inline-block;
+    	    background: white;
+    	    .drop-shadow;
+    	    h1{
+    	    	display: block;
+    	    	background: red;
+    	    	color: white;
+    	    	font-size: 0.7em;
+    	    	text-transform: uppercase;
+    	    	padding: 10px;
+    	    }
+    	    .content{
+    	    	padding: 2em;
+    	    	p.lead{
+    	    		font-size: 1.1em;
+    	    		font-weight: 600;
+    	    		border-bottom: 1px solid fade(@brand-secondary-2,20%);
+    	    		margin-bottom: 0.8em;
+    	    		text-align: center;
+    	    		line-height:1.5em; 
+    	    		padding-bottom: 0.8em;
+    	    		opacity: 1;
+    	    	}
+    	    	p{
+    	    		text-align: left;
+    	    		font-size: 0.8em;
+    	    		line-height: 1.3em;
+				    line-height: 1.8em;
+				    opacity: 0.8;
+    	    	}
+    	    }
     }
 }
 

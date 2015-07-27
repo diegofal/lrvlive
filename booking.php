@@ -2008,6 +2008,7 @@ switch (@$_GET['subpage']) {
         */
 
         $smarty->assign("resellers", $resellers);
+        $smarty->assign("error", $_GET['error']);
         $smarty->assign("tour", $tour_details);
         $smarty->assign("tour_id", $tour_id);
         $smarty->assign("tours", $tours);

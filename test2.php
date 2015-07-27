@@ -6,8 +6,8 @@ $reselerID = "112";
 $token = "abc";
 
 $scritpUrl = "test2.php"; // if you change the script name.
-$baseUrl = "http://134.213.145.120/lrvlive/";
-//$baseUrl = "http://live.lrv.web/";
+//$baseUrl = "http://134.213.145.120/lrvlive/";
+$baseUrl = "http://live.lrv.web/";
 
 // End config
 
@@ -149,9 +149,9 @@ if (!$json->Status == 'Ok' && $_POST['step'] != 1){
 ?>
     <form action="<?=$scritpUrl?>" method="post" role="form">
 	<input type="hidden" name="step" value="1">
-    <legend>Step 1 - Get Offers</legend>
-    <p>These are the offers avaiable for our test reseller account. You host this php script in your servers and change the ResellerID and Token, by the one giwen by us, in order to test the API integration.</p>
-    <p><b>Offers</b></p>
+    <legend>Step 1 - Get Tickets</legend>
+    <p>These are the tickets avaiable for our test reseller account. You host this php script in your servers and change the ResellerID and Token, by the one giwen by us, in order to test the API integration.</p>
+    <p><b>Tickets</b></p>
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -229,7 +229,7 @@ switch ($_POST['step']){
 
 
         </div>
-            <button type="submit" class="btn btn-primary">Get offer Availavility</button>
+            <button type="submit" class="btn btn-primary">Get tickets Availavility</button>
         </form>
 
 <?
@@ -259,7 +259,7 @@ if ($_POST[step] == 2){
             <? foreach ($json->departures as $departure) {
                 $sDeparture = serialize($departure);
                 echo "<tr>
-        				<td>$departure->time</td>
+        				<td>" . substr($departure->time,0,5) ."</td>
         				<td><input type='radio' name='DepartureInfo' id='DepartureInfo' value='$sDeparture'></td>
         			</tr>";
             }
@@ -289,7 +289,7 @@ if ($_POST[step] == 2){
             <legend>Step 3 - Confirm Booking</legend>
             <p>After ther customer has entered ther personal information and payed, reseller website will be able to confirm the booking</p>
             <div class="form-group">
-                <label for="offerName">Offer</label>
+                <label for="offerName">Ticket</label>
                 <input disabled type="text" class="form-control" name="offerName" id="offerName"  value="<?= $_POST['OfferName'] ?>">
             </div>
             <div class="form-group">
