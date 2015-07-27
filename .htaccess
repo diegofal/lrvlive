@@ -13,6 +13,87 @@ RewriteRule ^\/?vouchers\/?(.*)\.html$ /vouchers/html.php?code=$1
 RewriteCond %{REQUEST_URI}  ^\/?vouchers\/?(.*)\.pdf$
 RewriteRule ^\/?vouchers\/?(.*)\.pdf$ /vouchers/pdf.php?code=$1
 
+# Old site to new Site
+
+RewriteCond %{REQUEST_URI}  ^/route.php$
+RewriteRule .* /map.php
+
+RewriteCond %{REQUEST_URI}  ^/location.php$
+RewriteRule .* /map.php
+
+RewriteCond %{REQUEST_URI}  ^/families.php$
+RewriteRule .* /detail-captainkiddcanarywharf.php
+
+RewriteCond %{REQUEST_URI}  ^/who_is_this_for.php$
+RewriteRule .* /safety.php
+
+RewriteCond %{REQUEST_URI}  ^/about_us_our_boat.php$
+RewriteRule .* /why-us.php
+
+RewriteCond %{REQUEST_URI}  ^/about_us_features.php$
+RewriteRule .* /why-us.php
+
+RewriteCond %{REQUEST_URI}  ^/about_us_guides_stacey.php$
+RewriteRule .* /crew.php#1
+
+RewriteCond %{REQUEST_URI}  ^/about_us_guides_ben.php$
+RewriteRule .* /crew.php#2
+
+RewriteCond %{REQUEST_URI}  ^/about_us_guides.php$
+RewriteRule .* /crew.php
+
+RewriteCond %{REQUEST_URI}  ^/about_us_guides_mike_cole.php$
+RewriteRule .* /crew.php#5
+
+RewriteCond %{REQUEST_URI}  ^/about_us_guides_matt1.php$
+RewriteRule .* /crew.php#4
+
+RewriteCond %{REQUEST_URI}  ^/about_us_guides_matt2.php$
+RewriteRule .* /crew.php#3
+
+RewriteCond %{REQUEST_URI}  ^/stag_and_hen.php$
+RewriteRule .* /services.php
+
+RewriteCond %{REQUEST_URI}  ^/contact.php$
+RewriteRule .* /index.php#1
+
+RewriteCond %{REQUEST_URI}  ^/filming.php$
+RewriteRule .* /services.php
+
+RewriteCond %{REQUEST_URI}  ^/corporate_groups.php$
+RewriteRule .* /services.php
+
+RewriteCond %{REQUEST_URI}  ^/Termsandconditions.pdf$
+RewriteRule .* /terms.php
+
+RewriteCond %{REQUEST_URI}  ^/press_release.php$
+RewriteRule .* /why-us.php
+
+RewriteCond %{REQUEST_URI}  ^/skyfall.php$
+RewriteRule .* /index.php
+
+RewriteCond %{REQUEST_URI}  ^/vessels.htm$
+RewriteRule .* /safety.php#1
+
+RewriteCond %{REQUEST_URI}  ^/about_us_people_say.php$
+RewriteRule .* /why-us.php
+
+RewriteCond %{REQUEST_URI}  ^/about_us.php$
+RewriteRule .* /why-us.php
+
+#RewriteCond ^booking.php?subpage=charter$
+#RewriteRule .* services.php
+
+
+RewriteRule ^about_us_videos.php$ https://www.youtube.com/channel/UC_78eKTUZPWQv7Yhb6jIJVA [NC,R=301,L]
+
+RewriteRule ^special_offer.php$ https://londonribvoyages.wordpress.com/ [NC,R=301,L]
+
+RewriteRule ^in_the_news.php$ https://londonribvoyages.wordpress.com/ [NC,R=301,L]
+
+RewriteRule ^media_center.php$ https://londonribvoyages.wordpress.com/ [NC,R=301,L]
+# End old site to new site
+
 RewriteCond %{REQUEST_URI}  ^\/?booking\/?(.*)\.html$
 RewriteRule ^\/?booking\/?(.*)\.html$ /booking/print.php?code=$1
 

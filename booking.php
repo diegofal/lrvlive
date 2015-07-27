@@ -613,17 +613,15 @@ switch (@$_GET['subpage']) {
         break;
     case "select":
 
-        $smarty->assign("subpage", "_select");
-        // asignare variabile smarty si generare fisier smarty :
-        $smarty->assign("pages_dir", "pages");
-        $smarty->assign("page", "booking");
-        $smarty->display('site_pages.tpl');
+        header("Location: index.php");
+        exit();
 
         break;
     /**
      * PACKAGE DETAILS
      */
     case "package_details":
+
 
         if (isset($_GET['package_id']) && is_numeric($_GET['package_id'])) {
             $package_id = $_GET['package_id'];
@@ -639,8 +637,7 @@ switch (@$_GET['subpage']) {
         if (sizeof($package_details) > 0) {
             $package_details = $package_details[0];
         } else {
-            // TODO
-            header("Location: booking.php?subpage=select");
+            header("Location: index.php");
             exit();
         }
         $query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
@@ -690,143 +687,9 @@ switch (@$_GET['subpage']) {
      */
     case "tours":
 
-        $id_page = 26;
-        $content = $db->select_fields($db->page, "", "", "page_id", $id_page, "", "", "", 1);
-        $smarty->assign("content", $content);
 
-
-        $query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
-        $tours = $db->select_fields($db->tour, $query, array("tour_id", "tour_home_name1", "tour_home_name2", "tour_duration", "tour_home_image", "tour_big_image", "tour_charter_price", "order_by"));
-
-        /*echo "<pre>";
-        print_r($tours);
-        echo "</pre>";*/
-
-        foreach ($tours as $index => $tour) {
-            $query = "SELECT ticket_type, ticket_price FROM `" . $db->ticket . "` WHERE 1 AND ticket_tour_id = '" . $tour['tour_id'] . "' AND ticket_del = 0";
-            $tickets = $db->select_fields($db->ticket, $query, array("ticket_type", "ticket_price"));
-            if (sizeof($tickets) > 0)
-                $tours[$index]['tour_tickets'] = $tickets;
-            else
-                $tours[$index]['tour_tickets'] = false;
-
-            $query = "SELECT * FROM $db->voucher WHERE 1 AND voucher_del = 0 AND voucher_tour_id = " . $tour['tour_id'] . " ORDER BY voucher_id ASC";
-            $vouchers = $db->select_fields($db->voucher, $query, array("voucher_id", "voucher_tour_id"));
-
-            if (sizeof($vouchers) > 0) {
-                $tours[$index]['have_voucher'] = true;
-                $tours[$index]['voucher_id'] = $vouchers[0]['voucher_id'];
-            }
-            $query = "SELECT * FROM $db->package WHERE 1 AND package_del = 0 ORDER BY package_id ASC LIMIT 0,2";
-            $packages = $db->select_fields($db->package, $query, array("package_id", "package_name", "package_short_description", "package_big_image"));
-
-        }
-
-        /*-Tours Array-*/
-        $tours_indexed = array();
-        foreach ($tours as $tour) {
-            $tours_indexed[$tour['tour_id'] . "_Heading_Text"] = $tour['tour_home_name1'];
-            foreach ($tour as $k => $v) {
-                if ($k == 'tour_home_name1') {
-                    $strn_val = $smarty->smarty_modifier_truncate($tour['tour_home_name1'], 25);
-                    $tour['tour_home_name1'] = $strn_val;
-                }
-            }
-            //echo $tour['tour_id'].'----Test';
-
-            $tours_indexed[$tour['tour_id']] = $tour;
-
-        }
-        /*-Packages Array-*/
-        $packageIndex = array();
-        $style_array = array("imagerow_image_4", "imagerow_image_5");
-        foreach ($packages as $tourPackage) {
-            foreach ($tourPackage as $Pindex => $Pvalue) {
-                if ($Pindex == 'package_name') {
-                    $packag_val = $smarty->smarty_modifier_truncate($tourPackage['package_name'], 20);
-                    $tourPackage['package_name'] = $packag_val;
-                }
-            }
-            $packageIndex[] = $tourPackage;
-        }
-
-        /*-Random Tour Id-*/
-        $tour_id_arr = "";
-        $tour_id_arr = array();
-        foreach ($tours as $tindex => $tvalue) {
-            if ($tvalue['tour_id'] != '8') {
-                $tour_id_arr[] = $tvalue['tour_id'];
-            }
-        }
-
-        $count_tours = count($tour_id_arr) . 'countr';
-        $first = $second = '';
-        $first = rand(0, ($count_tours - 1));
-        $second = rand(0, ($count_tours - 1));
-
-        for ($i = 0; $i < $count_tours; $i++) {
-            if ($first == $second) {
-                $second = rand(0, ($count_tours - 1));
-            }
-        }
-
-        $Tour_Trip = array();
-        foreach ($tours as $Tvaluearr) {
-            if ($Tvaluearr['tour_id'] != '8') {
-                $Tour_Trip[$Tvaluearr['order_by']] = $Tvaluearr;
-            }
-        }
-
-        //echo $trip_counts; exit();
-
-        //unset($Tour_Trip[count($Tour_Trip)-1]);
-
-        /*echo "<pre>";
-        print_r($Tour_Trip);
-        echo "</pre>";*/
-
-        $trip_count = "";
-        $trip_counts = count($Tour_Trip);
-
-
-        $smarty->assign("Tour_Trip", $Tour_Trip);
-        $smarty->assign("trip_counts", $trip_counts);
-
-        /*$imgind = 0;
-        $Image_size_array = array();
-        foreach($tours as $Tindex=>$Tvalue)
-        {
-             $image_name   	 =  $Tvalue['tour_big_image'];
-             $imgwidth		 = 197;
-             $imgheight 		 = 118;
-             $ppath_image 	 = $WS_PATH.'img/tours/thumb/';
-             $spath_image		 = $FS_PATH.'img/tours/thumb/';
-             $Image_size_array[$imgind] = $smarty->ImageResize($ppath_image,$spath_image,$imgwidth,$imgheight,$image_name);
-             //$Image_size_array = $smarty->ImageResize($ppath_image,$spath_image,$imgwidth,$imgheight,$image_name);
-             $imgind++;
-        }*/
-
-        $myArray[] = $tour_id_arr[$first];
-        $myArray[] = $tour_id_arr[$second];
-        /*echo "<pre>";
-        print_r($Tour_Trip);
-        exit();*/
-
-        //$smarty->assign("Imagesize",$Image_size_array);
-        $smarty->assign("tours", $tours_indexed);
-        $smarty->assign("_tours", $tours);
-        $smarty->assign("TourId_0", $myArray[0]);
-        $smarty->assign("TourId_1", $myArray[1]);
-
-        $smarty->assign("styleSheet", $style_array);
-        $smarty->assign("packages", $packageIndex);
-        //$smarty->assign("content",$content);
-
-        $smarty->assign("subpage", "_tours");
-        // asignare variabile smarty si generare fisier smarty :
-        $smarty->assign("pages_dir", "pages");
-        $smarty->assign("page", "booking");
-        $smarty->display('site_pages.tpl');
+        header("Location: index.php");
+        exit();
 
         break;
     /**
@@ -834,105 +697,8 @@ switch (@$_GET['subpage']) {
      */
     case "charter":
 
-        $id_page = 1;
-        $content = $db->select_fields($db->page, "", "", "page_id", $id_page, "", "", "", 1);
-
-        $query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
-        $tours = $db->select_fields($db->tour, $query, array("tour_id", "tour_home_name1", "tour_home_name2", "tour_duration", "tour_home_image", "tour_charter_price", "order_by"));
-
-        foreach ($tours as $index => $tour) {
-            $query = "SELECT ticket_type, ticket_price FROM `" . $db->ticket . "` WHERE 1 AND ticket_tour_id = '" . $tour['tour_id'] . "' AND ticket_del = 0";
-            $tickets = $db->select_fields($db->ticket, $query, array("ticket_type", "ticket_price"));
-            if (sizeof($tickets) > 0)
-                $tours[$index]['tour_tickets'] = $tickets;
-            else
-                $tours[$index]['tour_tickets'] = false;
-
-            $query = "SELECT * FROM $db->voucher WHERE 1 AND voucher_del = 0 AND voucher_tour_id = " . $tour['tour_id'] . " ORDER BY voucher_id ASC";
-            $vouchers = $db->select_fields($db->voucher, $query, array("voucher_id", "voucher_tour_id"));
-
-            if (sizeof($vouchers) > 0) {
-                $tours[$index]['have_voucher'] = true;
-                $tours[$index]['voucher_id'] = $vouchers[0]['voucher_id'];
-            }
-            $query = "SELECT * FROM $db->package WHERE 1 AND package_del = 0 ORDER BY package_id ASC";
-            $packages = $db->select_fields($db->package, $query, array("package_id", "package_name", "package_short_description", "package_home_image"));
-        }
-
-        //echo "<pre>"; print_r($packages);
-        foreach ($packages as $key => $val) {
-            $package_nameTmp = $packages[$key]['package_name'];
-            if (strlen($package_nameTmp) > 23) {
-                $package_nameTmp = $package_nameTmp;
-            }
-            $packagesTmp[$key]['package_name'] = $package_nameTmp;
-        }
-        //echo "<pre>"; print_r($packagesTmp);
-
-        $Tour_Tripe = array();
-        foreach ($tours as $Tvaluearr) {
-            $Tour_Trip[$Tvaluearr['order_by']] = $Tvaluearr;
-        }
-        $smarty->assign("Tour_Trip", $Tour_Trip);
-
-        /*-Tours Array-*/
-        $tours_indexed = array();
-        foreach ($tours as $tour) {
-            foreach ($tour as $k => $v) {
-                if ($k == 'tour_home_name1') {
-                    $strn_val = $smarty->smarty_modifier_truncate($tour['tour_home_name1'], 25);
-                    $tour['tour_home_name1'] = $strn_val;
-                }
-            }
-            $tours_indexed[$tour['tour_id']] = $tour;
-        }
-        /*-Packages Array-*/
-        $packageIndex = array();
-        $style_array = array("imagerow_image_4", "imagerow_image_5");
-        foreach ($packages as $tourPackage) {
-            $packageIndex[] = $tourPackage;
-        }
-
-        /*-Random Tour Id-*/
-        $tour_id_arr = "";
-        $tour_id_arr = array();
-        foreach ($tours as $tindex => $tvalue) {
-            if ($tvalue['tour_id'] != '8') {
-                $tour_id_arr[] = $tvalue['tour_id'];
-            }
-        }
-
-        $count_tours = count($tour_id_arr) . 'countr';
-        $first = $second = '';
-        $first = rand(0, ($count_tours - 1));
-        $second = rand(0, ($count_tours - 1));
-
-        for ($i = 0; $i < $count_tours; $i++) {
-            if ($first == $second) {
-                $second = rand(0, ($count_tours - 1));
-            }
-        }
-
-        $myArray[] = $tour_id_arr[$first];
-        $myArray[] = $tour_id_arr[$second];
-        /*-END HERE-*/
-        $smarty->assign("packagesTmp", $packagesTmp);
-
-        $smarty->assign("tours", $tours_indexed);
-        $smarty->assign("_tours", $tours);
-        $smarty->assign("TourId_0", $myArray[0]);
-        $smarty->assign("TourId_1", $myArray[1]);
-
-
-        $smarty->assign("styleSheet", $style_array);
-        $smarty->assign("packages", $packageIndex);
-        $smarty->assign("content", $content);
-
-        $smarty->assign("subpage", "_charter");
-        // asignare variabile smarty si generare fisier smarty :
-        $smarty->assign("pages_dir", "pages");
-        $smarty->assign("page", "booking");
-        $smarty->display('site_pages.tpl');
+        header("Location: index.php");
+        exit();
         break;
     /**
      * TOUR DETAILS
@@ -948,90 +714,28 @@ switch (@$_GET['subpage']) {
             $tour_id = $tour_ids[0];
         }
 
-        $query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
-        $tours = $db->select_fields($db->tour, $query, array("tour_id", "tour_name", "tour_home_name1", "order_by"));
-
-
-        $query = "SELECT * FROM $db->voucher WHERE 1 AND voucher_del = 0 AND voucher_tour_id = " . $tour_id . " ORDER BY voucher_id ASC";
-        $vouchers = $db->select_fields($db->voucher, $query, array("voucher_id", "voucher_tour_id"));
-
-        $query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 AND tour_id = " . $tour_id . "";
-        $tour_details = $db->select_fields($db->tour, $query);
-        /*echo "<pre>";
-        print_r($tour_details);
-        exit();*/
-
-
-        if (sizeof($tour_details) > 0) {
-            $tour_details = $tour_details[0];
-        } else {
-            echo('Sorry! Trip not found');
-            //header("Location: booking.php?subpage=tours");
-            exit();
-        }
-
-
-        //normal tickets
-        $query = "SELECT * FROM $db->ticket
-				  WHERE ticket_del ='0' 
-				  AND ticket_tour_id = " . $tour_id . "
-				  AND ticket_special = '0'";
-        $tickets = $db->select_fields($db->ticket, $query, "");
-        //print_r($tickets);
-
-        //special tickets
-        $query = "SELECT * FROM $db->ticket
-				  WHERE ticket_del ='0' 
-				  AND ticket_tour_id = " . $tour_id . "
-				  AND ticket_special = '1'";
-        $special_tickets = $db->select_fields($db->ticket, $query, "");
-        /*		echo "<pre>";
-                print_r($tours);
+        switch($tour_id){
+            case 9:
+                header("Location: detail-ultimatelondon.php");
                 exit();
-        */
-        //print_r($special_tickets);
-        $Tour_Tripe = array();
-        foreach ($tours as $Tvaluearr) {
-            $Tour_Trip[$Tvaluearr['order_by']] = $Tvaluearr;
+                break;
+            case 1:
+                header("Location: detail-captainkiddcanarywharf.php");
+                exit();
+                break;
+            case 4:
+                header("Location: detail-thamesbarrierexplorersvoyage.php");
+                exit();
+                break;
+            case 12:
+                header("Location: detail-breakthebarrier.php");
+                exit();
+                break;
+            default:
+                header("Location: index.php");
+                exit();
+                break;
         }
-
-        $smarty->assign("Tour_Trip", $Tour_Trip);
-        $backgound_style = array("style_div_1", "style_div_2");
-        $smarty->assign("vouchers", $vouchers);
-        $smarty->assign("tickets", $tickets);
-        $smarty->assign("style_div", $backgound_style);
-        $smarty->assign("special_tickets", $special_tickets);
-        $smarty->assign("tour", $tour_details);
-        $smarty->assign("tour_id", $tour_id);
-        $smarty->assign("tours", $tours);
-
-
-        if (!empty($tour_details['tour_image1'])) {
-            $image1 = explode(".", $tour_details['tour_image1']);
-            unset ($image1[sizeof($image1) - 1]);
-            $smarty->assign("image1", implode(".", $image1));
-        }
-        if (!empty($tour_details['tour_image2'])) {
-            $image2 = explode(".", $tour_details['tour_image2']);
-            unset ($image2[sizeof($image2) - 1]);
-            $smarty->assign("image2", implode(".", $image2));
-        }
-        if (!empty($tour_details['tour_image3'])) {
-            $image3 = explode(".", $tour_details['tour_image3']);
-            unset ($image3[sizeof($image3) - 1]);
-            $smarty->assign("image3", implode(".", $image3));
-        }
-        if (!empty($tour_details['tour_image4'])) {
-            $image4 = explode(".", $tour_details['tour_image4']);
-            unset ($image4[sizeof($image4) - 1]);
-            $smarty->assign("image4", implode(".", $image4));
-        }
-
-        $smarty->assign("subpage", "_tour_details");
-        // asignare variabile smarty si generare fisier smarty :
-        $smarty->assign("pages_dir", "pages");
-        $smarty->assign("page", "booking");
-        $smarty->display('site_pages.tpl');
 
         break;
 
