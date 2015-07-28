@@ -478,6 +478,7 @@
 
 		withoutCopyright: true,
 		inverseButton: false,
+		selected_departure: null,
 		hours12: false,
 		next: 'xdsoft_next',
 		prev : 'xdsoft_prev',
@@ -1524,7 +1525,8 @@
 						time = '';
 						h = '';
 						m = '';
-						line_time = function line_time(h, m) {
+
+						line_time = function line_time(h, m, departure_id) {
 							var now = _xdsoft_datetime.now();
 							now.setHours(h);
 							h = parseInt(now.getHours(), 10);
@@ -1543,8 +1545,11 @@
 							current_time.setMinutes(Math[options.roundTime](_xdsoft_datetime.currentTime.getMinutes() / options.step) * options.step);
 
 							if ((options.initTime || options.defaultSelect || datetimepicker.data('changed')) && current_time.getHours() === parseInt(h, 10) && (options.step > 59 || current_time.getMinutes() === parseInt(m, 10))) {
+
+
 								if (options.defaultSelect || datetimepicker.data('changed')) {
-									classes.push('xdsoft_current');
+										//classes.push('xdsoft_current');
+
 								} else if (options.initTime) {
 									classes.push('xdsoft_init_time');
 								}
@@ -1552,7 +1557,7 @@
 							if (parseInt(today.getHours(), 10) === parseInt(h, 10) && parseInt(today.getMinutes(), 10) === parseInt(m, 10)) {
 								classes.push('xdsoft_today');
 							}
-							time += '<div class="xdsoft_time ' + classes.join(' ') + '" data-hour="' + h + '" data-minute="' + m + '">' + now.dateFormat(options.formatTime) + '</div>';
+							time += '<div class="xdsoft_time ' + classes.join(' ') + '"data-id="' + departure_id + '" data-hour="' + h + '" data-minute="' + m + '">' + now.dateFormat(options.formatTime) + '</div>';
 						};
 
 						if (!options.allowTimes || !$.isArray(options.allowTimes) || !options.allowTimes.length) {
@@ -1564,10 +1569,12 @@
 								}
 							}
 						} else {
+							var departure_id;
 							for (i = 0; i < options.allowTimes.length; i += 1) {
-								h = _xdsoft_datetime.strtotime(options.allowTimes[i]).getHours();
-								m = _xdsoft_datetime.strtotime(options.allowTimes[i]).getMinutes();
-								line_time(h, m);
+								h = _xdsoft_datetime.strtotime(options.allowTimes[i].departure_time).getHours();
+								m = _xdsoft_datetime.strtotime(options.allowTimes[i].departure_time).getMinutes();
+								departure_id = options.allowTimes[i].departure_id;
+								line_time(h, m, departure_id);
 							}
 						}
 
@@ -1652,6 +1659,7 @@
 					setTimeout(function () {
 						timerclick = 0;
 					}, 200);
+
 				});
 
 			timebox
@@ -1670,6 +1678,7 @@
 					}
 					currentTime.setHours($this.data('hour'));
 					currentTime.setMinutes($this.data('minute'));
+
 					datetimepicker.trigger('select.xdsoft', [currentTime]);
 
 					datetimepicker.data('input').val(_xdsoft_datetime.str());
@@ -1679,11 +1688,16 @@
                     }
 
 					if (options.onSelectTime && $.isFunction(options.onSelectTime)) {
-						options.onSelectTime.call(datetimepicker, _xdsoft_datetime.currentTime, datetimepicker.data('input'), xdevent);
+						options.onSelectTime.call(datetimepicker, $this.data('id'), datetimepicker.data('input'), xdevent);
+						$('.xdsoft_time_variant').find('.xdsoft_current').removeClass('xdsoft_current');
+						$this.toggleClass('xdsoft_current');
+						return;
+
 					}
 					datetimepicker.data('changed', true);
 					datetimepicker.trigger('xchange.xdsoft');
 					datetimepicker.trigger('changedatetime.xdsoft');
+
 				});
 
 

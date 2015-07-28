@@ -32,17 +32,15 @@
         var visible = true;
         var sid = {$sessionId[0]};
         departures = {$departures};
-
+//console.log(departures);
         var availableDates = {$availableDates};
     </script>
     <script src="js/plugins/jquery.datetimepicker.js"></script>
 
 {literal}
         <script>
-        $.each( departures, function( key, val ) {
-            times.push(val.departure_time.substr(0,5));
-        } );
-        if (times.length == 0){
+
+        if (departures.length == 0){
             visible = false;
         }
         function addZero(i) {
@@ -51,20 +49,15 @@
             }
             return i;
         }
-            var selectedTime = function (currentTime) {
-                givenTime = new Date(currentTime);
-                date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth()+1) + '-' + addZero(givenTime.getDate());
-                hourSelected = addZero(givenTime.getHours()) + ':' + addZero(givenTime.getMinutes()) + ':00';
-                console.log(hourSelected);
-                result = $.grep(departures, function(e) { return e.departure_time == hourSelected; } );
-                $('#selected_departure').val(result[0].departure_id);
-                $('#selected_date').val(date);
+            var selectedTime = function (selectedDeparture) {
+                $('#selected_departure').val(selectedDeparture);
             }
 
             var logic = function( givenTime ){
-                console.log(givenTime);
-                console.log(givenTime.getMonth());
+                //console.log(givenTime);
+                //console.log(givenTime.getMonth());
                 date = givenTime.getFullYear() + '-' +  addZero(givenTime.getMonth() + 1) + '-' + addZero(givenTime.getDate());
+                $('#selected_date').val(date);
                 var picker = this;
                 sid = $('#order_id').val();
                 tour_id = $('#tour_id').val();
@@ -76,21 +69,23 @@
 
                 $.getJSON( "departure_time.php", data, function( response ) {
                     departures = response;
-                    times = [];
-                    $.each( response, function( key, val ) {
-                        times.push(val.departure_time.substr(0,5));
-                    } );
-                     if (times.length == 0){
+                    //times = [];
+                    //$.each( response, function( key, val ) {
+                    //    times.push(val.departure_time);
+                    //} );
+                     if (departures.length == 0){
                          picker.setOptions({
                              timepicker: false
                          });
                     } else {
                          picker.setOptions({
-                             allowTimes: times,
+                             allowTimes: departures,
                              timepicker: true
                          });
                      }
-                    console.log(times)
+                    $('#selected_departure').val('');
+                    //jQuery(this).find('.xdsoft_current').removeClass('xdsoft_current');
+                    //console.log(times)
                 } );
 
             };
@@ -120,7 +115,7 @@
                 inline:true,
                 //format: "Y/m/d H:i",
                 onSelectDate:logic,
-                allowTimes: times,
+                allowTimes: departures,
                 onSelectTime: selectedTime,
                 timepicker: visible,
                 roundTime: 'floor',

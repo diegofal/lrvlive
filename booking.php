@@ -1776,7 +1776,7 @@ switch (@$_GET['subpage']) {
             $qty = "boat_passengers";
         }
         //var_dump($qty); die();
-        $departuresQuery = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+        $departuresQuery = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '" . $selectDate . "'
 					  AND departure_boat_id = boat_id
@@ -1784,6 +1784,7 @@ switch (@$_GET['subpage']) {
 					  AND boat_del = 0
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
+					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
 //echo $departuresQuery;
         $availableDepartureDaysQuery = "SELECT DISTINCT departure_date
@@ -1801,7 +1802,7 @@ switch (@$_GET['subpage']) {
 
 
         $availableDatesResults = $db->select_fields($db->departure, $availableDepartureDaysQuery, array("departure_date"));
-        $availableDates = [];
+        $availableDates = array();
 
         foreach ($availableDatesResults as $availableDateResult) {
             $availableDates[] = $availableDateResult['departure_date'];
