@@ -5,6 +5,9 @@
     {if $error == 'nodata' }
         <p class="msj error" style="display: block"><span class="icon">No data received</p>
     {/if}
+    {if $error == 'busy' }
+        <p class="msj error" style="display: block"><span class="icon">Sorry, the trip is full, try again.</p>
+    {/if}
     <div class="grid">
         {if $subpage==_step1}
         <div class="col-1-3">
