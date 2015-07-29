@@ -30,7 +30,7 @@
                     <input type="hidden" name="price[]" value="{$tickets[i].ticket_price}" />
                     <div>
                         <label for="select_{$tickets[i].ticket_id}"></label>
-                        <select id="select_{$tickets[i].ticket_id}" ticketPrice="{$tickets[i].ticket_price}" onchange="calculate_total()" name="quantity[]" class="ticket cs-select cs-skin-elastic">
+                        <select id="select_{$tickets[i].ticket_id}" {if ($order.order_tickets_number == 1) && ($order.order_tickets == 0)} disabled{/if}  ticketPrice="{$tickets[i].ticket_price}" onchange="calculate_total()" name="quantity[]" class="ticket cs-select cs-skin-elastic">
                             <option value="0" {if $tickets[i].quantity == 0}selected{/if}>0</option>
                             <option value="1" {if $tickets[i].quantity == 1}selected{/if}>1</option>
                             <option value="2" {if $tickets[i].quantity == 2}selected{/if}>2</option>
@@ -67,23 +67,10 @@
                 <label for="charter"></label>
                 <p>Book the whole boat for a private and exclusive experience for up to twelve passengers.</p>
             </div>
-            <div class="chartercheckbox" onclick="is_charter('{$tour.tour_charter_price}');"><input type="checkbox" name="charter" id="charter" {if ($order.order_tickets_number == 1) && ($order.order_tickets == 0)} checked="checked"{/if} onclick="is_charter('{$tour.tour_charter_price}');"/>${$tour.tour_charter_price} (12 seats)</div>
+            <div class="chartercheckbox" onclick="is_charter('{$tour.tour_charter_price}');"><input type="checkbox" name="charter" id="charter" {if ($order.order_tickets_number == 1) && ($order.order_tickets == 0)} checked="checked"{/if}/>${$tour.tour_charter_price} (12 seats)</div>
         </div>
 
     </div>
 
 </div>
 
-    {literal}
-        <script type="text/javascript">
-            $(document).ready(function(){
-                calculate_total();
-            });
-
-//            {
-//                $("#charter").click(function(){
-//                    calculate_total();
-//                })
-//            })
-        </script>
-    {/literal}

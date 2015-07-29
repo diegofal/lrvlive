@@ -67,14 +67,13 @@ function set_fields(status, price){
 }
 
 function is_charter(price){
-    if(document.step1.charter.checked==false){
+    if($("#charter").is(":checked")){
+        set_fields(false, price);
+        document.step1.charter.checked=false;
+    } else {
 
         set_fields(true, price);
         document.step1.charter.checked=true;
-    } else {
-
-        set_fields(false, price);
-        document.step1.charter.checked=false;
 
     }
 
