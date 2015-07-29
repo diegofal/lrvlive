@@ -29,7 +29,8 @@ $EncryptionPassword = "GAzHuWWJyBg6mZyj";
 
 
 //$URL = "http://162.13.140.19/booking.php?subpage=step8";
-$URL = "http://www.londonribvoyages.com/booking.php?subpage=step8";
+//$URL = "http://www.londonribvoyages.com/booking.php?subpage=step8";
+$URL = "http://staging.londonribvoyages.com:9090/booking.php?subpage=step8";
 
 //** Your server's IP address or dns name and web app directory.  Fully qualified **
 //** Examples : $MyServer="https://www.newco.com/php-form-kit/", $MyServer="192.168.0.1/php-form-kit", $MyServer="http://localhost/php-form-kit/" **
@@ -289,6 +290,7 @@ function generate_crypt3($ThisVendorTxCode, $ThisAmount, $ThisDescription, $This
     //$stuff .= "FailureURL=http://www.x3studios.com/clients/londonrib_cms/contact.htm&";
     $stuff .= "SuccessURL=" . $URL . "&";
     $stuff .= "FailureURL=" . $URL . "&";
+    //$stuff .= "FailureURL=http://staging.londonribvoyages.com:9090/booking.php?subpage=step8&";
     // V3
     $stuff .= "BillingSurname=" . $ThisBSurname . "&";
     $stuff .= "BillingFirstNames=" . $ThisBFirstNames . "&";

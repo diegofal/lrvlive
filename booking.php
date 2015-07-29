@@ -173,19 +173,29 @@ switch (@$_GET['subpage']) {
 
         write_log("Time: " . $voucher_order['voucher_order_time'] . ", Voucher Order ID: " . $voucher_order['voucher_order_id'] . ", Direction: TO PROTX, Voucher Order Code: " . $voucher_order['voucher_order_unique_code'] . ", Session ID: " . session_id() . ", voucher_order = " . serialize($voucher_order));
 
-        $URL = "http://www.londonribvoyages.com/booking.php?subpage=voucher_step4";
+        //$URL = "http://www.londonribvoyages.com/booking.php?subpage=voucher_step4";
+        $URL = "http://staging.londonribvoyages.com:9090/booking.php?subpage=voucher_step4";
 
-        /*  if (TESTING) {
-              $crypt = base64Encode(SimpleXor("VendorTxCode=".$voucher_order['voucher_order_unique_code']."&Status=OK",$EncryptionPassword));
+
+        if (TESTING) {
+            $stuff = addPKCS5Padding("VendorTxCode=".$voucher_order['voucher_order_unique_code']."&Status=OK");
+
+            $crypt = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $EncryptionPassword, $stuff, MCRYPT_MODE_CBC, $EncryptionPassword);
+
+            // Perform hex encoding and return.
+            $crypt =  "@" . strtoupper(bin2hex($crypt));
+
+            //$crypt = base64Encode(SimpleXor("VendorTxCode=".$voucher_order['voucher_order_unique_code']."&Status=OK",$EncryptionPassword));
               header("Location: booking.php?subpage=voucher_step4&crypt=".$crypt);
               exit();
-          }*/
-
+          }
 
         $crypt = generate_crypt3($voucher_order['voucher_order_unique_code'], $voucher_order['voucher_order_total'], $tour_details[0]['tour_name'], $voucher_order['voucher_order_email'],
             $voucher_order['voucher_order__name'] . " " . $voucher_order['voucher_order_lastname'], COMPANY_EMAIL,
             $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country'],
             $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country']);
+
+
 
 
         /*$crypt = generate_crypt($voucher_order['voucher_order_unique_code'], $voucher_order['voucher_order_discounted_total'], $voucher_details['voucher_name'], $voucher_order['voucher_order_email'],
@@ -1272,9 +1282,16 @@ switch (@$_GET['subpage']) {
              * using functions from "functions_payment.php"
              * We send what Step8 is expecting as a 'success' payment
              */
+            $stuff = addPKCS5Padding("VendorTxCode=" . $order['order_unique_code'] . "&Status=OK");
+
+            $crypt = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $EncryptionPassword, $stuff, MCRYPT_MODE_CBC, $EncryptionPassword);
+
+            // Perform hex encoding and return.
+            $crypt =  "@" . strtoupper(bin2hex($crypt));
+
             //$crypt = base64Encode(SimpleXor("VendorTxCode=" . $order['order_unique_code'] . "&Status=OK", $EncryptionPassword));
-            //header("Location: booking.php?subpage=step8&crypt=" . $crypt);
-            //exit();
+            header("Location: booking.php?subpage=step8&crypt=" . $crypt);
+            exit();
         }
 
         /*$crypt = generate_crypt($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
