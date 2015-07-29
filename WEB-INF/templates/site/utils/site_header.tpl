@@ -9,14 +9,14 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet/less" type=/"text/css" href="css/main.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/main.less" />
+    <!--<link rel="stylesheet" type="text/css" href="v8.css"> -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/vendor/less.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="https://plus.google.com/100978293955287726375" rel="publisher" />
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -25,16 +25,14 @@
 
 <!-- Add your site or application content here -->
 <div id="fb-root"></div>
-<div id="fb-root"></div>
 {literal}
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=194261774035424";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=194261774035424";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 {/literal}
 
 <div class="md-modal md-effect-11" id="modal-1">

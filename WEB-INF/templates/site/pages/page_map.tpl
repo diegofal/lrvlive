@@ -650,10 +650,10 @@
             <a href="#" class="btn btn-main md-trigger" data-modal="london-eye"> view more </a>
             <small>meet here for:</small>
             <ul>
-                <li><a href="#">The Ultimate London Adventure</a></li>
-                <li><a href="#">Captain Kidd’s Canary Wharf</a></li>
-                <li><a href="#">Thames Barrier Explorer’s Voyage</a></li>
-                <li><a href="#">The London Edge Skyride</a></li>
+                <li><a href="detail-ultimatelondon.php">The Ultimate London Adventure</a></li>
+                <li><a href="detail-captainkiddcanarywharf.php">Captain Kidd’s Canary Wharf</a></li>
+                <li><a href="detail-thamesbarrierexplorersvoyage.php">Thames Barrier Explorer’s Voyage</a></li>
+                <li><a href="detail-limehouseblast.php">Limehouse Blast</a></li>
             </ul>
         </div>
     </div>
@@ -664,7 +664,7 @@
             <a href="#" class="btn btn-main md-trigger" data-modal="tower-bridge"> view more </a>
             <small>meet here for:</small>
             <ul>
-                <li><a href="#">Break the barrier</a></li>
+                <li><a href="detail-breakthebarrier.php">Break the barrier</a></li>
             </ul>
         </div>
     </div>
@@ -677,7 +677,7 @@
         <div id="map-locations" class="slider-map slider center">
             <div class="md-trigger" data-modal="site-1" alt="Houses of Parliament"><img src="content/img/map/thumb-parliament.png" alt="Houses of Parliament"/></div>
             <div class="md-trigger" data-modal="site-2" alt="Big Ben"><img src="content/img/map/thumb-bigben.png" alt="Big Ben"/></div>
-            <div class="md-trigger" data-modal="site-3" alt="Cleopatras Needle"><img src="content/img/map/thumb-knidle.png" alt="Cleopatras Needle"/></div>
+            <div class="md-trigger" data-modal="site-3" alt="Cleopatra's Needle"><img src="content/img/map/thumb-knidle.png" alt="Cleopatra's Needle"/></div>
             <div class="md-trigger" data-modal="site-4" alt="Somerset House"><img src="content/img/map/thumb-somerset.png" alt="Somerset House"/></div>
             <div class="md-trigger" data-modal="site-5" alt="Oxo tower"><img src="content/img/map/thumb-oxo.png" alt="Oxo tower"/></div>
             <div class="md-trigger" data-modal="site-6" alt="HMS President"><img src="content/img/map/thumb-hms.png" alt="HMS President"/></div>
@@ -705,7 +705,34 @@
 
         </div>
     </div>
-
+    <div class="schema">
+        <div itemscope itemtype="http://schema.org/LocalBusiness">
+            <span itemprop="name">London RIB Voyages</span>
+            <span itemprop="description">The fastest, funniest and craziest speedboat adventures on the river Thames</span>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">Boarding Gate One,The London Eye Millennium Pier</span>
+                <span itemprop="addressLocality">Southbank</span>,
+                <span itemprop="addressRegion">London</span>
+                <span itemprop="postalCode">SE1 7PB</span>
+            </div>
+            <!-- Add the lat/long geo sub-type -->
+            <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+                <!-- Add Latitude -->
+                <meta itemprop="latitude" content="1.503349" />
+                <!-- Add Longitude -->
+                <meta itemprop="longitude" content="-0.120415" />
+                <!-- End sub schema block -->
+            </div>
+            Phone: <span itemprop="telephone">0207 928 8933</span>
+            <time itemprop="openingHours" datetime="Mo,Su 10.00 - 18.00">Monday to Sunday 10:00-18:00</time>.
+            <div itemscope itemtype="http://schema.org/Product">
+                <span itemprop="name">London RIB Voyages</span>
+                <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    Rated <span itemprop="ratingValue">5</span>/5 based on <span itemprop="reviewCount">2971</span> reviews
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
