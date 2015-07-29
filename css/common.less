@@ -200,13 +200,18 @@ body {
 }
 #main-header nav {
 	text-align: right;
+	a.selected{
+		.gradient;
+		color:white;
+		cursor: pointer;
+	}
 	a {
-		padding:3.24em 1.9em;
+		padding:2.22em 1.5em;
 		color:@black;
 		display: inline-block;
-	  	font-size: 0.7em;
-	  	font-weight: 700;
-	  	text-transform: uppercase;
+	  	font-size: 1em;
+	  	text-transform: capitalize;
+	  	font-family: 'dearjoe';
 	  	border-right: 1px solid #ededed;
 		position: relative;
 		z-index: 2;
@@ -394,6 +399,9 @@ body {
     background: url("img/bg-home.jpg")no-repeat top center;
     background-size:cover;  
     padding-bottom:50px;
+    h1{
+    	display: none;
+    }
 }
 .subheading{
 	
@@ -575,6 +583,8 @@ body {
   					width: 49%;
 				    font-weight: 300;
 				    padding: 0.8em;
+				    text-transform: uppercase;
+    				font-size: 0.7em;
   				}
         	}
         	h1,h2,p{
@@ -813,6 +823,12 @@ body {
   		font-size: 0.8em;
   		.border-radius(7px);
   		min-height: 513px;
+  		h2{
+  			background: white;
+  		}
+  		p{
+  			margin: 0 0 10px 0;
+  		}
     }
     .slides-pagination{
     }
@@ -850,7 +866,6 @@ body {
             	font-family:'dearjoe';
             	display: inline-block;
             	padding: 0 5px;
-            	background: white;
             }
             strong {
                   text-transform: uppercase;
@@ -1076,7 +1091,11 @@ body {
 }
 
 /*///////////////////////////////////////////////////////////////////  MAP //////*/
-
+@media (min-width: 1500px){
+	#map {
+		top:120px;
+	}
+}
 #map{
      
   position: fixed;
@@ -1085,6 +1104,7 @@ body {
   bottom: 0;
   > img{
   	width: 100%;
+    height: 100%;
   }
 
 	.slick-slider{
@@ -1181,9 +1201,9 @@ body {
 }
 .map-heading{
 	position: absolute;
-	top:20%;
-	left:30px;
-	width: 300px;
+	top: 17%;
+    left: 80px;
+    width: 370px;
 	z-index: 1;
 	img{
 		width: 100%;
@@ -1214,8 +1234,7 @@ body {
 .locations-container{
 	position: absolute;
 	bottom:0px;
-	padding-bottom: 30px;
-	.gradient-map-bg;	
+	padding-bottom: 30px;	
 	width: 100%;
 	z-index: 2;
 	&::after{
@@ -1250,13 +1269,12 @@ body {
 		content: attr(alt);
 		background: white;
 		color:red;
-		.translate3d(0%,100%,0);
+		.translate3d(-25%,100%,0);
 		opacity: 0;
 		z-index: 0;
-		font-size: 0.5em;
-		padding: 0.8em;
-		width: 100px;
-		margin-left: -25px;
+	    font-size: 0.8em;
+	    padding: 0.8em;
+	    width: 150px;
 		text-transform: uppercase;
 		.transition-short;
 		position: absolute;
@@ -1269,7 +1287,7 @@ body {
 				}
 			&::before{
 				opacity: 1;
-				.translate3d(0%,-120%,0);
+				.translate3d(-25%,-120%,0);
 				z-index: 1;
 			}
 	}
@@ -1336,23 +1354,26 @@ body {
 
 		.btn-main{			
   			font-weight: normal;
-  			font-size: 7px;
+  			font-size: 12px;
 			margin-bottom: 0.6em;
 			text-transform: uppercase;
-			min-width: 70px;
+			min-width: 77px;
 			padding: 8px 14px 7px;
 		}
 		small{
 			display: block;
 			text-transform: uppercase;
-			font-size: 6px;
+			font-size: 10px;
 			margin-bottom: 5px;
 		}
-		ul li {
+		ul{
 			margin-bottom: 0;
+		}
+		ul li {
+			margin-bottom: 5px;
 			a{
 				color:@brand-secondary-2;
-				font-size: 8px;
+				font-size: 12px;
 				text-decoration: underline;	
 				&:hover{
 					text-decoration:none;
@@ -1386,6 +1407,9 @@ body {
 	  	padding-left: 25px;
   		padding-top: 24px;
   		font-size: 0.5em;
+  		p{
+  		font-size: 10px;
+  		}
 	  }
   }
 }
@@ -1400,18 +1424,18 @@ body {
 	}
 }
 #meeting-1{
-	left: 36%;
-	top:47%;
-	width: 140px;
+    left: 35%;
+    top: 47%;
+    width: 180px;
 	height: 180px;
 	margin:-70px 0 0 -90px;
 }
 #meeting-2{
-	  left: 68%;
-	  top: 40%;
-	width: 310px;
-	height: 140px;
-	margin:-125px 0 0 -70px;
+	left: 66.5%;
+    top: 36.5%;
+    width: 370px;
+    height: 140px;
+    margin: -125px 0 0 -89px;
 }
 
 /*///////////////////////////////////////////////////////////////////  SAFETY //////*/
@@ -1482,7 +1506,7 @@ body {
         a:nth-child(2):before { content: 'Licensing' }
         a:nth-child(3):before { content: 'Safety equipment' }
         a:nth-child(4):before { content: 'Insurance, skippers...' }
-        a:nth-child(5):before { content: 'London Eye' }
+        a:nth-child(5):before { content: 'Locations' }
         a:nth-child(6):before { content: 'Sailing jackets...' }
         
         
@@ -1520,13 +1544,13 @@ body {
     .infobox {
         border-top: 12px solid @brand-primary-1;
         background: rgba(255, 255, 255, 0.96) url(img/fast-stripes-1.png)  center bottom no-repeat;
-        padding: 2em 2em 4.5em 2em;
+        padding:2em 2em 6.5em 2em;
         position: absolute;
         top: 50%;
         right: 6%;
   		width: 620px;
-  		height: 721px;
-        margin-top: -380px;
+	    min-height: 721px;
+	    margin-top: -380px;
         .scale(.8);
         h3 {
             font-size: 2em;
@@ -1571,11 +1595,12 @@ body {
         padding: 10px;
         background: rgba(189, 187, 187, 0.2);
         border-radius: 6px;
-        width: 50%;
+        width: 70%;
         border: 3px solid rgba(255, 0, 0, 0.05);
         .transition-short;
+        margin-bottom: 10px;
     }
-    input:focus { outline:none; padding: 13px; width: 60%;   }
+    input:focus { outline:none; padding: 13px; width: 80%;   }
     input:hover, input:active { background: rgba(189, 187, 187, 0.4);  }
     
 	background-color: @lightgrey;
@@ -1605,8 +1630,10 @@ body {
 			padding-bottom: 1em;
 			font-size: 0.8em;
 			.transition-short;
+			color:@brand-secondary-2;
+			text-decoration: underline;
 			&:hover{
-				text-decoration:underline;
+				text-decoration:none;
 			}
 		}
 	}

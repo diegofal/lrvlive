@@ -1,4 +1,3 @@
-
 <section id="detail" class="captain-kid">
     <div class="intro">
 
@@ -19,17 +18,17 @@
                 </p>
                 <p>
                     <strong>£29.95</strong><br>
-                    Children<br>(14)*
+                    Children<br>(&lt; 14 years)
                 </p>
                 <p>
                     <strong>£550.00</strong><br>
-                    Charter per<br>hour
+                    Charter<br>(per hour)
                 </p>
             </div>
             <div class="actions">
                 <div class="booknow"></div>
-                <button class="btn btn-main md-trigger" tourid="4" data-modal="modal-1"> book this trip  </button>
-                <button class="btn btn-secondary md-trigger" voucherid="5" data-modal="modal-1"> buy gift voucher  </button>
+                <button class="btn btn-main md-trigger" data-modal="modal-1"> book this trip  </button>
+                <button class="btn btn-secondary md-trigger" data-modal="modal-1"> buy gift voucher  </button>
             </div>
         </div>
     </div>
@@ -93,3 +92,5 @@
     </div>
 
 </section>
+
+<br/><br/><br/><br/>

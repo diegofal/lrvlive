@@ -1,4 +1,3 @@
-
 <section id="services" >
 
     <div class="intro">
@@ -6,7 +5,7 @@
     </div>
     <div class="lead-h1">
         <div class="splash-left"></div>
-        <h1>London RIB Voyages have a good few other tricks up our sleeves, from direct transfers and safety boating, to filming, team building and river to restaurant. Stags and hens, business associates and media; we really do have something for everybody</h1>
+        <h1>London RIB Voyages have a good few other tricks up our sleeves, from direct transfers and safety boating, to filming, team building and river to restaurant. Stags and hens, business associates and media; we really do have something for everybody.</h1>
         <div class="splash-right"></div>
     </div>
 
@@ -28,9 +27,9 @@
             <div class="service-content">
                 <h2>Filming</h2>
                 <p class="lead">London RIB Voyages regularly welcome film crews and photographers on to the river Thames. It's impossible to match the manoeuvrability of our RIB's, making us the perfect choice for a wide range of clients from a whole spectrum of backgrounds.</p>
-                <p>Recent clients include Harry Potter and the Goblet of Fire, Dispatches, Soccer AM, Top Gear, Jedward's Big Adventure and The Graham Norton Show (to name but a few!).</p>
-                <p>Not only that, but London RIB Voyages have proved to be the most most rock n' roll fleet on the Thames!</p>
-                <p>We also welcome guests on their way to the O2 including Ozzy Osbourne, Robert Redford, The Black Eyed Peas, The Rolling Stones, Led Zeppelin, The Eagles, Boris Johnson, Michael MacIntyre, Peter Kaye, Pink and many more</p>
+                <p>Recent clients include Harry Potter and the Goblet of Fire, Dispatches, Soccer AM, Top Gear, Jedward's Big Adventure, The Hustle, Bear Grylls, Union J and The Graham Norton Show (to name but a few!).</p>
+                <p>Not only that, but London RIB Voyages have proved to be the most rock n' roll fleet on the Thames!</p>
+                <p>We also welcome guests on their way to the O2 including Ozzy Osbourne, Robert Redford, The Black Eyed Peas, The Rolling Stones, Led Zeppelin, The Eagles, Boris Johnson, Michael MacIntyre, Peter Kaye, Pink and many more.</p>
                 <p>So let us take your crew out to get up close and personal to what you need to see, because only London RIB Voyages have the experience and know-how to get you what you need.</p>
             </div>
         </div>
@@ -42,9 +41,9 @@
                 <h2>Corporate</h2>
                 <p class="lead">Organizing a great corporate event can be stressful. What to do? Paintballing, Laser Quest, Treasure hunt?</p>
                 <p class="lead">How about Speedboat Tour?!</p>
-                <p>In fact, why not leave all the hard work to us? We specialise in providing an event unlike any other. Our experienced bookings team will make life easy guiding you through all the planning and booking process until you have the booking confirmation right in front of you!</p>
+                <p>In fact, why not leave all the hard work to us? We specialise in providing an event unlike any other. Our experienced bookings team will make life easy, guiding you through all the planning and booking process until you have the booking confirmation right in front of you!</p>
                 <p>It's entertaining, with our award winning comedian guides on hand to keep the banter flowing and suitable for all from visiting colleagues with minimal time to born and bred Londoners alike.</p>
-                <p>And the entertainment doesn't have to stop with us! We work closely with many super swish bars and restaurants along the river from the Skybar to Gordon Ramsay at the Narrow. We'll tailor your trip to pick you up or drop you off wherever you need, keeping your travel time to an absolute minimum.</p>
+                <p>And the entertainment doesn't have to stop with us! We work closely with many super swish bars and restaurants along the river from the Tom?s Kitchen to Gordon Ramsay at the Narrow. We'll tailor your trip to pick you up or drop you off wherever you need, keeping your travel time to an absolute minimum.</p>
                 <p>Who said corporate events were tough to organize?</p>
 
 

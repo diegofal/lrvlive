@@ -3,18 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="London RIB Voyages">
+    <title>The Thames Cruise with a unique difference | London RIB Voyages</title>
+    <meta name="description" content="The original Thames Cruise with a unique difference - see London's famous landmarks as you whizzzzz along the Thames in our comfortable RIB boats. This is the original speed boat ride on the Thames.">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet/less" type="text/css" href="css/main.less" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/vendor/less.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <link href="https://plus.google.com/100978293955287726375" rel="publisher" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>

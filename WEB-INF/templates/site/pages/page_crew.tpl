@@ -1,5 +1,6 @@
 
 <section id="crew" class="slider-fullscreen">
+    <h1 class="hide">You won’t find better guides on the Thames than with London RIB Voyages. We pride ourselves on delivering the freshest, funniest tours all courtesy of our hand picked comedy guides – closet history buffs by day, stand up comics and actors by night!</h1>
     <div class="height-fill">
         <div id="slides">
             <ul class="slides-container">
@@ -18,7 +19,7 @@
                             <header>
                                 <span>Meet:</span>
                                 <h2>Stacey Evans</h2>
-                                <strong>“The Squirrell”</strong>
+                                <strong>“The Squirrel”</strong>
                             </header>
                             <table class="table-info">
                                 <tr>
@@ -28,7 +29,7 @@
                                     </td>
                                     <td class="">
                                         <span>Aka</span>
-                                        The Squirrell
+                                        The Squirrel
                                     </td>
                                 </tr>
                                 <tr>
@@ -53,8 +54,9 @@
                                 </tr>
                             </table>
                             <p>
-                                I’m from Manchester and when not clog dancing or working in the local cotton mill I enjoy dining in the finest restaurants in London. I am still surprised that someone will employ me to hang out on a speedboat all day telling people about this amazing city!<br>
-                                I am hoping to soon to have the weathered face of an old sea-dog when I will change my name to Arthur and talk exclusively in vowels.
+                                I’m from Manchester and when not clog dancing or working in the local cotton mill I enjoy dining in the finest restaurants in London. I am still surprised that someone will employ me to hang out on a speedboat all day telling people about this amazing city!</p>
+                            <p>
+                                I am hope to soon have the weathered face of an old sea-dog when I will change my name to Arthur and talk exclusively in vowels.
                             </p>
                         </div>
                     </article>
@@ -110,7 +112,7 @@
                                 </tr>
                             </table>
                             <p>
-                                In a laboratory at the London Rib Voyages secret research facility an experiment was taking place, their goal was to create the ultimate river tour guide by genetically splicing the cuteness of a puppy, the swimming ability of a fish and the knowledge of the Encyclopaedia Britannica. Unfortunately due to a slight mishap involving an LHC (Little Hadron Collider), a doughnut and a warm tea spoon, the subject was imbued with the cuteness of a fish, the knowledge of a puppy and the swimming ability of the Encyclopaedia Britannica - and Little Mike was created!!<br>
+                                In a laboratory at the London Rib Voyages secret research facility an experiment was taking place, their goal was to create the ultimate river tour guide by genetically splicing the cuteness of a puppy, the swimming ability of a fish and the knowledge of the Encyclopaedia Britannica. Unfortunately due to a slight mishap involving an LHC (Little Hadron Collider), a doughnut and a warm tea spoon, the subject was imbued with the cuteness of a fish, the knowledge of a puppy and the swimming ability of the Encyclopaedia Britannica - and Little Mike was created!!</p><p>
                                 I tried using my new found abilities to fight crime but I found it quite tiring so I went back to being a guide. I am fully house trained and enjoy being scratched behind the ears…
                             </p>
                         </div>
@@ -167,7 +169,8 @@
                                 </tr>
                             </table>
                             <p>
-                                I hail from Wales. Although I has lived in London for half my life, I still has the lilting welsh accent, innit. You may recognise me from "Gavin and Stacey", BBC3's "Grownups", or from daytime soap "Doctors".<br>
+                                I hail from Wales. Although I has lived in London for half my life, I still has the lilting welsh accent, innit. You may recognise me from "Gavin and Stacey", BBC3's "Grownups" or from daytime soap "Doctors".</p>
+                            <p>
                                 My motto when guiding is "never let the truth get in the way of a good story"!!
                             </p>
                         </div>
@@ -224,7 +227,7 @@
                                 </tr>
                             </table>
                             <p>
-                                Hi! I'm Amy and I love to show people the BEST that London has to offer from the comfort of our very own SPEEDBOAT! Always up for a laugh - the most important thing to me is that everyone has a great time, and leaves with an even bigger smile than me (if possible)!<br>
+                                Hi! I'm Amy and I love to show people the BEST that London has to offer from the comfort of our very own SPEEDBOAT! Always up for a laugh - the most important thing to me is that everyone has a great time, and leaves with an even bigger smile than me (if possible)!</p><p>
                                 So come on, let's show London how it's done!
                             </p>
                         </div>
@@ -272,17 +275,17 @@
                                 </tr>
                                 <tr>
                                     <td class="">
-                                        <span>When I grow up I want to be</span>
-                                        Captain Maller
+                                        <span>My Claim to Fame is:</span>
+                                        I played football with James Mcavoy and he said my chest was like Superman!
                                     </td>
                                     <td class="">
                                         <span>My 3 luxury items when working on the river are</span>
-                                        3 luxury items too many.
+                                        Hair oils, my number and a copy of War and Peace.
                                     </td>
                                 </tr>
                             </table>
                             <p>
-                                Hi I'm Tom, I'm from the green rolling fields of Gloucestershire where everyone is related. I moved to the big smoke to study at the Drama Centre London as an actor. When I'm not starring in James Bond films I like spending my time entertaining and having a laugh speeding around on the Thames!<br>
+                                Hi I'm Tom, I'm from the green rolling fields of Gloucestershire where everyone is related. I moved to the big smoke to study at the Drama Centre London as an actor. When I'm not starring in James Bond films I like spending my time entertaining and having a laugh speeding around on the Thames!</p><p>
                                 On one of my trips you can expect high energy, a good laugh and maybe a selfie or two when I photograph you and your pals.  See you on-board for some speed, sights and serious fun!
                             </p>
                         </div>
@@ -300,6 +303,7 @@
         </div>
     </div>
 </section>
+
 
 {literal}
     <script>
