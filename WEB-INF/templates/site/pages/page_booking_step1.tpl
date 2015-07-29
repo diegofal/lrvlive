@@ -74,3 +74,26 @@
 
 </div>
 
+    <script type="text/javascript">
+        var charter_price = "{$tour.tour_charter_price}";
+    </script>
+    {literal}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                calculate_total();
+
+                if($("#charter").is(":checked")){
+                    var price_fee = parseFloat($("#price_fee").val());
+
+                    document.getElementById("total").value = parseFloat(charter_price) + price_fee;
+                    document.getElementById("tot_price").innerHTML = Currency( parseFloat(charter_price) + price_fee);
+                }
+            });
+
+//            {
+//                $("#charter").click(function(){
+//                    calculate_total();
+//                })
+//            })
+        </script>
+    {/literal}
