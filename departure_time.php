@@ -9,13 +9,7 @@ $db = new DB_config;
 $db->connect();
 
 $tour_id 	= trim($_GET['tour_id']);
-
 $selectDate = trim($_GET['selectDate']);
-
-//$date = new DateTime($selectDate);
-//$selectDate = $date->format('Y-m-d');
-
-
 $order_id   = trim($_GET['sid']); //Changed to use Order Id
 
 $order = $db->select_fields($db->order, "", "", 'order_id', $order_id, "", "", "", 1);
@@ -45,7 +39,7 @@ if ($order['order_tickets'] != 0){ // not a charter
     $qty = "boat_passengers";
 }
 
-$query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price
+$query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price, (select order_tickets_number from orders where order_departure_id = departure_id and order_tickets = 0) as isCharter
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '".$selectDate."'
 
@@ -53,6 +47,7 @@ $query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_ti
 					  AND departure_tour_id = ".$_tour_id."
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
+					  and departure_id not in(select order_departure_id from orders where order_departure_id = departure_id and order_tickets = 0)
 					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
 
@@ -61,12 +56,14 @@ $query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_ti
 //die;
 //echo $query; exit();
 
-$fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
+$fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price", "isCharter");
 $departures = $db->select_fields($db->departure, $query, $fields);
 
-echo json_encode($departures);
-die();
+//var_dump($departures); die();
 
+echo json_encode($departures);
+
+die();
 
 if(!empty($departures))
 {

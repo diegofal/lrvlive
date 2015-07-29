@@ -1801,6 +1801,7 @@ switch (@$_GET['subpage']) {
 					  AND boat_del = 0
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
+					  and departure_id not in(select order_departure_id from orders where order_departure_id = departure_id and order_tickets = 0)
 					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
 //echo $departuresQuery;
@@ -1812,6 +1813,7 @@ switch (@$_GET['subpage']) {
 					  AND departure_date >= curdate()
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
+					  and departure_id not in(select order_departure_id from orders where order_departure_id = departure_id and order_tickets = 0)
 					  ORDER BY departure_date ASC";
         //echo $departuresQuery;
         $fields = array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
