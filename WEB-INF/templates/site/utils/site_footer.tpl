@@ -54,7 +54,7 @@
             <h4>Newsletter</h4>
             <p>Suscribe to our newsletter! <br>Get special discounts and news about our lastest trips.</p>
             </br>
-            <input type="email" placeholder="your@mail.com">
+            <input disabled type="email" placeholder="coming soon!">
             <!--<ul>
                 <li><span> + </span><a href="index.php"> home </a></li>
                 <li><span> + </span><a href="index.php#trips"> trips </a></li>
