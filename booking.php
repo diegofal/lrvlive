@@ -1787,7 +1787,15 @@ switch (@$_GET['subpage']) {
 //            AND boat_del = 0
 //            ORDER BY departure_time ASC";
         //echo $query; exit();
-        if ($order['orders_tickets'] != 0) {
+        if ($order['order_tour_shared_id'] !=0) {
+            $_tour_id = $order['order_tour_shared_id'];
+            $qty = 12;
+        } else {
+            $_tour_id = $tour_id;
+            $qty = $order["order_tickets_number"];
+        }
+
+        if ($order['order_tickets'] != 0) {
             $qty = $order["order_tickets_number"];
         } else {
             $qty = "boat_passengers";
@@ -1798,13 +1806,12 @@ switch (@$_GET['subpage']) {
 					  WHERE departure_date = '" . $selectDate . "'
 					  AND departure_boat_id = boat_id
 					  AND departure_tour_id = " . $_tour_id . "
-					  AND boat_del = 0
 					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  and departure_id not in(select order_departure_id from orders where order_departure_id = departure_id and order_tickets = 0)
 					  AND boat_del = 0
 					  ORDER BY departure_time ASC";
-//echo $departuresQuery;
+
         $availableDepartureDaysQuery = "SELECT DISTINCT departure_date
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_boat_id = boat_id

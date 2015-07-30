@@ -19,7 +19,7 @@
             </div>
             <div class="actions">
                 <div class="booknow"></div>
-                <button class="btn btn-main md-trigger" data-modal="modal-1"> book this trip  </button><!--
+                <button class="btn btn-main md-trigger" data-modal="modal-1" tourid="27"> book this trip  </button><!--
                 <button class="btn btn-secondary md-trigger" data-modal="modal-1"> buy gift voucher  </button> -->
             </div>
         </div>

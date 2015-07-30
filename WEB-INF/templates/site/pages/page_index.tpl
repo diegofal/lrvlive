@@ -142,7 +142,7 @@
                             <p>London RIB Voyages invite you to start your weekend in style. This is the classiest, tastiest and speediest Friday night in London!<br><br></p>
                             <div class="facts">
                                 <p>
-                                    <strong>30</strong><br>
+                                    <strong>30'</strong><br>
                                     min. ride
                                 </p>
                                 <p>
@@ -157,7 +157,7 @@
                         </div>
 
                         <div class="btn btn-main doble">
-                            <a href="detail-limehouseblast.php"> view detail </a><span>or</span><a class="md-trigger" data-modal="modal-1"> book now </a>
+                            <a href="detail-limehouseblast.php"> view detail </a><span>or</span><a class="md-trigger" tourid="27" data-modal="modal-1"> book now </a>
                         </div>
                     </div>
                 </div>

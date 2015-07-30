@@ -39,7 +39,7 @@ if ($order['order_tickets'] != 0){ // not a charter
     $qty = "boat_passengers";
 }
 
-$query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price, (select order_tickets_number from orders where order_departure_id = departure_id and order_tickets = 0) as isCharter
+$query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '".$selectDate."'
 
@@ -56,7 +56,7 @@ $query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_ti
 //die;
 //echo $query; exit();
 
-$fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price", "isCharter");
+$fields 	= array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
 $departures = $db->select_fields($db->departure, $query, $fields);
 
 //var_dump($departures); die();

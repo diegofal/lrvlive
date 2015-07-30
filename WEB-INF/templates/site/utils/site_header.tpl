@@ -66,7 +66,7 @@
             <a href="index.php"> home</a><a href="why-us.php">why us? </a><a href="crew.php">crew </a><a href="services.php">services </a><a href="map.php">locations </a><a href="safety.php">safety </a>
         </nav>
         <div class="col-1-6">
-            <a href="#" class="btn btn-main dropdown-btn book-now"> book now !<span class="icon"></span></a>
+            <a href="#" class="btn btn-main dropdown-btn book-now"> BOOK NOW <span class="icon"></span></a>
         </div>
     </div>
     <ul class="select-trip-items">
@@ -74,7 +74,7 @@
         <li><button class="md-trigger" tourid="1" data-modal="modal-1"> Captain Kidd's Canary Wharf </button></li>
         <li><button class="md-trigger" tourid="4" data-modal="modal-1"> Thames Barrier Explorers Voyage </button></li>
         <li><button class="md-trigger" tourid="12" data-modal="modal-1"> Break The Barrier (Speed only) </button></li>
-        <li><button class="md-trigger" tourid="27" data-modal="modal-1"> Sunset Speed Boating </button></li>
+        <li><button class="md-trigger" tourid="27" data-modal="modal-1"> Limehouse Blast </button></li>
     </ul>
 </header>
 

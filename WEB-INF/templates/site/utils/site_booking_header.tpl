@@ -14,7 +14,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- End New booking design -->
 
-    <title>{if $content.page_title != ""} {$content.page_title} {else} London RIB Voyages{/if}</title>
+    <title>{if $content.page_title != ""} {$content.page_title} {else}
+
+            London RIB Voyages{/if}</title>
 {$MycontentpageMeta}
 {if $subpage == '_tour_details'}
 {$tour.page_meta}
