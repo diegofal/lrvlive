@@ -46,7 +46,7 @@
 	font-weight: bold;
 	line-height: 18px;">
         <div style="float: left;width: 50%;">
-            <span style="color: yellow">Need help with your booking?</span> Call us on: 0207 928 8933
+            <span style="color: yellow">Need help with your booking?</span> Call us on: 020 7928 8933
         </div>
         <div style="text-align: right;">
             <span style="font-size: 26px;

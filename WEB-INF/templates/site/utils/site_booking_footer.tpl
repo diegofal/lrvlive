@@ -16,7 +16,7 @@
             <div class="col-1-3"><a href="javascript:history.back()" id="prev" class="btn md-close btn-secondary"> Back </a></div>
         {/if}
 
-        <div class="col-1-3"><p class="price-total"><span>$</span><span id="tot_price" class="number">{$order.order_total}</span></p></div>
+        <div class="col-1-3"><p class="price-total"><span>&pound;</span><span id="tot_price" class="number">{$order.order_total}</span></p></div>
         <div class="col-1-3"><a href="javascript:check_form();" id="next" class="btn btn-main" > Next </a></div>
         <!--<input type="submit" class="btn btn-main" value="Next">-->
     </div>
