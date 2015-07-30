@@ -96,7 +96,7 @@ class Api {
 
 
         // start processing response
-        $response = [];
+        $response = aray();
 
         foreach($departures as $departure){
             $orderQuery = "SELECT * FROM $db->order
@@ -152,9 +152,9 @@ class Api {
                 FROM " . $db->departure. "
                 WHERE departure_id = " . $departureId . "
         ";
-        $departureDate = $db->select_field($db->departure, "departure_date", "", $departureDateQuery)[0];
+        $departureResult = $db->select_field($db->departure, "departure_date", "", $departureDateQuery);
 
-
+        $departureDate = $departureResult[0];
         // get offer tickets information
 
         $ticketsInfoQuery ="
@@ -316,8 +316,8 @@ class Api {
             INNER JOIN ". $db->ticket ." t on t.ticket_id = rot.ticket_id
             WHERE reseller_offer_id = " . $offerId ."
         ";
-        $tourId = $db->select_field($db->reseller_offer_tickets, "tour_id", "", $tourQuery)[0];
-
+        $tourResult = $db->select_field($db->reseller_offer_tickets, "tour_id", "", $tourQuery);
+        $tourId = $tourResult[0];
         return $tourId;
     }
 

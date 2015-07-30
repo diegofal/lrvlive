@@ -29,7 +29,7 @@
                 <li>Trip</li>
                 <li>Trip</li>
                 <li><span>Trip</span>{$tour}</li>
-                <li><span>Date</span>{$departure.departure_dateHide time selector when empty departures|date_format:"%d %b %Y"}</li>
+                <li><span>Date</span>{$departure.departure_date|date_format:"%d %b %Y"}</li>
                 <li><span>Time</span>{$departure.departure_time|truncate:5:""}</li>
                 {section name=i loop=$tickets}
                     <li><span>{$tickets[i].type}</span>&pound;{$tickets[i].price} ({$tickets[i].quantity})</li>

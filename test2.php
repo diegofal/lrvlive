@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(1);
 // Config parameters
 
 $reselerID = "112";
@@ -8,6 +8,7 @@ $token = "abc";
 $scritpUrl = "test2.php"; // if you change the script name.
 //$baseUrl = "http://134.213.145.120/lrvlive/";
 $baseUrl = "http://live.lrv.web/";
+//$baseUrl = "http://www.londonribvoyages.com/";
 
 // End config
 
@@ -135,7 +136,7 @@ if (!$json->Status == 'Ok' && $_POST['step'] != 1){
     echo '
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Error!</strong> Api call failed! on step ' .$_POST['step'] . ' detail: ' . print_r($json).'
+                <strong>Error!</strong> Api call failed! on step ' .$_POST['step'] . ' detail: ' . $json.'
             </div>
             ';
     die();
@@ -177,7 +178,7 @@ if (!$json->Status == 'Ok' && $_POST['step'] != 1){
                 </table>
             </div>
 
-            <button type="submit" class="btn btn-primary">Select offer</button>
+            <button type="submit" class="btn btn-primary">Select ticket</button>
         </form>
 <?
     }
