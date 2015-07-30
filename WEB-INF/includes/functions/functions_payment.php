@@ -29,8 +29,8 @@ $EncryptionPassword = "GAzHuWWJyBg6mZyj";
 
 
 //$URL = "http://162.13.140.19/booking.php?subpage=step8";
-//$URL = "http://www.londonribvoyages.com/booking.php?subpage=step8";
-$URL = "http://live.lrv.web/booking.php?subpage=step8";
+$URL = "http://www.londonribvoyages.com/booking.php?subpage=step8";
+//$URL = "http://live.lrv.web/booking.php?subpage=step8";
 
 //** Your server's IP address or dns name and web app directory.  Fully qualified **
 //** Examples : $MyServer="https://www.newco.com/php-form-kit/", $MyServer="192.168.0.1/php-form-kit", $MyServer="http://localhost/php-form-kit/" **

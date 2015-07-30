@@ -173,8 +173,8 @@ switch (@$_GET['subpage']) {
 
         write_log("Time: " . $voucher_order['voucher_order_time'] . ", Voucher Order ID: " . $voucher_order['voucher_order_id'] . ", Direction: TO PROTX, Voucher Order Code: " . $voucher_order['voucher_order_unique_code'] . ", Session ID: " . session_id() . ", voucher_order = " . serialize($voucher_order));
 
-        //$URL = "http://www.londonribvoyages.com/booking.php?subpage=voucher_step4";
-        $URL = "http://staging.londonribvoyages.com:9090/booking.php?subpage=voucher_step4";
+        $URL = "http://www.londonribvoyages.com/booking.php?subpage=voucher_step4";
+        //$URL = "http://staging.londonribvoyages.com:9090/booking.php?subpage=voucher_step4";
 
 
         if (TESTING) {
