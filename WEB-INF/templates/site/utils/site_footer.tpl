@@ -169,11 +169,7 @@
                     header.removeClass("darkHeader").addClass('clearHeader');
                 }
             });
-            $('.dropdown-btn').on('click', function(e) {
-                $('.select-trip-items').toggleClass("pressed");
-                $('.dropdown-btn').toggleClass("pressed");
-                e.preventDefault();
-            });
+
             // Si clickear cualquier item del menu, oculpa el menu
             $('.select-trip-items .md-trigger').on('click', function(e) {
                 $('.select-trip-items').toggleClass("pressed");
