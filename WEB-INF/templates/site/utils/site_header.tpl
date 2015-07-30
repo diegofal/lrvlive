@@ -9,10 +9,12 @@
     <link rel="stylesheet/less" type="text/css" href="css/main.less" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="js/vendor/less.min.js"></script>
+    <!--<script src="js/vendor/less.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <link href="https://plus.google.com/100978293955287726375" rel="publisher" />
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 8]>

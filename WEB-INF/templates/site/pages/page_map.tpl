@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -135,7 +135,7 @@
                 </div>
             </div>
 
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -152,7 +152,7 @@
                 <p>Considering it began with a temporary 5-year planning permission, we think our neighbours have created an extraordinary bit of history! 32 pods represent the 32 boroughs that make up this city as a whole, each offering the awesome sight of London's famous skyline. The London Eye has become a centrepoint for New Years Eve celebrations and the firework displays as Big Ben chimes in the new year are unrivalled.</p>
                 <p>Although a famous British landmark, the construction employed companies from all over Europe, including France, Germany, Italy, the Netherlands and Czech Republic, and there are now similar attractions all around the world – as far as Singapore – proving the universal appeal of this unique experience.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -170,7 +170,7 @@
                 <p>A record breaker in its day, the Victoria Tower opposite Big Ben was the largest stone square tower in the world when the Victorians built it – another example of their incredible feats of engineering, many of which you will see from your unique view in your very own speedboat!</p>
                 <p>Home of the House of Lords and the House of Commons, there are over 3 miles of corridor inside – which must be why it takes so long to get anything done in government!</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -188,7 +188,7 @@
                 <p>Look closely and you may notice the tower leans slightly. It&#39;s not an optical illusion! This was due to the construction of the Jubilee line that runs right below it knocking it off its foundations.</p>
                 <p> Luckily, it still stands as sign of London’s resilience. After celebrating her Diamond Jubilee in 2012 the tower was renamed in the Queen&#39;s honour and is now officially known as the Elizabeth Tower. You cannot travel around London without hearing the famous bell within.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -205,7 +205,7 @@
                 <p>Dated at over 3500 years old, it was given as a present from the ruler of Sudan (named Mohammed Ali – no relation!) to Nelson for his part in the Battle of the Nile 1798.</p>
                 <p>Look carefully and the Egyptian Hieroglyphics are still visible today! A time capsule was buried at the base of the needle by the Victorians. It includes: a set of 12 photographs of the best looking English women of the day, a box of hairpins, a box of cigars, several tobacco pipes, a set of imperial weights, a baby's bottle, some children's toys, a shilling razor, a hydraulic jack and some samples of the cable used when installing the needle, a 3' bronze model of the monument, a complete set of British coins, a rupee, a portrait of Queen Victoria, a written history of the strange tale of the transport of the monument, plans on vellum, a translation of the inscriptions, copies of the bible in several languages, a copy of John 3:16 in 215 languages, a copy of Whitaker's Almanack, a Bradshaw Railway Guide, a map of London and copies of 10 daily newspapers.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -224,7 +224,7 @@
                 <p>Elizabeth I, James I and Charles I all enjoyed life at this Tudor Palace. Oliver Cromwell was laid in state here in 1658 and the Palace even escaped the clutches of the Great Fire of 1666, which stopped just short of the site. 100 years later and Somerset House was a shadow of its former glory. Falling into disrepair, George III ordered the demolition of the Palace and relocated the official dower house of the Queen to Buckingham House.</p>
                 <p>The rebuilding of the House resulted in what you see today. The courtyard plays host to an ice rink in the winter and an outdoor cinema in the summer – keeping its original traditions of social and artistic life very much alive!</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -243,7 +243,7 @@
                 <p>When cornered, Albert Moore blamed coincidence and managed to get away with it, leaving the iconic tower proudly displaying the illegal advert. Get yourself a table in the restaurant bar one evening and enjoy a cocktail while watching the sunset over St Paul's Cathedral.</p>
                 <p>You might even see us whizzing by far below…</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -262,7 +262,7 @@
                 <p>They were designed to look like merchant ships, while carrying concealed 4-inch and 12-pounder naval guns. U boats would dive at the sight of a warship, so these undercover vessels posing as merchant ships could approach close enough to unveil its true identity! Today the ship plays host to weddings, birthdays and many other special occasions.</p>
                 <p>It stands as a quiet reminder of the crafty side of naval warfare, which was so vital in the success of our famous maritime nation.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -281,7 +281,7 @@
                 <p>Home to some of the biggest public ceremonies including Charles and Diana's wedding in 1981 to Margaret Thatcher's funeral in 2013.</p>
                 <p>Climb to the top of the dome to stand 365 feet over London (one foot for every day of the year) and it’s hard not to appreciate the rich and diverse architecture we are so lucky to have.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -299,7 +299,7 @@
                 <p>It crosses at a point that now links the Tate Modern to St Paul's Cathedral and the views are outstanding.</p>
                 <p>It has made a couple of notable appearances in films, featuring in the sixth instalment of the Harry Potter film franchise, where the bridge collapsed following an attack by Death Eaters. The Bridge also appeared in the 2014 Marvel Cinematic Universe film Guardians of the Galaxy during the climactic battle on Xandar.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -316,7 +316,7 @@
                 <p>The Tate Modern is Britain's home of modern art and whether it's an unmade bed you are looking at or a Dali painting, the collection here boasts something for everyone. Free entry means it is a must-do on anyone's itinerary, making it the most visited modern art gallery in the world with around 4.7 million visitors every year!</p>
                 <p>Designed by Giles Gilbert Scott (the man responsible for designing London’s famous red telephone box!), the new designers (Herzog & de Meuron) wanted to retain the original character. The huge turbine hall was turned into an enormous social space – a ‘space for people’. Measuring an impressive 35 metres high and 152 metres long it became a vast and dramatic entrance area with ramped access, as well as a display space for very large sculptural projects and installation art.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -334,7 +334,7 @@
                 <p>What could possibly go wrong?! Yes you guessed it - we burnt it down. It was really embarrassing! 400 years later this exact replica was the work of the American actor Sam Wannamaker.</p>
                 <p>Unfortunately he never saw it completed in 1997 but it is a hugely valued and now iconic part of London's famous South Bank and with tickets as little as £5 you'd be mad not to indulge in a little culture from this country's greatest ever playwright.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -352,7 +352,7 @@
                 <p>That is until you look closer. On his expedition he managed to 'acquire' £600,000 – which is many millions by today's standards. In fact, he cleared our national debt by stealing it from the rest of the world. Abroad he is a villain! Yet here, he's a bona fide British hero.</p>
                 <p>Today the replica offers a glimpse into life on an Elizabethan sea vessel. Open for tours and educational experiences, it is a far cry from today's power-driven boats. The Golden Hinde was originally known as the Pelican and was renamed in mid-voyage (1577) by Drake as he prepared to enter the Straits of Magellan.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -372,7 +372,7 @@
                 <p>The current bridge was completed fairly recently in 1973. However, surely the most spectacular bridge on this site was the medieval London Bridge. With shops, housing and even a chapel in the middle, the old London Bridge really was a town within a town! Built over a series of arches, the river below was forced through these creating severe river rapids. A popular (but hugely dangerous!) pastime was ‘shooting the bridge’ – only the brave or foolhardy attempted to steer their boats through on a flood tide, and many were drowned during the attempt. The bridge was "for wise men to pass over, and for fools to pass under."</p>
                 <p>Today the modern London Bridge is a major pedestrian commuter route into the heart of the city. It is quite a sight at 5pm to see the city workers leaving and filling the bridge with suit after suit after suit. We certainly feel blessed when we cruise under during rush hour, sometimes modernising the old saying to ourselves, “the bridge is for wise men to pass under, and for fools to pass over!”</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -392,7 +392,7 @@
                 <p>The Monument now stands the same distance as it's height from the site on Pudding Lane where the bakers shop was and serves as a reminder of London's ability to rebuild itself. Still an observation deck today with the golden urn of flames at the top creating the impression of an everlasting candle – this is yet another contribution from Christopher Wren to the re-establishment of the London skyline.</p>
                 <p>It is still today the tallest isolated stone column in the world and a real testament to the resilience of Londoners to use disaster as a springboard for achievement.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -410,7 +410,7 @@
                 <p>The broken top creates the impression of a huge shard of glass rising up out of the capital. The tallest building in Western Europe towers at 1016ft from base to tip. It's on the 72nd floor on the Shard's observation deck you can enjoy views as far as the North Sea over 50 miles away!</p>
                 <p>Filled with offices, leisure complexes, retail space, hotels and residences, the Shard is a vertical city in the middle of London. If you fancy one of the luxury apartments it'll set you back a mere £50million. And if you dare travel the 72 floors to the top deck don't forget to give us a wave.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -428,7 +428,7 @@
                     With fish on the weathervanes to distinguish it as the fish market, people would flock to get the best picks from the freshest catches. Famous workers include Michael Caine (then Maurice Micklewhite.) and the Kray twins! The beautiful arcaded market hall was built in 1875, but the market itself was moved to a new site on the Isle of Dogs in 1982. The building remains as one of London’s most beautiful landmarks with the best views from – you’ve guessed it – the river! It is now a listed building and used as a hospitality and events space.
                 </p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -447,7 +447,7 @@
                 <p>From our twelve-seater RIB seeing the ominous façade of the hull up close proves what an awesome and mighty warship this once was. You’ll notice it's much friendlier today so don’t forget to wave at the visitors as they enviously look down!</p>
                 <p>With over 250,000 visitors per year HMS Belfast has proved to be a hugely popular glimpse into a small part of this nation's rich maritime history.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -465,7 +465,7 @@
                 <p>It's over 3 times the height of Niagra Falls and surprisingly there is only one piece of curved glass – the lens at the top of the building. The rest are smaller, flat panels giving the illusion of a curved structure.</p>
                 <p>During construction the grave of a Roman girl was discovered on the site. She was sheltered in the Museum of London during construction and returned once work was completed.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -484,7 +484,7 @@
                 <p>It was meant to symbolise transparency, although many Londoners would question the reflected transparency of the Mayor himself! The building has spawned many nicknames due to it's unusual shape, including: Darth Vader's Helmet; the Misshapen Egg; the Woodlouse; the Motorcycle Helmet and from Boris himself; the Glass Gonad!</p>
                 <p>You cannot deny the impact from our vantage point of City Hall representing modern London on one side of the river, compared to the stoic and ominous front of the Tower of London squared up on the other side. The spectrum of time is palpable here and it's a real display of 1000 years of evolving London separated by a just a small stretch of water and just a few metres apart!</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -503,7 +503,7 @@
                 <p>The Tower has survived every major disaster in London and been in some way related to nearly every major event over its 1000 year lifetime. With a lifetime to last a millennium it is inevitably going to be used for a huge range of needs. The Tower has been home to the royal treasury, the royal mint, London Zoo, an armoury and a place of execution and torture, to name but a few. You will see the entry to the traitors gate from our RIB where the accused were brought to be imprisoned and eventually executed</p>
                 <p>Home of the Crown Jewels today and probably the most important thing you should do in London (apart from a London RIB Voyage of course!) the Tower continues to be a fascinating anchor to an event that was to shape the way we live to this day.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -520,7 +520,7 @@
                 <p>To be honest, we think it still is! It still happens, particularly at weekends, so if you are lucky you may even get to watch this spectacular event on your voyage with us. You’ve got to hand it to the Victorians – they knew how to build! You will see their stamp all over London.</p>
                 <p>Parliament, Tower Bridge and the embankment of the river is all their amazing work. The towers of the bridge were designed to be in keeping with the look of the Tower of London and for much of its life the bridge was painted brown! It was the silver jubilee of 1977 when we decided to update the colours to that of the British flag. The walkway at the top was originally for pedestrians. The cumbersome nature of climbing to the top and down again just to cross the river proved unpopular and were closed in 1910. In 1982, 2 years before it's 100th birthday, they were reopened as part of the Tower Bridge Experience giving visitors the chance to explore how and why the bridge was built and to experience the steam room that originally powered the opening of the bridge.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -538,7 +538,7 @@
                 <p>Today’s problems must differ greatly from those of their eighteenth century counterparts. Be sure to look at their super modern fast patrol launches (these are capable of over 40 knots!), which have replaced the original rowing galleys.</p>
                 <p>Officers are more likely to be involved in "Counter Terrorism" patrols or people stuck on the beaches as the tide comes in rather than preventing pirates looting the river's trade ships. However, the dark and murky waters of the Thames are still policed on a twenty four hour a day basis by traditional London "Bobbies" and to the people who live and work on the Thames they are still simply known as "The Thames River Police"</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -557,7 +557,7 @@
                 <p>If you don't recognize it, think again! It has been featured in many cinema and television shows including The World is not Enough, The Bourne Supremacy, Harry Potter and the Order of the Phoenix, 28 Weeks Later, Johnny English, Doctor Who, Torchwood, The Apprentice and Eastenders.</p>
                 <p>In fact, the area of Canary Wharf has boomed ever since its construction in the 1980's and is well worth a visit if you are thinking about experiencing some of the outskirts of the main city.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -576,7 +576,7 @@
                 <p>Opened by the Queen – a familiar ceremony as the Queen opened the 19th century tea clipper exhibit in 1957. Unusually the name 'Cutty Sark' is Scottish slang for 'short undergarments'! If you look carefully you may see the figurehead.</p>
                 <p>The lady is a witch called 'Nanny' from a famous Robert Burns poem. Why? Well the Cutty Sark was launched from Dumbarton in Scotland.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -593,7 +593,7 @@
                 <p>This was the home of the Tudors, with Henry VIII, Mary I and Elizabeth I all being born in Greenwich. Greenwich Park was a hunting ground for Henry, one of our most famous Kings and on the distant tree line from your RIB you can see the Royal Observatory.</p>
                 <p>A wonderful, vibrant market town today, Greenwich retains its royal roots mixed with modern trend cementing its place as one of the most important historical areas beyond the Cities of London and Westminster.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -610,7 +610,7 @@
                 <p>The post was appointed to John Flamsteed under the order to "apply himself with the most exact care and diligence to the rectifying of the tables of the motions of the heavens, and the places of the fixed stars, so as to find out the so much desired longitude of places for the perfecting of the art of navigation".</p>
                 <p>So without Flamsteed and the observatory, we wouldn't be able to travel here at all on our super slick RIB's! Today the buildings include a museum of astronomical and navigational tools, which is part of the National Maritime Museum, and is open to the general public throughout the year. Not only that, but the views from the top of the hill are quite amazing!</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -628,7 +628,7 @@
                 <p>Some of the biggest names in music have performed here including AC/DC, Rod Stewart, Tina Turner, The Rolling Stones, Paul McCartney, Led Zeppelin, Kylie Minogue, Justin Timberlake, Guns N’ Roses, Bob Dylan, Queen and Metallica to name just a handful! Up At The O2 opened in 2012, offering visitors the chance to walk on a specially designed walkway over the dome itself. The dome has a diameter of 365 metres, a height of 52 metres and 12 'needles' sticking out the top representing time itself – 365 days in the year, 52 weeks and 12 months respectively.</p>
                 <p>With many attractions inside including shops, restaurants, bars, exhibitions, Indigo at the O2 arena for more intimate gigs and a cinema you won’t be short of finding something to do in this area of Greenwich that has been completely reshaped by this celebration of the millennium.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
@@ -647,7 +647,7 @@
                 <p>As we cruise through in our intimate RIB ride you can see up close the huge mechanisms in between each island ready to turn and bring up the huge defences that are buried into the riverbed. Costing over £500million (over £1billion of todays money) it wasn’t cheap, but remains absolutely vital in the preservation of the City.</p>
                 <p>Sitting quietly on the edge of London the Barrier is a silent but indispensable tool to the lives of all who live and work in the City.</p>
             </div>
-            <a href="#" class="md-close">close</a>
+            <a href="#" class="md-close" onclick="javascript:$(document.querySelector('.md-overlay')).click();" >close</a>
         </div>
     </div>
 
