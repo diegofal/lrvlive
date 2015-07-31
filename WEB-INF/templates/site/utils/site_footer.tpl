@@ -55,7 +55,7 @@
             <p>Suscribe to our newsletter! <br>Get special discounts and news about our lastest trips.</p>
             </br>
             <input disabled type="email" placeholder="coming soon!">
-            <br><a href="termsandconditions.pdf" target="_blank">Terms and Conditions</a>
+            <br><a href="Termsandconditions.pdf" target="_blank">Terms and Conditions</a>
 
         </div>
         <div class="col-1-4 news">
@@ -80,34 +80,7 @@
         </div>
     </div>
 
-    <div class="schema">
-        <div itemscope itemtype="http://schema.org/LocalBusiness">
-            <span itemprop="name">London RIB Voyages</span>
-            <span itemprop="description">The fastest, funniest and craziest speedboat adventures on the river Thames</span>
-            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <span itemprop="streetAddress">Boarding Gate One,The London Eye Millennium Pier</span>
-                <span itemprop="addressLocality">Southbank</span>,
-                <span itemprop="addressRegion">London</span>
-                <span itemprop="postalCode">SE1 7PB</span>
-            </div>
-            <!-- Add the lat/long geo sub-type -->
-            <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-                <!-- Add Latitude -->
-                <meta itemprop="latitude" content="1.503349" />
-                <!-- Add Longitude -->
-                <meta itemprop="longitude" content="-0.120415" />
-                <!-- End sub schema block -->
-            </div>
-            Phone: <span itemprop="telephone">0207 928 8933</span>
-            <time itemprop="openingHours" datetime="Mo,Su 10.00 - 18.00">Monday to Sunday 10:00-18:00</time>.
-            <div itemscope itemtype="http://schema.org/Product">
-                <span itemprop="name">London RIB Voyages</span>
-                <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                    Rated <span itemprop="ratingValue">5</span>/5 based on <span itemprop="reviewCount">2971</span> reviews
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="schema">
         <div itemscope itemtype="http://schema.org/LocalBusiness">
             <span itemprop="name">London RIB Voyages</span>

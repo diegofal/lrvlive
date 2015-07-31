@@ -94,9 +94,8 @@ class Api {
         // get all departures for selected tour and date
         $departures = $this->getDeparturesForTourAndDate($tourId, $date);
 
-
         // start processing response
-        $response = aray();
+        $response = array();
 
         foreach($departures as $departure){
             $orderQuery = "SELECT * FROM $db->order
