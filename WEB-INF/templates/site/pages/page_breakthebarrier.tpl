@@ -75,7 +75,7 @@
         </div>
 
         <div class="col-1-6 second-column">
-            <h5>Complementary information</h5>
+            <h5>Complimentary information</h5>
             <ul>
                 <li><span>40</span> <i>minutes ride</i></li>
                 <li><span>8</span> <i>sitepoints</i></li>
@@ -92,6 +92,7 @@
                     <li><span>Cutty Sark</span></li>
                     <li><span>O2 Arena</span></li>
                     <li><span>Thames Barrier</span></li>
+                    <li><span>Three course dining</span></li>
                 </ul>
                 <a href="map.php" class="viewmore">View all</a>
             </div>

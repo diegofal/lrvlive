@@ -56,7 +56,7 @@
                             <p>
                                 I’m from Manchester and when not clog dancing or working in the local cotton mill I enjoy dining in the finest restaurants in London. I am still surprised that someone will employ me to hang out on a speedboat all day telling people about this amazing city!</p>
                             <p>
-                                I am hope to soon have the weathered face of an old sea-dog when I will change my name to Arthur and talk exclusively in vowels.
+                                I am hoping to soon have the weathered face of an old sea-dog when I will change my name to Arthur and talk exclusively in vowels.
                             </p>
                         </div>
                     </article>

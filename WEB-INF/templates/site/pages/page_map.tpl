@@ -13,7 +13,7 @@
                     <span>Meeting point</span>
                     <h3>The London Eye</h3>
                     <p class="lead">
-                        Nestled in the shadow of one of the most iconic and accessible landmarks on the river, our home at the London Eye guarantees both convenience and the ‘wow’ factor. Head here for The Ultimate London Adventure, Captain Kidd’s Canary Wharf, Thames Barrier Explorer’s Voyage and The London Edge Skyride.
+                        Nestled in the shadow of one of the most iconic and accessible landmarks on the river, our home at the London Eye guarantees both convenience and the ‘wow’ factor. Head here for The Ultimate London Adventure, Captain Kidd’s Canary Wharf, Thames Barrier Explorer’s Voyage and The Limehouse Blast.
                     </p>
 
                     <h6>By tube</h6>

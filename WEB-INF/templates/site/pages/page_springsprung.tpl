@@ -60,7 +60,7 @@
 
 
         <div class="col-1-6 second-column">
-            <h5>Complementary information</h5>
+            <h5>Complimentary information</h5>
             <ul>
                 <li><span>50</span> <i>minutes ride</i></li>
                 <li><span>22</span> <i>sitepoints</i></li>

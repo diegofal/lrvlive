@@ -128,7 +128,7 @@
                     <li>
                         <a class="cd-faq-trigger" href="#0">How do small children<br/>sit on board?</a>
                         <div class="cd-faq-content">
-                            <p>Children will be able to sit normally in perfect safety beside their (responsible) adult. They can sit on your lap if you like or next to you on their seat. Straps or safety beats are not required for this experience.</p>
+                            <p>Children will be able to sit normally in perfect safety beside their (responsible) adult. They can sit on your lap if you like or next to you on their seat. Straps or safety belts are not required for this experience.</p>
                         </div>
                     </li>
                     <li>

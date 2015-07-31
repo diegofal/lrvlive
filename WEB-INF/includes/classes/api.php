@@ -133,6 +133,13 @@ class Api {
         // check offer is set
         $offerId = $this->checkOfferParameter();
 
+        $offerPriceQuery =  "
+                SELECT price
+                FROM " . $db->reseller_offers. "
+                WHERE reseller_offer_id = " . $offerId . "
+        ";
+        $offerPriceResult = $db->select_field($db->reseller_offers, "price", "", $offerPriceQuery);
+
         // check departure is set
         if (!isset($_POST['DepartureId'])){
             $this->buildResponse("ERROR", "Invalid departure id.", "empty", null);
@@ -176,10 +183,13 @@ class Api {
             $orderTickets = strlen($orderTickets)>0 ? $orderTickets . "|".$ticketInfo['ticket_id'] : $ticketInfo['ticket_id'];
             $orderQuantities = strlen($orderQuantities)>0 ? $orderQuantities . "|".$ticketInfo['quantity'] : $ticketInfo['quantity'];
             $orderTicketsNumber += intval($ticketInfo['quantity']) * intval($ticketInfo['ticket_seats']);
-            $orderTotal += floatval($ticketInfo['ticket_price']);
+            //$orderTotal += floatval($ticketInfo['ticket_price']);
         }
 
-        $orderTotal += PRICE_FEE;
+
+        $orderTotal = $offerPriceResult[0];
+        // Uncomment to sum booking fee
+        //$orderTotal += PRICE_FEE;
 
         $reservationFields = array( "order_tickets" => $orderTickets,
                                     "order_quantities" => $orderQuantities,
