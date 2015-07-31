@@ -80,6 +80,7 @@
                 <li><span>40</span> <i>minutes ride</i></li>
                 <li><span>8</span> <i>sitepoints</i></li>
                 <li><span>35</span> <i>rpm</i></li>
+                <li><span>Three course dining</span></li>
             </ul>
             <div class="attractions">
                 <h5>What you will see</h5>
@@ -92,7 +93,6 @@
                     <li><span>Cutty Sark</span></li>
                     <li><span>O2 Arena</span></li>
                     <li><span>Thames Barrier</span></li>
-                    <li><span>Three course dining</span></li>
                 </ul>
                 <a href="map.php" class="viewmore">View all</a>
             </div>
