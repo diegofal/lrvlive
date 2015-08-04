@@ -9,6 +9,22 @@ $id_page = 1;
 $content = $db->select_fields($db->page, "", "", "page_id", $id_page , "", "", "",1 );
 
 
+define('MOBILE_SITE_URL', '/mobile');
+
+$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
+$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+
+if ($iphone
+	|| $android
+	|| $palmpre
+	|| $ipod
+	|| $berry == true)
+{
+	header('Location: ' . MOBILE_SITE_URL);
+}
 
 $query = "SELECT * FROM $db->tour WHERE 1 AND tour_del = 0 ORDER BY tour_id ASC";
 $tours = $db->select_fields ($db->tour,$query, array("tour_id","tour_home_name1", "tour_home_name2", "tour_duration", "tour_home_image", "title_home_page", "tour_special_text_home", "tour_charter_price"));

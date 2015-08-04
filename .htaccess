@@ -1,4 +1,8 @@
 #Options +FollowSymlinks
+AddType video/mp4 .mp4 .m4v
+AddType video/ogg .ogv
+AddType video/webm .webm
+
 RewriteEngine On
  
 Redirect 302 /thamesrockets http://www.londonribvoyages.com/booking.php?tour_id=12&subpage=tour_details

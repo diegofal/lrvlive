@@ -1,0 +1,101 @@
+/*************************************************TYPE*/
+p.lead{
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+@font-face {
+    font-family: 'dearjoe';
+    src: url('fonts/dearjoe_6_trial-webfont.eot');
+    src: url('fonts/dearjoe_6_trial-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dearjoe_6_trial-webfont.woff2') format('woff2'),
+         url('fonts/dearjoe_6_trial-webfont.woff') format('woff'),
+         url('fonts/dearjoe_6_trial-webfont.ttf') format('truetype'),
+         url('fonts/dearjoe_6_trial-webfont.svg#dearjoe_6_trialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*************************************************MENU*/
+#main-header{
+  background: white;
+}
+.mdl-layout-title{
+  margin-left: -40px;
+}
+/*************************************************HOMEPAGE*/
+#homepage{
+  background: #ededed;
+}
+#h1-home {
+  text-align: center;
+  padding: 2em;
+  background: white url(img/bg-h1-home.jpg) no-repeat top center;
+}
+#h1-home img{
+  width: 100%;
+}
+#homepage .mdl-card{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+#homepage .mdl-card h2{
+  text-transform: uppercase;
+  color:#00334e;
+  font-size: 2em;
+  line-height: 1;
+  font-weight: 600;
+}
+#homepage .mdl-card img{
+  width: 100%;
+  height: auto;
+}
+#homepage .mdl-card .info span{
+  font-size: 0.8em;
+}
+.mdl-card .arrow-mini{
+  color:#ee3124;
+}
+#homepage .mdl-card .mdl-card__actions .mdl-button{
+  width: 90%;
+}
+
+.mdl-card .facts{
+  color:#ee3124;
+  font-size: 0.7em;
+}
+
+/************************************************* DETAIL PAGE */
+
+.detail-page .header-img{
+  width: 100%;
+}
+
+.detail-page h1{
+  font-size: 2em;
+  padding: 0.5em;
+  margin: 0;
+  background-color:#00334e;
+  text-align: center;
+  color:#fff;
+  font-family: 'dearjoe'
+}
+.detail-page .facts{
+  padding-left: 1.2em;
+  padding-bottom: 1.2em;
+  padding-top: 1.2em;
+  background-color: #eaeaea;
+}
+.detail-page .facts p{
+  font-size: 0.8em;
+}
+.detail-page .info {
+  padding-top: 2em;
+}
+.detail-page .info p{
+  color:#00334e;
+}
+.detail-page .bookthis .mdl-button{
+  width: 93%;
+}
+

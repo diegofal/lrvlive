@@ -55,17 +55,17 @@
             <p>Suscribe to our newsletter! <br>Get special discounts and news about our lastest trips.</p>
             </br>
             <input disabled type="email" placeholder="coming soon!">
-            <br><a href="Termsandconditions.pdf" target="_blank">Terms and Conditions</a>
+            <br><a href="termsandconditions.pdf" target="_blank">Terms and Conditions</a>
 
         </div>
         <div class="col-1-4 news">
             <h4>News</h4>
             <ul class="">
-                <li><a href="https://londonribvoyages.wordpress.com/2015/02/05/no-cringe-allowed-try-something-different-this-valentines-day/">Have yourself a Merry Little RIBMASS!</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/02/05/no-cringe-allowed-try-something-different-this-valentines-day/">Spring is sprung!</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/02/05/no-cringe-allowed-try-something-different-this-valentines-day/">Two new boats, two maiden voyages!</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/02/05/no-cringe-allowed-try-something-different-this-valentines-day/">Stag and hen parties…at speed!</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/02/05/no-cringe-allowed-try-something-different-this-valentines-day/">It’s time for the Thames Festival!</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/07/31/hottest-july-ever/">Hottest July Ever!</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/07/30/schools-out-for-summer/">School’s out for summer!</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/07/24/the-garden-bridge/">The garden bridge</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/07/19/90-years-of-tauck/">90 years of tauck</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/07/17/bond-spotted-on-the-thames/">Bond spotted on the thames</a></li>
             </ul>
         </div>
         <div class="col-1-4 social">

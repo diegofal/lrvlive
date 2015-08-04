@@ -239,14 +239,15 @@
         var index = 0;
         $(document).ready(function(){
             video = document.getElementsByTagName('video')[0];
-            addSourceToVideo( video, "content/video/video.ogv", "video/ogv");
-            addSourceToVideo( video, "content/video/video.mp4", "video/mp4");
+            addSourceToVideo( video, "content/video/video.ogv", "video/ogv; codecs='theora, vorbis'");
+            addSourceToVideo( video, "content/video/video.mp4", "video/mp4; codecs='avc1.42E01E, mp4a.40.2'");
+            addSourceToVideo( video, "content/video/video.webm", "video/webm");
             video.addEventListener("progress", progressHandler,false);
-            bindKeys();
+            //bindKeys();
             // if set, overrides <video width>
-            videoWidth: win.width;
+            //videoWidth: win.width;
             // if set, overrides <video height>
-            videoHeight: win.height;
+            //videoHeight: win.height;
         });
 
         progressHandler = function(e) {
