@@ -394,7 +394,7 @@ switch (@$_GET['subpage']) {
         if (isset($_GET['error'])){
             $smarty->assign('error',$_GET['error'] );
         }
-
+        $smarty->assign('mobile',$_GET['mobile'] );
         if (isset($_GET['voucher_id']) && is_numeric($_GET['voucher_id'])) {
             $voucher_id = $_GET['voucher_id'];
         } else {
@@ -2036,6 +2036,7 @@ switch (@$_GET['subpage']) {
 
         $smarty->assign("resellers", $resellers);
         $smarty->assign("error", $_GET['error']);
+        $smarty->assign("mobile", $_GET['mobile']);
         $smarty->assign("tour", $tour_details);
         $smarty->assign("tour_id", $tour_id);
         $smarty->assign("tours", $tours);

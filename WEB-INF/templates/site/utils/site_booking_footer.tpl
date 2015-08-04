@@ -10,8 +10,11 @@
     {/if}
     <div class="grid">
         {if $subpage==_step1}
-        <div class="col-1-3">
-            <a href="#" id="prev" class="btn md-close btn-secondary" onclick="javascript:$(window.parent.document.querySelector('.md-overlay')).click();"> Close </a></div>
+            {if $mobile==y}
+                <div class="col-1-3"><a href="#" id="prev" class="btn md-close btn-secondary" onclick="javascript:$(window.close())"> Close </a></div>
+                {else}
+            <div class="col-1-3"><a href="#" id="prev" class="btn md-close btn-secondary" onclick="javascript:$(window.parent.document.querySelector('.md-overlay')).click();"> Close </a></div>
+                {/if}
         {else}
             <div class="col-1-3"><a href="javascript:history.back()" id="prev" class="btn md-close btn-secondary"> Back </a></div>
         {/if}
