@@ -46,6 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
+$smarty->assign("title","Why us | London RIB Voyages");
+$smarty->assign("desc","most fun and innovative way to see the Thames and enjoy the city of London from a new vantage point. We were entered into the ?Hall of Fame? after receiving our 5th consecutive ?Certificate of Excellence? year on year. ");
 $smarty->assign("page","why-us");
 $smarty->display('site_pages.tpl');
 ?>

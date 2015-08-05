@@ -46,6 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
+$smarty->assign("title","Limehouse Blast | London RIB Voyages");
+$smarty->assign("desc","London RIB Voyages invite you to start your weekend in style. This is the classiest, tastiest and speediest Friday night in London!");
 $smarty->assign("page","limehouseblast");
 $smarty->display('site_pages.tpl');
 ?>

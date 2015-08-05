@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>The Thames Cruise with a unique difference | London RIB Voyages</title>
-    <meta name="description" content="The original Thames Cruise with a unique difference - see London's famous landmarks as you whizzzzz along the Thames in our comfortable RIB boats. This is the original speed boat ride on the Thames.">
+    <title>{if $title != ""} {$title} {else}
+            London RIB Voyages{/if}</title>
+    <meta name="description"
+    {if $desc != ""} content="{$desc}" {else}
+            content="The original Thames Cruise with a unique difference - see London's famous landmarks as you whizzzzz along the Thames in our comfortable RIB boats. This is the original speed boat ride on the Thames."{/if}>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">

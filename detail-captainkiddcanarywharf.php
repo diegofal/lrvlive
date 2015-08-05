@@ -46,6 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
+$smarty->assign("title","Captain Kidd's Canary Wharf Voyage | London RIB Voyages");
+$smarty->assign("desc","Specially designed for families. You can still expect all the thrills and spills that have become the trademark our experience!");
 $smarty->assign("page","captainkiddcanarywharf");
 $smarty->display('site_pages.tpl');
 ?>
