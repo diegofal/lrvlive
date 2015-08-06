@@ -665,7 +665,7 @@ body {
     padding: 2.22em 1.5em;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
   /* this mediaqueries makes the navBar bigger */
   body {
     padding-top: 120px;
@@ -1525,7 +1525,7 @@ body {
   font-size: 0.8em;
 }
 /*///////////////////////////////////////////////////////////////////  MAP //////*/
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
   #map {
     top: 120px;
   }
@@ -1548,7 +1548,6 @@ body {
   max-width: 1170px;
   width: 1070px;
   height: 355px;
-  display: block;
   vertical-align: top;
   overflow: visible;
 }
@@ -3320,7 +3319,6 @@ body {
   max-width: 940px;
   min-width: 710px;
   height: auto;
-  z-index: 2000;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -3332,6 +3330,7 @@ body {
 }
 .md-show {
   visibility: visible;
+  z-index: 2000;
 }
 .md-overlay {
   position: fixed;
@@ -4660,10 +4659,10 @@ div.cs-skin-elastic {
   left: auto;
 }
 .slick-prev:before {
-  content: '←';
+  content: 'â†';
 }
 [dir='rtl'] .slick-prev:before {
-  content: '→';
+  content: 'â†’';
 }
 .slick-next {
   right: -25px;
@@ -4673,10 +4672,10 @@ div.cs-skin-elastic {
   left: -25px;
 }
 .slick-next:before {
-  content: '→';
+  content: 'â†’';
 }
 [dir='rtl'] .slick-next:before {
-  content: '←';
+  content: 'â†';
 }
 /* Dots */
 .slick-slider {
@@ -4730,7 +4729,7 @@ div.cs-skin-elastic {
   left: 0;
   width: 20px;
   height: 20px;
-  content: '•';
+  content: 'â€¢';
   text-align: center;
   opacity: .25;
   color: black;
@@ -4824,4 +4823,54 @@ div.cs-skin-elastic {
   display: block;
   height: auto;
   border: 1px solid transparent;
+}
+/********************************************* ARREGLOS IPAD Y 1024*/
+@media only screen and (min-width: 430px) and (max-width: 1030px){
+
+  #badges .tripadvisor-live{  
+      padding: 0.95em 0em;
+      margin: 0 10px;
+      }
+  #badges .view-review{
+    width: 130px;
+  } 
+  #why-us .col-2-6 {
+      width: 28.333333%;
+  }
+  .lead-h1 h1{
+    width: 680px;
+      font-size: 1.7em;
+  }
+  #crew .height-fill{
+    height: 700px !important;
+  }
+  .map-heading{
+      width: 250px;
+  }
+  .map-splash-title{
+      width: 200px;
+  }
+  .meeting-point > div{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+  }
+  #map .md-modal{
+      max-width: 790px;
+      height: 256px;
+      background: transparent;
+  }
+  #map .modal-sitepoint {
+      width: 1010px;
+      height: 360px;
+      background: transparent;
+  }
+  #map .md-show{
+    background: white;
+  }
+  .step-1 #mainbooking div{
+    padding: 0 20px 0 0;
+  }
 }
