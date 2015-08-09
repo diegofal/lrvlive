@@ -19,7 +19,7 @@ class DB_config extends x3_database {
 	var $mysql_host		= "127.0.0.1";
 	var $mysql_username	= "root"; //lrv-live
 	//var $mysql_username	= "lrv-live"; //lrv-live
-	var $mysql_password	= ""; //mP9KXcTr9MYsxH8G
+	var $mysql_password	= "Tl4358"; //mP9KXcTr9MYsxH8G
 	//var $mysql_password	="mP9KXcTr9MYsxH8G";
 	var $mysql_database	= "lrvlive"; //lrv-live
 	//var $mysql_database	= "lrv-live"; //lrv-live

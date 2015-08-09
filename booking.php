@@ -5,6 +5,22 @@ include "WEB-INF/includes/functions/functions_payment.php";
 include "WEB-INF/includes/functions/functions_log.php";
 include "WEB-INF/includes/functions/functions_order.php";
 
+define('MOBILE_SITE_URL', '/mobile');
+
+$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
+$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+
+if ($iphone
+|| $android
+|| $palmpre
+|| $ipod
+|| $berry == true) {
+    $_GET['mobile'] = 'y';
+}
+
 $price_fee = PRICE_FEE;
 // Added by Carlos
 $smarty->assign("price_fee", $price_fee);
@@ -191,9 +207,9 @@ switch (@$_GET['subpage']) {
           }
 
         $crypt = generate_crypt3($voucher_order['voucher_order_unique_code'], $voucher_order['voucher_order_total'], $tour_details[0]['tour_name'], $voucher_order['voucher_order_email'],
-            $voucher_order['voucher_order__name'] . " " . $voucher_order['voucher_order_lastname'], COMPANY_EMAIL,
-            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country'],
-            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country']);
+            $voucher_order['voucher_order_name'] . " " . $voucher_order['voucher_order_lastname'], COMPANY_EMAIL,
+            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country'],$voucher_order['voucher_order_state'],
+            $voucher_order['voucher_order_address1'] . ", " . $voucher_order['voucher_order_address2'], $voucher_order['voucher_order_postcode'], $voucher_order['voucher_order_lastname'], $voucher_order['voucher_order_name'], $voucher_order['voucher_order_city'], $voucher_order['voucher_order_country'],$voucher_order['voucher_order_state'] );
 
 
 
@@ -240,8 +256,7 @@ switch (@$_GET['subpage']) {
         $smarty->assign("vspsite", $vspsite);
         $smarty->assign("crypt", $crypt);
         $smarty->assign("tourName", $tour_details[0]['tour_name']);
-
-
+        $smarty->assign("mobile", $_GET['mobile']);
 
         $smarty->assign("COUNTRIES", $COUNTRIES);
         $smarty->assign("subpage", "_voucher_step3");
@@ -374,7 +389,7 @@ switch (@$_GET['subpage']) {
 //		echo ("test");
         $smarty->assign("tickets", $tickets);
         $smarty->assign("special_tickets", $special_tickets);
-
+        $smarty->assign("mobile", $_GET['mobile']);
 
         $smarty->assign("tickets", $tickets);
         $smarty->assign("subpage", "_voucher_step2");
@@ -448,6 +463,8 @@ switch (@$_GET['subpage']) {
                 //add booking fee
                 $discounted_total = $discounted_total + (float)$price_fee;
 */
+            if ($_POST['voucher_order_country'] != 'US') {$_POST['voucher_order_state'] = '';}
+
             $fields = array(
                 "voucher_order_to" => $_POST['voucher_order_to'],
                 "voucher_order_phone_to" => $_POST['voucher_order_phone_to'],
@@ -463,6 +480,7 @@ switch (@$_GET['subpage']) {
                 "voucher_order_city" => $_POST['voucher_order_city'],
                 "voucher_order_postcode" => $_POST['voucher_order_postcode'],
                 "voucher_order_country" => $_POST['voucher_order_country'],
+                "voucher_order_state" => $_POST['voucher_order_state'],
                 "voucher_order_time" => time(),
                 "voucher_order_method" => "protx",
                 "voucher_order_voucher_id" => $voucher_id
@@ -501,7 +519,7 @@ switch (@$_GET['subpage']) {
         $smarty->assign("voucher_id", $voucher_id);
         $smarty->assign("vouchers", $vouchers);
         $smarty->assign("COUNTRIES", $COUNTRIES);
-
+        $smarty->assign("mobile", $_GET['mobile']);
 
         $smarty->assign("subpage", "_voucher_step1");
         // asignare variabile smarty si generare fisier smarty :
@@ -777,11 +795,11 @@ switch (@$_GET['subpage']) {
 
             if ($results['status'] == 'OK') {
 
+
                 write_log("Time: " . $order['order_time'] . ", Order ID: " . $order['order_id'] . ", Direction: FROM PROTX, Order Code: " . $order['order_unique_code'] . ", Total: " . $order['order_total'] .
                     ", Email: " . $order['order_email'] . ", Name: " . $order['order_title'] . " " . $order['order_first_name'] . " " . $order['order_last_name'] . ", Address: " .
                     $order['order_street_address1'] . " " . $order['order_street_address2'] . ", City: " . $order['order_city'] . ", Country: " . $order['order_country'] .
                     ", Zip:" . $order['order_zip'] . ", Shared tour ID:" . $order['order_tour_shared_id'] . ", Session ID: " . session_id());
-
 
                 include "WEB-INF/includes/functions/functions_email.php";
 
@@ -1300,8 +1318,8 @@ switch (@$_GET['subpage']) {
 
         $crypt = generate_crypt3($order['order_unique_code'], $order['order_total'], $tour_details['tour_name'], $order['order_email'],
             $order['order_title'] . " " . $order['order_first_name'] . " " . $order['order_last_name'], COMPANY_EMAIL,
-            $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country'],
-            $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country']);
+            $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country'], $order['order_state'],
+            $order['order_street_address1'] . ", " . $order['order_street_address2'], $order['order_zip'], $order['order_last_name'], $order['order_first_name'], $order['order_city'], $order['order_country'], $order['order_state']);
 
         /*
          * ONLY FOR TESTING (look config.php)
@@ -1357,7 +1375,7 @@ switch (@$_GET['subpage']) {
         $smarty->assign("tour", $tour_name);
         $wipe = base64_encode($order['order_id']);
         $smarty->assign("wipe", $wipe);
-
+        $smarty->assign("mobile", $_GET['mobile']);
         $smarty->assign("tour_id", $tour_id);
         $smarty->assign("COUNTRIES", $COUNTRIES);
         $smarty->assign("subpage", "_step4");
@@ -1403,7 +1421,7 @@ switch (@$_GET['subpage']) {
         }
         //extract current session
         $order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
-
+        if ($_POST['order_country'] != "US"){$_POST['order_state'] = "";}
         //add to database
         if (!empty($_POST['order_find'])) {
             $fields = $_POST;
@@ -1512,6 +1530,7 @@ switch (@$_GET['subpage']) {
         $smarty->assign("divStyles", $style_array);
         $smarty->assign("tickets", $tickets);
         $smarty->assign("bottomTotal", $_POST['bottomTotal']);
+        $smarty->assign("mobile", $_GET['mobile']);
         //Deprecated (not used)
         $wipe = base64_encode($order['order_id']);
         $smarty->assign("wipe", $wipe);
@@ -1845,7 +1864,7 @@ switch (@$_GET['subpage']) {
         $smarty->assign("tours", $tours);
         $smarty->assign("availableDates", json_encode($availableDates));
         $smarty->assign("departures", $Initdepartures);
-
+        $smarty->assign("mobile", $_GET['mobile']);
         $smarty->assign("contor", array(0, 1, 2, 3, 4, 5, 6));
         $smarty->assign("subpage", "_step2");
         // asignare variabile smarty si generare fisier smarty :

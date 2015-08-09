@@ -270,8 +270,8 @@ function generate_crypt($ThisVendorTxCode, $ThisAmount, $ThisDescription, $ThisC
 }
 
 function generate_crypt3($ThisVendorTxCode, $ThisAmount, $ThisDescription, $ThisCustomerEmail, $ThisCustomerName, $ThisVendorEmail,
-                         $ThisDAddress1, $ThisDPostCode, $ThisDSurname, $ThisDFirstNames, $ThisDCity, $ThisDCountry,
-                         $ThisBAddress1, $ThisBPostCode, $ThisBSurname, $ThisBFirstNames, $ThisBCity, $ThisBCountry,
+                         $ThisDAddress1, $ThisDPostCode, $ThisDSurname, $ThisDFirstNames, $ThisDCity, $ThisDCountry,$ThisDState,
+                         $ThisBAddress1, $ThisBPostCode, $ThisBSurname, $ThisBFirstNames, $ThisBCity, $ThisBCountry, $ThisBState,
                          $MyURL = "")
 {
     global $EncryptionPassword;
@@ -298,6 +298,10 @@ function generate_crypt3($ThisVendorTxCode, $ThisAmount, $ThisDescription, $This
     $stuff .= "BillingCity=" . $ThisBCity . "&";
     $stuff .= "BillingPostCode=" . $ThisBPostCode . "&";
     $stuff .= "BillingCountry=" . $ThisBCountry . "&";
+    if ($ThisBCountry == 'US') {
+        $stuff .= "BillingState=" . $ThisBState . "&";
+    }
+
 
     $stuff .= "DeliverySurname=" . $ThisDSurname . "&";
     $stuff .= "DeliveryFirstNames=" . $ThisDFirstNames . "&";
@@ -305,6 +309,9 @@ function generate_crypt3($ThisVendorTxCode, $ThisAmount, $ThisDescription, $This
     $stuff .= "DeliveryCity=" . $ThisDCity . "&";
     $stuff .= "DeliveryPostCode=" . $ThisDPostCode . "&";
     $stuff .= "DeliveryCountry=" . $ThisDCountry . "&";
+    if ($ThisBCountry == 'US') {
+        $stuff .= "DeliveryState=" . $ThisBState . "&";
+    }
 
     if (!empty($ThisCustomerEmail)) {
         $stuff .= "CustomerEmail=" . $ThisCustomerEmail . "&";
