@@ -8,3 +8,6 @@ ADD COLUMN `voucher_order_state` VARCHAR(2) NULL DEFAULT NULL COMMENT '' AFTER `
 
 ALTER TABLE `orders`
 ADD COLUMN `order_state` VARCHAR(2) NULL DEFAULT NULL COMMENT '' AFTER `order_country`;
+
+ALTER TABLE `orders_deleted`
+ADD COLUMN `order_state` VARCHAR(2) NULL DEFAULT NULL COMMENT '' AFTER `order_country`;

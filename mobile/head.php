@@ -18,7 +18,7 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
                 mdl-layout--fixed-header">
       <header id="main-header" class="mdl-layout__header">
-        
+        <div class="mdl-layout-icon"></div>
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">
                 <a href="index.php"><img src="content/logo.png" alt="London RIB Voyages" /></a>
@@ -37,6 +37,19 @@
             </ul>
         </div>
       </header>
+       <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">
+                <a href="index.php"><img src="content/logo.png" alt="London RIB Voyages" /></a>
+            </span>
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="index.php">Home</a>
+              <a class="mdl-navigation__link" href="why-us.php">Why us?</a>
+              <a class="mdl-navigation__link" href="crew.php">Crew</a>
+              <a class="mdl-navigation__link" href="services.php">Services</a>
+              <a class="mdl-navigation__link" href="locations.php">Locations</a>
+              <a class="mdl-navigation__link" href="safety.php">Safety</a>
+            </nav>
+        </div>
       
       <main class="mdl-layout__content">
         
