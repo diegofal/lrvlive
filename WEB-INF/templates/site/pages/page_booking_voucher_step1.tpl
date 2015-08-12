@@ -19,14 +19,15 @@
 				<li><span>Address:</span><input name="voucher_order_address1" value="{$voucher_order.voucher_order_address1}" maxlength="50" type="text"/></li>
 				<li><span></span><input name="voucher_order_address2" value="{$voucher_order.voucher_order_address2}" maxlength="49" type="text"/></li>
 				<li class="city"><span>City:</span><input name="voucher_order_city" value="{$voucher_order.voucher_order_city}" maxlength="40" type="text"/></li>
-				<li class="postcode"><span>Post Code:</span><input name="voucher_order_postcode" value="{$voucher_order.voucher_order_postcode}" maxlength="10" type="text"/></li>
-				<li><span>Country:</span>
+				<div id="divPostCode" ><li class="postcode"><span>Post Code:</span><input id="voucher_order_postcode" name="voucher_order_postcode" value="{$voucher_order.voucher_order_postcode}" maxlength="10" type="text"/></li></div>
+				<div id="divPostCode1" ><li class="postcode"><span>Post Code:</span><input  value="N/A" type="text" readonly></li></div>
+				<div><li><span>Country:</span>
 					<select name="voucher_order_country" id="country" class="booking-ddwn-length" onchange="countryChange()">
 						{foreach key=key from=$COUNTRIES item=country}
 							<option value="{$key}" {if $voucher_order.voucher_order_country == $key} selected="selected"{/if}>{$country}</option>
 						{/foreach}
 					</select>
-				</li>
+				</li></div>
 				<li id="stateDiv" style="display:none">
 					<span>State</span>
 					<select name="voucher_order_state" id="state" class="booking-ddwn-length" >

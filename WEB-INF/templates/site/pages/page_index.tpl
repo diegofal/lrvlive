@@ -1,7 +1,7 @@
 <section id="homepage">
     <div class="video-container">
         <canvas width="960" height="220"></canvas>
-        <video poster="content/img/poster.jpg" width="960" height="220" id="intro-video" loop >
+        <video poster="content/img/poster.jpg" width="960" height="220" id="intro-video" loop autoplay>
         </video>
     </div>
     <div class="home-content">
@@ -227,36 +227,5 @@
 
         });
     </script>
-    <script>
-        function addSourceToVideo(element, src, type) {
-            var source = document.createElement('source');
-            source.src = src;
-            source.type = type;
-            element.appendChild(source);
-        }
 
-        var video;
-        var index = 0;
-        $(document).ready(function(){
-            video = document.getElementsByTagName('video')[0];
-            addSourceToVideo( video, "content/video/video.ogv", "video/ogv; codecs='theora, vorbis'");
-            addSourceToVideo( video, "content/video/video.mp4", "video/mp4; codecs='avc1.42E01E, mp4a.40.2'");
-            addSourceToVideo( video, "content/video/video.webm", "video/webm");
-            video.addEventListener("progress", progressHandler,false);
-            //bindKeys();
-            // if set, overrides <video width>
-            //videoWidth: win.width;
-            // if set, overrides <video height>
-            //videoHeight: win.height;
-        });
-
-        progressHandler = function(e) {
-            if( video.duration ) {
-                var percent = (video.buffered.end(0)/video.duration) * 100;
-                if( percent >= 40 ) {
-                    video.play();
-                }
-            }
-        }
-    </script>
 {/literal}

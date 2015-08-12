@@ -1,3 +1,72 @@
+COUNTRIES_WITHOUT_POSTCODES = [
+	"AO" ,
+	"AG" ,
+	"AW" ,
+	"BS" ,
+	"BZ" ,
+	"BJ" ,
+	"BW" ,
+	"BF" ,
+	"BI" ,
+	"CM" ,
+	"CF" ,
+	"KM" ,
+	"CG" ,
+	"CD" ,
+	"CK" ,
+	"CI" ,
+	"DJ" ,
+	"DM" ,
+	"GQ" ,
+	"ER" ,
+	"FJ" ,
+	"TF" ,
+	"GM" ,
+	"GH" ,
+	"GD" ,
+	"GN" ,
+	"GY" ,
+	"HK" ,
+	"IE" ,
+	"JM" ,
+	"KE" ,
+	"KI" ,
+	"MO" ,
+	"MW" ,
+	"ML" ,
+	"MR" ,
+	"MU" ,
+	"MS" ,
+	"NR" ,
+	"AN" ,
+	"NU" ,
+	"KP" ,
+	"PA" ,
+	"QA" ,
+	"RW" ,
+	"KN" ,
+	"LC" ,
+	"ST" ,
+	"SA" ,
+	"SC" ,
+	"SL" ,
+	"SB" ,
+	"SO" ,
+	"ZA" ,
+	"SR" ,
+	"SY" ,
+	"TZ" ,
+	"TL" ,
+	"TK" ,
+	"TO" ,
+	"TT" ,
+	"TV" ,
+	"UG" ,
+	"AE" ,
+	"VU" ,
+	"YE" ,
+	"ZW"
+];
 function isnumeric(text, text_alert) {
 	valid = true;
 	
@@ -19,11 +88,29 @@ function isnumeric(text, text_alert) {
 	return valid;
 }
 function countryChange(){
+	if($.inArray($('#country').val(), COUNTRIES_WITHOUT_POSTCODES) >= 0){
+		document.voucher_step1.voucher_order_postcode.value = 0;
+		$("#divPostCode").css('display', 'none');
+		$("#divPostCode1").css('display', 'block');
+	} else {
+		document.voucher_step1.voucher_order_postcode.value = '';
+		$("#divPostCode").css('display', 'block');
+		$("#divPostCode1").css('display', 'none');
+	}
+
 	if ($('#country').val() == 'US') {$('#stateDiv').css('display', 'block')} else { $('#stateDiv').css('display', 'none') };
 }
 
 $( document ).ready(function() {
 	if ($('#country').val() == 'US') {$('#stateDiv').css('display', 'block')} else { $('#stateDiv').css('display', 'none') };
+	if($.inArray($('#country').val(), COUNTRIES_WITHOUT_POSTCODES) >= 0){
+		document.voucher_step1.voucher_order_postcode.value = 0;
+		$("#divPostCode").css('display', 'none');
+		$("#divPostCode1").css('display', 'block');
+	} else {
+		$("#divPostCode").css('display', 'block');
+		$("#divPostCode1").css('display', 'none');
+	}
 });
 function check_input(){
 

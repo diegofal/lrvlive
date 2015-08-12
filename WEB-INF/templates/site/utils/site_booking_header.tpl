@@ -258,7 +258,7 @@
         <script language="javascript" src="WEB-INF/includes/js/step2.js" type="text/javascript"></script>
 {/if}
 {if $subpage=="_step3"}
-        <script language="javascript" src="WEB-INF/includes/js/step3.js" type="text/javascript"></script>
+        <script language="javascript" src="WEB-INF/includes/js/step3.js?v=3" type="text/javascript"></script>
 {/if}
 {if $subpage=="_step4"}
 		<script language="javascript" src="WEB-INF/includes/js/validation.js" type="text/javascript"></script>

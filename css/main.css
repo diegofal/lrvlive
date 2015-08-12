@@ -685,19 +685,20 @@ body {
 }
 /*///////////////////////////////////////////////////////////////////  INTRO //////*/
 #homepage .video-container {
-  position: relative;
+  position:relative;
+  line-height:0;
 }
-#homepage .video-container video,
-#homepage .video-container canvas {
+#homepage .video-container video {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 100%;
   height: auto;
 }
-#homepage .video-container video {
-  height: 100%;
-  position: absolute;
+#homepage .video-container canvas {
+  width: 100%;
+  position: relative;
 }
 .slider-homepage div.slick-slide {
   -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);

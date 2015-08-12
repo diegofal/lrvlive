@@ -107,7 +107,7 @@
                 <label for="address2">Aditional address</label>
                 <input name="order_street_address2" id="address2" type="text" maxlength="49" value="{$order.order_street_address2}"/>
             </div>
-            <div>
+            <div id="divPostCode">
                 <label for="postcode">Post code</label>
                 <input name="order_zip" id="postcode" type="text"  maxlength="10" value="{$order.order_zip}"/>
             </div>
