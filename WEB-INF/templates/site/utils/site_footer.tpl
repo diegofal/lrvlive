@@ -244,6 +244,16 @@
     <![endif]-->
 
     <script>
+
+        <!-- Loads controls for video only on iPad -->
+        if (navigator.userAgent.match(/like Mac OS X/i)) {
+            // Grab a handle to the video
+            var video = document.getElementById("intro-video");
+            // Turn off the default controls
+            video.controls = true;
+        }
+
+
         function addSourceToVideo(element, src, type) {
             var source = document.createElement('source');
             source.src = src;
