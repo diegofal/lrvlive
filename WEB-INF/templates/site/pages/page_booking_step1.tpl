@@ -76,13 +76,18 @@
 
             <small>BOOKING FEE: £3.95</small>
         </div>
-        <div id="thecharter">
+        <div id="thecharter" {if $tour.tour_charter_price == 0 } style="display:none" {/if}>
+
             <div>
+
+
+
                 <h5>Charters</h5>
                 <label for="charter"></label>
                 <p>Book the whole boat for a private and exclusive experience for up to twelve passengers.</p>
             </div>
             <div class="chartercheckbox" onclick="is_charter('{$tour.tour_charter_price}');"><input type="checkbox" name="charter" id="charter" {if ($order.order_tickets_number == 1) && ($order.order_tickets == 0)} checked="checked"{/if}/>&pound;{$tour.tour_charter_price} (12 seats)</div>
+
         </div>
 
     </div>

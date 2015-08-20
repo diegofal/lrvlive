@@ -13,6 +13,38 @@
         </div>
         <section id="trips">
             <div class="slider-homepage slider center">
+
+                <!-- <div class="trip">
+                    <div>
+                        <img src="content/img/thumb-totallythames.jpg" class="preserve"/>
+                        <div class="info">
+                            <span>St Katharine Pier <img src="content/img/arrow-mini.png"/> Canary Wharf <img src="content/img/arrow-mini.png"/> St Katharine Pier </span>
+                            <h3>Totally Thames Blast 2015</h3>
+                            <p> Celebrate this year’s ‘Totally Thames Festival’ on a river trip with a modern twist !</p>
+                            <div class="facts">
+                                <p>
+                                    <strong>15’</strong><br>
+                                    min. ride
+                                </p>
+                                <p>
+                                    <strong>5</strong><br>
+                                    sitepoints
+                                </p>
+                                <p>
+                                    <strong>35</strong><br>
+                                    mph<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="btn btn-main doble">
+                            <a href="detail-totally-thames-blast.php"> view detail </a><span>or</span><a class="md-trigger" tourid='28' data-modal="modal-1"> book now </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end trip item -->
+
+
                 <div class="trip">
                     <div>
                         <img src="content/img/thumb-ultimatelondon.jpg" class="preserve"/>
