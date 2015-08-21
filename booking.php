@@ -1817,7 +1817,7 @@ switch (@$_GET['subpage']) {
         if ($order['order_tickets'] != 0) {
             $qty = $order["order_tickets_number"];
         } else {
-            $qty = "boat_passengers";
+            $qty = "boat_passengers and boat_passengers > 1";
         }
         //var_dump($qty); die();
         $departuresQuery = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price

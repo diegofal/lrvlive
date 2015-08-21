@@ -2,7 +2,6 @@
 require_once "WEB-INF/includes/classes/class.x3.database.php";
 require_once "WEB-INF/includes/config.php";
 require_once "WEB-INF/includes/functions/functions_utils.php";
-
 // includere smarty :
 include "WEB-INF/includes/smarty/smarty_site.php";
 $db = new DB_config;
@@ -36,7 +35,7 @@ if ($order['order_tour_shared_id'] !=0) {
 if ($order['order_tickets'] != 0){ // not a charter
     $qty = $order["order_tickets_number"];
 } else { // charter
-    $qty = "boat_passengers";
+    $qty = "boat_passengers and boat_passengers > 1"; // they use boats with capacity 0 and 1 to add comments
 }
 
 $query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price
