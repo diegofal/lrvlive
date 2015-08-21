@@ -10,7 +10,6 @@
     <header>
         <span>Step 3</span>
         <h3>Complete your personal information</h3>
-        <p>And save one pound in just in one click!</p>
     </header>
     <div class="buy-content">
         <form id="personal-info">
@@ -104,7 +103,7 @@
                 <input name="order_street_address1" id="address" type="text" maxlength="50" value="{$order.order_street_address1}"/>
             </div>
             <div>
-                <label for="address2">Aditional address</label>
+                <label for="address2">Additional Address</label>
                 <input name="order_street_address2" id="address2" type="text" maxlength="49" value="{$order.order_street_address2}"/>
             </div>
             <div id="divPostCode">

@@ -698,8 +698,8 @@ blockquote:before,blockquote:after{
 }
 .step-1 #mainbooking div {
     float: left;
-    padding: 0 10px 0 0;
-    width: 29%;
+    padding: 0 0 0 0;
+    width: auto;
 }
 .step-1 #mainbooking div:first-child ol li,
 .step-1 #mainbooking div:last-child ol li {
@@ -708,15 +708,17 @@ blockquote:before,blockquote:after{
 .step-1 #mainbooking div ol li {
   height: 35px;
   margin: 18px 0 19px;
-  line-height: 33px;
+  overflow: hidden;
+  line-height: 2.4;
+  font-size: 0.9em;
+  padding-right: 11px;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
 }
 .step-1 #mainbooking div div {
   float: none;
   width: 100%;
-  margin: 0 0 8px 0;
-  padding: 0;
+  padding: 0 11px 0 0;
   height: 35px;
   margin: 18px 0 19px;
   border-top: 1px solid #ededed;
