@@ -1,11 +1,8 @@
-
 <section id="crew" class="slider-fullscreen">
     <h1 class="hide">You won’t find better guides on the Thames than with London RIB Voyages. We pride ourselves on delivering the freshest, funniest tours all courtesy of our hand picked comedy guides – closet history buffs by day, stand up comics and actors by night!</h1>
     <div class="height-fill">
         <div id="slides">
             <ul class="slides-container">
-
-
                 <li>
                     <img src="content/img/crew/stacey_big.jpg" alt="Cinelli">
                     <div class="review-crew-container">
@@ -53,11 +50,10 @@
                                     </td>
                                 </tr>
                             </table>
-                            <p>
-                                I’m from Manchester and when not clog dancing or working in the local cotton mill I enjoy dining in the finest restaurants in London. I am still surprised that someone will employ me to hang out on a speedboat all day telling people about this amazing city!</p>
-                            <p>
-                                I am hoping to soon have the weathered face of an old sea-dog when I will change my name to Arthur and talk exclusively in vowels.
-                            </p>
+                            <p>I’m from Manchester and when not clog dancing or working in the local cotton mill I enjoy dining in the finest restaurants in London. I am still surprised that someone will employ me to hang out on a speedboat all day telling people about this amazing city! I’m not going to lie – my job is pretty cool.</p>
+                            <p>I am hoping to soon have the weathered face of an old sea-dog when I will change my name to Arthur and talk exclusively in vowels. That’s what ‘boaty’ people are like, isn’t it? Is anyone out there selling any parrots? I’d be interested…</p>
+                            <p>In fact, if you are very lucky, I may be conducting my tours as my alter ego: Pirate Geoff.</p>
+                            <p>Apparently Twitter’s pretty big. Check out <a href="https://twitter.com/StaceyHasLanded">@staceyhaslanded</a> for strange ramblings!</p>
                         </div>
                     </article>
                 </li>
@@ -168,11 +164,9 @@
                                     </td>
                                 </tr>
                             </table>
-                            <p>
-                                I hail from Wales. Although I has lived in London for half my life, I still has the lilting welsh accent, innit. You may recognise me from "Gavin and Stacey", BBC3's "Grownups" or from daytime soap "Doctors".</p>
-                            <p>
-                                My motto when guiding is "never let the truth get in the way of a good story"!!
-                            </p>
+                            <p>I was born and bred in the beautiful valleys of Wales, and although I has lived in London half my life I still has the lilting Welsh accent, innit! I am known for playing Dwayne Hoffman in BBC Wales sitcom High Hopes, Grant in the BBC Three show Grownups, and Owen in the BBC Wales drama series Belonging. I am also well known for playing the role of Owain Hughes in the third series of Gavin & Stacey. I appeared as Josh in the Torchwood episode Random Shoes, and participated in The Big Welsh Challenge on BBC Wales.</p>
+                            <p>I am well known for my modesty and would never use an opportunity like this to shamelessly plug my CV.</p>
+                            <p>You can follow me on Twitter: <a href="https://twitter.com/stevemeo">@stevemeo</a></p>
                         </div>
                     </article>
                 </li>
@@ -226,10 +220,10 @@
                                     </td>
                                 </tr>
                             </table>
-                            <p>
-                                Hi! I'm Amy and I love to show people the BEST that London has to offer from the comfort of our very own SPEEDBOAT! Always up for a laugh - the most important thing to me is that everyone has a great time, and leaves with an even bigger smile than me (if possible)!</p><p>
-                                So come on, let's show London how it's done!
-                            </p>
+                            <p>Hi! I’m Amy and I love to show people the BEST that London has to offer – all from the comfort of our very own SPEEDBOAT! Always up for a laugh – the most important thing to me is that everyone has a great time, and leaves with an even bigger smile than me (if that is even possible! Which it isn’t, so don’t even try)!</p>
+                            <p>I have also been known to build theatrical sets, paint anything anyone asks me to and operate a 12 foot Disco Turtle through Brockwell Park wearing a green wig. Honestly – I never know what I’m doing one day to the next! </p>
+                            <p>What I do know is that if you are lucky enough to have me as your guide we will spend 50 minutes giggling our way through the capital on one of the coolest vehicles the Thames has ever seen. I may even wear my green wig…</p>
+                            <p>I’m scared of Twitter, but you can always be on-board with us <a href="https://twitter.com/londonribguide">@londonribguide</a></p>
                         </div>
                     </article>
                 </li>
@@ -284,15 +278,187 @@
                                     </td>
                                 </tr>
                             </table>
-                            <p>
-                                Hi I'm Tom, I'm from the green rolling fields of Gloucestershire where everyone is related. I moved to the big smoke to study at the Drama Centre London as an actor. When I'm not starring in James Bond films I like spending my time entertaining and having a laugh speeding around on the Thames!</p><p>
-                                On one of my trips you can expect high energy, a good laugh and maybe a selfie or two when I photograph you and your pals.  See you on-board for some speed, sights and serious fun!
-                            </p>
+                            <p>Hi I’m Tom, I’m from the green rolling fields of Gloucestershire where everyone is related. I moved to the big smoke to study at the Drama Centre London as an actor. When I’m not starring in James Bond films I like spending my time entertaining and having a laugh speeding around on the Thames! I think there’s nothing better than waking up in the morning at 4am, beefing up for 3 hours in the gym, and then spending the day pointing at London’s landmarks with my massive arms.</p>
+                            <p>On one of my trips you can expect high energy, a good laugh and maybe a selfie or two when I photograph you and your pals. Ask me anything you like – I guarantee to know everything you want about London. See you on-board for some speed, sights and serious fun!</p>
+                            <p>Follow <a href="https://twitter.com/tommaller">@tommaller</a> for inspiration.</p>
                         </div>
                     </article>
                 </li>
 
 
+
+
+                <!-- CRAIG -->
+                <li>
+                    <img src="content/img/crew/craig_big.jpg" alt="Craig Russell">
+                    <div class="review-crew-container">
+                        <div class="review-crew">
+                            <h4>What people say:</h4>
+                            <p>Craig was a phenomenal guide with plenty of jokes and kept us in high spirits</p>
+                        </div>
+                    </div>
+                    <article class="container infobox">
+
+                        <div class="content">
+                            <header>
+                                <span>Meet:</span>
+                                <h2>Craig Russell</h2>
+                                <strong>“Busty”</strong>
+                            </header>
+                            <table class="table-info">
+                                <tr>
+                                    <td class="">
+                                        <span>Favourite landmark</span>
+                                        Queen's Orchard in Greenwich Park. Some of the fruit trees date back to 1500. What's to like? History AND food!
+                                    </td>
+                                    <td class="">
+                                        <span>Aka</span>
+                                        “Busty”
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="">
+                                        <span>Favourite obscure fact</span>
+                                        The meaning of the stone carvings on Blackfriars Bridge. You'll have to come on to find out more!
+                                    </td>
+                                    <td class="">
+                                        <span>When I grow up I want to be</span>
+                                        A farmer, have my own small holding and grow fruit and veg down in Cornwall.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="">
+                                        <span>My Claim to Fame is:</span>
+                                        My mother was on Roy Castle’s legendary T.V show Record Breakers!
+                                    </td>
+                                    <td class="">
+                                        <span>My 3 luxury items when working on the river are</span>
+                                        Bottle of water, bag of nuts and woolly pants.
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>Well hellooooo beautiful people – welcome to our world! A world of super speed and super sights, a world where everyone is out to have the best time of their lives with the family and friends they love. A world where fun is number one!</p>
+                            <p>The guides on London RIB Voyages are a close knit team of witty actors and creatives. We don’t want to do the usual ‘guided tour’. For us, it’s all about you and your experience. Let us take you on a journey you’ll never forget with plenty of laughs along the way!</p>
+                            <p>(I also hold the unrivalled title of most enthusiastic guide by the way.)</p>
+                            <p>Twitter? All over it <a href="https://twitter.com/russandchips">@russandchips</a></p>
+                        </div>
+                    </article>
+                </li>
+
+
+
+                <!-- JAMES -->
+                <li>
+                    <img src="content/img/crew/james_big.jpg" alt="James Clayton">
+                    <div class="review-crew-container">
+                        <div class="review-crew">
+                            <h4>What people say:</h4>
+                            <p>Our guide was James and he was fantastic. Very friendly and witty and his talk on the way back was great.</p>
+                        </div>
+                    </div>
+                    <article class="container infobox">
+
+                        <div class="content">
+                            <header>
+                                <span>Meet:</span>
+                                <h2>James Clayton</h2>
+                                <strong>“Brummy Boy!”</strong>
+                            </header>
+                            <table class="table-info">
+                                <tr>
+                                    <td class="">
+                                        <span>Favourite landmark</span>
+                                        Tower Bridge.
+                                    </td>
+                                    <td class="">
+                                        <span>Aka</span>
+                                        "Brummy Boy!"
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="">
+                                        <span>Favourite obscure fact</span>
+                                        A dragonfly has a lifespan of 24 hours!
+                                    </td>
+                                    <td class="">
+                                        <span>When I grow up I want to be</span>
+                                        A taller, better, stronger version of myself.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="">
+                                        <span>My Claim to Fame is:</span>
+                                        Just around the corner.
+                                    </td>
+                                    <td class="">
+                                        <span>My 3 luxury items when working on the river are</span>
+                                        3 Cheddar cheese biscuits.
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>I’m an actor, a film producer and an opener of tight jars. You probably recognise me from the recent Marks and Spencer’s advert where I played a cheeky yet devilishly handsome bellboy. When I’m not creating a marketing impact for major retail stores, I like to spend my days messing about on boats. Not just any old boats – oh no! I’m talking 12.5 metre, aerodynamically designed, 615 horsepower ROCKETS! That is the way to see London people!</p>
+                            <p>I’m originally from Birmingham but please don’t hold that against me. If ‘Brummy Boy’ is doing your tour you’re sure to have an absolute blast! How do I know that? Because I will be!</p>
+                            <p>I’m pretty awesome. Check out <a href="https://twitter.com/jamesclayactor">@jamesclayactor</a> if you don’t believe me.</p>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- MIKE COLE -->
+                <li>
+                    <img src="content/img/crew/mike_cole_big.jpg" alt="Mike Cole">
+                    <div class="review-crew-container">
+                        <div class="review-crew">
+                            <h4>What people say:</h4>
+                            <p>Ginger Mike and Joe were both wonderful hosts. I can't praise the company highly enough.</p>
+                        </div>
+                    </div>
+                    <article class="container infobox">
+
+                        <div class="content">
+                            <header>
+                                <span>Meet:</span>
+                                <h2>Mike Cole</h2>
+                                <strong>“Ginger Mike”</strong>
+                            </header>
+                            <table class="table-info">
+                                <tr>
+                                    <td class="">
+                                        <span>Favourite landmark</span>
+                                        St Paul’s Cathedral – it’s awesome!
+                                    </td>
+                                    <td class="">
+                                        <span>Aka</span>
+                                        "Ginger Mike"
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="">
+                                        <span>Favourite obscure fact</span>
+                                        Banging your head against a wall uses 150 calories per hour. I’ve tried it – it’s true!
+                                    </td>
+                                    <td class="">
+                                        <span>When I grow up I want to be</span>
+                                        All over the papers!
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="">
+                                        <span>My Claim to Fame is:</span>
+                                        Being the first male to appear on Channel Five.
+                                    </td>
+                                    <td class="">
+                                        <span>My 3 luxury items when working on the river are</span>
+                                        A hat, sunglasses and a little touch of mystery.
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>Hey guys and gals, Ginger Mike here and at your service. You want a speedboat ride? We can do that. You want a guided tour that actually interests you, dare I say even makes you laugh? Sure no problem. You want classic feel good tunes accompanying the #1 river trip in London? Easy peasy!</p>
+                            <p>We love being part of your day out in London. We love this city and we love watching you scream with joy as we open up the throttles and propel you down the Thames. It’s what we do.</p>
+                            <p>An actor, occasional rock guitar god and master of the one pot meal – I’ll pass on all the knowledge and skills you’ll need to succeed in this speedboat mission. If you make it I may even make you an honorary Ginger!</p>
+                            <p>Check out <a href="https://twitter.com/michael___cole">@michael___cole</a> for insights into the meaning of life<br> (one per year).</p>
+                        </div>
+                    </article>
+                </li>
 
             </ul>
 
