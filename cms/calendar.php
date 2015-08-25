@@ -314,7 +314,7 @@ switch($subpage){
 		$smarty->assign("departures",$departures); //"
 		$smarty->assign("counter",$count); //"
 
-		$colours = array("#ffffff", "#d7eeff", "#c5f2c5", "#e9dff7", "#e8f5ca", "#f1dbac", "#FFCCCC");
+		$colours = array("#ffffff", "#d7eeff", "#c5f2c5", "#e9dff7", "#e8f5ca", "#f1dbac", "#FFCCCC",'#ed1', '#EEE');
 		$tor_names = array();
 		$tour_colours = array();
 		foreach ($tours as $k=>$tour) {
