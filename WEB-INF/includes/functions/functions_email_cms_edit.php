@@ -13,9 +13,9 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code, $comments="")
 	AND departure_tour_id = tour_id
 	AND order_unique_code = '".$unique_code."'";
 	$fields = array("order_id","order_reseller_id","order_date","order_unique_code","order_title","order_first_name","order_last_name",
-			"order_street_address1", "order_street_address2", "order_city", "order_zip", "order_country",
-			"order_phone", "order_email", "order_tickets", "order_quantities", "order_total",
-			"departure_date", "departure_time", "boat_name", "tour_id", "tour_name");
+		"order_street_address1", "order_street_address2", "order_city", "order_zip", "order_country",
+		"order_phone", "order_email", "order_tickets", "order_quantities", "order_total",
+		"departure_date", "departure_time", "boat_name", "tour_id", "tour_name");
 	$order = $db->select_fields($db->order, $query, $fields, "", "", "", "", "", 1);
 
 	$tickets_type = explode("|", $order['order_tickets']);
@@ -28,18 +28,18 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code, $comments="")
 	$tickets[] = $tmp;
 
 	$msg_body = "";
-    if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23") //Different email for st katerines dock.
-        $msg_body = $emails['order_user2'];
-    else if ($order['tour_id'] == "24" || $order['tour_id'] == "25")
+	if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23" || $order['tour_id'] == "28") //Different email for st katerines dock.
+		$msg_body = $emails['order_user2'];
+	else if ($order['tour_id'] == "24" || $order['tour_id'] == "25")
 		$msg_body = $emails['thames_festival_blast'];
-    else
-        $msg_body = $emails['order_user'];
+	else
+		$msg_body = $emails['order_user'];
 
 	$msg = "<p><strong>Date of Voyage:</strong> ".date("d F Y",strtotime($order['departure_date']))."<br>
 			<strong>Departure Time:</strong> ".substr($order['departure_time'],0,5)." (Please ensure you arrive <strong>15 minutes</strong> prior to your trips departure)<br>";
-	
+
 	$msg .= "<strong>Tickets Purchased:</strong>\n";
-	
+
 	$_ticket_types = array();
 	$_tickets = array();
 	foreach($tickets as $ticket){
@@ -74,19 +74,23 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code, $comments="")
 							<img src='http://www.theghostbustours.com/edn/images/edinburg_index.jpg' border='0' width='185px' alt='The Ghost Bus Tours' />
 						</a>
 						<a href='http://www.londonducktours.co.uk/' target='_blank'>
-							<img src='http://blogs.whatsontv.co.uk/movietalk/files/2012/11/13245-Master-DUCK-TOURS-Logo-CMYK1.jpg' border=0 width='100px' alt='London Duck Tours' />
+							<img src='http://www.londonribvoyages.com/img/email/Ducks.jpg' border=0 width='100px' alt='London Duck Tours' />
 						</a>
 						<a href='http://www.jerseyboyslondon.com/' target='_blank'>
 							<img src='http://collider.com/wp-content/uploads/jersey-boys-image.jpg' border=0 width='140px' alt='Jersey Boys' />
 						</a>
 						<a href='http://www.therainforestcafe.co.uk/' target='_blank'>
 							<img src='http://orlandotouristtips.com/wp-content/uploads/Rainforest-Cafe.jpg' border=0 width='232px' alt='Rainforest Cafe' />
-						</a>      </p>";
+						</a>
+						<a href='http://www.tallyhocycletours.com/' target='_blank'>
+							<img src='http://www.londonribvoyages.com/img/email/TallyHoCycleTours.png' border='0' width='232px' alt='Tally Ho! Cycle Tours' />
+						</a>
+						</p>";
 	}
 
 	$user_message = preg_replace(array("/(<img[^>]*?src=['\"])(\/.*?)(['\"][^>]*?>)/", "/%%DETAILS%%/", "/%%USERNAME%%/", "/%%COMMENTS%%/", "/%%FOOTER%%/"),
-			array("\\1http://".$_SERVER['SERVER_NAME']."\\2\\3", $msg, $mail_name, nl2br($comments), $footer),
-			$msg_body);
+		array("\\1http://".$_SERVER['SERVER_NAME']."\\2\\3", $msg, $mail_name, nl2br($comments), $footer),
+		$msg_body);
 
 	$to  = $adr_to ;
 	$subject_flag = (TESTING?"[TEST] ":"");
@@ -96,14 +100,38 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code, $comments="")
 			'X-Mailer: PHP/' . phpversion();*/
 
 	Mail_Queue::put(
-			"BOOKING",
-			"CMS-EDIT",
-			$to,
-			$subject_flag."LRV Booking Confirmation",
-			$user_message,
-			$order['order_id'],
-			COMPANY_EMAIL_FROM_BOOKINGS);
+		"BOOKING",
+		"CMS-EDIT",
+		$to,
+		$subject_flag."LRV Booking Confirmation",
+		$user_message,
+		$order['order_id'],
+		COMPANY_EMAIL_FROM_BOOKINGS);
 
 	return true;
 }
+
+
+function remove_feedback($adr_to) {
+
+	global $db, $COUNTRIES, $emails;
+
+	Mail_Queue::remove_feedback($adr_to);
+}
+
+function send_feedback_mail($adr_to, $order_id) {
+
+	global $db, $COUNTRIES, $emails;
+
+	$query = "SELECT * FROM
+	    			departure as d
+	    				INNER JOIN orders as o ON (o.order_departure_id = d.departure_id)
+	    			WHERE o.order_id=".$order_id;
+	$departure = $db->select_fields("departure", $query);
+
+	Mail_Queue::put_feedback($adr_to, $departure[0]["departure_date"]);
+
+	return true;
+}
+
 ?>

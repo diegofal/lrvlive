@@ -200,11 +200,13 @@ else
  $selected_date= date ("Y-m-d", time());
 }		
 		//$selected_date = date ("Y-m-d", time());
-		
 
 
 
 
+$dateTmp = new DateTime();
+$dateTmp->add(new DateInterval('PT30M'));
+$timeTmp = $dateTmp->format('H:i:s');
 
 
 		//extract departures
@@ -215,7 +217,8 @@ else
 				INNER JOIN boat b ON d.departure_boat_id = b.boat_id
 				INNER JOIN tours t ON d.departure_tour_id = t.tour_id
 			WHERE
-				d.departure_date = '$selected_date' 
+				d.departure_date = '$selected_date'
+				AND if (curdate() = departure_date, departure_time > '$timeTmp', 1)
 				AND b.boat_del = 0
 				AND b.boat_passengers > 0
 				AND t.tour_id IN (".implode(",", $_SESSION["tours"]).")

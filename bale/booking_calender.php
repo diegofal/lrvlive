@@ -375,12 +375,15 @@ $pagecontent.='<table width="97%" border="0" align="right" cellpadding="0" cells
 					INNER JOIN boat b ON d.departure_boat_id = b.boat_id
 					INNER JOIN tours t ON d.departure_tour_id = t.tour_id
 				WHERE
-					d.departure_date = '$tdata' 
+					d.departure_date = '$tdata'
+					   AND if (curdate() = departure_date, departure_time > '".$time."', 1)
 					AND b.boat_del = 0
 					AND b.boat_passengers > 0
 					AND t.tour_id IN (".implode(",", $_SESSION["tours"]).")
 			   	ORDER BY departure.departure_time ASC";
-		
+
+
+
 		$result_new = mysql_query($query);
 		$total_arr  = array();
 		$total_arr = "";

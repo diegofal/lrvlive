@@ -25,7 +25,7 @@ function send_confirmation_mail_voucher($adr_to, $unique_code) {
 
 	$pier = "";
 
-	if ($voucher_order['voucher_tour_id'] == "12" || $voucher_order['voucher_tour_id'] == "21" || $voucher_order['voucher_tour_id'] == "23") //Different email for st katerines dock.
+	if ($voucher_order['voucher_tour_id'] == "12" || $voucher_order['voucher_tour_id'] == "21" || $voucher_order['voucher_tour_id'] == "23" || $voucher_order['tour_id'] == "28") //Different email for st katerines dock.
         $pier = "Be sure to check-in with an LRV staff member at St Katharine’s Pier, <strong>at least 10 minutes</strong> before your scheduled sailing.";
     else if ($voucher_order['voucher_tour_id'] == "24" || $voucher_order['voucher_tour_id'] == "25")
 		$pier = "Be sure to check-in with an LRV staff member at St Katharine’s Pier, <strong>at least 10 minutes</strong> before your scheduled sailing.";
@@ -121,7 +121,7 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code) {
 
     $msg_body = "";
     
-    if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23") //Different email for st katerines dock.
+    if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23" || $order['tour_id'] == "28") //Different email for st katerines dock.
         $msg_body = $emails['order_user2'];
     else if ($order['tour_id'] == "24" || $order['tour_id'] == "25")
 		$msg_body = $emails['thames_festival_blast'];
@@ -165,14 +165,18 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code) {
 							<img src='http://www.theghostbustours.com/edn/images/edinburg_index.jpg' border='0' width='185px' alt='The Ghost Bus Tours' />
 						</a>
 						<a href='http://www.londonducktours.co.uk/' target='_blank'>
-							<img src='http://blogs.whatsontv.co.uk/movietalk/files/2012/11/13245-Master-DUCK-TOURS-Logo-CMYK1.jpg' border=0 width='100px' alt='London Duck Tours' />
+							<img src='http://www.londonribvoyages.com/img/email/Ducks.jpg' border=0 width='100px' alt='London Duck Tours' />
 						</a>
 						<a href='http://www.jerseyboyslondon.com/' target='_blank'>
 							<img src='http://collider.com/wp-content/uploads/jersey-boys-image.jpg' border=0 width='140px' alt='Jersey Boys' />
 						</a>
 						<a href='http://www.therainforestcafe.co.uk/' target='_blank'>
 							<img src='http://orlandotouristtips.com/wp-content/uploads/Rainforest-Cafe.jpg' border=0 width='232px' alt='Rainforest Cafe' />
-						</a>      </p>";
+						</a>
+						<a href='http://www.tallyhocycletours.com/' target='_blank'>
+							<img src='http://www.londonribvoyages.com/img/email/TallyHoCycleTours.png' border='0' width='232px' alt='Tally Ho! Cycle Tours' />
+						</a>
+						</p>";
 	}
 
 

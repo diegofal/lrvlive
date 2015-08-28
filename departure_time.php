@@ -38,13 +38,19 @@ if ($order['order_tickets'] != 0){ // not a charter
     $qty = "boat_passengers and boat_passengers > 1"; // they use boats with capacity 0 and 1 to add comments
 }
 
+
+$date = new DateTime();
+$date->add(new DateInterval('PT30M'));
+
+$time = $date->format('H:i:s');
+
 $query = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '".$selectDate."'
 
 					  AND departure_boat_id = boat_id
 					  AND departure_tour_id = ".$_tour_id."
-					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
+					  AND if (curdate() = departure_date, departure_time > '".$time."', 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  and departure_id not in(select order_departure_id from orders where order_departure_id = departure_id and order_tickets = 0)
 					  AND boat_del = 0

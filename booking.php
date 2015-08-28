@@ -1469,7 +1469,6 @@ switch (@$_GET['subpage']) {
         if (!empty($departures['departure_id'])) {
             $query2 = "SELECT * FROM $db->order
 						  WHERE order_departure_id = '" . $order['order_departure_id'] . "'";
-            //echo $query; echo "<hr>"; echo $query2; exit();
             $fields = array("order_tickets", "order_tickets_number");
             $orders = $db->select_fields($db->order, $query2, $fields);
             $sum = 0;
@@ -1482,10 +1481,6 @@ switch (@$_GET['subpage']) {
                     $sum += $ordern['order_tickets_number'];
                 }
             }
-            //echo $sum;
-            //echo " -  " . $departures['boat_passengers'];
-            //echo " -  " . $departures['departure_id'];
-            //die();
             if ($sum > $departures['boat_passengers']) {
                 header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=busy");
                 exit();
@@ -1584,6 +1579,47 @@ switch (@$_GET['subpage']) {
     */
         // Save values
         if (!empty($_POST['selected_departure'])) {
+
+            //Check Availability
+            //check if there is tickets Available or Sold Out
+            $order = $db->select_fields($db->order, "", "", 'order_id', $_SESSION['order_id'], "", "", "", 1);
+            if ($order['order_tour_shared_id'] != 0) {
+                $_tour_id = $order['order_tour_shared_id'];
+            } else {
+                $_tour_id = $tour_id;
+            }
+            $query3 = "SELECT departure_id, departure_time, boat_passengers, boat_charter_price
+					  FROM $db->departure,  $db->boat
+					  WHERE departure_id = '" . $order['order_departure_id'] . "'
+					  AND departure_boat_id = boat_id
+					  AND departure_tour_id = " . $_tour_id . "
+					  AND boat_del = 0";
+
+            $fields3 = array("departure_id", "departure_time", "boat_passengers", "boat_charter_price");
+
+            $departures = $db->select_fields($db->departure, $query3, $fields3, "", "", "", "", "", 1);
+
+            if (!empty($departures['departure_id'])) {
+                $query2 = "SELECT * FROM $db->order
+						  WHERE order_departure_id = '" . $order['order_departure_id'] . "'";
+                $fields = array("order_tickets", "order_tickets_number");
+                $orders = $db->select_fields($db->order, $query2, $fields);
+                $sum = 0;
+                foreach ($orders as $ordern) {
+                    //charter
+                    if (($ordern['order_tickets'] == 0) && ($ordern['order_tickets_number'] == 1)) {
+                        $sum += $departures['boat_passengers'];
+                    } else {
+                        //normal
+                        $sum += $ordern['order_tickets_number'];
+                    }
+                }
+                if ($sum > $departures['boat_passengers']) {
+                    header("Location: booking.php?tour_id=" . $tour_id . "&subpage=step1&error=busy");
+                    exit();
+                }
+            }
+            //------Ends Here-----//
 
             $fields = array("order_departure_id" => $_POST['selected_departure'], "order_date" => $_POST['selected_date'], "order_time" => time());
 
@@ -1820,12 +1856,18 @@ switch (@$_GET['subpage']) {
             $qty = "boat_passengers and boat_passengers > 1";
         }
         //var_dump($qty); die();
+        $date = strtotime('-30 minutes');
+        $date = new DateTime();
+        $date->add(new DateInterval('PT30M'));
+
+        $time = $date->format('H:i:s');
+
         $departuresQuery = "SELECT departure_id, SUBSTRING(departure_time , 1 , 5) as departure_time, boat_passengers, boat_charter_price
 					  FROM $db->departure,  $db->boat
 					  WHERE departure_date = '" . $selectDate . "'
 					  AND departure_boat_id = boat_id
 					  AND departure_tour_id = " . $_tour_id . "
-					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
+					  AND if (curdate() = departure_date, departure_time > '".$time."', 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  and departure_id not in(select order_departure_id from orders where order_departure_id = departure_id and order_tickets = 0)
 					  AND boat_del = 0
@@ -1837,7 +1879,7 @@ switch (@$_GET['subpage']) {
 					  AND departure_tour_id = " . $_tour_id . "
 					  AND boat_del = 0
 					  AND departure_date >= curdate()
-					  AND if (curdate() = departure_date, departure_time > current_time(), 1)
+					  AND if (curdate() = departure_date, departure_time > '".$time."', 1)
 					  and (boat_passengers  - (select COALESCE(sum(order_tickets_number),0) from orders where order_departure_id = departure_id)) >=  $qty
 					  and departure_id not in(select order_departure_id from orders where order_departure_id = departure_id and order_tickets = 0)
 					  ORDER BY departure_date ASC";

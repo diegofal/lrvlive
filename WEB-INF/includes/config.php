@@ -1,6 +1,6 @@
 <?php
-//error_reporting(E_ALL ^ E_NOTICE);
-error_reporting(0);
+error_reporting(E_ALL ^ E_NOTICE && E_DEPRECATED);
+//error_reporting(1);
 // connecting class :
 /*
 	var $mysql_host		= "localhost";
