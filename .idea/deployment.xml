@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="LRV Produccion">
+  <component name="PublishConfigData" serverName="LRV">
     <serverData>
-      <paths name="LRV Produccion">
+      <paths name="LRV">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="LRV Testing">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/londonribvoyages.com" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
