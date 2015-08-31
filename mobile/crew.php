@@ -120,7 +120,7 @@
             In a laboratory at the London Rib Voyages secret research facility an experiment was taking place, their goal was to create the ultimate river tour guide by genetically splicing the cuteness of a puppy, the swimming ability of a fish and the knowledge of the Encyclopaedia Britannica. Unfortunately due to a slight mishap involving an LHC (Little Hadron Collider), a doughnut and a warm tea spoon, the subject was imbued with the cuteness of a fish, the knowledge of a puppy and the swimming ability of the Encyclopaedia Britannica - and Little Mike was created!!</p><p>
             I tried using my new found abilities to fight crime but I found it quite tiring so I went back to being a guide. I am fully house trained and enjoy being scratched behind the ears…
           </p>
-            
+          <p>You can feel like you’re with me all the time! <a href="https://twitter.com/MikeGeary73" alt="Mike twitter" target="_blank">@mikegeary73</a></p>
 
           </li>
         </ul>
@@ -307,7 +307,7 @@
         <tr>
           <td class="">
             <span>Favourite landmark</span>
-            Queen's Orchard in Greenwich Park. Some of the fruit trees date back to 1500. What's to like? History AND food!
+            Queen's Orchard in Greenwich Park. Some of the fruit trees date back to 1500. What’s not to like? History AND food!
           </td>
           <td class="">
             <span>Aka</span>
