@@ -1246,7 +1246,7 @@ body {
   background: transparent url(img/card.png) no-repeat 0 0;
   position: absolute;
   background-size: cover;
-  padding: 82px 42px 42px 42px;
+  padding: 94px 42px 42px 42px;
   top: 0%;
   right: 4%;
   width: 522px;
@@ -1277,7 +1277,7 @@ body {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  min-height: 513px;
+  height: 548px;
 }
 #crew .content h2 {
   background: white;
