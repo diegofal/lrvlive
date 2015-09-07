@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>The Thames Cruise with a unique difference | London RIB Voyages</title>
+        <meta name="description" content="The original Thames Cruise with a unique difference - see London's famous landmarks as you whizzzzz along the Thames in our comfortable RIB boats. This is the original speed boat ride on the Thames.">
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+
+		<style>
+			video{
+				width: 100%;
+				position: absolute;
+				left: 0;
+				right: 0;
+			    height: auto;
+			}
+            canvas{
+                position: relative;
+                width: 100%;
+            }
+		</style>
+    </head>
+ <body>
+
+	<div class="video-container">
+	    <canvas width="960" height="220"></canvas>
+	    <video poster="content/img/poster.jpg" width="960" height="220" id="intro-video" loop autoplay controls="false">
+
+	    </video>
+	</div>
+
+<script>
+        function addSourceToVideo(element, src, type) {    
+            var source = document.createElement('source');    
+            source.src = src;    
+            source.type = type;    
+            element.appendChild(source);    
+        }
+        var video;    
+        var index = 0;    
+        $(document).ready(function(){    
+            video = document.getElementsByTagName('video')[0];    
+            addSourceToVideo( video, "content/video/video.ogv", "video/ogv; codecs='theora, vorbis'");    
+            addSourceToVideo( video, "content/video/video.mp4", "video/mp4; codecs='avc1.42E01E, mp4a.40.2'");     
+            addSourceToVideo( video, "content/video/videohd.webm", "video/webm;");   
+            video.addEventListener("progress", progressHandler,false);    
+            bindKeys();    
+            // if set, overrides <video width>
+            videoWidth: win.width;
+            // if set, overrides <video height>
+            videoHeight: win.height;    
+        });
+
+        progressHandler = function(e) {    
+            if( video.duration ) {    
+                var percent = (video.buffered.end(0)/video.duration) * 100;    
+                console.log( percent );    
+                if( percent >= 40 ) {    
+                    video.play();    
+                }      
+            }    
+        }
+        
+</script>
+</body>
+</html>

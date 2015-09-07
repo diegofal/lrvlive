@@ -1022,6 +1022,14 @@ body {
   text-transform: uppercase;
   font-size: 0.7em;
 }
+#detail .intro .facts-container .actions .btn-secondary {
+    background-color: white;
+    color: red;
+    border-color: #ee3124;
+}
+#detail .intro .facts-container .actions .btn-secondary:hover {
+    border-color: #f9b7b2;
+}
 #detail .intro .facts-container h1,
 #detail .intro .facts-container h2,
 #detail .intro .facts-container p {
@@ -1250,7 +1258,6 @@ body {
   top: 0%;
   right: 4%;
   width: 522px;
-  min-height: 640px;
 }
 #crew .infobox::after {
   content: '';
@@ -1277,7 +1284,7 @@ body {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  height: 548px;
+  height: 568px;
 }
 #crew .content h2 {
   background: white;
@@ -1909,6 +1916,7 @@ body {
 #safety {
   background: url("img/bg-safety.jpg") no-repeat center center fixed;
   background-size: cover;
+  height: 800px;
 }
 #safety .slides-navigation {
   display: none;
@@ -2037,15 +2045,11 @@ body {
   background: rgba(255, 255, 255, 0.96) url(img/fast-stripes-1.png) center bottom no-repeat;
   padding: 2em 2em 6.5em 2em;
   position: absolute;
-  top: 50%;
-  right: 6%;
-  width: 620px;
-  min-height: 721px;
-  margin-top: -380px;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
+  top: 10%;
+  right: 8%;
+  width: 550px;
+  height: auto;
+  font-size: 0.8em;
 }
 #safety .infobox h3 {
   font-size: 2em;
