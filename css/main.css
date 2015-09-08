@@ -1214,6 +1214,9 @@ body {
   padding: 1px;
 }
 /*///////////////////////////////////////////////////////////////////  CREW //////*/
+#crew{
+  height: 800px;
+}
 #crew .slides-pagination a {
   border: 3px solid white;
   width: 50px;
@@ -3119,6 +3122,7 @@ body {
   display: table;
   clear: both;
 }
+
 .slides-navigation {
   margin: 0 auto;
   position: absolute;
@@ -3130,7 +3134,7 @@ body {
   position: absolute;
   display: block;
   width: 50px;
-  background: rgba(255, 0, 0, 0.62);
+  background: rgba(255, 0, 0, 0.62) url('../content/img/sliderarrow.png') no-repeat 50% 50%;
   height: 75px;
   top: 50%;
   text-indent: 900px;
@@ -3142,7 +3146,7 @@ body {
 }
 .slides-navigation a:hover {
   width: 75px;
-  background: rgba(255, 0, 0, 0.82);
+  background-color: rgba(255, 0, 0, 0.82);
 }
 .slides-navigation a.prev {
   left: 0;
@@ -3150,15 +3154,7 @@ body {
 .slides-navigation a.next {
   right: 0;
 }
-.slides-navigation a:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent url('../content/img/sliderarrow.png') no-repeat 50% 50%;
-  top: 1px;
-}
-.slides-navigation a.prev:after {
+.slides-navigation a.prev {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
