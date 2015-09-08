@@ -173,7 +173,7 @@
                         <img src="content/img/thumb-limehouse.jpg" class="preserve" />
                         <div class="info">
                             <span>The London Eye <img src="content/img/arrow-mini.png"/> Canary Wharf <img src="content/img/arrow-mini.png"/> Limehouse Pontoon</span>
-                            <h3>Limehouse<br>Blast</h3>
+                            <h3>Limehouse Blast & <br>Dining for two at the narrow</h3>
                             <p>London RIB Voyages invite you to start your weekend in style. This is the classiest, tastiest and speediest Friday night in London!<br><br></p>
                             <div class="facts">
                                 <p>
