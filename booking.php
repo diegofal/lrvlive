@@ -512,7 +512,10 @@ switch (@$_GET['subpage']) {
             header("Location: booking.php?voucher_id=" . $voucher_id . "&subpage=voucher_step2");
             exit();
         }
-        $voucher_order = $db->select_fields($db->voucher_order, "", "", 'voucher_order_id', $_SESSION['voucher_order_id'], "", "", "", 1);
+        if (isset($_SESSION['voucher_order_id'])) {
+            $voucher_order = $db->select_fields($db->voucher_order, "", "", 'voucher_order_id', $_SESSION['voucher_order_id'], "", "", "", 1);
+        }
+
         $smarty->assign("voucher_order", $voucher_order);
 
         $smarty->assign("voucher", $voucher_details);
