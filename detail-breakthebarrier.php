@@ -46,8 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
-$smarty->assign("title","Break The Barrier | London RIB Voyages");
-$smarty->assign("desc","It?s Fast, Furious and a World First. Thames Rockets is a new thrilling, high-speed boat ride blasting off this summer in the Capital.");
+$smarty->assign("title","London RIB Voyages | Break the Barrier, Tower Bridge");
+$smarty->assign("desc","Our fastest speedboat ride! At 35mph, London RIB Voyages' Thames Rocket speedboat twists and turns its way east from Tower Bridge up to the O2 arena.");
 $smarty->assign("page","breakthebarrier");
 $smarty->display('site_pages.tpl');
 ?>

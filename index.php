@@ -64,6 +64,10 @@ $smarty->assign("content",$content);
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
 $smarty->assign("page","index");
+$smarty->assign("title","London RIB Voyages | The Fastest, Funniest & Craziest Trip!");
+$smarty->assign("desc","The original Thames Cruise with a difference! Let London RIB Voyages take you along the Thames, past the capital's landmarks in our RIB boats.");
+
 $smarty->display('site_pages.tpl');
+
 
 ?>

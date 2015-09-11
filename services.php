@@ -47,7 +47,7 @@ include "check_session.php";
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
 $smarty->assign("page","services");
-$smarty->assign("title","Services | London RIB Voyages");
-$smarty->assign("desc","Direct transfers and safety boating, filming, team building and river to restaurant. Stags and hens, business associates and media.");
+$smarty->assign("title","London RIB Voyages | Special & Group Events");
+$smarty->assign("desc","London RIB Voyages cater for special events too including filming, Stag & Hen do's, corporate activities and river to restaurant drop-offs.");
 $smarty->display('site_pages.tpl');
 ?>

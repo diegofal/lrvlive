@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">       
-        <title>London RIB Voyages</title>
-        <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+        <title>London RIB Voyages | The Fastest, Funniest & Craziest Trip!</title>
+        <meta name="description" content="The original Thames Cruise with a difference! Let London RIB Voyages take you along the Thames, past the capital's landmarks in our RIB boats.">
+        <meta name="keywords" content="london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises">
         <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no">
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-red.min.css">
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>

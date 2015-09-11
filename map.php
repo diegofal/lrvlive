@@ -3,7 +3,7 @@ include "check_session.php";
 
 $smarty->assign("pages_dir","pages");
 $smarty->assign("page","map");
-$smarty->assign("title","Locations | London RIB Voyages");
-$smarty->assign("desc","You will see iconic locations of London on our speedboats trips in the Thames. London Eye, Tower Bridge, Houses of Parliament, Cleopatra's Needle, Somerset House, Oxo tower, HMS President, St Pauls Cathedral, Millennium Bridge and many more");
+$smarty->assign("title","London RIB Voyages | Our Map - Meeting Points, Landmarks");
+$smarty->assign("desc","Getting on a London RIB Voyages speedboat is a great way of sightseeing the capital. Our map explains where you can hop on and what you'll see!");
 $smarty->display('site_pages.tpl');
 ?>

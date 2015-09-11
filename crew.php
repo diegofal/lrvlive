@@ -46,8 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
-    $smarty->assign("title","Crew | London RIB Voyages");
-    $smarty->assign("desc","Meet our Crew: Stacey Evans, Mike MacCormac, Steve Meo, Amy West, Tom Maller");
+    $smarty->assign("title","London RIB Voyages | Meet the Crew!");
+    $smarty->assign("desc","Our crew of highly skilled, funny & friendly speedboat operators are on-hand to help you from the moment you step on-board. Get to know them now!");
 $smarty->assign("page","crew");
 $smarty->display('site_pages.tpl');
 ?>
