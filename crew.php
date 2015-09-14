@@ -46,6 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
+$smarty->assign("meta","london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises
+");
     $smarty->assign("title","London RIB Voyages | Meet the Crew!");
     $smarty->assign("desc","Our crew of highly skilled, funny & friendly speedboat operators are on-hand to help you from the moment you step on-board. Get to know them now!");
 $smarty->assign("page","crew");

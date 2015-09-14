@@ -46,6 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
+$smarty->assign("meta","london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises
+");
 $smarty->assign("title","London RIB Voyages | About Us, Our Past, Present & Future!");
 $smarty->assign("desc","Formed in 2006, London RIB Voyages was the first speedboat operator on the River Thames. Today, we continue to go from strength to strength!");
 $smarty->assign("page","why-us");

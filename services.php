@@ -48,6 +48,8 @@ include "check_session.php";
 $smarty->assign("pages_dir","pages");
 $smarty->assign("page","services");
 $smarty->assign("title","London RIB Voyages | Special & Group Events");
+$smarty->assign("meta","safety boating, river to restaurant, charter city boat trips, stag boat rides, hen boat rides, river filming, corporate boat rides, boat rides for coporate events, london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises
+");
 $smarty->assign("desc","London RIB Voyages cater for special events too including filming, Stag & Hen do's, corporate activities and river to restaurant drop-offs.");
 $smarty->display('site_pages.tpl');
 ?>

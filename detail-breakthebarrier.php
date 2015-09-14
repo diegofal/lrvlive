@@ -46,6 +46,8 @@ include "check_session.php";
 
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
+$smarty->assign("meta","break the barrier, tower bridge pier, tower bridge boat, tower bridge cruise, london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises
+");
 $smarty->assign("title","London RIB Voyages | Break the Barrier, Tower Bridge");
 $smarty->assign("desc","Our fastest speedboat ride! At 35mph, London RIB Voyages' Thames Rocket speedboat twists and turns its way east from Tower Bridge up to the O2 arena.");
 $smarty->assign("page","breakthebarrier");

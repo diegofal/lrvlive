@@ -48,6 +48,8 @@ include "check_session.php";
 $smarty->assign("pages_dir","pages");
 $smarty->assign("title","London RIB Voyages | Ultimate London Adventure, London Eye");
 $smarty->assign("desc","Step aboard London RIB Voyages' new generation of speedboats. Our ‘Ultimate London Adventure’ is a jam-packed, adrenaline-fuelled 50 minutes of fun.");
+$smarty->assign("meta","ultimate london adventure, london eye pier, london eye boat, london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises
+");
 $smarty->assign("page","ultimatelondon");
 $smarty->display('site_pages.tpl');
 ?>

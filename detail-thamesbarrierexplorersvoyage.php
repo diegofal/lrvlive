@@ -47,6 +47,8 @@ include "check_session.php";
 // asignare variabile smarty si generare fisier smarty :
 $smarty->assign("pages_dir","pages");
 $smarty->assign("title","London RIB Voyages | Thames Barrier Explorers, London Eye");
+$smarty->assign("meta","thames barrier explorers, london eye pier, london eye boat, thames barrier boat, 1 hour boat ride london, london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises
+");
 $smarty->assign("desc","This London RIB Voyages ride is only for the most adventurous of daredevils. An 80-minute journey from Parliament to the Thames Barrier and back!");
 $smarty->assign("page","thamesbarrierexplorervoyage");
 $smarty->display('site_pages.tpl');
