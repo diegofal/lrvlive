@@ -13,8 +13,12 @@
 
             <div class="facts">
                 <p>
-                    <strong>£150</strong><br>
+                    <strong>£128.00</strong><br>
                     Couple<br>(2 adults)
+                </p>
+                <p>
+                    <strong>£699.00</strong><br>
+                    Charter<br>(per hour)
                 </p>
             </div>
             <div class="actions">
