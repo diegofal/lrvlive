@@ -32,7 +32,7 @@
     <div class="mdl-mega-footer__drop-down-section">
       <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
       <div class="mdl-mega-footer__heading">
-          <h2>Licesing</h2>
+          <h2>Licensing</h2>
       </div>
       <ul class="mdl-mega-footer__link-list">
         <li>
