@@ -45,6 +45,19 @@
             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=194261774035424";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Hotjar Tracking Code for www.londonribvoyages.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:81840,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
 {/literal}
 
 <div class="md-modal md-effect-11" id="modal-1">
