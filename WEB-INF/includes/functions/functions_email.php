@@ -25,7 +25,7 @@ function send_confirmation_mail_voucher($adr_to, $unique_code) {
 
 	$pier = "";
 
-	if ($voucher_order['voucher_tour_id'] == "12" || $voucher_order['voucher_tour_id'] == "21" || $voucher_order['voucher_tour_id'] == "23" || $voucher_order['tour_id'] == "28") //Different email for st katerines dock.
+	if ($voucher_order['voucher_tour_id'] == "12" || $voucher_order['voucher_tour_id'] == "21" || $voucher_order['voucher_tour_id'] == "23" || $voucher_order['tour_id'] == "28"|| $voucher_order['tour_id'] == "29") //Different email for st katerines dock.
         $pier = "Be sure to check-in with an LRV staff member at St Katharine’s Pier, <strong>at least 10 minutes</strong> before your scheduled sailing.";
     else if ($voucher_order['voucher_tour_id'] == "24" || $voucher_order['voucher_tour_id'] == "25")
 		$pier = "Be sure to check-in with an LRV staff member at St Katharine’s Pier, <strong>at least 10 minutes</strong> before your scheduled sailing.";
@@ -121,7 +121,7 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code) {
 
     $msg_body = "";
     
-    if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23" || $order['tour_id'] == "28") //Different email for st katerines dock.
+    if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23" || $order['tour_id'] == "28" || $order['tour_id'] == "29") //Different email for st katerines dock.
         $msg_body = $emails['order_user2'];
     else if ($order['tour_id'] == "24" || $order['tour_id'] == "25")
 		$msg_body = $emails['thames_festival_blast'];

@@ -31,7 +31,7 @@
             </button>
             <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="booknow">
                 <li class="mdl-menu__item"><a href="http://www.londonribvoyages.com/booking.php?tour_id=9&subpage=step1&mobile=y" target="_blank">The Ultimate London Adventure</a></li>
-                <li class="mdl-menu__item"><a href="http://www.londonribvoyages.com/booking.php?tour_id=28&subpage=step1&mobile=y" target="_blank">Totally Thames Blast 2015</a></li>
+                <li class="mdl-menu__item"><a href="http://www.londonribvoyages.com/booking.php?tour_id=29&subpage=step1&mobile=y" target="_blank">Beware the Barrier</a></li>
                 <li class="mdl-menu__item"><a href="http://www.londonribvoyages.com/booking.php?tour_id=4&subpage=step1&mobile=y" target="_blank">Thames Barrier Explorers Voyage</a></li>
                 <li class="mdl-menu__item"><a href="http://www.londonribvoyages.com/booking.php?tour_id=12&subpage=step1&mobile=y" target="_blank">Break the barrier (Speed only)</a></li>
                 <li class="mdl-menu__item"><a href="http://www.londonribvoyages.com/booking.php?tour_id=1&subpage=step1&mobile=y" target="_blank">Captain Kidd's Canary Wharf Voyage</a></li>

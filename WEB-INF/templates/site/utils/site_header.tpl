@@ -102,6 +102,7 @@
         <li><button class="md-trigger" tourid="4" data-modal="modal-1"> Thames Barrier Explorers Voyage </button></li>
         <li><button class="md-trigger" tourid="12" data-modal="modal-1"> Break The Barrier (Speed only) </button></li>
         <li><button class="md-trigger" tourid="27" data-modal="modal-1"> Limehouse Blast </button></li>
+        <li><button class="md-trigger" tourid="29" data-modal="modal-1"> Beware the Barrier!  </button></li>
         <!-- <li><button class="md-trigger" tourid="28" data-modal="modal-1"> Totally Thames Blast 2015 </button></li> -->
     </ul>
 </header>

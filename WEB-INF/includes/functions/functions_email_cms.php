@@ -33,7 +33,7 @@ function send_confirmation_mail($adr_to, $mail_name, $unique_code, $comments="")
 
 
 	$msg_body = "";
-    if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23"|| $order['tour_id'] == "28") //Different email for st katerines dock.
+    if ($order['tour_id'] == "12" || $order['tour_id'] == "21" || $order['tour_id'] == "23"|| $order['tour_id'] == "28" || $order['tour_id'] == "29") //Different email for st katerines dock.
         $msg_body = $emails['order_user2'];
     else if ($order['tour_id'] == "24" || $order['tour_id'] == "25")
 		$msg_body = $emails['thames_festival_blast'];
