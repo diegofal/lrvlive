@@ -13,7 +13,7 @@
         {if $tour.tour_name == 'Limehouse Blast'}
             <p> Please select the number of couples joining you for your experience.</p>
         {else}
-        <p>Please select the number of adults and children joining you for your experience below.</p>
+        <p>Please select the number of tickets for your experience below</p>
         {/if}
     </header>
     <div class="buy-content">

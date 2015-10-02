@@ -129,27 +129,27 @@ function check_input(){
 
 function check_form(){
 	validate();
-	/*try {
-		if (document.voucher_step1.voucher_order_name.value == '') throw("Please type your name");
+	try {
+		/*if (document.voucher_step1.voucher_order_name.value == '') throw("Please type your name");
 		if (document.voucher_step1.voucher_order_lastname.value == '') throw("Please type your Surname");
 		if (document.voucher_step1.order_phone.value == '') throw("Please type your phone");
 		if (document.voucher_step1.order_email.value == '') throw("Please type your email");
 		if (document.voucher_step1.voucher_order_city.value == '') throw("Please type your city");
-		if (document.voucher_step1.voucher_order_address1.value == '') throw("Please type your address");
+		if (document.voucher_step1.voucher_order_address1.value == '') throw("Please type your address");*/
 		if (document.voucher_step1.voucher_order_postcode.value == '') throw("Please type your Post code or 0");
-		if (document.voucher_step1.voucher_order_email.value == '') throw("Please type your Email");
+		/*if (document.voucher_step1.voucher_order_email.value == '') throw("Please type your Email");
 		if (document.voucher_step1.voucher_order_phone.value == '') throw("Please type your Phone");
 		if (document.voucher_step1.voucher_order_to.value == '') throw("Please type Name of person to receive this Voucher");
 		if (document.voucher_step1.voucher_order_phone_to.value == '') throw("Please type Phone of person to receive this Voucher");
 		if (document.voucher_step1.voucher_order_name_to.value == '') throw("Please type Name of person to be posted to");
 		if (document.voucher_step1.voucher_order_address1_to.value == '') throw("Please type Address of where the voucher is to be posted");
-		if (document.voucher_step1.voucher_order_message.value == '') throw("Please type Message from sender");
+		if (document.voucher_step1.voucher_order_message.value == '') throw("Please type Message from sender");*/
 	}
 	catch (err){
 		alert(err);
 		return;
 	}
-*/
+
 	/*
 	if (returnVal) {
 		//Check Quantity at least 1
