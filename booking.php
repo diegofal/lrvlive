@@ -76,39 +76,41 @@ switch (@$_GET['subpage']) {
 
         $voucher_order = $db->select_fields($db->voucher_order, "", "", 'voucher_order_unique_code', $results['code'], "", "", "", 1);
 
-
-        if ($results['status'] == 'OK') {
-
-            include "WEB-INF/includes/functions/functions_email.php";
-            include "WEB-INF/includes/functions/functions_images.php";
-
-            $_date = date("Y-m-d");
-            $_img_date = date("d.m.y");
-            $fields = array("voucher_order_date" => $_date,
-                "voucher_order_payd" => 1);
-            $db->edit_field($db->voucher_order, $fields, "voucher_order_unique_code", $results['code']);
-
-            $query = "SELECT count(voucher_order_id) as cnt FROM `" . $db->voucher_order . "` WHERE 1 AND voucher_order_payd = 1 AND voucher_order_date = CURDATE()";
-            $next_today_order = $db->select_field($db->voucher_order, "cnt", "", $query);
-
-            $_order_time = date("Hm");
-            $_order_dmy = date("dmy");
-            $next_today_order = sprintf("%02d", $next_today_order[0]);
-            $voucher_number = "lrv" . $_order_time . $_order_dmy . $next_today_order;
-
-            $db->edit_field($db->voucher_order, array("voucher_order_number" => $voucher_number), "voucher_order_unique_code", $results['code']);
-            @make_voucher_images($voucher_order['voucher_order_unique_code'], array("voucher_order_number" => $voucher_number, "voucher_order_to" => $voucher_order['voucher_order_to'], "voucher_order_date" => $_img_date, "guests" => $voucher_order['voucher_order_tickets_number']));
-            @send_confirmation_mail_voucher($voucher_order['voucher_order_email'], $voucher_order['voucher_order_unique_code']);
-
-            write_log("Time: " . $voucher_order['voucher_order_time'] . ", Voucher Order ID: " . $voucher_order['voucher_order_id'] . ", Direction: FROM PROTX, Voucher Order Code: " . $voucher_order['voucher_order_unique_code'] . ", Total: " . $voucher_order['voucher_order_total'] .
-                ", Session ID: " . session_id() . ", results = " . serialize($results) . ", voucher_order = " . serialize($voucher_order));
+        if ($voucher_order["voucher_order_payd"] != 1) {
+            if ($results['status'] == 'OK') {
 
 
-        } else {
+                include "WEB-INF/includes/functions/functions_email.php";
+                include "WEB-INF/includes/functions/functions_images.php";
 
-            write_log("Time: " . $voucher_order['voucher_order_time'] . ", Voucher Order ID: " . $voucher_order['voucher_order_id'] . ", Direction: FROM PROTX (ERROR status not ok), Voucher Order Code: " . $voucher_order['voucher_order_unique_code'] . ", Total: " . $voucher_order['voucher_order_total'] .
-                ", Session ID: " . session_id() . ", results = " . serialize($results) . ", voucher_order = " . serialize($voucher_order));
+                $_date = date("Y-m-d");
+                $_img_date = date("d.m.y");
+                $fields = array("voucher_order_date" => $_date,
+                    "voucher_order_payd" => 1);
+                $db->edit_field($db->voucher_order, $fields, "voucher_order_unique_code", $results['code']);
 
+                $query = "SELECT count(voucher_order_id) as cnt FROM `" . $db->voucher_order . "` WHERE 1 AND voucher_order_payd = 1 AND voucher_order_date = CURDATE()";
+                $next_today_order = $db->select_field($db->voucher_order, "cnt", "", $query);
+
+                $_order_time = date("Hm");
+                $_order_dmy = date("dmy");
+                $next_today_order = sprintf("%02d", $next_today_order[0]);
+                $voucher_number = "lrv" . $_order_time . $_order_dmy . $next_today_order;
+
+                $db->edit_field($db->voucher_order, array("voucher_order_number" => $voucher_number), "voucher_order_unique_code", $results['code']);
+                @make_voucher_images($voucher_order['voucher_order_unique_code'], array("voucher_order_number" => $voucher_number, "voucher_order_to" => $voucher_order['voucher_order_to'], "voucher_order_date" => $_img_date, "guests" => $voucher_order['voucher_order_tickets_number']));
+                @send_confirmation_mail_voucher($voucher_order['voucher_order_email'], $voucher_order['voucher_order_unique_code']);
+
+                write_log("Time: " . $voucher_order['voucher_order_time'] . ", Voucher Order ID: " . $voucher_order['voucher_order_id'] . ", Direction: FROM PROTX, Voucher Order Code: " . $voucher_order['voucher_order_unique_code'] . ", Total: " . $voucher_order['voucher_order_total'] .
+                    ", Session ID: " . session_id() . ", results = " . serialize($results) . ", voucher_order = " . serialize($voucher_order));
+
+
+            } else {
+
+                write_log("Time: " . $voucher_order['voucher_order_time'] . ", Voucher Order ID: " . $voucher_order['voucher_order_id'] . ", Direction: FROM PROTX (ERROR status not ok), Voucher Order Code: " . $voucher_order['voucher_order_unique_code'] . ", Total: " . $voucher_order['voucher_order_total'] .
+                    ", Session ID: " . session_id() . ", results = " . serialize($results) . ", voucher_order = " . serialize($voucher_order));
+
+            }
         }
         $smarty->assign("voucher_id", $voucher_order['voucher_order_voucher_id']);
         $smarty->assign("results", $results);
