@@ -45,6 +45,8 @@ include "check_session.php";
 //$smarty->assign("content",$content);
 
 // asignare variabile smarty si generare fisier smarty :
+$openVoucher = $_GET['openVoucher'];
+$smarty->assign("openVoucher",$openVoucher);
 $smarty->assign("pages_dir","pages");
 $smarty->assign("title","London RIB Voyages | Ultimate London Adventure, London Eye");
 $smarty->assign("desc","Step aboard London RIB Voyages' new generation of speedboats. Our ‘Ultimate London Adventure’ is a jam-packed, adrenaline-fuelled 50 minutes of fun.");

@@ -45,6 +45,8 @@ include "check_session.php";
 //$smarty->assign("content",$content);
 
 // asignare variabile smarty si generare fisier smarty :
+$openVoucher = $_GET['openVoucher'];
+$smarty->assign("openVoucher",$openVoucher);
 $smarty->assign("pages_dir","pages");
 $smarty->assign("meta","break the barrier, tower bridge pier, tower bridge boat, tower bridge cruise, london rib voyages, speedboat rides, london speedboat, london rib tours, speedboat experiences, thames river cruise, london boat trips, london river cruise, london rib experience, river thames cruise, thames cruise, city cruises
 ");

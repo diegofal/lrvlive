@@ -30,7 +30,7 @@
 
                 <div class="booknow"></div>
                 <button class="btn btn-main md-trigger" tourid='9' data-modal="modal-1"> book this trip  </button>
-                <button class="btn btn-secondary md-trigger" voucherid='6' data-modal="modal-1"> buy gift voucher  </button>
+                <button id="voucherBtn" class="btn btn-secondary md-trigger" voucherid='6' data-modal="modal-1"> buy gift voucher  </button>
             </div>
         </div>
     </div>
@@ -92,3 +92,18 @@
 </section>
 
 <br/><br/><br/><br/>
+
+{if $openVoucher == 1}
+{literal}
+    <script>
+        $(document).ready(function(){
+            setTimeout(
+                    function()
+                    {
+                        $('#voucherBtn').click();
+                    }, 1000);
+
+        })
+    </script>
+{/literal}
+{/if}

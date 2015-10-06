@@ -45,6 +45,8 @@ include "check_session.php";
 //$smarty->assign("content",$content);
 
 // asignare variabile smarty si generare fisier smarty :
+$openVoucher = $_GET['openVoucher'];
+$smarty->assign("openVoucher",$openVoucher);
 $smarty->assign("pages_dir","pages");
 $smarty->assign("title","Captain Kidd's Canary Wharf Voyage | London RIB Voyages");
 $smarty->assign("desc","Specially designed for families. You can still expect all the thrills and spills that have become the trademark our experience!");
