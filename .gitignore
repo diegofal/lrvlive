@@ -50,5 +50,6 @@ crashlytics-build.properties
 
 
 WEB-INF/includes/config.php
-index.php
+WEB-INF/includes/smarty/templates_c/site/*
+WEB-INF/includes/smarty/templates_c/cms/*
 .gitignore
