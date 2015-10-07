@@ -61,11 +61,11 @@
         <div class="col-1-4 news">
             <h4>News</h4>
             <ul class="">
-                <li><a href="https://londonribvoyages.wordpress.com/2015/07/31/hottest-july-ever/">Hottest July Ever!</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/07/30/schools-out-for-summer/">School’s out for summer!</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/07/24/the-garden-bridge/">The garden bridge</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/07/19/90-years-of-tauck/">90 years of tauck</a></li>
-                <li><a href="https://londonribvoyages.wordpress.com/2015/07/17/bond-spotted-on-the-thames/">Bond spotted on the thames</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/09/28/the-ten-best-places-to-propose-in-london/">The Ten Best Places to Propose in London</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/09/21/totally-thames/">Totally Thames</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/09/14/run-the-river-tomorrow/">Run the River:&nbsp;Tomorrow</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/09/09/dont-miss-the-great-river-race-this-weekend/">Don’t Miss The Great River Race This&nbsp;Weekend!</a></li>
+                <li><a href="https://londonribvoyages.wordpress.com/2015/08/31/end-the-school-holidays-with-a-bang/">End the School Holidays with a&nbsp;Bang!</a></li>
             </ul>
         </div>
         <div class="col-1-4 social">
@@ -77,6 +77,7 @@
                 <li><a href="https://twitter.com/LondonRIB?lang=en" target="_blank"><span class="icon"> <img src="content/img/social/twitter-icon.png" /> </span><span>Twitter</span></a></li>
                 <li><a href="https://www.youtube.com/channel/UC_78eKTUZPWQv7Yhb6jIJVA" target="_blank"><span class="icon"> <img src="content/img/social/youtube-icon.png" /> </span><span>YouTube</span></a></li>
             </ul>
+            <a href="http://kidrated.com/sponsored-fun/london-rib-voyages/" target="_blank" class="kid-rated"><img src="content/img/kid-rated.png" alt="We Have Been Kid Rated" ></a>
         </div>
     </div>
 

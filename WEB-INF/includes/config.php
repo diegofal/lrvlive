@@ -12,8 +12,8 @@ error_reporting(E_ALL ^ E_NOTICE && E_DEPRECATED);
 define("TESTING",true);
 
  //define("ROOT_PATH", "C:\\xampp\\htdocs\\lrvlive");
- define("ROOT_PATH", "C:\\xampp\\htdocs\\lrvlive");
-//define("ROOT_PATH", "/var/www/vhosts/new.londonribvoyages.com");
+ //define("ROOT_PATH", "C:\\xampp\\htdocs\\lrvlive");
+define("ROOT_PATH", "/var/www/vhosts/lrvlive");
 
 
 class DB_config extends x3_database {

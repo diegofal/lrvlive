@@ -1,7 +1,7 @@
 <section id="services" >
 
     <div class="intro">
-        <img class="" src="content/img/services/services2.jpg" />
+        <img class="" src="content/img/services/services3.jpg" />
     </div>
     <div class="lead-h1">
         <div class="splash-left"></div>

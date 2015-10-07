@@ -2182,6 +2182,9 @@ body {
   border-bottom: 1px dotted rgba(40, 40, 40, 0.3);
   margin: 0;
 }
+#footer-main .social {
+  position: relative;
+}
 #footer-main .social li .icon {
   width: 30px;
   height: 30px;
@@ -2220,6 +2223,12 @@ body {
 }
 .schema {
   display: none;
+}
+
+#footer-main .social .kid-rated {
+  position: absolute;
+  top: 0;
+  right: 20px;
 }
 /*///////////////////////////////////////////////////////////////////  FOOTER LINKS //////*/
 #footerlinks {
