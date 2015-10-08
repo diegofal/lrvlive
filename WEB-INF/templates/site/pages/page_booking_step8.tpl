@@ -39,7 +39,6 @@
 	})();
 </script>
 {/literal}
-{/literal}
 	<section id="random-section" class="success">
 		<div>
 			<h1>Payment process successful :)</h1>
